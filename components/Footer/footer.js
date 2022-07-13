@@ -57,22 +57,22 @@ export default function Footer() {
         <ContactTitle>Contatos e Redes</ContactTitle>
         <Iconsrow>
           <Icon>
-            <a href="https://twitter.com/lucas_wyllame" target="_blank">
+            <a href="https://twitter.com/lucas_wyllame" target="_blank" rel="noreferrer">
               Twitter
             </a>
           </Icon>
           <Icon>
-            <a href="https://www.instagram.com/davihayato/" target="_blank">
+            <a href="https://www.instagram.com/davihayato/" target="_blank" rel="noreferrer">
               Instagram
             </a>
           </Icon>
           <Icon>
-            <a href="https://www.youtube.com" target="_blank">
+            <a href="https://www.youtube.com" target="_blank" rel="noreferrer">
               Youtube
             </a>
           </Icon>
           <Icon>
-            <a href="https://twitter.com/lucas_wyllame" target="_blank">
+            <a href="https://twitter.com/lucas_wyllame" target="_blank" rel="noreferrer">
               Twitter
             </a>
           </Icon>

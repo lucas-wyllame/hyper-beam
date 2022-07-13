@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Title, Desc } from './../Global/globalStyles';
 
 const Content = styled.div`
   width: 100%;
@@ -21,18 +22,7 @@ const TextDiv = styled.div`
   padding-left: 48px;
 `;
 
-const Title = styled.p`
-  font-size: 45px;
-  color: #fff;
-  margin: 0;
-  font-weight: bold;
-`;
 
-const Desc = styled.h1`
-  font-size: 28px;
-  color: #9a8dac;
-  width: 50%;
-`;
 
 const MoreInfs = styled.h2`
   font-size: 25px;

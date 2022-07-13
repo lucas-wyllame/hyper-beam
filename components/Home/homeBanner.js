@@ -7,9 +7,9 @@ const Content = styled.div`
   margin: 20px 0;
   display: flex;
   justify-content: center;
-  `;
-  
-  const Banner = styled.div`
+`;
+
+const Banner = styled.div`
   width: 1317px;
   height: 488px;
   background: green;
@@ -17,7 +17,6 @@ const Content = styled.div`
   display: flex;
   align-items: center;
   position: relative;
-
 `;
 
 const TextsDiv = styled.div`
@@ -34,7 +33,7 @@ const TextsDiv = styled.div`
     background: #ffe747 0% 0% no-repeat padding-box;
     border-radius: 44px;
     border: none;
-    color: #A127FF;
+    color: #a127ff;
   }
 `;
 
@@ -48,10 +47,10 @@ const Title = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  span{ 
-    color: #FFE747;
+  span {
+    color: #ffe747;
   }
-  div{
+  div {
     border-radius: 50%;
     width: 10px;
     height: 10px;
@@ -69,8 +68,6 @@ const Desc = styled.p`
   font-weight: bold;
 `;
 
-
-
 const BigImg = styled.img`
   width: 35%;
   position: absolute;
@@ -85,12 +82,14 @@ export default function HomeBanner() {
     <Content>
       <Banner>
         <TextsDiv>
-          <Title>Hyper Beam <div/> <span>03</span></Title>
+          <Title>
+            Hyper Beam <div /> <span>03</span>
+          </Title>
           <Desc>Pokémon Unite e The World Ends with You</Desc>
           <button>Play</button>
         </TextsDiv>
         <BigImg></BigImg>
-        <HyperCard></HyperCard>
+        <HyperCard position={'absolute'} width={'196px'} height={'196px'}></HyperCard>
       </Banner>
     </Content>
   );
