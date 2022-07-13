@@ -6,6 +6,7 @@ import HomeBanner from '../components/Home/homeBanner'
 import About from '../components/About/about'
 import Footer from '../components/Footer/Footer'
 import LastEpisodes from '../components/LastEpisodes'
+import AvaiablePlats from '../components/AvaiablePLats'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
     <HomeBanner/>
     <About/>
     <LastEpisodes/>
+    <AvaiablePlats/>
     <Footer/>
     </>
   )

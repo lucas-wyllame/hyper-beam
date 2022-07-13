@@ -10,5 +10,5 @@ export const Title = styled.p`
 export const Desc = styled.h1`
   font-size: 28px;
   color: #9a8dac;
-  width: 50%;
+  max-width: 50%;
 `;
