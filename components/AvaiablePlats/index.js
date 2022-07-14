@@ -4,7 +4,7 @@ import { Title, Desc } from "../Global/globalStyles";
 const Content = styled.div`
   width: 100%;
   height: 836px;
-  background: pink;
+  background: #11122d;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -12,53 +12,69 @@ const Content = styled.div`
   padding: 70px;
 `;
 
-const CardsPlats = styled.div`
+const PlatsCards = styled.div`
   width: 274px;
   height: 274px;
-  background: blue;
-  margin: 70px 70px 0 70px;
-  border-radius: 15px;
+  background: #7c7da2;
+  margin: 70px 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 15px;
+  :hover{ 
+    width: 288px;
+    height: 335px;
+    div{
+      width: 146px;
+      height: 146px;
+      background: green;
+    }
+  }
 `;
 
-const PlatsLogo = styled.img`
+const PlatsIcons = styled.div`
   width: 136px;
   height: 136px;
-  background: red;
+  background: #fff;
 `;
 
-const TitleCards = styled.label`
+const PlatsTitle = styled.label`
   font-size: 28px;
-  color: #fff;
-  margin-top: 15px;
-  margin-bottom: 50px;
+  color: #ffffff;
+  margin: 15px 0 50px 0;
   font-weight: bold;
 `;
 
-const CardsButtons = styled.button`
-  width: 247px;
-  height: 49px;
-  background: none;
-  border: 1px solid #FFFFFF;
-  border-radius: 44px;
+const PlatsButtons = styled.button`
   font-size: 20px;
   color: #fff;
-  margin-bottom: 15px;
+  width: 247px;
+  height: 49px;
+  border-radius: 44px;
+  background: none;
+  border: 1px solid #ffffff;
+  margin-bottom: 25px;
 `;
 
 export default function AvaiablePlats() {
   return (
     <Content>
-      <Title>Plataformas Disponíveis</Title>
+      <Title>Plataformas disponíveis</Title>
       <Desc>Onde encontrar nosso podcast para escutar</Desc>
-      <CardsPlats>
-        <PlatsLogo></PlatsLogo>
-      </CardsPlats>
-      <TitleCards>Spotify</TitleCards>
-      <CardsButtons>Podcast Addict</CardsButtons>
-      <CardsButtons>Sugerir plataforma</CardsButtons>
+      <PlatsCards>
+        <PlatsIcons></PlatsIcons>
+      </PlatsCards>
+      <PlatsTitle>Spotify</PlatsTitle>
+      <PlatsButtons>
+        <a
+          href="https://open.spotify.com/show/5a9RaVxeNAn1zZezcY74b7?si=e2da5b48867145f2" target="_blank" rel="noreferrer">
+            Podcast Addict
+        </a>
+      </PlatsButtons>
+      <PlatsButtons><a href="https://textoeditable.com.br/bloco-de-notas-online/" target="_blank" rel="noreferrer">
+        Sugerir plataforma
+        </a>
+        </PlatsButtons>
     </Content>
   );
 }
