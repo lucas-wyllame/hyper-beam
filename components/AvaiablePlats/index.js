@@ -32,6 +32,8 @@ const PlatsCards = styled.div`
   }
 `;
 
+
+
 const PlatsIcons = styled.div`
   width: 136px;
   height: 136px;
@@ -67,7 +69,7 @@ export default function AvaiablePlats() {
       <PlatsTitle>Spotify</PlatsTitle>
       <PlatsButtons>
         <a
-          href="https://open.spotify.com/show/5a9RaVxeNAn1zZezcY74b7?si=e2da5b48867145f2" target="_blank" rel="noreferrer">
+          href="https://podcastaddict.com/podcast/3670417" target="_blank" rel="noreferrer">
             Podcast Addict
         </a>
       </PlatsButtons>

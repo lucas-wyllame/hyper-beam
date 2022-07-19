@@ -1,3 +1,4 @@
+/*
 import styled from "styled-components";
 
 const Content = styled.div`
@@ -32,8 +33,8 @@ const ContactTitle = styled.p`
 const Iconsrow = styled.div`
   width: 100%;
   heigth: 53px;
-  flex-direction: row;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 `;
@@ -81,3 +82,4 @@ export default function Footer() {
     </Content>
   );
 }
+*/
