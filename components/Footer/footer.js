@@ -21,7 +21,6 @@ const SocialMedia = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: green;
 `;
 
 const TitleSocial = styled.p`
@@ -51,7 +50,7 @@ const Icon = styled.div`
     margin-right: 16px;
 `;
 
-export default function FooterN() {
+export default function Footer() {
     return (
       <Content>
         <MainImage></MainImage>

@@ -4,10 +4,9 @@ import styles from "../styles/Home.module.css";
 import Header from "../components/Home/header";
 import HomeBanner from "../components/Home/homeBanner";
 import About from "../components/About/about";
-/*import Footer from "../components/Footer/footer";*/
 import LastEpisodes from "../components/LastEpisodes";
 import AvailablePlats from "../components/AvailablePLats";
-import FooterN from "../components/FooterN/footern";
+import Footer from "../components/Footer/footer";
 
 export default function Home() {
   return (
@@ -17,7 +16,7 @@ export default function Home() {
       <About />
       <LastEpisodes />
       <AvailablePlats />
-      <FooterN></FooterN>
+      <Footer></Footer>
     </>
   );
 }
