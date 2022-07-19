@@ -58,7 +58,7 @@ const PlatsButtons = styled.button`
   margin-bottom: 25px;
 `;
 
-export default function AvaiablePlats() {
+export default function AvailablePlats() {
   return (
     <Content>
       <Title>Plataformas disponíveis</Title>

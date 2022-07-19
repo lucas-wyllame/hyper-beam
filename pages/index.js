@@ -6,11 +6,8 @@ import HomeBanner from "../components/Home/homeBanner";
 import About from "../components/About/about";
 /*import Footer from "../components/Footer/footer";*/
 import LastEpisodes from "../components/LastEpisodes";
-import AvaiablePlats from "../components/AvaiablePLats";
+import AvailablePlats from "../components/AvailablePLats";
 import FooterN from "../components/FooterN/footern";
-
-
-
 
 export default function Home() {
   return (
@@ -19,26 +16,10 @@ export default function Home() {
       <HomeBanner />
       <About />
       <LastEpisodes />
-      <AvaiablePlats />
+      <AvailablePlats />
       <FooterN></FooterN>
     </>
   );
 }
 
 
-
-
-/*
-export default function Home() {
-  return (
-    <>
-      <Header />
-      <HomeBanner />
-      <About />
-      <LastEpisodes />
-      <AvaiablePlats />
-      <Footer />
-    </>
-  );
-}
-*/
