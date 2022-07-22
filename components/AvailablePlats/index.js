@@ -47,7 +47,7 @@ const PlatsTitle = styled.label`
   font-weight: bold;
 `;
 
-const PlatsButtons = styled.button`
+const PlatsButton = styled.a`
   font-size: 20px;
   color: #fff;
   width: 247px;
@@ -57,6 +57,9 @@ const PlatsButtons = styled.button`
   border: 1px solid #ffffff;
   margin-bottom: 25px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export default function AvailablePlats() {
@@ -68,16 +71,12 @@ export default function AvailablePlats() {
         <PlatsIcons></PlatsIcons>
       </PlatsCards>
       <PlatsTitle>Spotify</PlatsTitle>
-      <PlatsButtons>
-        <a
-          href="https://podcastaddict.com/podcast/3670417" target="_blank" rel="noreferrer">
+      <PlatsButton href="https://podcastaddict.com/podcast/3670417" target="_blank" rel="noreferrer">
             Podcast Addict
-        </a>
-      </PlatsButtons>
-      <PlatsButtons><a href="https://textoeditable.com.br/bloco-de-notas-online/" target="_blank" rel="noreferrer">
-        Sugerir plataforma
-        </a>
-        </PlatsButtons>
+      </PlatsButton>
+      <PlatsButton href="https://textoeditable.com.br/bloco-de-notas-online/" target="_blank" rel="noreferrer">
+            Sugerir Plataforma
+      </PlatsButton>
     </Content>
   );
 }

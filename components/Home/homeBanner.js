@@ -77,7 +77,29 @@ const BigImg = styled.img`
   bottom: 0;
 `;
 
+const HyperCards = styled.div`
+  width: 100%;
+  height: auto;
+  background: purple;
+  position: absolute;
+  bottom: -30%;
+  display: flex;
+`;
+
 export default function HomeBanner() {
+  const titles = [
+    {
+      name: "Hyper Beam 1",
+      numero: 1,
+      foto: "linkgenericodefotourl",
+    },
+    {
+      name: "Hyper Beam 2",
+      numero: 2,
+      foto: "linkgenericodefotourl2",
+    },
+  ];
+
   return (
     <Content>
       <Banner>
@@ -89,7 +111,20 @@ export default function HomeBanner() {
           <button>Play</button>
         </TextsDiv>
         <BigImg></BigImg>
-        <HyperCard position={'absolute'} width={'196px'} height={'196px'}></HyperCard>
+        <HyperCards>
+          {titles.map((res) => {
+            return (
+              // eslint-disable-next-line react/jsx-key
+              <HyperCard
+                position={"relative"}
+                width={"196px"}
+                height={"196px"}
+                name={res.name}
+                numero={res.numero}
+              ></HyperCard>
+            );
+          })}
+        </HyperCards>
       </Banner>
     </Content>
   );
