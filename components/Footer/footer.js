@@ -49,7 +49,7 @@ const Icon = styled.div`
   color: #ffffff;
 `;
 
-export default function FooterN() {
+export default function Footer() {
   const listLinks = [
     { name: "E-mail", url: "https://linktr.ee/hyperbeamcast" },
     { name: "Twitter", url: "https://twitter.com/hyperbeamcast" },
