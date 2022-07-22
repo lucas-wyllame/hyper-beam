@@ -50,44 +50,32 @@ const Icon = styled.div`
 `;
 
 export default function FooterN() {
+  const listLinks = [
+    { name: "E-mail", url: "https://linktr.ee/hyperbeamcast" },
+    { name: "Twitter", url: "https://twitter.com/hyperbeamcast" },
+    {
+      name: "Youtube",
+      url: "https://www.youtube.com/channel/UCrB_y3PT-cLvv2WKB17B2lw",
+    },
+    { name: "Instagram", url: "https://www.instagram.com/davihayato/" },
+  ];
+
   return (
     <Content>
       <MainImage></MainImage>
       <Contacts>
         <ContactTitle>Contatos e Redes</ContactTitle>
         <IconsRow>
-        <Icon>
-            <a
-              href="https://linktr.ee/hyperbeamcast"
-              target="_blank"
-              rel="noreferrer"
-            >
-              E-mail
-            </a>
-          </Icon>
-          <Icon>
-            <a
-              href="https://twitter.com/hyperbeamcast"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Twitter
-            </a>
-          </Icon>
-          <Icon>
-            <a href="https://www.youtube.com/channel/UCrB_y3PT-cLvv2WKB17B2lw" target="_blank" rel="noreferrer">
-              Youtube
-            </a>
-          </Icon>
-          <Icon>
-            <a
-              href="https://www.instagram.com/davihayato/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Instagram
-            </a>
-          </Icon>
+          {listLinks.map((res) => {
+            return (
+              // eslint-disable-next-line react/jsx-key
+              <Icon>
+                <a href={res.url} target="_blank" rel="noreferrer">
+                  {res.name}
+                </a>
+              </Icon>
+            );
+          })}
         </IconsRow>
       </Contacts>
     </Content>
