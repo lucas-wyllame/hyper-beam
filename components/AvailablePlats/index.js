@@ -56,6 +56,7 @@ const PlatsButtons = styled.button`
   background: none;
   border: 1px solid #ffffff;
   margin-bottom: 25px;
+  cursor: pointer;
 `;
 
 export default function AvailablePlats() {
