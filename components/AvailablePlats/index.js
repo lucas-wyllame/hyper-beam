@@ -12,31 +12,38 @@ const Content = styled.div`
   padding: 70px;
 `;
 
+const Plats = styled.div`
+  width: 60%;
+  height: 50%;
+  background: crimson;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
 const PlatsCards = styled.div`
-  width: 274px;
-  height: 274px;
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
   background: #7c7da2;
-  margin: 70px 0 0 0;
+  margin: 0px 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 15px;
-  :hover{ 
-    width: 288px;
-    height: 335px;
-    div{
-      width: 146px;
-      height: 146px;
-      background: green;
+  :hover {
+    width: ${(props) => props.widthHover};
+    height: ${(props) => props.heightHover};
+    div {
+      width: ${(props) => props.widthHoverDiv};
+      height: ${(props) => props.heightHoverDiv};
+      background: ${(props) => props.backColor};
     }
   }
 `;
 
-
-
 const PlatsIcons = styled.div`
-  width: 136px;
-  height: 136px;
+  width: ${(props) => props.widthIcon};
+  height: ${(props) => props.heightIcon};
   background: #fff;
 `;
 
@@ -67,15 +74,55 @@ export default function AvailablePlats() {
     <Content>
       <Title>Plataformas disponíveis</Title>
       <Desc>Onde encontrar nosso podcast para escutar</Desc>
-      <PlatsCards>
-        <PlatsIcons></PlatsIcons>
-      </PlatsCards>
+      <Plats>
+        <PlatsCards
+          width={"196px"}
+          height={"196px"}
+          backColor={"#fff"}
+          widthHover={"196px"}
+          heightHover={"196px"}
+          widthHoverDiv={"98px"}
+          heightHoverDiv={"98px"}
+        >
+          <PlatsIcons widthIcon={"98px"} heightIcon={"98px"}></PlatsIcons>
+        </PlatsCards>
+        <PlatsCards
+          width={"274px"}
+          height={"274px"}
+          backColor={"green"}
+          widthHover={"288px"}
+          heightHover={"288px"}
+          widthHoverDiv={"146px"}
+          heightHoverDiv={"146px"}
+        >
+          <PlatsIcons widthIcon={"136px"} heightIcon={"136px"}></PlatsIcons>
+        </PlatsCards>
+        <PlatsCards
+          width={"196px"}
+          height={"196px"}
+          backColor={"#fff"}
+          widthHover={"196px"}
+          heightHover={"196px"}
+          widthHoverDiv={"98px"}
+          heightHoverDiv={"98px"}
+        >
+          <PlatsIcons widthIcon={"98px"} heightIcon={"98px"}></PlatsIcons>
+        </PlatsCards>
+      </Plats>
       <PlatsTitle>Spotify</PlatsTitle>
-      <PlatsButton href="https://podcastaddict.com/podcast/3670417" target="_blank" rel="noreferrer">
-            Podcast Addict
+      <PlatsButton
+        href="https://podcastaddict.com/podcast/3670417"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Podcast Addict
       </PlatsButton>
-      <PlatsButton href="https://textoeditable.com.br/bloco-de-notas-online/" target="_blank" rel="noreferrer">
-            Sugerir Plataforma
+      <PlatsButton
+        href="https://textoeditable.com.br/bloco-de-notas-online/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Sugerir Plataforma
       </PlatsButton>
     </Content>
   );
