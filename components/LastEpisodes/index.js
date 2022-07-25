@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Title, Desc } from "./../Global/globalStyles";
-import HyperCard from './../HyperCard/hyperCard';
+import HyperCard from "./../HyperCard/hyperCard";
 
 const Content = styled.div`
   width: 100%;
@@ -36,7 +36,11 @@ export default function LastEpisodes() {
 
       <ListPodcasts>
         <Background>
-          <HyperCard position={'static'} width={'337px'} height={'337px'}></HyperCard>
+          <HyperCard
+            position={"static"}
+            width={"337px"}
+            height={"337px"}
+          ></HyperCard>
         </Background>
       </ListPodcasts>
     </Content>

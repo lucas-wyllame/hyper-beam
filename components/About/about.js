@@ -34,8 +34,10 @@ export default function About() {
     <Content>
       <LeftImage></LeftImage>
       <TextDiv>
-        <Title>Somos o Hyper Beam</Title>
-        <Desc>A fagulha de amor aos games em forma de podcast.</Desc>
+        <Title
+        >Somos o Hyper Beam</Title>
+        <Desc
+        >A fagulha de amor aos games em forma de podcast.</Desc>
         <MoreInfs>
           Lorem ipsum dolor sit amet, consectetur a elit. Sed dictum sodales
           rutrum. Praesent eget lobortis purus. Donec a finibus neque. Nu erat a
