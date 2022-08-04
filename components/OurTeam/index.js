@@ -13,12 +13,13 @@ const Content = styled.div`
 `;
 
 const GlobalPeoples = styled.div`
-  width: 1000px;
-  height: auto;
+  width: 60%;
+  height: 343px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin-top: 69px;
+  align-items: center;
 `;
 
 const Peoples = styled.div`
@@ -40,6 +41,9 @@ const CardsOurTeam = styled.div`
 const NameCasters = styled.label`
   font-size: 23px;
   color: #fff;
+  span{
+    color: #FFE747;
+  }
 `;
 
 const FuncCasters = styled.label`
@@ -47,17 +51,29 @@ const FuncCasters = styled.label`
   color: #9a8dac;
 `;
 
-const TeamButtons = styled.button`
-  width: 100px;
-  height: 100px;
-  background: red;
+const Buttons = styled.div`
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+`;
+
+const TeamButton = styled.button`
+  width: 39px;
+  height: 39px;
+  background: #a127ff;
+  border-radius: 50%;
 `;
 
 export default function OurTeam() {
   const listCardsOurTeam = [
-    { name: "Leandro Radnas", func: "Host e Caster" },
-    { name: "Leo Dratini", func: "Caster" },
-    { name: "Davi Hayato", func: "Caster" },
+    { name: "Leandro", surname: "Radnas", func: "Host e Caster" },
+    { name: "Leo", surname: "Dratini", func: "Caster" },
+    { name: "Davi", surname: "Hayato", func: "Caster" },
+  ];
+
+  const CarouselButtons = [
+    { linkimg: "diretorio da imagem1" },
+    { linkimg: "diretorio da imagem2" },
   ];
 
   return (
@@ -65,12 +81,18 @@ export default function OurTeam() {
       <Title>Nosso time</Title>
       <Desc>A equipe que trabalha no Hyper Beam</Desc>
       <GlobalPeoples>
+        <Buttons>
+          <TeamButton></TeamButton>
+        </Buttons>
         {listCardsOurTeam.map((res) => {
           return (
             <Peoples>
               <CardsOurTeam></CardsOurTeam>
               <NameCasters>
-                <div>{res.name}</div>
+                <div>
+                  {res.name}
+                  <span> {res.surname} </span>
+                </div>
               </NameCasters>
               <FuncCasters>
                 <div>{res.func}</div>
@@ -78,8 +100,10 @@ export default function OurTeam() {
             </Peoples>
           );
         })}
+        <Buttons>
+          <TeamButton></TeamButton>
+        </Buttons>
       </GlobalPeoples>
-      <TeamButtons></TeamButtons>
     </Content>
   );
 }
