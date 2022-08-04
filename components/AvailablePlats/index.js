@@ -10,6 +10,9 @@ const Content = styled.div`
   justify-content: flex-start;
   align-items: center;
   padding: 70px;
+  @media (max-width:480px)  {
+    
+  }
 `;
 
 const Plats = styled.div`
@@ -19,6 +22,9 @@ const Plats = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width:480px)  {
+    flex-direction: column;
+  }
 `;
 
 const PlatsCards = styled.div`
@@ -67,6 +73,7 @@ const PlatsButton = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
+  
 `;
 
 export default function AvailablePlats() {
