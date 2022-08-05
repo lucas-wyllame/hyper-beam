@@ -18,7 +18,7 @@ const Content = styled.div`
 `;
 
 const Plats = styled.div`
-  width: 42%;
+  width: 45%;
   height: 50%;
   display: flex;
   justify-content: space-between;
@@ -26,14 +26,14 @@ const Plats = styled.div`
   margin-bottom: 50px;
   @media (max-width: 480px) {
     width: 100%;
-    height: 67%;
+    height: 65%;
     flex-direction: column;
     margin-bottom: 56px;
     margin-top: 45px;
   }
 `;
 
-const PlatsCards = styled.div`
+const PlatsCards = styled.a`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
   background: #7c7da2;
@@ -71,7 +71,7 @@ const PlatsGroup = styled.div`
   }
 `;
 
-const PlatsTitle = styled.label`
+const PlatsTitle = styled.a`
   width: auto;
   font-size: ${(props) => props.fontSize};
   color: #ffffff;
@@ -95,11 +95,15 @@ const PlatsButton = styled.a`
   justify-content: center;
   align-items: center;
   @media (max-width: 480px) {
-    
   }
 `;
 
 export default function AvailablePlats() {
+  // const PlatsLinks = [
+  //   { name: "Google Podcast", url: "https://www.google.com" },
+  //   { name: "Spotify", url: "https://www.google.com" },
+  //   { name: "Pocket Casts", url: "https://www.google.com" },
+  // ];
   return (
     <Content>
       <Title>Plataformas disponíveis</Title>
@@ -114,12 +118,19 @@ export default function AvailablePlats() {
             heightHover={"196px"}
             widthHoverDiv={"98px"}
             heightHoverDiv={"98px"}
-            // widthQueri={""}
-            // heightQueri={""}
+            href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy82ZmM3MWFjYy9wb2RjYXN0L3Jzcw?sa=X&ved=0CAIQ9sEGahcKEwjY-_yB8bD5AhUAAAAAHQAAAAAQRQ"
+            target="_blank"
+            rel="noreferrer"
           >
             <PlatsIcons widthIcon={"98px"} heightIcon={"98px"}></PlatsIcons>
           </PlatsCards>
-          <PlatsTitle fontSize={"20px"} margin={"15px 0 0 0"}>
+          <PlatsTitle
+            href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy82ZmM3MWFjYy9wb2RjYXN0L3Jzcw?sa=X&ved=0CAIQ9sEGahcKEwjY-_yB8bD5AhUAAAAAHQAAAAAQRQ"
+            target="_blank"
+            rel="noreferrer"
+            fontSize={"20px"}
+            margin={"15px 0 0 0"}
+          >
             Google Podcast
           </PlatsTitle>
         </PlatsGroup>
@@ -133,10 +144,21 @@ export default function AvailablePlats() {
             heightHover={"288px"}
             widthHoverDiv={"146px"}
             heightHoverDiv={"146px"}
+            href="https://open.spotify.com/show/5a9RaVxeNAn1zZezcY74b7?si=e2da5b48867145f2&nd=1"
+            target="_blank"
+            rel="noreferrer"
           >
             <PlatsIcons widthIcon={"136px"} heightIcon={"136px"}></PlatsIcons>
           </PlatsCards>
-            <PlatsTitle fontSize={"28px"} margin={"15px 0 0 0"}>Spotify</PlatsTitle>
+          <PlatsTitle
+            fontSize={"28px"}
+            margin={"15px 0 0 0"}
+            href="https://open.spotify.com/show/5a9RaVxeNAn1zZezcY74b7?si=e2da5b48867145f2&nd=1"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Spotify
+          </PlatsTitle>
         </PlatsGroup>
         <PlatsGroup>
           <PlatsCards
@@ -147,16 +169,23 @@ export default function AvailablePlats() {
             heightHover={"196px"}
             widthHoverDiv={"98px"}
             heightHoverDiv={"98px"}
+            href="https://anchor.fm/hyper-beam"
+            target="_blank"
+            rel="noreferrer"
           >
             <PlatsIcons widthIcon={"98px"} heightIcon={"98px"}></PlatsIcons>
           </PlatsCards>
-          <PlatsTitle fontSize={"20px"} margin={"15px 0 0 0"}>
+          <PlatsTitle
+            href="https://anchor.fm/hyper-beam"
+            target="_blank"
+            rel="noreferrer"
+            fontSize={"20px"}
+            margin={"15px 0 0 0"}
+          >
             Pocket Casts
           </PlatsTitle>
         </PlatsGroup>
       </Plats>
-      {/* <PlatsTitleGroup>
-      </PlatsTitleGroup> */}
       <PlatsButton
         href="https://podcastaddict.com/podcast/3670417"
         target="_blank"
