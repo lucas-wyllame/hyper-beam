@@ -10,20 +10,26 @@ const Content = styled.div`
   justify-content: flex-start;
   align-items: center;
   padding: 70px;
-  @media (max-width:480px)  {
-    
+  @media (max-width: 480px) {
+    height: 1401px;
+    padding: 0;
+    margin-bottom: 97px;
   }
 `;
 
 const Plats = styled.div`
-  width: 60%;
+  width: 42%;
   height: 50%;
-  background: crimson;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media (max-width:480px)  {
+  margin-bottom: 50px;
+  @media (max-width: 480px) {
+    width: 100%;
+    height: 67%;
     flex-direction: column;
+    margin-bottom: 56px;
+    margin-top: 45px;
   }
 `;
 
@@ -53,11 +59,26 @@ const PlatsIcons = styled.div`
   background: #fff;
 `;
 
+const PlatsGroup = styled.div`
+  width: auto;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 480px) {
+    height: auto;
+  }
+`;
+
 const PlatsTitle = styled.label`
-  font-size: 28px;
+  width: auto;
+  font-size: ${(props) => props.fontSize};
   color: #ffffff;
-  margin: 15px 0 50px 0;
+  margin: ${(props) => props.margin};
   font-weight: bold;
+  padding-left: ${(props) => props.paddingLeft};
+  padding-right: ${(props) => props.paddingRight};
 `;
 
 const PlatsButton = styled.a`
@@ -73,7 +94,9 @@ const PlatsButton = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  @media (max-width: 480px) {
+    
+  }
 `;
 
 export default function AvailablePlats() {
@@ -82,41 +105,58 @@ export default function AvailablePlats() {
       <Title>Plataformas disponíveis</Title>
       <Desc>Onde encontrar nosso podcast para escutar</Desc>
       <Plats>
-        <PlatsCards
-          width={"196px"}
-          height={"196px"}
-          backColor={"#fff"}
-          widthHover={"196px"}
-          heightHover={"196px"}
-          widthHoverDiv={"98px"}
-          heightHoverDiv={"98px"}
-        >
-          <PlatsIcons widthIcon={"98px"} heightIcon={"98px"}></PlatsIcons>
-        </PlatsCards>
-        <PlatsCards
-          width={"274px"}
-          height={"274px"}
-          backColor={"green"}
-          widthHover={"288px"}
-          heightHover={"288px"}
-          widthHoverDiv={"146px"}
-          heightHoverDiv={"146px"}
-        >
-          <PlatsIcons widthIcon={"136px"} heightIcon={"136px"}></PlatsIcons>
-        </PlatsCards>
-        <PlatsCards
-          width={"196px"}
-          height={"196px"}
-          backColor={"#fff"}
-          widthHover={"196px"}
-          heightHover={"196px"}
-          widthHoverDiv={"98px"}
-          heightHoverDiv={"98px"}
-        >
-          <PlatsIcons widthIcon={"98px"} heightIcon={"98px"}></PlatsIcons>
-        </PlatsCards>
+        <PlatsGroup>
+          <PlatsCards
+            width={"196px"}
+            height={"196px"}
+            backColor={"#fff"}
+            widthHover={"196px"}
+            heightHover={"196px"}
+            widthHoverDiv={"98px"}
+            heightHoverDiv={"98px"}
+            // widthQueri={""}
+            // heightQueri={""}
+          >
+            <PlatsIcons widthIcon={"98px"} heightIcon={"98px"}></PlatsIcons>
+          </PlatsCards>
+          <PlatsTitle fontSize={"20px"} margin={"15px 0 0 0"}>
+            Google Podcast
+          </PlatsTitle>
+        </PlatsGroup>
+
+        <PlatsGroup>
+          <PlatsCards
+            width={"274px"}
+            height={"274px"}
+            backColor={"green"}
+            widthHover={"288px"}
+            heightHover={"288px"}
+            widthHoverDiv={"146px"}
+            heightHoverDiv={"146px"}
+          >
+            <PlatsIcons widthIcon={"136px"} heightIcon={"136px"}></PlatsIcons>
+          </PlatsCards>
+            <PlatsTitle fontSize={"28px"} margin={"15px 0 0 0"}>Spotify</PlatsTitle>
+        </PlatsGroup>
+        <PlatsGroup>
+          <PlatsCards
+            width={"196px"}
+            height={"196px"}
+            backColor={"#fff"}
+            widthHover={"196px"}
+            heightHover={"196px"}
+            widthHoverDiv={"98px"}
+            heightHoverDiv={"98px"}
+          >
+            <PlatsIcons widthIcon={"98px"} heightIcon={"98px"}></PlatsIcons>
+          </PlatsCards>
+          <PlatsTitle fontSize={"20px"} margin={"15px 0 0 0"}>
+            Pocket Casts
+          </PlatsTitle>
+        </PlatsGroup>
       </Plats>
-      <PlatsTitle>Spotify</PlatsTitle>
+      {/* <PlatsTitleGroup>
+      </PlatsTitleGroup> */}
       <PlatsButton
         href="https://podcastaddict.com/podcast/3670417"
         target="_blank"
