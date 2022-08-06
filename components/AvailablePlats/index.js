@@ -57,6 +57,7 @@ const PlatsIcons = styled.div`
   width: ${(props) => props.widthIcon};
   height: ${(props) => props.heightIcon};
   background: #fff;
+  border-radius: 50%;
 `;
 
 const PlatsGroup = styled.div`
@@ -94,8 +95,6 @@ const PlatsButton = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (max-width: 480px) {
-  }
 `;
 
 export default function AvailablePlats() {

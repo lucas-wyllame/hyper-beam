@@ -12,7 +12,7 @@ const Content = styled.div`
 const Banner = styled.div`
   width: 1317px;
   height: 488px;
-  background: green;
+  background: purple;
   border-radius: 44px;
   display: flex;
   align-items: center;
@@ -22,7 +22,7 @@ const Banner = styled.div`
 const TextsDiv = styled.div`
   width: 45%;
   height: 40%;
-  background: cyan;
+  background: lightblue;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -34,13 +34,15 @@ const TextsDiv = styled.div`
     border-radius: 44px;
     border: none;
     color: #a127ff;
+    font-size: 25px;
+    margin-top: 19px;
   }
 `;
 
-const Title = styled.div`
-  font-size: 20px;
+const TitleInside = styled.div`
+  font-size: 30px;
   margin: 10px 0;
-  width: 30%;
+  width: 43%;
   color: #fff;
   font: Poppins;
   font-weight: bold;
@@ -55,13 +57,13 @@ const Title = styled.div`
     width: 10px;
     height: 10px;
     background: gray;
-    opacity: 0.5;
+    opacity: 1;
     margin-top: 5px;
   }
 `;
 
 const Desc = styled.p`
-  font-size: 20px;
+  font-size: 25px;
   margin: 10px 0;
   color: #fff;
   font: Poppins;
@@ -71,8 +73,8 @@ const Desc = styled.p`
 const BigImg = styled.img`
   width: 35%;
   position: absolute;
-  background: red;
-  height: 510px;
+  background: yellow;
+  height: 513px;
   right: 80px;
   bottom: 0;
 `;
@@ -87,7 +89,7 @@ const HyperCards = styled.div`
 `;
 
 export default function HomeBanner() {
-  const titles = [
+  const TitleInsides = [
     {
       name: "Hyper Beam 1",
       numero: 1,
@@ -104,15 +106,15 @@ export default function HomeBanner() {
     <Content>
       <Banner>
         <TextsDiv>
-          <Title>
+          <TitleInside>
             Hyper Beam <div /> <span>03</span>
-          </Title>
+          </TitleInside>
           <Desc>Pokémon Unite e The World Ends with You</Desc>
           <button>Play</button>
         </TextsDiv>
         <BigImg></BigImg>
         <HyperCards>
-          {titles.map((res) => {
+          {TitleInsides.map((res) => {
             return (
               // eslint-disable-next-line react/jsx-key
               <HyperCard
