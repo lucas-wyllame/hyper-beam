@@ -51,7 +51,7 @@ const IconsRow = styled.div`
   align-items: center;
 `;
 
-const Icon = styled.div`
+export const Icon = styled.div`
   width: 53px;
   height: 53px;
   background: #a127ff;

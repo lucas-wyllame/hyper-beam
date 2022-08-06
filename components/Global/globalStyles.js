@@ -37,3 +37,4 @@ export const MoreInfs = styled.h2`
     text-align: justify;
   }
 `;
+
