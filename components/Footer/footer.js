@@ -33,7 +33,7 @@ const Contacts = styled.div`
   justify-content: space-between;
   @media (max-width: 480px) {
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
 `;
 
