@@ -13,7 +13,7 @@ const Content = styled.div`
   @media (max-width: 480px) {
     height: 1401px;
     padding: 0;
-    margin-bottom: 97px;
+    margin-top: 40px;
   }
 `;
 

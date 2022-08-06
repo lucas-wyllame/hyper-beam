@@ -7,12 +7,22 @@ const Content = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @media (max-width: 480px) {
+    flex-direction: column;
+    height: 463px;
+    justify-content: center;
+  }
 `;
 
 const MainImage = styled.img`
   width: 290px;
   height: 124px;
   background: gray;
+  @media (max-width: 480px) {
+    width: 214px;
+    height: 92px;
+    margin-bottom: 50px;
+  }
 `;
 
 const Contacts = styled.div`
@@ -21,6 +31,10 @@ const Contacts = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (max-width: 480px) {
+    align-items: center;
+    margin-bottom: 100px;
+  }
 `;
 
 const ContactTitle = styled.label`
