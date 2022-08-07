@@ -21,6 +21,7 @@ const ListPodcasts = styled.div`
   flex-direction: column;
   justify-content: center;
   position: relative;
+  align-items: center;
 `;
 
 const Background = styled.div`
@@ -36,9 +37,9 @@ const Background = styled.div`
 const CardAndText = styled.div`
   width: 100%;
   height: auto;
-  background: blue;
   display: flex;
   justify-content: flex-start;
+  border-radius: 44px 44px 0px 0px;
 `;
 
 const TextsDivEp = styled.div`
@@ -76,6 +77,7 @@ const IconAndButtons = styled.div`
   display: flex;
   justify-content: space-between;
   margin-left: 60px;
+  margin-bottom: 41px;
 `;
 
 const ButtonsEp = styled.div`
@@ -89,6 +91,37 @@ const ButtonsEp = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+const ThinBarsGroup = styled.div`
+  width: 100%;
+  height: 20px;
+  background: #11122D;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const ThinBars = styled.button`
+  width: 330px;
+  height: 10px;
+  background: #fff;
+  border: none;
+  border-radius: 44px;
+  opacity: 0.12;
+  cursor: pointer;
+`;
+
+const ButtonSeeAll = styled.button`
+  width: 160px;
+  height: 49px;
+  background: #ffe747;
+  border-radius: 44px;
+  border: none;
+  color: #a127ff;
+  font-size: 20px;
+  margin-top: 19px;
+  cursor: pointer;
 `;
 
 export default function LastEpisodes() {
@@ -123,6 +156,14 @@ export default function LastEpisodes() {
             <ButtonsEp widthButton={"293px"}>The World Ends with You</ButtonsEp>
           </IconAndButtons>
         </Background>
+        <ThinBarsGroup>
+          <ThinBars></ThinBars>
+          <ThinBars></ThinBars>
+          <ThinBars></ThinBars>
+          <ThinBars></ThinBars>
+          <ThinBars></ThinBars>
+        </ThinBarsGroup>
+        <ButtonSeeAll>Ver todos</ButtonSeeAll>
       </ListPodcasts>
     </Content>
   );

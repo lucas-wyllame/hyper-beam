@@ -10,7 +10,7 @@ const Content = styled.div`
 `;
 
 const Banner = styled.div`
-  width: 1317px;
+  width: 94.7%;
   height: 488px;
   background: purple;
   border-radius: 44px;
@@ -79,10 +79,26 @@ const BigImg = styled.img`
   bottom: 0;
 `;
 
+const HyperCardGroup = styled.div`
+  width: 16%;
+  height: auto;
+  background: green;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  bottom: 31px;
+`;
+
+const HyperText = styled.label`
+  width: 70%;
+  font-size: 17px;
+  color: #9A8DAC;
+`;
+
 const HyperCards = styled.div`
   width: 100%;
   height: auto;
-  background: purple;
   position: absolute;
   bottom: -30%;
   display: flex;
@@ -98,6 +114,21 @@ export default function HomeBanner() {
     {
       name: "Hyper Beam 2",
       numero: 2,
+      foto: "linkgenericodefotourl2",
+    },
+    {
+      name: "Hyper Beam 3",
+      numero: 3,
+      foto: "linkgenericodefotourl2",
+    },
+    {
+      name: "Hyper Beam 4",
+      numero: 4,
+      foto: "linkgenericodefotourl2",
+    },
+    {
+      name: "Hyper Beam 5",
+      numero: 5,
       foto: "linkgenericodefotourl2",
     },
   ];
@@ -116,14 +147,16 @@ export default function HomeBanner() {
         <HyperCards>
           {TitleInsides.map((res) => {
             return (
-              // eslint-disable-next-line react/jsx-key
-              <HyperCard
-                position={"relative"}
-                width={"196px"}
-                height={"196px"}
-                name={res.name}
-                numero={res.numero}
-              ></HyperCard>
+                // eslint-disable-next-line react/jsx-key
+              <HyperCardGroup>
+                <HyperCard
+                  width={"196px"}
+                  height={"196px"}
+                  name={res.name}
+                  numero={res.numero}
+                  ></HyperCard>
+                  <HyperText>Hyper Beam ● 01</HyperText>
+              </HyperCardGroup>
             );
           })}
         </HyperCards>

@@ -6,7 +6,7 @@ const CardBanner = styled.div`
   background: orange;
   position: ${(props) => props.position};
   top: ${(props) => props.top};
-  bottom: -30%;
+  bottom: 31px;
   margin: ${(props) => props.margin};
   border-radius: 15px;
   p {

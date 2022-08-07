@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Header />
       <HomeBanner />
-      <About />
+      {/* <About /> */}
       <LastEpisodes />
       {/* <OurTeam />
       <AvailablePlats />
