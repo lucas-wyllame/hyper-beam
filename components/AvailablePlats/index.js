@@ -98,17 +98,47 @@ const PlatsButton = styled.a`
 `;
 
 export default function AvailablePlats() {
-  // const PlatsLinks = [
-  //   { name: "Google Podcast", url: "https://www.google.com" },
-  //   { name: "Spotify", url: "https://www.google.com" },
-  //   { name: "Pocket Casts", url: "https://www.google.com" },
-  // ];
+  const PlatsLinks = [
+    { name: "Google Podcast", url: "https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy82ZmM3MWFjYy9wb2RjYXN0L3Jzcw?sa=X&ved=0CAIQ9sEGahcKEwjY-_yB8bD5AhUAAAAAHQAAAAAQRQ", width: "196px", height: "196px" },
+    { name: "Spotify", url: "https://open.spotify.com/show/5a9RaVxeNAn1zZezcY74b7?si=e2da5b48867145f2&nd=1", width: "274px", height: "274px" },
+    { name: "Pocket Casts", url: "https://anchor.fm/hyper-beam", width: "196px", height: "196px" },
+  ];
   return (
     <Content>
       <Title>Plataformas disponíveis</Title>
       <Desc>Onde encontrar nosso podcast para escutar</Desc>
       <Plats>
-        <PlatsGroup>
+    {PlatsLinks.map((res) => {
+      return(
+      // eslint-disable-next-line react/jsx-key
+      <PlatsGroup>
+          <PlatsCards
+            width={res.width}
+            height={res.height}
+            backColor={"#fff"}
+            widthHover={"196px"}
+            heightHover={"196px"}
+            widthHoverDiv={"98px"}
+            heightHoverDiv={"98px"}
+            href={res.url}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <PlatsIcons widthIcon={"98px"} heightIcon={"98px"}></PlatsIcons>
+          </PlatsCards>
+          <PlatsTitle
+            href={res.url}
+            target="_blank"
+            rel="noreferrer"
+            fontSize={"20px"}
+            margin={"15px 0 0 0"}
+          >
+           {res.name}
+          </PlatsTitle>
+        </PlatsGroup>
+      )
+    })}
+        {/* <PlatsGroup>
           <PlatsCards
             width={"196px"}
             height={"196px"}
@@ -183,7 +213,7 @@ export default function AvailablePlats() {
           >
             Pocket Casts
           </PlatsTitle>
-        </PlatsGroup>
+        </PlatsGroup> */}
       </Plats>
       <PlatsButton
         href="https://podcastaddict.com/podcast/3670417"

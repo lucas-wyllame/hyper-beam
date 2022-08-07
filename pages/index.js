@@ -13,9 +13,9 @@ export default function Home() {
       <HomeBanner />
       {/* <About /> */}
       <LastEpisodes />
-      {/* <OurTeam />
+      {/* <OurTeam /> */}
       <AvailablePlats />
-      <Footer /> */}
+      {/* <Footer />  */}
     </>
   );
 }
