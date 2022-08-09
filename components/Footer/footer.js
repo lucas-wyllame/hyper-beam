@@ -1,67 +1,11 @@
-import styled from "styled-components";
-
-const Content = styled.div`
-  width: 100%;
-  height: 214px;
-  background: #1b1b40;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  @media (max-width: 480px) {
-    flex-direction: column;
-    height: 463px;
-    justify-content: center;
-  }
-`;
-
-const MainImage = styled.img`
-  width: 290px;
-  height: 124px;
-  background: gray;
-  @media (max-width: 480px) {
-    width: 214px;
-    height: 92px;
-    margin-bottom: 50px;
-  }
-`;
-
-const Contacts = styled.div`
-  width: auto;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  @media (max-width: 480px) {
-    align-items: center;
-    margin-bottom: 80px;
-  }
-`;
-
-const ContactTitle = styled.label`
-  font-size: 20px;
-  color: #ffffff;
-`;
-
-const IconsRow = styled.div`
-  width: 100%;
-  height: 53px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-export const Icon = styled.div`
-  width: 53px;
-  height: 53px;
-  background: #a127ff;
-  border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 16px;
-  color: #ffffff;
-`;
+import {
+  Content,
+  MainImage,
+  Contacts,
+  ContactTitle,
+  IconsRow,
+  Icon,
+} from "./styles";
 
 export default function Footer() {
   const listLinks = [
