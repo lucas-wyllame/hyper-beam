@@ -108,43 +108,40 @@ export const BigImg = styled.img`
 `;
 
 export const HyperCards = styled.div`
-  width: 100%;
+  width: 85%;
   height: auto;
   position: absolute;
   bottom: -30%;
   display: flex;
-  justify-content: center;
+  background: blue;
+  justify-content: space-between;
+  bottom: -165px;
+  left: 7.5%;
   @media (max-width: 1080px) {
     bottom: -20%;
   }
 `;
 
 export const HyperCardGroup = styled.div`
-  width: 16%;
+  width: 15%;
   height: 220px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  bottom: -20px;
+  background: green;
 
-  @media (max-width: 1510px) {
-    bottom: ${(props) => props.bottom1510};
-  }
-  @media (max-width: 1280px) {
-    height: 150px;
-    bottom: ${(props) => props.bottom1280};
-  }
-  @media (max-width: 1080px) {
-    height: 120px;
-    bottom: ${(props) => props.bottom1080};
-  }
-  @media (max-width: 925px) {
-    bottom: ${(props) => props.bottom925};
-  }
-  @media (max-width: 760px) {
-    bottom: ${(props) => props.bottom760};
-  }
+  // @media (max-width: 1510px) {
+  // }
+  // @media (max-width: 1280px) {
+  // }
+  // @media (max-width: 1080px) {
+  //   height: 120px;
+  // }
+  // @media (max-width: 925px) {
+  // }
+  // @media (max-width: 760px) {
+  // }
 `;
 
 export const HyperText = styled.label`

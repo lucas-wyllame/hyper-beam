@@ -17,6 +17,7 @@ export const Desc = styled.h1`
   font-size: 28px;
   color: #9a8dac;
   max-width: 50%;
+  font-weight: 500;
   @media (max-width: 480px) {
     font-size: 16px;
     width: ${(props) => props.widthDescMobile};
@@ -30,11 +31,11 @@ export const MoreInfs = styled.h2`
   width: ${(props) => props.width};
   font-size: 25px;
   color: #ffffff;
+  font-weight: 500;
   @media (max-width: 480px) {
-    font-size: 14px;
+    font-size: ${(props) =>props.fontsize};
     height: 125px;
     width: 324px;
-    text-align: justify;
   }
 `;
 

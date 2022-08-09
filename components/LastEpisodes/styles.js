@@ -7,6 +7,9 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 88px;
+  @media (max-width: 480px) {
+    padding: 0;
+  }
 `;
 
 export const ListPodcasts = styled.div`
@@ -19,16 +22,23 @@ export const ListPodcasts = styled.div`
   justify-content: center;
   position: relative;
   align-items: center;
+  @media (max-width: 480px) {
+    height: 940px;
+  }
 `;
 
 export const Background = styled.div`
-  width: 100%;
+  width: 95%;
   height: 429px;
   border-radius: 44px 44px 0px 0px;
   background: purple;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  @media (max-width: 480px) {
+    height: 764px;
+    justify-content: flex-start;
+  }
 `;
 
 export const CardAndText = styled.div`
@@ -37,12 +47,20 @@ export const CardAndText = styled.div`
   display: flex;
   justify-content: flex-start;
   border-radius: 44px 44px 0px 0px;
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
 `;
 
 export const TextsDivEp = styled.div`
   width: auto;
   height: auto;
   margin-left: 62px;
+  @media (max-width: 480px) {
+    margin: 0 0 0 20px;
+    width: 329px;
+    height: 304px;
+  }
 `;
 
 export const TitleInside = styled.div`
@@ -55,9 +73,17 @@ export const TitleInside = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: 480px) {
+    font-size: 28px;
+    width: 70%;
+  }
   span {
     color: #ffe747;
+    @media (max-width: 480px) {
+      font-size: 29px;
+    }
   }
+
   div {
     border-radius: 50%;
     width: 10px;
@@ -65,6 +91,10 @@ export const TitleInside = styled.div`
     background: gray;
     opacity: 1;
     margin-top: 5px;
+    @media (max-width: 480px) {
+      width: 8px;
+      height: 8px;
+    }
   }
 `;
 
@@ -75,6 +105,14 @@ export const IconAndButtons = styled.div`
   justify-content: space-between;
   margin-left: 60px;
   margin-bottom: 41px;
+  @media (max-width: 480px) {
+    flex-direction: column;
+    width: 100%;
+    height: 191px;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-left: 20px;
+  }
 `;
 
 export const ButtonsEp = styled.div`
@@ -88,6 +126,10 @@ export const ButtonsEp = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 480px) {
+    width: ${(props) => props.widthMobile};
+    font-size: 15px;
+  }
 `;
 
 export const ThinBarsGroup = styled.div`
@@ -97,6 +139,12 @@ export const ThinBarsGroup = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 30px;
+  padding-left: 30px;
+  @media (max-width: 480px) {
+    padding-right: 9px;
+    padding-left: 9px;
+  }
 `;
 
 export const ThinBars = styled.button`
@@ -107,6 +155,10 @@ export const ThinBars = styled.button`
   border-radius: 44px;
   opacity: 0.12;
   cursor: pointer;
+  @media (max-width: 480px) {
+    width: 58px;
+    height: 20px;
+  }
 `;
 
 export const ButtonSeeAll = styled.button`
@@ -119,4 +171,8 @@ export const ButtonSeeAll = styled.button`
   font-size: 20px;
   margin-top: 19px;
   cursor: pointer;
+  @media (max-width: 480px) {
+    width: 184px;
+    height: 49px;
+  }
 `;

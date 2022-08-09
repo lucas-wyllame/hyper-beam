@@ -10,7 +10,7 @@ export default function About() {
         <Desc widthDescMobile={"276px"} maxWidthMobile={"276px"}>
           A fagulha de amor aos games em forma de podcast.
         </Desc>
-        <MoreInfs>
+        <MoreInfs fontsize={"14px"}>
           Lorem ipsum dolor sit amet, consectetur a elit. Sed dictum sodales
           rutrum. Praesent eget lobortis purus. Donec a finibus neque. Nu erat a
           cursus sodales. Fusce vel nulla aliquam, convallis odio semper,
