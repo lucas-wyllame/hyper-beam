@@ -13,31 +13,31 @@ import {
 
 export default function HomeBanner() {
   const TitleInsides = [
-    {
-      name: "Hyper Beam 1",
-      numero: 1,
-      foto: "linkgenericodefotourl",
-    },
-    {
-      name: "Hyper Beam 2",
-      numero: 2,
-      foto: "linkgenericodefotourl2",
-    },
-    {
-      name: "Hyper Beam 3",
-      numero: 3,
-      foto: "linkgenericodefotourl2",
-    },
-    {
-      name: "Hyper Beam 4",
-      numero: 4,
-      foto: "linkgenericodefotourl2",
-    },
-    {
-      name: "Hyper Beam 5",
-      numero: 5,
-      foto: "linkgenericodefotourl2",
-    },
+    // {
+    //   name: "Hyper Beam 1",
+    //   numero: 1,
+    //   foto: "linkgenericodefotourl",
+    // },
+    // {
+    //   name: "Hyper Beam 2",
+    //   numero: 2,
+    //   foto: "linkgenericodefotourl2",
+    // },
+    // {
+    //   name: "Hyper Beam 3",
+    //   numero: 3,
+    //   foto: "linkgenericodefotourl2",
+    // },
+    // {
+    //   name: "Hyper Beam 4",
+    //   numero: 4,
+    //   foto: "linkgenericodefotourl2",
+    // },
+    // {
+    //   name: "Hyper Beam 5",
+    //   numero: 5,
+    //   foto: "linkgenericodefotourl2",
+    // },
   ];
 
   return (
@@ -51,7 +51,7 @@ export default function HomeBanner() {
           <button>Play</button>
         </TextsDiv>
         <BigImg></BigImg>
-        <HyperCards>
+        {/* <HyperCards>
           {TitleInsides.map((res) => {
             return (
               // eslint-disable-next-line react/jsx-key
@@ -72,7 +72,7 @@ export default function HomeBanner() {
               </HyperCardGroup>
             );
           })}
-        </HyperCards>
+        </HyperCards> */}
       </Banner>
     </Content>
   );

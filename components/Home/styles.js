@@ -24,16 +24,25 @@ export const Banner = styled.div`
   display: flex;
   align-items: center;
   position: relative;
+  @media (max-width: 480px) {
+    width: 95%;
+    height: 610px;
+    flex-direction: column;
+  }
 `;
 
 export const TextsDiv = styled.div`
   width: 45%;
   height: 40%;
-  background: lightblue;
+  background: lightblue 0% 0% no-repeat padding-box;;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding-left: 34px;
+  @media (max-width: 480px) {
+    width: 100%;
+    border-radius: 44px;
+  }
   button {
     width: 20%;
     height: 25%;
@@ -43,12 +52,17 @@ export const TextsDiv = styled.div`
     color: #a127ff;
     font-size: 25px;
     margin-top: 19px;
-    @media (max-width: 1280px) {
+    @media (max-width: 480px){
+      width: 130px;
+      height: 49px;
       font-size: 20px;
     }
-    @media (max-width: 1080px) {
-      font-size: 15px;
-    }
+    // @media (max-width: 1280px) {
+    //   font-size: 20px;
+    // }
+    // @media (max-width: 1080px) {
+    //   font-size: 15px;
+    // }
   }
 `;
 
@@ -72,16 +86,25 @@ export const TitleInside = styled.div`
     background: gray;
     opacity: 1;
     margin-top: 5px;
+    @media (max-width: 480px) {
+      width: 7px;
+      height: 7px;
+      opacity: 0.6;
+    }
   }
-  @media (max-width: 1366px) {
-    width: 45%;
-  }
-  @media (max-width: 1280px) {
+  @media (max-width: 480px) {
+    width: 62%;
     font-size: 25px;
   }
-  @media (max-width: 1080px) {
-    font-size: 20px;
-  }
+  // @media (max-width: 1366px) {
+  //   width: 45%;
+  // }
+  // @media (max-width: 1280px) {
+  //   font-size: 25px;
+  // }
+  // @media (max-width: 1080px) {
+  //   font-size: 20px;
+  // }
 `;
 
 export const Desc = styled.p`
@@ -90,12 +113,16 @@ export const Desc = styled.p`
   color: #fff;
   font: Poppins;
   font-weight: bold;
-  @media (max-width: 1280px) {
-    font-size: 20px;
+  @media (max-width: 480px) {
+    font-size: 21px;
+    width: 262px;
   }
-  @media (max-width: 1080px) {
-    font-size: 15px;
-  }
+  // @media (max-width: 1280px) {
+  //   font-size: 20px;
+  // }
+  // @media (max-width: 1080px) {
+  //   font-size: 15px;
+  // }
 `;
 
 export const BigImg = styled.img`
@@ -105,6 +132,11 @@ export const BigImg = styled.img`
   height: 513px;
   right: 80px;
   bottom: 0;
+  @media (max-width: 480px) {
+    width: 329px;
+    height: 317px;
+    right: 14px;
+  }
 `;
 
 export const HyperCards = styled.div`
