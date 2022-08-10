@@ -5,7 +5,7 @@ export default function AvailablePlats() {
   const PlatsLinks = [
     {
       name: "Google Podcast",
-      url: "https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy82ZmM3MWFjYy9wb2RjYXN0L3Jzcw?sa=X&ved=0CAIQ9sEGahcKEwjY-_yB8bD5AhUAAAAAHQAAAAAQRQ",
+      url: "https://bit.ly/3QiAwf6",
       width: "196px",
       height: "196px",
       widthIcon: "98px",
@@ -14,7 +14,7 @@ export default function AvailablePlats() {
     },
     {
       name: "Spotify",
-      url: "https://open.spotify.com/show/5a9RaVxeNAn1zZezcY74b7?si=e2da5b48867145f2&nd=1",
+      url: "https://spoti.fi/3QbrMHI",
       width: "274px",
       height: "274px",
       widthHover: "288px",
@@ -28,7 +28,7 @@ export default function AvailablePlats() {
     },
     {
       name: "Pocket Casts",
-      url: "https://anchor.fm/hyper-beam",
+      url: "https://bit.ly/3PgAZ0e",
       width: "196px",
       height: "196px",
       widthIcon: "98px",
@@ -76,7 +76,7 @@ export default function AvailablePlats() {
         })}
       </Plats>
       <PlatsButton
-        href="https://podcastaddict.com/podcast/3670417"
+        href="https://bit.ly/3Qe9421"
         target="_blank"
         rel="noreferrer"
       >
