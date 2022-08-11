@@ -99,7 +99,7 @@ export const TitleInside = styled.div`
 `;
 
 export const IconAndButtons = styled.div`
-  width: 35%;
+  width: 36%;
   height: auto;
   display: flex;
   justify-content: space-between;
@@ -171,6 +171,11 @@ export const ButtonSeeAll = styled.button`
   font-size: 20px;
   margin-top: 19px;
   cursor: pointer;
+  :hover{
+    width: 161px;
+    height: 51px;
+    text-shadow: 0px 3px 6px #FF00C47A;
+  }
   @media (max-width: 480px) {
     width: 184px;
     height: 49px;

@@ -44,14 +44,19 @@ export const TextsDiv = styled.div`
     border-radius: 44px;
   }
   button {
-    width: 20%;
-    height: 25%;
+    width: 17.5%;
+    height: 28%;
     background: #ffe747 0% 0% no-repeat padding-box;
     border-radius: 44px;
     border: none;
     color: #a127ff;
-    font-size: 25px;
-    margin-top: 19px;
+    font-size: 21px;
+    :hover{
+      width: 18%;
+      height: 28.5%;
+      text-shadow: 0px 3px 6px #FF00C47A;
+    }
+
     @media (max-width: 480px){
       width: 130px;
       height: 49px;
@@ -109,7 +114,7 @@ export const TitleInside = styled.div`
 
 export const Desc = styled.p`
   font-size: 25px;
-  margin: 10px 0;
+  margin:  0 0 21px 0;
   color: #fff;
   font: Poppins;
   font-weight: bold;

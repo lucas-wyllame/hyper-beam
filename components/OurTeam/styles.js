@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-width: 100%;
+  width: 100%;
   height: 716px;
   background: #1b1b36;
   display: flex;
@@ -16,7 +16,7 @@ width: 100%;
 `;
 
 export const GlobalPeoples = styled.div`
-width: 60%;
+  width: 60%;
   height: 343px;
   display: flex;
   flex-direction: row;
@@ -33,7 +33,7 @@ width: 60%;
 `;
 
 export const Peoples = styled.div`
-width: 285px;
+  width: 285px;
   heigth: auto;
   background: #1b1b36;
   display: flex;
@@ -45,10 +45,16 @@ width: 285px;
 `;
 
 export const CardsOurTeam = styled.div`
-width: 285px;
+  width: 285px;
   height: 285px;
-  background: purple;
+  background: #9697c7;
   border-radius: 20px;
+  margin-bottom: 20px;
+  :hover{
+    width: 293px;
+    height: 293px;
+    background: yellow;
+  }
 `;
 
 export const NameCasters = styled.label`

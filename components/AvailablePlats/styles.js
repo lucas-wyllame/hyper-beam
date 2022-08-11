@@ -94,4 +94,8 @@ export const PlatsButton = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
+  :hover{
+    color: #11122D;
+    background: #fff;
+  }
 `;
