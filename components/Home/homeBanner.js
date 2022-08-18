@@ -9,7 +9,9 @@ import {
   HyperCards,
   HyperCardGroup,
   HyperText,
+  Carousel
 } from "./styles";
+import Slider from "react-slick";
 
 export default function HomeBanner() {
   const TitleInsides = [
@@ -38,7 +40,19 @@ export default function HomeBanner() {
       numero: 5,
       foto: "linkgenericodefotourl2",
     },
+    {
+      name: "Hyper Beam 6",
+      numero: 5,
+      foto: "linkgenericodefotourl2",
+    },
   ];
+  var carousel = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+  };
 
   return (
     <Content>
@@ -52,26 +66,28 @@ export default function HomeBanner() {
         </TextsDiv>
         <BigImg></BigImg>
         <HyperCards>
-          {TitleInsides.map((res) => {
-            return (
-              // eslint-disable-next-line react/jsx-key
-              <HyperCardGroup
-                bottom1500={"-27px"}
-                bottom1280={"37px"}
-                bottom1080={"13px"}
-                bottom925={"7px"}
-                bottom760={"4px"}
-              >
-                <HyperCard
-                  width={"100%"}
-                  height={"85%"}
-                  name={res.name}
-                  numero={res.numero}
-                ></HyperCard>
-                <HyperText>Hyper Beam ● 01</HyperText>
-              </HyperCardGroup>
-            );
-          })}
+            <Slider style={{ width: "1500px" }} {...carousel}>
+              {TitleInsides.map((res) => {
+                return (
+                  // eslint-disable-next-line react/jsx-key
+                  <HyperCardGroup
+                    bottom1500={"-27px"}
+                    bottom1280={"37px"}
+                    bottom1080={"13px"}
+                    bottom925={"7px"}
+                    bottom760={"4px"}
+                  >
+                    <HyperCard
+                      width={"78%"}
+                      height={"80%"}
+                      name={res.name}
+                      numero={res.numero}
+                    ></HyperCard>
+                    <HyperText>{res.name}</HyperText>
+                  </HyperCardGroup>
+                );
+              })}
+            </Slider>
         </HyperCards>
       </Banner>
     </Content>

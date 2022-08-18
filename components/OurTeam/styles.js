@@ -10,7 +10,7 @@ export const Content = styled.div`
   flex-direction: column;
   padding-top: 70px;
   @media (max-width: 480px) {
-    height: 1366px;
+    height: 1400px;
     justify-content: flex-start;
   }
 `;
@@ -33,12 +33,10 @@ export const GlobalPeoples = styled.div`
 `;
 
 export const Peoples = styled.div`
-  width: 285px;
-  heigth: auto;
-  background: #1b1b36;
+  width: 1000px;
+  height: auto;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   @media (max-width: 480px) {
     margin: 0 0 30px 0;
   }
@@ -50,7 +48,7 @@ export const CardsOurTeam = styled.div`
   background: #9697c7;
   border-radius: 20px;
   margin-bottom: 20px;
-  :hover{
+  :hover {
     width: 293px;
     height: 293px;
     background: yellow;
@@ -108,4 +106,24 @@ export const TeamButtonMobile = styled.div`
     background: #a127ff;
     border-radius: 50px;
   }
+`;
+
+export const Carousel = styled.div`
+  width: 1000px;
+  height: 370px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const LeftArrow = styled.img`
+  width: 39px;
+  height:39px;
+  background: red;
+`;
+
+export const RightArrow = styled.img`
+  width: 39px;
+  height:39px;
+  background: red;
 `;

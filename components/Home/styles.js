@@ -161,13 +161,12 @@ export const HyperCards = styled.div`
 
 export const HyperCardGroup = styled.div`
   width: 15%;
-  height: 220px;
+  height: 260px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
   background: green;
-
   // @media (max-width: 1510px) {
   // }
   // @media (max-width: 1280px) {
@@ -191,4 +190,13 @@ export const HyperText = styled.label`
   @media (max-width: 1080px) {
     font-size: 10px;
   }
+`;
+
+export const Carousel = styled.div`
+  width: 1500px;
+  height: 370px;
+  background: green;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
 `;

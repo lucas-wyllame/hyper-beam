@@ -6,6 +6,7 @@ import OurTeam from "../components/OurTeam";
 import AvailablePlats from "../components/AvailablePLats";
 import Footer from "../components/Footer/footer";
 
+
 export default function Home() {
   return (
     <>
