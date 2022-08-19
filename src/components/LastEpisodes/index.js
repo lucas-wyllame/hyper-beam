@@ -1,5 +1,5 @@
-import { Title, Desc, MoreInfs } from "./../Global/globalStyles";
-import HyperCard from "./../HyperCard/hyperCard";
+import { Title, Desc, MoreInfs } from "../Global/globalStyles";
+import HyperCard from "../HyperCard/hyperCard";
 import { Icon } from "../Footer/styles";
 import {
   Content,

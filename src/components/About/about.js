@@ -1,4 +1,4 @@
-import { Title, Desc, MoreInfs } from "./../Global/globalStyles";
+import { Title, Desc, MoreInfs } from "../Global/globalStyles";
 import { Content, LeftImage, TextDiv } from "./styles";
 
 export default function About() {
