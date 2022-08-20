@@ -27,15 +27,15 @@ function PrevArrow(props) {
   );
 }
 
-function NextArrow (props) {
+function NextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <RightArrow
-    className={className}
-    src= "./icon/Grupo22.svg"
-    onClick={onClick}
+      className={className}
+      src="./icon/Grupo22.svg"
+      onClick={onClick}
     />
-  )
+  );
 }
 
 export default function OurTeam() {
@@ -51,7 +51,8 @@ export default function OurTeam() {
     { linkimg: "diretorio da imagem1" },
     { linkimg: "diretorio da imagem2" },
   ];
-  var carousel = {
+
+  const carousel = {
     dots: false,
     infinite: true,
     speed: 500,
@@ -59,6 +60,16 @@ export default function OurTeam() {
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    resposive: [
+      {
+        breakpoint: 375,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          vertical: true,
+        },
+      },
+    ],
   };
 
   return (
