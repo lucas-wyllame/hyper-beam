@@ -7,13 +7,14 @@ import {
   Desc,
   BigImg,
   HyperCards,
+  ListHomeBanner,
   HyperCardGroup,
   HyperText,
-  Carousel
 } from "./styles";
 import Slider from "react-slick";
 
 export default function HomeBanner() {
+  var slider = ('.slider');
   const TitleInsides = [
     {
       name: "Hyper Beam 1",
@@ -46,12 +47,24 @@ export default function HomeBanner() {
       foto: "linkgenericodefotourl2",
     },
   ];
-  var carousel = {
+  var settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: slider.length > 1?true: false,
+          
+        }
+      }
+
+    ]
   };
 
   return (
@@ -65,21 +78,15 @@ export default function HomeBanner() {
           <button>Play</button>
         </TextsDiv>
         <BigImg></BigImg>
-        <HyperCards>
-            <Slider style={{ width: "1500px" }} {...carousel}>
+        <ListHomeBanner>
+            <Slider {...settings}>
               {TitleInsides.map((res) => {
                 return (
                   // eslint-disable-next-line react/jsx-key
-                  <HyperCardGroup
-                    bottom1500={"-27px"}
-                    bottom1280={"37px"}
-                    bottom1080={"13px"}
-                    bottom925={"7px"}
-                    bottom760={"4px"}
-                  >
+                  <HyperCardGroup>
                     <HyperCard
-                      width={"78%"}
-                      height={"80%"}
+                      width={"196px"}
+                      height={"196px"}
                       name={res.name}
                       numero={res.numero}
                     ></HyperCard>
@@ -88,8 +95,8 @@ export default function HomeBanner() {
                 );
               })}
             </Slider>
-        </HyperCards>
-      </Banner>
-    </Content>
+        </ListHomeBanner>
+       </Banner>
+     </Content>
   );
 }

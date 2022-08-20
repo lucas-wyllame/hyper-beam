@@ -34,7 +34,7 @@ export const Banner = styled.div`
 export const TextsDiv = styled.div`
   width: 45%;
   height: 40%;
-  background: lightblue 0% 0% no-repeat padding-box;;
+  background: lightblue 0% 0% no-repeat padding-box;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -51,23 +51,17 @@ export const TextsDiv = styled.div`
     border: none;
     color: #a127ff;
     font-size: 21px;
-    :hover{
+    :hover {
       width: 18%;
       height: 28.5%;
-      text-shadow: 0px 3px 6px #FF00C47A;
+      text-shadow: 0px 3px 6px #ff00c47a;
     }
 
-    @media (max-width: 480px){
+    @media (max-width: 480px) {
       width: 130px;
       height: 49px;
       font-size: 20px;
     }
-    // @media (max-width: 1280px) {
-    //   font-size: 20px;
-    // }
-    // @media (max-width: 1080px) {
-    //   font-size: 15px;
-    // }
   }
 `;
 
@@ -101,20 +95,11 @@ export const TitleInside = styled.div`
     width: 62%;
     font-size: 25px;
   }
-  // @media (max-width: 1366px) {
-  //   width: 45%;
-  // }
-  // @media (max-width: 1280px) {
-  //   font-size: 25px;
-  // }
-  // @media (max-width: 1080px) {
-  //   font-size: 20px;
-  // }
 `;
 
 export const Desc = styled.p`
   font-size: 25px;
-  margin:  0 0 21px 0;
+  margin: 0 0 21px 0;
   color: #fff;
   font: Poppins;
   font-weight: bold;
@@ -122,12 +107,6 @@ export const Desc = styled.p`
     font-size: 21px;
     width: 262px;
   }
-  // @media (max-width: 1280px) {
-  //   font-size: 20px;
-  // }
-  // @media (max-width: 1080px) {
-  //   font-size: 15px;
-  // }
 `;
 
 export const BigImg = styled.img`
@@ -144,44 +123,30 @@ export const BigImg = styled.img`
   }
 `;
 
-export const HyperCards = styled.div`
-  width: 85%;
+export const ListHomeBanner = styled.div`
+  width: 70%;
   height: auto;
   position: absolute;
-  bottom: -30%;
-  display: flex;
+  bottom: -70px;
+  left: 50px;
   background: blue;
-  justify-content: space-between;
-  bottom: -165px;
-  left: 7.5%;
-  @media (max-width: 1080px) {
-    bottom: -20%;
+  @media (max-width: 480px) {
+    left: 60px;
+    bottom: -150px;
   }
 `;
 
 export const HyperCardGroup = styled.div`
-  width: 15%;
-  height: 260px;
-  display: flex;
+  height: 220px;
+  display: flex !important;
+  align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
   background: green;
-  // @media (max-width: 1510px) {
-  // }
-  // @media (max-width: 1280px) {
-  // }
-  // @media (max-width: 1080px) {
-  //   height: 120px;
-  // }
-  // @media (max-width: 925px) {
-  // }
-  // @media (max-width: 760px) {
-  // }
 `;
 
 export const HyperText = styled.label`
-  width: 70%;
+  width: 60%;
   font-size: 17px;
   color: #9a8dac;
   @media (max-width: 1280px) {
