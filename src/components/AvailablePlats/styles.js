@@ -82,10 +82,10 @@ export const PlatsTitle = styled.a`
 `;
 
 export const PlatsButton = styled.a`
-  font-size: 20px;
-  color: #fff;
   width: 247px;
   height: 49px;
+  font-size: 20px;
+  color: #fff;
   border-radius: 44px;
   background: none;
   border: 1px solid #ffffff;
@@ -94,8 +94,8 @@ export const PlatsButton = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  :hover{
-    color: #11122D;
+  :hover {
+    color: #11122d;
     background: #fff;
   }
 `;

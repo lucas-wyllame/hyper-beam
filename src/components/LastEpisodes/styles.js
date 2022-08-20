@@ -64,9 +64,9 @@ export const TextsDivEp = styled.div`
 `;
 
 export const TitleInside = styled.div`
+  width: 43%;
   font-size: 38px;
   margin: 10px 0;
-  width: 43%;
   color: #fff;
   font: Poppins;
   font-weight: bold;
@@ -171,10 +171,10 @@ export const ButtonSeeAll = styled.button`
   font-size: 20px;
   margin-top: 19px;
   cursor: pointer;
-  :hover{
+  :hover {
     width: 161px;
     height: 51px;
-    text-shadow: 0px 3px 6px #FF00C47A;
+    text-shadow: 0px 3px 6px #ff00c47a;
   }
   @media (max-width: 480px) {
     width: 184px;
