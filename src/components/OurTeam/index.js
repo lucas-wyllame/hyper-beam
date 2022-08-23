@@ -75,7 +75,7 @@ export default function OurTeam() {
   return (
     <Content>
       <Title margin={"-40px 0 0px 0"}>Nosso time</Title>
-      <Desc textAlignDescMobile={"center"} margin={"2px"}>
+      <Desc maxWidth={"50%"} textAlignDescMobile={"center"} margin={"2px"}>
         A equipe que trabalha no Hyper Beam
       </Desc>
       <GlobalPeoples>

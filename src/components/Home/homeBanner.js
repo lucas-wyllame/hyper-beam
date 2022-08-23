@@ -14,7 +14,7 @@ import {
 import Slider from "react-slick";
 
 export default function HomeBanner() {
-  var slider = ('.slider');
+  var slider = ".slider";
   const TitleInsides = [
     {
       name: "Hyper Beam 1",
@@ -59,19 +59,17 @@ export default function HomeBanner() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: slider.length > 1?true: false,
-          
-        }
-      }
-
-    ]
+          infinite: slider.length > 1 ? true : false,
+        },
+      },
+    ],
   };
 
   return (
     <Content>
       <Banner>
         <TextsDiv>
-          <TitleInside>
+          <TitleInside margin={"10px 0"}>
             Hyper Beam <div /> <span>03</span>
           </TitleInside>
           <Desc>Pokémon Unite e The World Ends with You</Desc>
@@ -79,24 +77,24 @@ export default function HomeBanner() {
         </TextsDiv>
         <BigImg></BigImg>
         <ListHomeBanner>
-            <Slider {...settings}>
-              {TitleInsides.map((res) => {
-                return (
-                  // eslint-disable-next-line react/jsx-key
-                  <HyperCardGroup>
-                    <HyperCard
-                      width={"196px"}
-                      height={"196px"}
-                      name={res.name}
-                      numero={res.numero}
-                    ></HyperCard>
-                    <HyperText>{res.name}</HyperText>
-                  </HyperCardGroup>
-                );
-              })}
-            </Slider>
+          <Slider {...settings}>
+            {TitleInsides.map((res) => {
+              return (
+                // eslint-disable-next-line react/jsx-key
+                <HyperCardGroup>
+                  <HyperCard
+                    width={"196px"}
+                    height={"196px"}
+                    name={res.name}
+                    numero={res.numero}
+                  ></HyperCard>
+                  <HyperText>{res.name}</HyperText>
+                </HyperCardGroup>
+              );
+            })}
+          </Slider>
         </ListHomeBanner>
-       </Banner>
-     </Content>
+      </Banner>
+    </Content>
   );
 }

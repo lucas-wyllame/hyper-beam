@@ -16,7 +16,7 @@ export const Title = styled.p`
 export const Desc = styled.h1`
   font-size: 28px;
   color: #9a8dac;
-  max-width: 50%;
+  max-width: ${(props) => props.maxWidth};
   font-weight: 500;
   @media (max-width: 480px) {
     font-size: 16px;
@@ -29,6 +29,7 @@ export const Desc = styled.h1`
 
 export const MoreInfs = styled.h2`
   width: ${(props) => props.width};
+  height: 143px;
   font-size: 25px;
   color: #ffffff;
   font-weight: 500;

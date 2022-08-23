@@ -19,7 +19,9 @@ export default function LastEpisodes() {
   return (
     <Content>
       <Title margin={"0 0 0 18px"}>Episódios Recentes</Title>
-      <Desc margin={"0 0 30px 18px"}>Acompanhe nosso podcast e seus episódios</Desc>
+      <Desc maxWidth={"50%"} margin={"0 0 30px 18px"}>
+        Acompanhe nosso podcast e seus episódios
+      </Desc>
       <ListPodcasts>
         <Background>
           <CardAndText>
@@ -32,7 +34,7 @@ export default function LastEpisodes() {
               height480={"253px"}
             ></HyperCard>
             <TextsDivEp>
-              <TitleInside>
+              <TitleInside margin={"10px 0"}>
                 Hyper Beam <div /> <span>03</span>
               </TitleInside>
               <MoreInfs fontsize={"18px"} width={"694px"}>
@@ -43,13 +45,17 @@ export default function LastEpisodes() {
               </MoreInfs>
             </TextsDivEp>
           </CardAndText>
-          <IconAndButtons>
-            <Icon
-            widthIcon={"40px"}
-            heightIcon={"40px"}
-            >Control</Icon>
-            <ButtonsEp widthButton={"202px"} widthMobile={"152px"}>Pokémon Unite</ButtonsEp>
-            <ButtonsEp widthButton={"293px"} widthMobile={"219px"}> World Ends with You </ButtonsEp>
+          <IconAndButtons width={"36%"} margin={"10px 10px 41px 60px"}>
+            <Icon widthIcon={"40px"} heightIcon={"40px"}>
+              Control
+            </Icon>
+            <ButtonsEp widthButton={"202px"} widthMobile={"152px"}>
+              Pokémon Unite
+            </ButtonsEp>
+            <ButtonsEp widthButton={"293px"} widthMobile={"219px"}>
+              {" "}
+              World Ends with You{" "}
+            </ButtonsEp>
           </IconAndButtons>
         </Background>
         <ThinBarsGroup>

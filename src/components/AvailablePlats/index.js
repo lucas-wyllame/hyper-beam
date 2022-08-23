@@ -1,5 +1,13 @@
 import { Title, Desc } from "../Global/globalStyles";
-import { Content, Plats, PlatsCards, PlatsIcons, PlatsGroup, PlatsTitle, PlatsButton} from "./styles";
+import {
+  Content,
+  Plats,
+  PlatsCards,
+  PlatsIcons,
+  PlatsGroup,
+  PlatsTitle,
+  PlatsButton,
+} from "./styles";
 
 export default function AvailablePlats() {
   const PlatsLinks = [
@@ -39,7 +47,7 @@ export default function AvailablePlats() {
   return (
     <Content>
       <Title>Plataformas disponíveis</Title>
-      <Desc>Onde encontrar nosso podcast para escutar</Desc>
+      <Desc maxWidth={"50%"}>Onde encontrar nosso podcast para escutar</Desc>
       <Plats>
         {PlatsLinks.map((res) => {
           return (
