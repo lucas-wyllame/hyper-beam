@@ -34,9 +34,9 @@ export const MoreInfs = styled.h2`
   color: #ffffff;
   font-weight: 500;
   @media (max-width: 480px) {
-    font-size: ${(props) =>props.fontsize};
-    height: 125px;
-    width: 324px;
+    width: ${(props) => props.widthMobile};
+    height: ${(props) => props.heightMobile};
+    font-size: ${(props) => props.fontsize};
+    padding-top: ${(props) => props.paddingTop};
   }
 `;
-

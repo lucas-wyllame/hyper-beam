@@ -14,6 +14,9 @@ const CommentBox = styled.div`
   background: red;
   font-size: 200px;
   color: #fff;
+  @media (max-width: 480px) {
+    font-size: 45px;
+  }
 `;
 
 export default function Comments() {

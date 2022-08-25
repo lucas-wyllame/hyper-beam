@@ -108,10 +108,12 @@ export const IconAndButtons = styled.div`
   @media (max-width: 480px) {
     flex-direction: column;
     width: 100%;
-    height: 191px;
+    height: ${(props) => props.heightMobile};
     margin-left: 0;
     margin-bottom: 0;
     padding-left: 20px;
+    justify-content: ${(props) => props.justifyContent};
+    align-items: ${(props) => props.alignItems};
   }
 `;
 

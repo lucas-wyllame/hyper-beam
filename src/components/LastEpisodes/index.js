@@ -29,15 +29,15 @@ export default function LastEpisodes() {
               position={"static"}
               width={"337px"}
               height={"337px"}
-              margin={"-26px 0 0 60px"}
-              width480={"253px"}
-              height480={"253px"}
+              margin={"-26px 0 0 53px"}
+              widthMobile={"253px"}
+              heightMobile={"253px"}
             ></HyperCard>
             <TextsDivEp>
               <TitleInside margin={"10px 0"}>
                 Hyper Beam <div /> <span>03</span>
               </TitleInside>
-              <MoreInfs fontsize={"18px"} width={"694px"}>
+              <MoreInfs widthMobile={"324px"} heightMobile={"174px"} fontsize={"18px"} width={"694px"}>
                 Lorem ipsum dolor sit amet, consectetur a elit. Sed dictum
                 sodales rutrum. Praesent eget lobortis purus. Donec a finibus
                 neque. Nu erat a cursus sodales. Fusce vel nulla aliquam,
@@ -45,7 +45,12 @@ export default function LastEpisodes() {
               </MoreInfs>
             </TextsDivEp>
           </CardAndText>
-          <IconAndButtons width={"36%"} margin={"10px 10px 41px 60px"}>
+          <IconAndButtons
+            width={"36%"}
+            margin={"10px 10px 41px 60px"}
+            justifyContent={"space-between"}
+            heightMobile={"191px"}
+          >
             <Icon widthIcon={"40px"} heightIcon={"40px"}>
               Control
             </Icon>

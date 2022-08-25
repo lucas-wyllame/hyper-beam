@@ -85,6 +85,7 @@ export default function HomeBanner() {
                   <HyperCard
                     width={"196px"}
                     height={"196px"}
+                    widthMobile={"80%"}
                     name={res.name}
                     numero={res.numero}
                   ></HyperCard>

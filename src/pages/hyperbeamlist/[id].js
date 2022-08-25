@@ -1,14 +1,15 @@
 import React from "react";
 import { useRouter } from "next/dist/client/router";
+import { ListPodcast } from "./ListPodcast";
 
-export default function ListPodcasts() {
+export default function HyperbeamList() {
 
     const router = useRouter();
     const parametro = router.query.id;
 
     return(
         <>
-        {parametro === "podcasts"?<h1> Lista de podcast</h1>
+        {parametro === "podcasts"? <ListPodcast />
         :null
         }
         </>
