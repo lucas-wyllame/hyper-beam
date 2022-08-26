@@ -9,23 +9,33 @@ const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 480px) {
+    height: 3340px;
+  }
 `;
 
 const Carrossel = styled.div`
   width: 100%;
   height: 312px;
-  // background: blue;
+  background: blue;
   display: flex;
   justify-content: space-between;
   text-aling: center;
+  @media (max-width: 480px) {
+    height: 270px;
+  }
 `;
 
 const PodcastsList = styled.div`
   width: 1062px;
   height: 936px;
-  // background: red;
+  background: red;
   display: flex;
   flex-direction: column;
+  @media (max-width: 480px) {
+    width: 225px;
+    height: 3240px;
+  }
 `;
 const HyperText = styled.label`
   width: 60%;
@@ -35,6 +45,7 @@ const HyperText = styled.label`
 `;
 
 export default function Carousel() {
+  var slider = ".slider";
   const TextInside = [
     {
       name: "Hyper Beam 1",
@@ -166,6 +177,17 @@ export default function Carousel() {
     speed: 500,
     rows: 3,
     slidesPerRow: 1,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          rows: 12,
+          infinite: slider.length > 1 ? true : false,
+          centerMode: false,
+        },
+      },
+    ],
   };
 
   return (

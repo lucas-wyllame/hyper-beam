@@ -4,8 +4,8 @@ import { PlatsButton } from "../../components/AvailablePlats/styles";
 
 const Content = styled.div`
   width: 100%;
-  height: 640px;
-  // background: red;
+  height: 725px;
+  background: red;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,7 +31,7 @@ const PlaySpotify = styled.div`
 const TextPlats = styled.div`
   width: 50%;
   height: 285px;
-  // background: pink;
+  background: pink;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -44,7 +44,7 @@ const TextPlats = styled.div`
 const OtherPlats = styled.div`
   width: 83%;
   height: 53%;
-  // background: green;
+  background: green;
   display: flex;
   justify-content: space-between;
   @media (max-width: 480px) {
@@ -56,7 +56,7 @@ const OtherPlats = styled.div`
 const OtherPlatsMid = styled.div`
   width: auto;
   height: 150px;
-  // background: blue;
+  background: blue;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

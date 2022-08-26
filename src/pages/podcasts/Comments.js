@@ -6,13 +6,15 @@ const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  background: yellow;
+  margin-top: 54px;
 `;
 
 const CommentBox = styled.div`
   width: 85%;
   height: 80%;
   background: red;
-  font-size: 200px;
+  font-size: 150px;
   color: #fff;
   @media (max-width: 480px) {
     font-size: 45px;

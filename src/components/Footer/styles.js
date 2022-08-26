@@ -62,7 +62,7 @@ export const Icon = styled.div`
   margin-right: 16px;
   color: #ffffff;
   @media (max-width: 480px) {
-    width: ${(props) =>props.widthIcon};
-    height: ${(props) =>props.heightIcon};
+    width: ${(props) => props.widthIcon};
+    height: ${(props) => props.heightIcon};
   }
 `;
