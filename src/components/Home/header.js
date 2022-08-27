@@ -1,5 +1,9 @@
-import { Top } from "./styles";
+import { Top, LogoTop } from "./styles";
 
 export default function Header() {
-  return <Top />;
+  return (
+    <Top>
+      <LogoTop></LogoTop>
+    </Top>
+  );
 }

@@ -14,8 +14,15 @@ import {
   ThinBars,
   ButtonSeeAll,
 } from "./styles";
+import { useRouter } from 'next/router'
 
 export default function LastEpisodes() {
+  const router = useRouter()
+
+  const handleClick = (e) => {
+    e.preventDefault()
+    router.push("/podcasts")
+  }
   return (
     <Content>
       <Title margin={"0 0 0 18px"}>Episódios Recentes</Title>
@@ -59,7 +66,7 @@ export default function LastEpisodes() {
           <ThinBars></ThinBars>
           <ThinBars></ThinBars>
         </ThinBarsGroup>
-        <ButtonSeeAll>Ver todos</ButtonSeeAll>
+        <ButtonSeeAll onClick={handleClick}>Ver todos</ButtonSeeAll>
       </ListPodcasts>
     </Content>
   );

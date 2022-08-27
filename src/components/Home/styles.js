@@ -3,9 +3,18 @@ import styled from "styled-components";
 export const Top = styled.div`
   width: 100%;
   height: 66px;
-  margin-bottom: 40px;
   background: #11122d 0% 0% no-repeat padding-box;
   box-shadow: 0px 6px 16px #0000004f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const LogoTop = styled.div`
+  width: 53px;
+  height: 53px;
+  background: white;
+  border-radius: 50%;
 `;
 
 export const Content = styled.div`
@@ -14,6 +23,10 @@ export const Content = styled.div`
   margin: 20px 0;
   display: flex;
   justify-content: center;
+  margin-top: 40px;
+  @media (max-width: 480px) {
+    height: 750px;
+  }
 `;
 
 export const Banner = styled.div`
@@ -110,7 +123,7 @@ export const Desc = styled.p`
 `;
 
 export const BigImg = styled.img`
-  width: 35%;
+  width: 30%;
   position: absolute;
   background: yellow;
   height: 513px;
@@ -124,13 +137,14 @@ export const BigImg = styled.img`
 `;
 
 export const ListHomeBanner = styled.div`
-  width: 70%;
+  width: 90%;
   height: auto;
   position: absolute;
   bottom: -70px;
   left: 50px;
   background: blue;
   @media (max-width: 480px) {
+    width: 68%;
     left: 60px;
     bottom: -150px;
   }
@@ -149,12 +163,6 @@ export const HyperText = styled.label`
   width: 60%;
   font-size: 17px;
   color: #9a8dac;
-  @media (max-width: 1280px) {
-    font-size: 12px;
-  }
-  @media (max-width: 1080px) {
-    font-size: 10px;
-  }
 `;
 
 export const Carousel = styled.div`

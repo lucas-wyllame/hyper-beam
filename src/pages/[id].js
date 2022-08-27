@@ -1,5 +1,8 @@
 import React from "react";
 import { useRouter } from "next/dist/client/router";
+import Header from "../components/Home/header";
+import Carousel from "../components/Caroussel";
+import Footer from "../components/Footer/footer"
 
 export default function Podcasts() {
 
@@ -8,9 +11,12 @@ export default function Podcasts() {
 
     return(
         <>
-        {parametro === "podcasts"?<h1> Todos os podcasts</h1>
+        <Header />
+      
+        {parametro === "podcasts"? <Carousel />
         :null
-        }
+    }
+    <Footer />
         </>
     )
 }
