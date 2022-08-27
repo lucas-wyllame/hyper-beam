@@ -7,9 +7,11 @@ export default function Podcasts() {
     const router = useRouter();
     const parametro = router.query.id;
 
+    const nome = "hyperbeam1"
+
     return(
         <>
-        {parametro === "hyperbeam1"?<Post/>
+        {parametro === nome?<Post/>
         :null
         }
         </>
