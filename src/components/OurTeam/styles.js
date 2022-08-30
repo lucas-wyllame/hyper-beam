@@ -10,7 +10,7 @@ export const Content = styled.div`
   flex-direction: column;
   padding-top: 70px;
   @media (max-width: 480px) {
-    height: 1400px;
+    height: 600px;
     justify-content: flex-start;
   }
 `;
@@ -19,7 +19,6 @@ export const GlobalPeoples = styled.div`
   width: 60%;
   height: 343px;
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   margin-top: 69px;
   align-items: center;
@@ -32,14 +31,18 @@ export const GlobalPeoples = styled.div`
   }
 `;
 
-export const Peoples = styled.div`
-  height: 370px;
-  display: flex;
-`;
-
 export const Group = styled.div`
   width: 90%;
   height: auto;
+  @media (max-width: 480px) {
+    width: 80%;
+    height: 500px;
+  }
+`;
+
+export const Peoples = styled.div`
+  height: 370px;
+  display: flex;
 `;
 
 export const CardsOurTeam = styled.div`
@@ -52,6 +55,10 @@ export const CardsOurTeam = styled.div`
     width: 293px;
     height: 293px;
     background: yellow;
+  }
+  @media (max-width: 480px) {
+    width: 253px;
+    height: 253px;
   }
 `;
 

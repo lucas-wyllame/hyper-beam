@@ -136,11 +136,11 @@ export const BigImg = styled.img`
 `;
 
 export const ListHomeBanner = styled.div`
-  width: 90%;
+  width: 64%;
   height: auto;
   position: absolute;
-  bottom: -70px;
-  left: 50px;
+  bottom: -140px;
+  left: 18%;
   background: blue;
   @media (max-width: 480px) {
     width: 68%;
@@ -151,11 +151,11 @@ export const ListHomeBanner = styled.div`
 
 export const HyperCardGroup = styled.div`
   height: 220px;
+  background: green;
   display: flex !important;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  background: green;
 `;
 
 export const HyperText = styled.label`

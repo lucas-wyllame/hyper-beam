@@ -7,10 +7,10 @@ export default function About() {
       <LeftImage></LeftImage>
       <TextDiv>
         <Title widthMobile={"294px"}>Somos o Hyper Beam</Title>
-        <Desc widthDescMobile={"276px"} maxWidthMobile={"276px"}>
+        <Desc maxWidth={"50%"} widthDescMobile={"276px"} maxWidthMobile={"276px"}>
           A fagulha de amor aos games em forma de podcast.
         </Desc>
-        <MoreInfs fontsize={"14px"}>
+        <MoreInfs widthMobile={"324px"} heightMobile={"99px"} fontsize={"14px"}>
           Lorem ipsum dolor sit amet, consectetur a elit. Sed dictum sodales
           rutrum. Praesent eget lobortis purus. Donec a finibus neque. Nu erat a
           cursus sodales. Fusce vel nulla aliquam, convallis odio semper,

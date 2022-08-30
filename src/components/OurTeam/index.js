@@ -45,8 +45,9 @@ export default function OurTeam() {
     { name: "Leandro", surname: "Radnas", func: "Host e Caster" },
     { name: "Leo", surname: "Dratini", func: "Caster" },
     { name: "Davi", surname: "Hayato", func: "Caster" },
-    { name: "LuKAS", surname: "SuP", func: "Dev" },
+    { name: "Lucas", surname: "SuP", func: "Dev" },
     { name: "Gabriel", surname: "C4rds", func: "Dev" },
+    { name: "Walter", surname: "Com Dablio", func: "Editor" },
   ];
 
   const CarouselButtons = [
@@ -62,9 +63,9 @@ export default function OurTeam() {
     slidesToScroll: 1,
     // nextArrow: <NextArrow />,
     // prevArrow: <PrevArrow />,
-    resposive: [
+    responsive: [
       {
-        breakpoint: 375,
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -92,14 +93,14 @@ export default function OurTeam() {
                 <Peoples>
                   <CardsOurTeam></CardsOurTeam>
                   <NameCasters>
-                      <div>
-                        {res.name}
-                        <span> {res.surname} </span>
-                      </div>
-                    </NameCasters>
-                    <FuncCasters>
-                      <div>{res.func}</div>
-                    </FuncCasters>
+                    <div>
+                      {res.name}
+                      <span> {res.surname} </span>
+                    </div>
+                  </NameCasters>
+                  <FuncCasters>
+                    <div>{res.func}</div>
+                  </FuncCasters>
                 </Peoples>
               );
             })}
