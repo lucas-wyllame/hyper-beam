@@ -1,11 +1,18 @@
 import React from "react";
-
+import Header from "../../components/Home/header";
+import Podcast from "../../components/Podcast"
+import Plats from "../../components/Plats";
+import Comments from "../../components/Comments";
+import Footer from "../../components/Footer/footer"
 
 export function Post() {
-    return(
-        <>
-       <h1>podcast1</h1>
-       <h2>primeiro podcast do hyper beam</h2>
-        </>
-    )
+  return (
+    <>
+      <Header />
+      <Podcast />
+      <Plats />
+      <Comments />
+      <Footer />
+    </>
+  );
 }

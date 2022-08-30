@@ -13,6 +13,7 @@ import {
   Carousel,
   LeftArrow,
   RightArrow,
+  Group,
 } from "./styles";
 import Slider from "react-slick";
 
@@ -39,6 +40,7 @@ function NextArrow(props) {
 }
 
 export default function OurTeam() {
+  var slider = ".slider";
   const listCardsOurTeam = [
     { name: "Leandro", surname: "Radnas", func: "Host e Caster" },
     { name: "Leo", surname: "Dratini", func: "Caster" },
@@ -52,21 +54,21 @@ export default function OurTeam() {
     { linkimg: "diretorio da imagem2" },
   ];
 
-  const carousel = {
+  var settings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    // nextArrow: <NextArrow />,
+    // prevArrow: <PrevArrow />,
     resposive: [
       {
         breakpoint: 375,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          vertical: true,
+          infinite: slider.length > 1 ? true : false,
         },
       },
     ],
@@ -83,20 +85,13 @@ export default function OurTeam() {
           <TeamButton></TeamButton>
         </Buttons> */}
 
-        <Peoples>
-          <Carousel>
-            <Slider style={{ width: "1000px" }} {...carousel}>
-              {listCardsOurTeam.map((res) => {
-                return (
-                  <div
-                    style={{
-                      width: "500px",
-                      height: "500px",
-                      background: "yellow",
-                    }}
-                  >
-                    <CardsOurTeam></CardsOurTeam>
-                    <NameCasters>
+        <Group>
+          <Slider {...settings}>
+            {listCardsOurTeam.map((res) => {
+              return (
+                <Peoples>
+                  <CardsOurTeam></CardsOurTeam>
+                  <NameCasters>
                       <div>
                         {res.name}
                         <span> {res.surname} </span>
@@ -105,12 +100,11 @@ export default function OurTeam() {
                     <FuncCasters>
                       <div>{res.func}</div>
                     </FuncCasters>
-                  </div>
-                );
-              })}
-            </Slider>
-          </Carousel>
-        </Peoples>
+                </Peoples>
+              );
+            })}
+          </Slider>
+        </Group>
 
         {/* <Buttons>
           <TeamButton></TeamButton>

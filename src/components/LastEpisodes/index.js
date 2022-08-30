@@ -50,7 +50,12 @@ export default function LastEpisodes() {
               </MoreInfs>
             </TextsDivEp>
           </CardAndText>
-          <IconAndButtons>
+          <IconAndButtons
+            width={"36%"}
+            margin={"10px 10px 41px 60px"}
+            justifyContent={"space-between"}
+            heightMobile={"191px"}
+          >
             <Icon
             widthIcon={"40px"}
             heightIcon={"40px"}

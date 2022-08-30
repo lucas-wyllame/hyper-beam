@@ -13,6 +13,17 @@ const Content = styled.div`
     height: 3340px;
   }
 `;
+const PodcastsList = styled.div`
+  width: 1062px;
+  height: 936px;
+  background: red;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 480px) {
+    width: 225px;
+    height: 3240px;
+  }
+`;
 
 const CarousselStyled = styled.div`
   width: 100%;
@@ -26,17 +37,6 @@ const CarousselStyled = styled.div`
   }
 `;
 
-const PodcastsList = styled.div`
-  width: 1062px;
-  height: 936px;
-  background: red;
-  display: flex;
-  flex-direction: column;
-  @media (max-width: 480px) {
-    width: 225px;
-    height: 3240px;
-  }
-`;
 const HyperText = styled.label`
   width: 60%;
   font-size: 17px;

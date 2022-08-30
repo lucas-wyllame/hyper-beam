@@ -69,7 +69,6 @@ export const TextsDiv = styled.div`
       height: 28.5%;
       text-shadow: 0px 3px 6px #ff00c47a;
     }
-
     @media (max-width: 480px) {
       width: 130px;
       height: 49px;

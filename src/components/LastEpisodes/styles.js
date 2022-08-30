@@ -66,7 +66,7 @@ export const TextsDivEp = styled.div`
 export const TitleInside = styled.div`
   width: 43%;
   font-size: 38px;
-  margin: 10px 0;
+  margin: ${(props) => props.margin};
   color: #fff;
   font: Poppins;
   font-weight: bold;
@@ -83,7 +83,6 @@ export const TitleInside = styled.div`
       font-size: 29px;
     }
   }
-
   div {
     border-radius: 50%;
     width: 10px;
@@ -99,19 +98,21 @@ export const TitleInside = styled.div`
 `;
 
 export const IconAndButtons = styled.div`
-  width: 36%;
+  width: ${(props) => props.width};
   height: auto;
   display: flex;
   justify-content: space-between;
-  margin-left: 60px;
-  margin-bottom: 41px;
+  margin: ${(props) => props.margin};
+  background: green;
   @media (max-width: 480px) {
     flex-direction: column;
     width: 100%;
-    height: 191px;
+    height: ${(props) => props.heightMobile};
     margin-left: 0;
     margin-bottom: 0;
     padding-left: 20px;
+    justify-content: ${(props) => props.justifyContent};
+    align-items: ${(props) => props.alignItems};
   }
 `;
 
