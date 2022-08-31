@@ -163,12 +163,3 @@ export const HyperText = styled.label`
   font-size: 17px;
   color: #9a8dac;
 `;
-
-export const Carousel = styled.div`
-  width: 1500px;
-  height: 370px;
-  background: green;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-`;

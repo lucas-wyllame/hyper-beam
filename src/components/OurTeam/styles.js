@@ -116,13 +116,19 @@ export const TeamButtonMobile = styled.div`
 `;
 
 export const LeftArrow = styled.img`
-  width: 39px;
-  height: 39px;
-  background: red;
+  height: 30px;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: -3vw;
+  z-index: 2;
 `;
 
 export const RightArrow = styled.img`
-  width: 39px;
-  height: 39px;
-  background: red;
+  height: 30px;
+  width: auto;
+  position: absolute;
+  right: -3vw;
+  top: 50%;
+  z-index: 2;
 `;

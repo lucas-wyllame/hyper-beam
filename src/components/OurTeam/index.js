@@ -10,30 +10,29 @@ import {
   TeamButton,
   ButtonsMobile,
   TeamButtonMobile,
-  Carousel,
   LeftArrow,
   RightArrow,
   Group,
 } from "./styles";
 import Slider from "react-slick";
 
-function PrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <LeftArrow
-      className={className}
-      src="./icon/Grupo21.svg"
-      onClick={onClick}
-    />
-  );
-}
-
-function NextArrow(props) {
+function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <RightArrow
       className={className}
       src="./icon/Grupo22.svg"
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <LeftArrow
+      className={className}
+      src="../public/icon/Grupo21.svg"
       onClick={onClick}
     />
   );
@@ -55,14 +54,14 @@ export default function OurTeam() {
     { linkimg: "diretorio da imagem2" },
   ];
 
-  var settings = {
+  const settings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    // nextArrow: <NextArrow />,
-    // prevArrow: <PrevArrow />,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 480,
