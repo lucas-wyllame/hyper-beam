@@ -141,7 +141,7 @@ export const ListHomeBanner = styled.div`
   position: absolute;
   bottom: -140px;
   left: 18%;
-  background: blue;
+  // background: blue;
   @media (max-width: 480px) {
     width: 68%;
     left: 60px;
@@ -151,7 +151,7 @@ export const ListHomeBanner = styled.div`
 
 export const HyperCardGroup = styled.div`
   height: 220px;
-  background: green;
+  // background: green;
   display: flex !important;
   align-items: center;
   flex-direction: column;
@@ -162,4 +162,28 @@ export const HyperText = styled.label`
   width: 60%;
   font-size: 17px;
   color: #9a8dac;
+`;
+
+export const RightArrow = styled.img`
+  height: 39px;
+  width: auto;
+  position: absolute;
+  right: -3vw;
+  top: 50%;
+  z-index: 2;
+  @media (max-width: 480px) {
+    right: -10vw;
+  }
+`;
+
+export const LeftArrow = styled.img`
+  height: 39px;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: -3vw;
+  z-index: 2;
+  @media (max-width: 480px) {
+    left: -10vw;
+  }
 `;

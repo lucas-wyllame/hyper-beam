@@ -17,8 +17,9 @@ export const Content = styled.div`
 `;
 
 export const Plats = styled.div`
-  width: 45%;
-  height: 50%;
+  width: 45vw;
+  height: 50vh;
+  // background: red;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -60,8 +61,9 @@ export const PlatsIcons = styled.div`
 `;
 
 export const PlatsGroup = styled.div`
-  width: auto;
+  width: 100%;
   height: 350px;
+  // background: yellow;
   display: flex;
   flex-direction: column;
   align-items: center;

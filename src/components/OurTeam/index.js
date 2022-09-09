@@ -6,10 +6,6 @@ import {
   CardsOurTeam,
   NameCasters,
   FuncCasters,
-  Buttons,
-  TeamButton,
-  ButtonsMobile,
-  TeamButtonMobile,
   LeftArrow,
   RightArrow,
   Group,
@@ -17,22 +13,22 @@ import {
 import Slider from "react-slick";
 
 function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
+  const { className, onClick } = props;
   return (
     <RightArrow
       className={className}
-      src="./icon/Grupo22.svg"
+      src="./icon/Grupo 22.svg"
       onClick={onClick}
     />
   );
 }
 
 function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
+  const { className, onClick } = props;
   return (
     <LeftArrow
       className={className}
-      src="../public/icon/Grupo21.svg"
+      src="./icon/Grupo 21.svg"
       onClick={onClick}
     />
   );
@@ -41,17 +37,17 @@ function SamplePrevArrow(props) {
 export default function OurTeam() {
   var slider = ".slider";
   const listCardsOurTeam = [
-    { name: "Leandro", surname: "Radnas", func: "Host e Caster" },
+    {
+      name: "Leandro",
+      surname: "Radnas",
+      func: "Host e Caster",
+      src: "./img/ProfileRadnas cinza.png",
+    },
     { name: "Leo", surname: "Dratini", func: "Caster" },
     { name: "Davi", surname: "Hayato", func: "Caster" },
     { name: "Lucas", surname: "SuP", func: "Dev" },
     { name: "Gabriel", surname: "C4rds", func: "Dev" },
     { name: "Walter", surname: "Com Dablio", func: "Editor" },
-  ];
-
-  const CarouselButtons = [
-    { linkimg: "diretorio da imagem1" },
-    { linkimg: "diretorio da imagem2" },
   ];
 
   const settings = {
@@ -66,9 +62,10 @@ export default function OurTeam() {
       {
         breakpoint: 480,
         settings: {
+          rows: 3,
           slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: slider.length > 1 ? true : false,
+          infinite: slider.length > 3 ? true : false,
         },
       },
     ],
@@ -81,10 +78,6 @@ export default function OurTeam() {
         A equipe que trabalha no Hyper Beam
       </Desc>
       <GlobalPeoples>
-        {/* <Buttons>
-          <TeamButton></TeamButton>
-        </Buttons> */}
-
         <Group>
           <Slider {...settings}>
             {listCardsOurTeam.map((res) => {
@@ -105,14 +98,6 @@ export default function OurTeam() {
             })}
           </Slider>
         </Group>
-
-        {/* <Buttons>
-          <TeamButton></TeamButton>
-        </Buttons>
-        <ButtonsMobile>
-          <TeamButtonMobile></TeamButtonMobile>
-          <TeamButtonMobile></TeamButtonMobile>
-        </ButtonsMobile> */}
       </GlobalPeoples>
     </Content>
   );

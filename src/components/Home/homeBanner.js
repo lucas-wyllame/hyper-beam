@@ -9,8 +9,32 @@ import {
   ListHomeBanner,
   HyperCardGroup,
   HyperText,
+  RightArrow,
+  LeftArrow,
 } from "./styles";
 import Slider from "react-slick";
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <RightArrow
+      className={className}
+      src="./icon/Grupo 22.svg"
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <LeftArrow
+      className={className}
+      src="./icon/Grupo 21.svg"
+      onClick={onClick}
+    />
+  );
+}
 
 export default function HomeBanner() {
   var slider = ".slider";
@@ -52,6 +76,8 @@ export default function HomeBanner() {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 480,

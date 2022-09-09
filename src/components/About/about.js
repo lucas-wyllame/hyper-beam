@@ -4,10 +4,16 @@ import { Content, LeftImage, TextDiv } from "./styles";
 export default function About() {
   return (
     <Content>
-      <LeftImage></LeftImage>
+      <LeftImage >
+        <img src="./img/Grupo 25.png" />
+      </LeftImage>
       <TextDiv>
         <Title widthMobile={"294px"}>Somos o Hyper Beam</Title>
-        <Desc maxWidth={"50%"} widthDescMobile={"276px"} maxWidthMobile={"276px"}>
+        <Desc
+          maxWidth={"72%"}
+          widthDescMobile={"276px"}
+          maxWidthMobile={"276px"}
+        >
           A fagulha de amor aos games em forma de podcast.
         </Desc>
         <MoreInfs widthMobile={"324px"} heightMobile={"99px"} fontsize={"14px"}>

@@ -16,7 +16,6 @@ export const ListPodcasts = styled.div`
   width: 100%;
   height: 700px;
   margin: 20px 0;
-  background: red;
   display: flex;
   flex-direction: column;
   justify-content: center;

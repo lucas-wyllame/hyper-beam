@@ -1,6 +1,29 @@
 import Slider from "react-slick";
 import { Content, PodcastsList, CarousselStyled, HyperText } from "./styles";
 import HyperCard from "../../components/HyperCard/hyperCard";
+import { RightArrow, LeftArrow } from "../OurTeam/styles";
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <RightArrow
+      className={className}
+      src="./icon/Grupo 22.svg"
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <LeftArrow
+      className={className}
+      src="./icon/Grupo 21.svg"
+      onClick={onClick}
+    />
+  );
+}
 
 export default function Carousel() {
   var slider = ".slider";
@@ -135,6 +158,8 @@ export default function Carousel() {
     speed: 500,
     rows: 3,
     slidesPerRow: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 480,

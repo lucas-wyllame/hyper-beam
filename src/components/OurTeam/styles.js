@@ -10,7 +10,7 @@ export const Content = styled.div`
   flex-direction: column;
   padding-top: 70px;
   @media (max-width: 480px) {
-    height: 600px;
+    height: 1350px;
     justify-content: flex-start;
   }
 `;
@@ -24,8 +24,8 @@ export const GlobalPeoples = styled.div`
   align-items: center;
   @media (max-width: 480px) {
     flex-direction: column;
-    width: 100%;
-    height: auto;
+    width: 85%;
+    height: 1200px;
     justify-content: space-between;
     margin-top: 50px;
   }
@@ -36,7 +36,7 @@ export const Group = styled.div`
   height: auto;
   @media (max-width: 480px) {
     width: 80%;
-    height: 500px;
+    height: 1100px;
   }
 `;
 
@@ -59,6 +59,11 @@ export const CardsOurTeam = styled.div`
   @media (max-width: 480px) {
     width: 253px;
     height: 253px;
+    :hover {
+      width: 253px;
+      height: 253px;
+      background: #9697c7;
+    }
   }
 `;
 
@@ -84,51 +89,28 @@ export const Buttons = styled.div`
   }
 `;
 
-export const TeamButton = styled.button`
-  width: 39px;
+export const RightArrow = styled.img`
   height: 39px;
-  background: #a127ff;
-  border-radius: 50%;
-`;
-
-export const ButtonsMobile = styled.div`
-  @media (max-width: 1980px) {
-    display: none;
-  }
+  width: 39px;
+  position: absolute;
+  right: -0.4vw;
+  top: 50%;
+  z-index: 2;
   @media (max-width: 480px) {
-    width: 108px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-  }
-`;
-
-export const TeamButtonMobile = styled.div`
-    width: 39px;
-    height: 39px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #a127ff;
-    border-radius: 50px;
+    top: 100%;
+    right: 20vw;
   }
 `;
 
 export const LeftArrow = styled.img`
-  height: 30px;
-  width: auto;
+  height: 39px;
+  width: 39px;
   position: absolute;
   top: 50%;
   left: -3vw;
   z-index: 2;
-`;
-
-export const RightArrow = styled.img`
-  height: 30px;
-  width: auto;
-  position: absolute;
-  right: -3vw;
-  top: 50%;
-  z-index: 2;
+  @media (max-width: 480px) {
+    top: 100%;
+    left: 20vw;
+  }
 `;
