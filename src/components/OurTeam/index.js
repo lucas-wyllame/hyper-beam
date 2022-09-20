@@ -37,12 +37,7 @@ function SamplePrevArrow(props) {
 export default function OurTeam() {
   var slider = ".slider";
   const listCardsOurTeam = [
-    {
-      name: "Leandro",
-      surname: "Radnas",
-      func: "Host e Caster",
-      src: "./img/ProfileRadnas cinza.png",
-    },
+    { name: "Leandro", surname: "Radnas", func: "Host e Caster" },
     { name: "Leo", surname: "Dratini", func: "Caster" },
     { name: "Davi", surname: "Hayato", func: "Caster" },
     { name: "Lucas", surname: "SuP", func: "Dev" },

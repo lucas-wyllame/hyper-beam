@@ -14,13 +14,11 @@ export const Content = styled.div`
 
 export const ListPodcasts = styled.div`
   width: 100%;
-  height: 700px;
+  height: 550px;
   margin: 20px 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  position: relative;
-  align-items: center;
+  justify-content: space-between;
   @media (max-width: 480px) {
     height: 940px;
   }
@@ -171,6 +169,8 @@ export const ButtonSeeAll = styled.button`
   font-size: 20px;
   margin-top: 19px;
   cursor: pointer;
+  position: relative;
+  left: 45%;
   :hover {
     width: 161px;
     height: 51px;
@@ -180,4 +180,37 @@ export const ButtonSeeAll = styled.button`
     width: 184px;
     height: 49px;
   }
+`;
+
+export const RightArrow = styled.img`
+  display: none;
+`;
+
+export const LeftArrow = styled.img`
+  display: none;
+`;
+export const Dots = styled.div`
+  width: 100%;
+  height: 10px;
+  display: flex;
+  background: #11122d;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 2;
+  @media only screen and (max-width: 768px) {
+    margin-left: -20px;
+  }
+  .slick-dots li{
+    width: 1000px;
+  }
+`;
+
+export const LittleDots = styled.div`
+  width: auto;
+  height: 10px;
+  background: #2e2f47;
+  opacity: 1;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 50px;
 `;

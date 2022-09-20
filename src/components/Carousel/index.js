@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 import { Content, PodcastsList, CarousselStyled, HyperText } from "./styles";
-import HyperCard from "../../components/HyperCard/hyperCard";
+import HyperCard from "../HyperCard/hyperCard";
 import { RightArrow, LeftArrow } from "../OurTeam/styles";
 
 function SampleNextArrow(props) {

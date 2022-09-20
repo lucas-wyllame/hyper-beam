@@ -15,11 +15,19 @@ export const Content = styled.div`
 `;
 
 export const PlaySpotify = styled.div`
-  width: 30%;
-  height: 256px;
+  width: 35%;
+  height: 230px;
   background: purple;
   display: flex;
   border-radius: 10px;
+  iframe {
+    width: 35vw;
+    h2 {
+      font-weight: 600;
+    }
+    @media only screen and (max-width: 768px) {
+      width: 95%;
+    }
   @media (max-width: 480px) {
     width: 85%;
     height: 134px;
