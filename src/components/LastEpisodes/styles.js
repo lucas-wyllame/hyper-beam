@@ -3,18 +3,21 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: 1000px;
+  background: pink;
   margin: 20px 0;
   display: flex;
   flex-direction: column;
   padding: 0 88px;
   @media (max-width: 480px) {
     padding: 0;
+    align-items: center;
   }
 `;
 
 export const ListPodcasts = styled.div`
   width: 100%;
-  height: 550px;
+  height: 630px;
+  background: red;
   margin: 20px 0;
   display: flex;
   flex-direction: column;
@@ -26,8 +29,10 @@ export const ListPodcasts = styled.div`
 
 export const Background = styled.div`
   width: 95%;
-  height: 429px;
+  height: 470px;
   border-radius: 44px 44px 0px 0px;
+  position: relative;
+  top: 60px;
   background: purple;
   display: flex;
   justify-content: space-between;
@@ -41,6 +46,7 @@ export const Background = styled.div`
 export const CardAndText = styled.div`
   width: 100%;
   height: auto;
+  background: orange;
   display: flex;
   justify-content: flex-start;
   border-radius: 44px 44px 0px 0px;

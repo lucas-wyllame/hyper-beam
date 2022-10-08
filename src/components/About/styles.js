@@ -15,7 +15,7 @@ export const Content = styled.div`
 export const LeftImage = styled.div`
   width: 40%;
   height: 476px;
-  background: background: transparent url('img/Grupo 25.png') 0% 0% no-repeat padding-box;
+  background: red;
   @media (max-width: 480px) {
     width: 100%;
     height: 37%;

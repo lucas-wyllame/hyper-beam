@@ -5,7 +5,6 @@ export default function About() {
   return (
     <Content>
       <LeftImage >
-        <img src="./img/Grupo 25.png" />
       </LeftImage>
       <TextDiv>
         <Title widthMobile={"294px"}>Somos o Hyper Beam</Title>

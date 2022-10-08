@@ -69,14 +69,10 @@ export default function LastEpisodes() {
             width: "100%",
             display: "flex",
             background: "red",
+            paddingInlineStart: "0",
           }}
         >
           {dots}
-          <li
-            style={{
-              width: "1000px",
-            }}
-          ></li>
         </ul>
       </Dots>
     ),
@@ -92,7 +88,7 @@ export default function LastEpisodes() {
       {
         breakpoint: 480,
         settings: {
-          rows: 3,
+          rows: 1,
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: slider.length > 3 ? true : false,
@@ -108,13 +104,13 @@ export default function LastEpisodes() {
         Acompanhe nosso podcast e seus episódios
       </Desc>
       <ListPodcasts>
-        <Slider {...settings}>
+        <Slider {...settings} style={{background:"green"}}>
           {listBackground.map((res) => {
             return (
               <Background>
                 <CardAndText>
                   <HyperCard
-                    position={"static"}
+                    position={"relative"}
                     width={"337px"}
                     height={"337px"}
                     margin={"-26px 0 0 53px"}
@@ -159,13 +155,6 @@ export default function LastEpisodes() {
             );
           })}
         </Slider>
-        {/* <ThinBarsGroup>
-          <ThinBars></ThinBars>
-          <ThinBars></ThinBars>
-          <ThinBars></ThinBars>
-          <ThinBars></ThinBars>
-          <ThinBars></ThinBars>
-        </ThinBarsGroup> */}
         <ButtonSeeAll onClick={handleClick}>Ver todos</ButtonSeeAll>
       </ListPodcasts>
     </Content>
