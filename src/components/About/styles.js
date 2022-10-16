@@ -11,14 +11,14 @@ export const Content = styled.div`
     justify-content: space-between;
   }
 `;
-
 export const LeftImage = styled.div`
-  width: 40%;
+  width: 50%;
   height: 476px;
   background: red;
+  border-radius: 0 50px 50px 0;
   @media (max-width: 480px) {
     width: 100%;
-    height: 37%;
+    height: 253px;
     border-radius: 0;
   }
 `;

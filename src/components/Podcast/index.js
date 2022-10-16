@@ -7,6 +7,7 @@ import { Icon } from "../../components/Footer/styles";
 import HyperCard from "../../components/HyperCard/hyperCard";
 import { TitleInside } from "../../components/LastEpisodes/styles";
 import { MoreInfs } from "../../components/Global/globalStyles";
+import { Control } from "../../../public/icon/IconComTag";
 
 export default function Podcast() {
   return (
@@ -32,7 +33,7 @@ export default function Podcast() {
                 alignItems={"center"}
                 heightMobile={"170px"}
               >
-                <Icon>Control</Icon>
+                <Control></Control>
                 <ButtonsEp widthButton={"202px"} widthMobile={"152px"}>
                   Pokémon Unite
                 </ButtonsEp>

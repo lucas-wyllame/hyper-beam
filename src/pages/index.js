@@ -12,14 +12,14 @@ import { GlobalStyles } from "../styles/globalStyles";
 export default function Home() {
   return (
     <>
-      {/* <Header />
+      <Header />
       <HomeBanner />
-      <About /> */}
+      <About />
       <GlobalStyles />
       <LastEpisodes />
-      {/* <OurTeam /> */}
-      {/* <AvailablePlats />
-      <Footer />  */}
+      <OurTeam />
+      <AvailablePlats />
+      <Footer /> 
     </>
   );
 }

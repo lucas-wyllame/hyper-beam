@@ -1,5 +1,13 @@
 import { Title, Desc } from "../Global/globalStyles";
-import { Content, Plats, PlatsCards, PlatsIcons, PlatsGroup, PlatsTitle, PlatsButton} from "./styles";
+import {
+  Content,
+  Plats,
+  PlatsCards,
+  PlatsIcons,
+  PlatsGroup,
+  PlatsTitle,
+  PlatsButton,
+} from "./styles";
 
 export default function AvailablePlats() {
   const PlatsLinks = [
@@ -41,10 +49,10 @@ export default function AvailablePlats() {
       <Title>Plataformas disponíveis</Title>
       <Desc>Onde encontrar nosso podcast para escutar</Desc>
       <Plats>
-        {PlatsLinks.map((res) => {
+        {PlatsLinks.map((res, index) => {
           return (
             // eslint-disable-next-line react/jsx-key
-            <PlatsGroup>
+            <PlatsGroup key={index}>
               <PlatsCards
                 width={res.width}
                 height={res.height}

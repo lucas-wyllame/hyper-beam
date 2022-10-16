@@ -1,3 +1,8 @@
+import { EmailIcon } from "../../../public/icon/EmailIcon";
+import { TwitterIcon } from "../../../public/icon/TwitterIcon";
+import { InstagramIcon } from "../../../public/icon/InstagramIcon";
+import { YTIcon } from "../../../public/icon/YTIcon";
+
 import {
   Content,
   MainImage,
@@ -9,13 +14,26 @@ import {
 
 export default function Footer() {
   const listLinks = [
-    { name: "E-mail", url: "https://linktr.ee/hyperbeamcast" },
-    { name: "Twitter", url: "https://twitter.com/hyperbeamcast" },
+    {
+      name: "E-mail",
+      url: "https://linktr.ee/hyperbeamcast",
+      icon: <EmailIcon />,
+    },
+    {
+      name: "Twitter",
+      url: "https://twitter.com/hyperbeamcast",
+      icon: <TwitterIcon />,
+    },
     {
       name: "Youtube",
       url: "https://www.youtube.com/channel/UCrB_y3PT-cLvv2WKB17B2lw",
+      icon: <InstagramIcon />,
     },
-    { name: "Instagram", url: "https://www.instagram.com/davihayato/" },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/davihayato/",
+      icon: <YTIcon />,
+    },
   ];
 
   return (
@@ -24,12 +42,12 @@ export default function Footer() {
       <Contacts>
         <ContactTitle>Contatos e Redes</ContactTitle>
         <IconsRow>
-          {listLinks.map((res) => {
+          {listLinks.map((res, index) => {
             return (
               // eslint-disable-next-line react/jsx-key
-              <Icon>
+              <Icon key={index}>
                 <a href={res.url} target="_blank" rel="noreferrer">
-                  {res.name}
+                  {res.icon}
                 </a>
               </Icon>
             );

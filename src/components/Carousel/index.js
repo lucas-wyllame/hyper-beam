@@ -177,9 +177,9 @@ export default function Carousel() {
     <Content>
       <PodcastsList>
         <Slider {...settings}>
-          {TextInside.map((res) => {
+          {TextInside.map((res,index) => {
             return (
-              <CarousselStyled>
+              <CarousselStyled key={index}>
                 <HyperCard
                   width={"225px"}
                   height={"225px"}

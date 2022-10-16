@@ -75,9 +75,9 @@ export default function OurTeam() {
       <GlobalPeoples>
         <Group>
           <Slider {...settings}>
-            {listCardsOurTeam.map((res) => {
+            {listCardsOurTeam.map((res, index) => {
               return (
-                <Peoples>
+                <Peoples key={index}>
                   <CardsOurTeam></CardsOurTeam>
                   <NameCasters>
                     <div>

@@ -17,9 +17,12 @@ import {
   LeftArrow,
   Dots,
   LittleDots,
+  HoveringIcon,
 } from "./styles";
 import { useRouter } from "next/router";
 import Slider from "react-slick";
+import { useState } from "react";
+import { Control } from "../../../public/icon/IconComTag";
 
 function SampleNextArrow(props) {
   const { className, onClick } = props;
@@ -44,6 +47,16 @@ function SamplePrevArrow(props) {
 }
 
 export default function LastEpisodes() {
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseOver = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHovering(false);
+  };
+
   const slider = ".slider";
   const router = useRouter();
 
@@ -68,7 +81,6 @@ export default function LastEpisodes() {
             margin: "0px",
             width: "100%",
             display: "flex",
-            background: "red",
             paddingInlineStart: "0",
           }}
         >
@@ -104,10 +116,10 @@ export default function LastEpisodes() {
         Acompanhe nosso podcast e seus episódios
       </Desc>
       <ListPodcasts>
-        <Slider {...settings} style={{background:"green"}}>
-          {listBackground.map((res) => {
+        <Slider {...settings}>
+          {listBackground.map((res, index) => {
             return (
-              <Background>
+              <Background key={index}>
                 <CardAndText>
                   <HyperCard
                     position={"relative"}
@@ -116,9 +128,10 @@ export default function LastEpisodes() {
                     margin={"-26px 0 0 53px"}
                     widthMobile={"253px"}
                     heightMobile={"253px"}
+                    top={"2px"}
                   ></HyperCard>
                   <TextsDivEp>
-                    <TitleInside margin={"10px 0"}>
+                    <TitleInside margin={"10px 0"} marginMobile={"50px 0"}>
                       Hyper Beam <div /> <span>{res.number}</span>
                     </TitleInside>
                     <MoreInfs
@@ -141,9 +154,20 @@ export default function LastEpisodes() {
                   justifyContent={"space-between"}
                   heightMobile={"191px"}
                 >
-                  <Icon widthIcon={"40px"} heightIcon={"40px"}>
-                    Control
+                  <Icon
+                    onMouseOver={handleMouseOver}
+                    onMouseOut={handleMouseOut}
+                    widthIcon={"40px"}
+                    heightIcon={"40px"}
+                  >
+                    <Control></Control>
+                    {isHovering && (
+                      <HoveringIcon>
+                        Qual jogo aparece nesse episodio?
+                      </HoveringIcon>
+                    )}
                   </Icon>
+
                   <ButtonsEp widthButton={"202px"} widthMobile={"152px"}>
                     Pokémon Unite
                   </ButtonsEp>

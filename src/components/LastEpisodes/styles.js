@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: 1000px;
-  background: pink;
+  // background: pink;
   margin: 20px 0;
   display: flex;
   flex-direction: column;
@@ -11,19 +11,20 @@ export const Content = styled.div`
   @media (max-width: 480px) {
     padding: 0;
     align-items: center;
+    height: 1280px;
   }
 `;
 
 export const ListPodcasts = styled.div`
   width: 100%;
   height: 630px;
-  background: red;
+  background: blue;
   margin: 20px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   @media (max-width: 480px) {
-    height: 940px;
+    height: 1130px;
   }
 `;
 
@@ -38,20 +39,21 @@ export const Background = styled.div`
   justify-content: space-between;
   flex-direction: column;
   @media (max-width: 480px) {
-    height: 764px;
+    height: 1000px;
     justify-content: flex-start;
   }
 `;
 
 export const CardAndText = styled.div`
   width: 100%;
-  height: auto;
-  background: orange;
+  height: 7630px0%;
+  // background: orange;
   display: flex;
   justify-content: flex-start;
   border-radius: 44px 44px 0px 0px;
   @media (max-width: 480px) {
     flex-direction: column;
+    height: 65%;
   }
 `;
 
@@ -79,6 +81,7 @@ export const TitleInside = styled.div`
   @media (max-width: 480px) {
     font-size: 28px;
     width: 70%;
+    margin: ${(props) => props.marginMobile};
   }
   span {
     color: #ffe747;
@@ -106,7 +109,7 @@ export const IconAndButtons = styled.div`
   display: flex;
   justify-content: space-between;
   margin: ${(props) => props.margin};
-  background: green;
+  background: yellow;
   @media (max-width: 480px) {
     flex-direction: column;
     width: 100%;
@@ -185,6 +188,8 @@ export const ButtonSeeAll = styled.button`
   @media (max-width: 480px) {
     width: 184px;
     height: 49px;
+    position: relative;
+    left: 95px;
   }
 `;
 
@@ -204,10 +209,9 @@ export const Dots = styled.div`
   position: absolute;
   z-index: 2;
   @media only screen and (max-width: 768px) {
-    margin-left: -20px;
-  }
-  .slick-dots li{
-    width: 1000px;
+    position: relative;
+    height: 25px;
+    bottom: -10px;
   }
 `;
 
@@ -219,4 +223,22 @@ export const LittleDots = styled.div`
   display: flex;
   justify-content: space-between;
   border-radius: 50px;
+  :hover {
+    background: purple;
+  }
+  @media (max-width: 480px) {
+    height: 25px;
+  }
+`;
+
+export const HoveringIcon = styled.label`
+  background: white;
+  width: 320px;
+  height: 40px;
+  position: absolute;
+  color: #000;
+  z-index: 9;
+  top: 80px;
+  left: -37px;
+  font-size: 20px;
 `;

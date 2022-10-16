@@ -61,8 +61,11 @@ export const Icon = styled.div`
   align-items: center;
   margin-right: 16px;
   color: #ffffff;
+  position: relative;
   @media (max-width: 480px) {
-    width: ${(props) =>props.widthIcon};
-    height: ${(props) =>props.heightIcon};
+    width: ${(props) => props.widthIcon};
+    height: ${(props) => props.heightIcon};
   }
 `;
+
+

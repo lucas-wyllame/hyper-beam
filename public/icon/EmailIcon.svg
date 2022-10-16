@@ -1,0 +1,11 @@
+<svg id="Grupo_12" data-name="Grupo 12" xmlns="http://www.w3.org/2000/svg" width="53" height="53" viewBox="0 0 53 53">
+  <circle id="Elipse_2" data-name="Elipse 2" cx="26.5" cy="26.5" r="26.5" fill="#a127ff"/>
+  <g id="Icon" transform="translate(12.294 11.943)">
+    <rect id="Area" width="29" height="29" transform="translate(-0.294 0.057)" fill="#fcfcfc" opacity="0"/>
+    <g id="Icon-2" data-name="Icon" transform="translate(-0.454 4.612)">
+      <path id="a91f2f63-481c-4148-96ec-1d4b5f9e7246" d="M0,0H29V29H0Z" transform="translate(0.16 -4.555)" fill="none"/>
+      <path id="d28f72f3-c49e-4ca7-881c-67e815e9eaf4" d="M6.042,6.042H22.958a2.417,2.417,0,0,1,2.417,2.416V20.542a2.417,2.417,0,0,1-2.417,2.416H6.042a2.417,2.417,0,0,1-2.417-2.416V8.458A2.417,2.417,0,0,1,6.042,6.042Z" transform="translate(0.16 -4.555)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.417"/>
+      <path id="_4f4d4125-ce63-4ca1-9b02-a111ae4cbf69" data-name="4f4d4125-ce63-4ca1-9b02-a111ae4cbf69" d="M3.625,8.458,14.5,15.708l10.875-7.25" transform="translate(0.16 -4.555)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.417"/>
+    </g>
+  </g>
+</svg>

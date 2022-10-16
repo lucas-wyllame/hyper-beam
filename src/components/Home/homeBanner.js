@@ -103,10 +103,10 @@ export default function HomeBanner() {
         <BigImg></BigImg>
         <ListHomeBanner>
           <Slider {...settings}>
-            {TitleInsides.map((res) => {
+            {TitleInsides.map((res, index) => {
               return (
                 // eslint-disable-next-line react/jsx-key
-                <HyperCardGroup>
+                <HyperCardGroup key={index}>
                   <HyperCard
                     width={"196px"}
                     height={"196px"}
