@@ -29,7 +29,7 @@ export const CarousselStyled = styled.div`
   background: blue;
   display: flex;
   justify-content: space-between;
-  text-aling: center;
+  text-align: center;
   @media (max-width: 480px) {
     height: 270px;
   }

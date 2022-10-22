@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: 1000px;
-  // background: pink;
+  background: pink;
   margin: 20px 0;
   display: flex;
   flex-direction: column;
@@ -18,7 +18,7 @@ export const Content = styled.div`
 export const ListPodcasts = styled.div`
   width: 100%;
   height: 630px;
-  background: blue;
+  /* background: blue; */
   margin: 20px 0;
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@ export const ListPodcasts = styled.div`
 
 export const Background = styled.div`
   width: 95%;
-  height: 470px;
+  height: 520px;
   border-radius: 44px 44px 0px 0px;
   position: relative;
   top: 60px;
@@ -46,8 +46,8 @@ export const Background = styled.div`
 
 export const CardAndText = styled.div`
   width: 100%;
-  height: 7630px0%;
-  // background: orange;
+  height: 350px;
+  background: orange;
   display: flex;
   justify-content: flex-start;
   border-radius: 44px 44px 0px 0px;
