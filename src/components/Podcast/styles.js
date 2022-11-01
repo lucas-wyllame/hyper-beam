@@ -1,15 +1,18 @@
 import styled from "styled-components";
 
-
 export const Content = styled.div`
   width: 100%;
-  height: 696px;
-  // background: red;
+  height: 700px;
+  background: red;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
   @media (max-width: 480px) {
-    height: 810px;
+    height: 1050px;
   }
 `;
+
 export const BackBanner = styled.div`
   width: 100%;
   height: 400px;
@@ -18,49 +21,62 @@ export const BackBanner = styled.div`
   align-items: flex-end;
   justify-content: center;
   @media (max-width: 480px) {
-    height: 620px;
+    height: 850px;
   }
 `;
 
 export const ItensBanner = styled.div`
   width: 80%;
-  height: 696px;
-  // background: blue;
+  height: 340px;
+  background: blue;
   display: flex;
-  flex-direction: column;
+  /* align-items: center; */
+  gap: 50px;
   position: relative;
-  top: 296px;
+  top: 60px;
   @media (max-width: 480px) {
-    top: 280px;
-    height: 900px;
-  }
-`;
-
-export const Topic = styled.div`
-  width: 100%;
-  height: 75%;
-  // background: lightblue;
-  display: flex;
-  align-items: center;
-  margin-bottom: -25px;
-  @media (max-width: 480px) {
-    height: 68.9%;
+    /* position: static; */
+    height: 600px;
     flex-direction: column;
+    gap: 0;
+    top: 0;
   }
 `;
 
 export const BannerInfos = styled.div`
-  width: 44%;
-  height: 124px;
-  // background: pink;
+  width: 40%;
+  height: 145px;
+  background: pink;
   display: flex;
   flex-direction: column;
-  margin-left: 58px;
+  justify-content: space-between;
+  margin-top: 60px;
   @media (max-width: 480px) {
     width: 100%;
-    height: 53%;
+    height: 250px;
     margin-left: 0px;
     align-items: center;
-    justify-content: center;
+  }
+`;
+
+export const SeparationDiv = styled.div`
+  width: 100%;
+  height: 60px;
+  background: green;
+  @media (max-width: 480px) {
+    height: 110px;
+  }
+`;
+
+export const Topic = styled.div`
+  width: 80%;
+  height: 250px;
+  background: lightblue;
+  display: flex;
+  align-items: center;
+  /* margin-bottom: -25px; */
+  @media (max-width: 480px) {
+    align-items: normal;
+    height: 490px;
   }
 `;

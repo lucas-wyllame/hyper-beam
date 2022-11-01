@@ -96,8 +96,14 @@ export const PlatsButton = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-column: ${(props) => props.gridColumn};
+  grid-row: ${(props) => props.gridRow};
   :hover {
     color: #11122d;
     background: #fff;
+  }
+  @media (max-width: 480px) {
+    grid-column: ${(props) => props.gridColumnMobile};
+    grid-row: ${(props) => props.gridRowMobile};
   }
 `;

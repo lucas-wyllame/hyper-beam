@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 100%;
-  height: 1101px;
+  height: 1100px;
   background: #11122d 0% 0% no-repeat padding-box;
   display: flex;
   justify-content: center;
   align-items: center;
   @media (max-width: 480px) {
-    height: 3340px;
+    height: 3500px;
   }
 `;
 export const PodcastsList = styled.div`

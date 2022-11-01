@@ -97,8 +97,9 @@ export const RightArrow = styled.img`
   top: 50%;
   z-index: 2;
   @media (max-width: 480px) {
-    top: 100%;
-    right: 20vw;
+    position: relative;
+    top: 10vw;
+    right: -34vw;
   }
 `;
 
@@ -110,7 +111,8 @@ export const LeftArrow = styled.img`
   left: -3vw;
   z-index: 2;
   @media (max-width: 480px) {
-    top: 100%;
-    left: 20vw;
+    position: relative;
+    top: 408.6vh;
+    left: 10vw;
   }
 `;

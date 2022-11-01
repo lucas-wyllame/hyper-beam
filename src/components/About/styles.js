@@ -5,6 +5,7 @@ export const Content = styled.div`
   height: 476px;
   margin: 91px 0;
   display: flex;
+  background: blue;
   @media (max-width: 480px) {
     height: 800px;
     flex-direction: column;

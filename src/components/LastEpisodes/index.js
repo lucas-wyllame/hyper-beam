@@ -18,6 +18,7 @@ import {
   Dots,
   LittleDots,
   HoveringIcon,
+  Block,
 } from "./styles";
 import { useRouter } from "next/router";
 import Slider from "react-slick";
@@ -119,63 +120,62 @@ export default function LastEpisodes() {
         <Slider {...settings}>
           {listBackground.map((res, index) => {
             return (
-              <Background key={index}>
-                <CardAndText>
-                  <HyperCard
-                    position={"relative"}
-                    width={"337px"}
-                    height={"337px"}
-                    margin={"-26px 0 0 53px"}
-                    widthMobile={"253px"}
-                    heightMobile={"253px"}
-                    top={"2px"}
-                  ></HyperCard>
-                  <TextsDivEp>
-                    <TitleInside margin={"10px 0"} marginMobile={"50px 0"}>
-                      Hyper Beam <div /> <span>{res.number}</span>
-                    </TitleInside>
-                    <MoreInfs
-                      widthMobile={"324px"}
-                      heightMobile={"174px"}
-                      fontsize={"18px"}
-                      width={"694px"}
-                    >
-                      Lorem ipsum dolor sit amet, consectetur a elit. Sed dictum
-                      sodales rutrum. Praesent eget lobortis purus. Donec a
-                      finibus neque. Nu erat a cursus sodales. Fusce vel nulla
-                      aliquam, convallis odio semper, finibus purus. orci, non
-                      malesuada augue.
-                    </MoreInfs>
-                  </TextsDivEp>
-                </CardAndText>
-                <IconAndButtons
-                  width={"36%"}
-                  margin={"10px 10px 41px 60px"}
-                  justifyContent={"space-between"}
-                  heightMobile={"191px"}
-                >
-                  <Icon
-                    onMouseOver={handleMouseOver}
-                    onMouseOut={handleMouseOut}
-                    widthIcon={"40px"}
-                    heightIcon={"40px"}
-                  >
-                    <Control></Control>
-                    {isHovering && (
-                      <HoveringIcon>
-                        Qual jogo aparece nesse episodio?
-                      </HoveringIcon>
-                    )}
-                  </Icon>
+              <>
+                <Background key={index}>
+                  <Block>
+                    <CardAndText>
+                      <HyperCard
+                        width={"337px"}
+                        height={"337px"}
+                        position={"relative"}
+                        top={"-35px"}
+                        widthMobile={"253px"}
+                        heightMobile={"253px"}
+                      ></HyperCard>
+                      <TextsDivEp>
+                        <TitleInside margin={"10px 0"} marginMobile={"0px 0"}>
+                          Hyper Beam <div /> <span>{res.number}</span>
+                        </TitleInside>
+                        <MoreInfs
+                          widthMobile={"324px"}
+                          heightMobile={"174px"}
+                          fontSizeMobile={"18px"}
+                          width={"694px"}
+                        >
+                          Lorem ipsum dolor sit amet, consectetur a elit. Sed
+                          dictum sodales rutrum. Praesent eget lobortis purus.
+                          Donec a finibus neque. Nu erat a cursus sodales. Fusce
+                          vel nulla aliquam, convallis odio semper, finibus
+                          purus. orci, non malesuada augue.
+                        </MoreInfs>
+                      </TextsDivEp>
+                    </CardAndText>
 
-                  <ButtonsEp widthButton={"202px"} widthMobile={"152px"}>
-                    Pokémon Unite
-                  </ButtonsEp>
-                  <ButtonsEp widthButton={"293px"} widthMobile={"219px"}>
-                    World Ends with You
-                  </ButtonsEp>
-                </IconAndButtons>
-              </Background>
+                    <IconAndButtons pLMobile={"20px"}>
+                      <Icon
+                        onMouseOver={handleMouseOver}
+                        onMouseOut={handleMouseOut}
+                        widthIcon={"40px"}
+                        heightIcon={"40px"}
+                      >
+                        <Control></Control>
+                        {isHovering && (
+                          <HoveringIcon>
+                            Qual jogo aparece nesse episodio?
+                          </HoveringIcon>
+                        )}
+                      </Icon>
+
+                      <ButtonsEp widthButton={"202px"} widthMobile={"152px"}>
+                        Pokémon Unite
+                      </ButtonsEp>
+                      <ButtonsEp widthButton={"293px"} widthMobile={"219px"}>
+                        World Ends with You
+                      </ButtonsEp>
+                    </IconAndButtons>
+                  </Block>
+                </Background>
+              </>
             );
           })}
         </Slider>

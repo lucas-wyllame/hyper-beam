@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 100%;
-  height: 1000px;
+  height: 800px;
   background: pink;
   margin: 20px 0;
   display: flex;
@@ -10,8 +10,7 @@ export const Content = styled.div`
   padding: 0 88px;
   @media (max-width: 480px) {
     padding: 0;
-    align-items: center;
-    height: 1280px;
+    height: 1200px;
   }
 `;
 
@@ -29,18 +28,27 @@ export const ListPodcasts = styled.div`
 `;
 
 export const Background = styled.div`
-  width: 95%;
+  width: 100%;
   height: 520px;
   border-radius: 44px 44px 0px 0px;
   position: relative;
   top: 60px;
   background: purple;
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  justify-content: center;
   @media (max-width: 480px) {
-    height: 1000px;
-    justify-content: flex-start;
+    height: 900px;
+    justify-content: center;
+  }
+`;
+
+export const Block = styled.div`
+  width: 90%;
+  height: 520px;
+  background: green;
+  border-radius: 44px 44px 0px 0px;
+  @media (max-width: 480px) {
+    height: 810px;
   }
 `;
 
@@ -49,11 +57,11 @@ export const CardAndText = styled.div`
   height: 350px;
   background: orange;
   display: flex;
-  justify-content: flex-start;
   border-radius: 44px 44px 0px 0px;
   @media (max-width: 480px) {
+    height: 600px;
     flex-direction: column;
-    height: 65%;
+    align-items: center;
   }
 `;
 
@@ -69,7 +77,7 @@ export const TextsDivEp = styled.div`
 `;
 
 export const TitleInside = styled.div`
-  width: 43%;
+  width: 300px;
   font-size: 38px;
   margin: ${(props) => props.margin};
   color: #fff;
@@ -104,7 +112,7 @@ export const TitleInside = styled.div`
 `;
 
 export const IconAndButtons = styled.div`
-  width: ${(props) => props.width};
+  width: 580px;
   height: auto;
   display: flex;
   justify-content: space-between;
@@ -113,10 +121,10 @@ export const IconAndButtons = styled.div`
   @media (max-width: 480px) {
     flex-direction: column;
     width: 100%;
-    height: ${(props) => props.heightMobile};
+    height: 200px;
     margin-left: 0;
     margin-bottom: 0;
-    padding-left: 20px;
+    padding-left: ${(props) => props.pLMobile};
     justify-content: ${(props) => props.justifyContent};
     align-items: ${(props) => props.alignItems};
   }

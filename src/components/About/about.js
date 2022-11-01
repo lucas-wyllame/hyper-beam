@@ -4,8 +4,7 @@ import { Content, LeftImage, TextDiv } from "./styles";
 export default function About() {
   return (
     <Content>
-      <LeftImage >
-      </LeftImage>
+      <LeftImage></LeftImage>
       <TextDiv>
         <Title widthMobile={"294px"}>Somos o Hyper Beam</Title>
         <Desc
@@ -15,7 +14,7 @@ export default function About() {
         >
           A fagulha de amor aos games em forma de podcast.
         </Desc>
-        <MoreInfs widthMobile={"324px"} heightMobile={"99px"} fontsize={"14px"}>
+        <MoreInfs widthMobile={"324px"} heightMobile={"99px"} fontSizeMobile={"14px"}>
           Lorem ipsum dolor sit amet, consectetur a elit. Sed dictum sodales
           rutrum. Praesent eget lobortis purus. Donec a finibus neque. Nu erat a
           cursus sodales. Fusce vel nulla aliquam, convallis odio semper,

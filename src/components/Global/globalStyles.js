@@ -25,9 +25,9 @@ export const Desc = styled.h1`
     text-align: ${(props) => props.textAlignDescMobile};
     margin: ${(props) => props.margin};
   }
-  @media (max-width: 1169px) {
+  /* @media (max-width: 1169px) {
     width: 80%;
-  }
+  } */
 `;
 
 export const MoreInfs = styled.h2`
@@ -39,7 +39,7 @@ export const MoreInfs = styled.h2`
   @media (max-width: 480px) {
     width: ${(props) => props.widthMobile};
     height: ${(props) => props.heightMobile};
-    font-size: ${(props) => props.fontsize};
+    font-size: ${(props) => props.fontSizeMobile};
     padding-top: ${(props) => props.paddingTop};
   }
   @media (max-width: 1169px) {
