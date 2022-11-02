@@ -14,7 +14,11 @@ export default function About() {
         >
           A fagulha de amor aos games em forma de podcast.
         </Desc>
-        <MoreInfs widthMobile={"324px"} heightMobile={"99px"} fontSizeMobile={"14px"}>
+        <MoreInfs
+          // widthMobile={"324px"}
+          // heightMobile={"99px"}
+          fontSizeMobile={"14px"}
+        >
           Lorem ipsum dolor sit amet, consectetur a elit. Sed dictum sodales
           rutrum. Praesent eget lobortis purus. Donec a finibus neque. Nu erat a
           cursus sodales. Fusce vel nulla aliquam, convallis odio semper,

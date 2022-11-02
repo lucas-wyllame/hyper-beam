@@ -14,10 +14,10 @@ export default function Home() {
     <>
       <Header />
       {/* <HomeBanner /> */}
-      <About />
+      {/* <About /> */}
       {/* <GlobalStyles /> */}
       {/* <LastEpisodes /> */}
-      {/* <OurTeam /> */}
+      <OurTeam />
       {/* <AvailablePlats /> */}
       <Footer /> 
     </>
