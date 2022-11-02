@@ -8,20 +8,9 @@ import {
   FuncCasters,
   LeftArrow,
   RightArrow,
-  Group,
+  GroupText,
 } from "./styles";
 import Slider from "react-slick";
-
-function SampleNextArrow(props) {
-  const { className, onClick } = props;
-  return (
-    <RightArrow
-      className={className}
-      src="./icon/Grupo 22.svg"
-      onClick={onClick}
-    />
-  );
-}
 
 function SamplePrevArrow(props) {
   const { className, onClick } = props;
@@ -29,6 +18,17 @@ function SamplePrevArrow(props) {
     <LeftArrow
       className={className}
       src="./icon/Grupo 21.svg"
+      onClick={onClick}
+    />
+  );
+}
+
+function SampleNextArrow(props) {
+  const { className, onClick } = props;
+  return (
+    <RightArrow
+      className={className}
+      src="./icon/Grupo 22.svg"
       onClick={onClick}
     />
   );
@@ -51,11 +51,11 @@ export default function OurTeam() {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    nextArrow: <SampleNextArrow />,
     responsive: [
       {
-        breakpoint: 480,
+        breakpoint: 860,
         settings: {
           rows: 3,
           slidesToShow: 1,
@@ -68,31 +68,31 @@ export default function OurTeam() {
 
   return (
     <Content>
-      <Title margin={"-40px 0 0px 0"}>Nosso time</Title>
-      <Desc textAlignDescMobile={"center"} margin={"2px"}>
-        A equipe que trabalha no Hyper Beam
-      </Desc>
+      <GroupText>
+        <Title>Nosso time</Title>
+        <Desc>
+          A equipe que trabalha no Hyper Beam
+        </Desc>
+      </GroupText>
       <GlobalPeoples>
-        <Group>
+        <>
           <Slider {...settings}>
             {listCardsOurTeam.map((res, index) => {
               return (
-                <Peoples key={index}>
-                  <CardsOurTeam></CardsOurTeam>
-                  <NameCasters>
-                    <div>
+                <>
+                  <Peoples key={index}>
+                    <CardsOurTeam></CardsOurTeam>
+                    <NameCasters>
                       {res.name}
                       <span> {res.surname} </span>
-                    </div>
-                  </NameCasters>
-                  <FuncCasters>
-                    <div>{res.func}</div>
-                  </FuncCasters>
-                </Peoples>
+                    </NameCasters>
+                    <FuncCasters>{res.func}</FuncCasters>
+                  </Peoples>
+                </>
               );
             })}
           </Slider>
-        </Group>
+        </>
       </GlobalPeoples>
     </Content>
   );
