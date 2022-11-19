@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39">
+  <g id="Grupo_21" data-name="Grupo 21" transform="translate(-88 -618)">
+    <circle id="Elipse_2" data-name="Elipse 2" cx="19.5" cy="19.5" r="19.5" transform="translate(88 618)" fill="#1b1c3b"/>
+    <g id="Icon" transform="translate(92.776 624.367)" opacity="0.5">
+      <rect id="Area" width="27" height="27" transform="translate(0.224 -0.367)" fill="#fcfcfc" opacity="0"/>
+      <g id="Icon-2" data-name="Icon" transform="translate(0 0)">
+        <path id="_7c4a2fdf-4703-4e39-84b3-7fd821a877e9" data-name="7c4a2fdf-4703-4e39-84b3-7fd821a877e9" d="M0,0H27.061V27.061H0Z" fill="none"/>
+        <path id="f2a7dca5-be89-4597-b881-b1d1959e6466" d="M19.515,8.5,12.75,15.265l6.765,6.765" transform="translate(-2.602 -1.735)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.833"/>
+      </g>
+    </g>
+  </g>
+</svg>

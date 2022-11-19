@@ -1,48 +1,29 @@
-import styled from "styled-components";
 import Slider from "react-slick";
-import HyperCard from "../../components/HyperCard/hyperCard";
+import { Content, PodcastsList, CarousselStyled, HyperText } from "./styles";
+import HyperCard from "../HyperCard/hyperCard";
+import { RightArrow, LeftArrow } from "../OurTeam/styles";
 
-const Content = styled.div`
-  width: 100%;
-  height: 1101px;
-  background: #11122d 0% 0% no-repeat padding-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @media (max-width: 480px) {
-    height: 3340px;
-  }
-`;
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <RightArrow
+      className={className}
+      src="./icon/Grupo 22.svg"
+      onClick={onClick}
+    />
+  );
+}
 
-const CarousselStyled = styled.div`
-  width: 100%;
-  height: 312px;
-  background: blue;
-  display: flex;
-  justify-content: space-between;
-  text-aling: center;
-  @media (max-width: 480px) {
-    height: 270px;
-  }
-`;
-
-const PodcastsList = styled.div`
-  width: 1062px;
-  height: 936px;
-  background: red;
-  display: flex;
-  flex-direction: column;
-  @media (max-width: 480px) {
-    width: 225px;
-    height: 3240px;
-  }
-`;
-const HyperText = styled.label`
-  width: 60%;
-  font-size: 17px;
-  color: #9a8dac;
-  padding-left: 60px;
-`;
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <LeftArrow
+      className={className}
+      src="./icon/Grupo 21.svg"
+      onClick={onClick}
+    />
+  );
+}
 
 export default function Carousel() {
   var slider = ".slider";
@@ -177,6 +158,8 @@ export default function Carousel() {
     speed: 500,
     rows: 3,
     slidesPerRow: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 480,
@@ -194,9 +177,9 @@ export default function Carousel() {
     <Content>
       <PodcastsList>
         <Slider {...settings}>
-          {TextInside.map((res) => {
+          {TextInside.map((res,index) => {
             return (
-              <CarousselStyled key="">
+              <CarousselStyled key={index}>
                 <HyperCard
                   width={"225px"}
                   height={"225px"}

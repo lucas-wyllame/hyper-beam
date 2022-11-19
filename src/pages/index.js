@@ -5,6 +5,8 @@ import LastEpisodes from "../components/LastEpisodes";
 import OurTeam from "../components/OurTeam";
 import AvailablePlats from "../components/AvailablePLats";
 import Footer from "../components/Footer/footer";
+import { GlobalStyles } from "../styles/globalStyles";
+
 
 
 export default function Home() {
@@ -13,8 +15,9 @@ export default function Home() {
       <Header />
       <HomeBanner />
       <About />
+      <GlobalStyles />
       <LastEpisodes />
-      {/* <OurTeam /> */}
+      <OurTeam />
       <AvailablePlats />
       <Footer /> 
     </>

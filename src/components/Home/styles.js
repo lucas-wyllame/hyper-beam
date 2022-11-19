@@ -19,24 +19,39 @@ export const LogoTop = styled.div`
 
 export const Content = styled.div`
   width: 100%;
-  height: 600px;
+  height: 650px;
+  background: #11129d;
   margin: 20px 0;
   display: flex;
   justify-content: center;
   margin-top: 40px;
   @media (max-width: 480px) {
-    height: 750px;
+    height: 790px;
   }
 `;
 
 export const Banner = styled.div`
-  width: 94.7%;
+  width: 95%;
   height: 488px;
   background: purple;
   border-radius: 44px;
   display: flex;
   align-items: center;
   position: relative;
+  justify-content: space-between;
+  @media (max-width: 1400px) {
+    height: 430px;
+  }
+  @media (max-width: 1176px) {
+    height: 380px;
+  }
+  @media (max-width: 962px) {
+    height: 315px;
+  }
+  @media (max-width: 860px) {
+    height: 600px;
+    flex-direction: column;
+  }
   @media (max-width: 480px) {
     width: 95%;
     height: 610px;
@@ -52,24 +67,13 @@ export const TextsDiv = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   padding-left: 34px;
+  @media (max-width: 860px) {
+  }
   @media (max-width: 480px) {
     width: 100%;
     border-radius: 44px;
   }
   button {
-    width: 17.5%;
-    height: 28%;
-    background: #ffe747 0% 0% no-repeat padding-box;
-    border-radius: 44px;
-    border: none;
-    color: #a127ff;
-    font-size: 21px;
-    :hover {
-      width: 18%;
-      height: 28.5%;
-      text-shadow: 0px 3px 6px #ff00c47a;
-    }
-
     @media (max-width: 480px) {
       width: 130px;
       height: 49px;
@@ -78,10 +82,43 @@ export const TextsDiv = styled.div`
   }
 `;
 
+export const PlayButton = styled.div`
+  width: 25%;
+  height: 50px;
+  background: #ffe747 0% 0% no-repeat padding-box;
+  border-radius: 44px;
+  border: none;
+  color: #a127ff;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  :hover {
+    width: 26%;
+    height: 54px;
+    text-shadow: 0px 3px 6px #ff00c47a;
+  }
+  @media (max-width: 1400px) {
+    width: 22%;
+    font-size: 2.5rem;
+  }
+  @media (max-width: 1252px) {
+    font-size: 2.2rem;
+  }
+  @media (max-width: 1112px) {
+    font-size: 2rem;
+  }
+  @media (max-width: 480px) {
+    width: 130px;
+    height: 49px;
+    font-size: 2rem;
+  }
+`;
+
 export const TitleInside = styled.div`
-  font-size: 30px;
+  font-size: 3.5rem;
   margin: 10px 0;
-  width: 32%;
+  max-width: 280px;
   color: #fff;
   font: Poppins;
   font-weight: bold;
@@ -90,32 +127,65 @@ export const TitleInside = styled.div`
   justify-content: space-between;
   span {
     color: #ffe747;
-  }
-  div {
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    background: gray;
-    opacity: 1;
-    margin-top: 5px;
-    @media (max-width: 480px) {
-      width: 7px;
-      height: 7px;
-      opacity: 0.6;
+    font-size: 3.5rem;
+    @media (max-width: 1520px) {
+      font-size: 3rem;
     }
+    @media (max-width: 1252px) {
+      font-size: 2.5rem;
+    }
+    @media (max-width: 1112px) {
+      font-size: 2.4rem;
+    }
+    @media (max-width: 1025px) {
+      font-size: 2rem;
+    }
+  }
+  @media (max-width: 1520px) {
+    width: 40%;
+    font-size: 3rem;
+  }
+  @media (max-width: 1400px) {
+    width: 240px;
+  }
+  @media (max-width: 1252px) {
+    font-size: 2.5rem;
+    width: 220px;
+  }
+  @media (max-width: 1112px) {
+    width: 200px;
+    font-size: 2.4rem;
+  }
+  @media (max-width: 1025px) {
+    width: 180px;
+    font-size: 2rem;
+  }
+  @media (max-width: 860px) {
   }
   @media (max-width: 480px) {
     width: 62%;
-    font-size: 25px;
+    font-size: 2.5rem;
   }
 `;
 
 export const Desc = styled.p`
-  font-size: 25px;
+  font-size: 3rem;
   margin: 0 0 21px 0;
   color: #fff;
   font: Poppins;
   font-weight: bold;
+  @media (max-width: 1520px) {
+    font-size: 2.5rem;
+  }
+  @media (max-width: 1252px) {
+    font-size: 2.2rem;
+  }
+  @media (max-width: 1112px) {
+    font-size: 2rem;
+  }
+  @media (max-width: 1025px) {
+    font-size: 1.8rem;
+  }
   @media (max-width: 480px) {
     font-size: 21px;
     width: 262px;
@@ -123,12 +193,27 @@ export const Desc = styled.p`
 `;
 
 export const BigImg = styled.img`
-  width: 30%;
+  width: 540px;
+  max-width: 540px;
   position: absolute;
   background: yellow;
-  height: 513px;
+  height: 520px;
   right: 80px;
   bottom: 0;
+  @media (max-width: 1400px) {
+    width: 35%;
+    height: 454px;
+  }
+  @media (max-width: 1176px) {
+    width: 35%;
+    height: 400px;
+  }
+  @media (max-width: 962px) {
+    width: 34%;
+    height: 370px;
+  }
+  @media (max-width: 860px) {
+  }
   @media (max-width: 480px) {
     width: 329px;
     height: 317px;
@@ -137,12 +222,13 @@ export const BigImg = styled.img`
 `;
 
 export const ListHomeBanner = styled.div`
-  width: 90%;
-  height: auto;
+  width: 85%;
+  height: 200px;
+  background: red;
   position: absolute;
-  bottom: -70px;
-  left: 50px;
-  background: blue;
+  bottom: -140px;
+  left: 7%;
+
   @media (max-width: 480px) {
     width: 68%;
     left: 60px;
@@ -152,11 +238,11 @@ export const ListHomeBanner = styled.div`
 
 export const HyperCardGroup = styled.div`
   height: 220px;
+  // background: green;
   display: flex !important;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  background: green;
 `;
 
 export const HyperText = styled.label`
@@ -165,11 +251,26 @@ export const HyperText = styled.label`
   color: #9a8dac;
 `;
 
-export const Carousel = styled.div`
-  width: 1500px;
-  height: 370px;
-  background: green;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
+export const RightArrow = styled.img`
+  height: 39px;
+  width: auto;
+  position: absolute;
+  right: -3vw;
+  top: 50%;
+  z-index: 2;
+  @media (max-width: 480px) {
+    right: -10vw;
+  }
+`;
+
+export const LeftArrow = styled.img`
+  height: 39px;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: -3vw;
+  z-index: 2;
+  @media (max-width: 480px) {
+    left: -10vw;
+  }
 `;

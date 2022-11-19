@@ -6,67 +6,61 @@ import {
   CardsOurTeam,
   NameCasters,
   FuncCasters,
-  Buttons,
-  TeamButton,
-  ButtonsMobile,
-  TeamButtonMobile,
-  Carousel,
   LeftArrow,
   RightArrow,
+  GroupText,
 } from "./styles";
 import Slider from "react-slick";
 
-function PrevArrow(props) {
-  const { className, style, onClick } = props;
+function SamplePrevArrow(props) {
+  const { className, onClick } = props;
   return (
     <LeftArrow
       className={className}
-      src="./icon/Grupo21.svg"
+      src="./icon/Grupo 21.svg"
       onClick={onClick}
     />
   );
 }
 
-function NextArrow(props) {
-  const { className, style, onClick } = props;
+function SampleNextArrow(props) {
+  const { className, onClick } = props;
   return (
     <RightArrow
       className={className}
-      src="./icon/Grupo22.svg"
+      src="./icon/Grupo 22.svg"
       onClick={onClick}
     />
   );
 }
 
 export default function OurTeam() {
+  var slider = ".slider";
   const listCardsOurTeam = [
     { name: "Leandro", surname: "Radnas", func: "Host e Caster" },
     { name: "Leo", surname: "Dratini", func: "Caster" },
     { name: "Davi", surname: "Hayato", func: "Caster" },
-    { name: "LuKAS", surname: "SuP", func: "Dev" },
+    { name: "Lucas", surname: "SuP", func: "Dev" },
     { name: "Gabriel", surname: "C4rds", func: "Dev" },
+    { name: "Walter", surname: "Com Dablio", func: "Editor" },
   ];
 
-  const CarouselButtons = [
-    { linkimg: "diretorio da imagem1" },
-    { linkimg: "diretorio da imagem2" },
-  ];
-
-  const carousel = {
+  const settings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-    resposive: [
+    prevArrow: <SamplePrevArrow />,
+    nextArrow: <SampleNextArrow />,
+    responsive: [
       {
-        breakpoint: 375,
+        breakpoint: 860,
         settings: {
+          rows: 3,
           slidesToShow: 1,
           slidesToScroll: 1,
-          vertical: true,
+          infinite: slider.length > 3 ? true : false,
         },
       },
     ],
@@ -74,51 +68,31 @@ export default function OurTeam() {
 
   return (
     <Content>
-      <Title margin={"-40px 0 0px 0"}>Nosso time</Title>
-      <Desc textAlignDescMobile={"center"} margin={"2px"}>
-        A equipe que trabalha no Hyper Beam
-      </Desc>
+      <GroupText>
+        <Title>Nosso time</Title>
+        <Desc>
+          A equipe que trabalha no Hyper Beam
+        </Desc>
+      </GroupText>
       <GlobalPeoples>
-        {/* <Buttons>
-          <TeamButton></TeamButton>
-        </Buttons> */}
-
-        <Peoples>
-          <Carousel>
-            <Slider style={{ width: "1000px" }} {...carousel}>
-              {listCardsOurTeam.map((res) => {
-                return (
-                  <div key=""
-                    style={{
-                      width: "500px",
-                      height: "500px",
-                      background: "yellow",
-                    }}
-                  >
+        <>
+          <Slider {...settings}>
+            {listCardsOurTeam.map((res, index) => {
+              return (
+                <>
+                  <Peoples key={index}>
                     <CardsOurTeam></CardsOurTeam>
                     <NameCasters>
-                      <div>
-                        {res.name}
-                        <span> {res.surname} </span>
-                      </div>
+                      {res.name}
+                      <span> {res.surname} </span>
                     </NameCasters>
-                    <FuncCasters>
-                      <div>{res.func}</div>
-                    </FuncCasters>
-                  </div>
-                );
-              })}
-            </Slider>
-          </Carousel>
-        </Peoples>
-
-        {/* <Buttons>
-          <TeamButton></TeamButton>
-        </Buttons>
-        <ButtonsMobile>
-          <TeamButtonMobile></TeamButtonMobile>
-          <TeamButtonMobile></TeamButtonMobile>
-        </ButtonsMobile> */}
+                    <FuncCasters>{res.func}</FuncCasters>
+                  </Peoples>
+                </>
+              );
+            })}
+          </Slider>
+        </>
       </GlobalPeoples>
     </Content>
   );

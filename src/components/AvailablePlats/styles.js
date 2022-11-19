@@ -2,13 +2,12 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 100%;
-  height: 836px;
-  background: #11122d;
+  height: 900px;
+  background: #11129d;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 70px;
   @media (max-width: 480px) {
     height: 1401px;
     padding: 0;
@@ -17,12 +16,20 @@ export const Content = styled.div`
 `;
 
 export const Plats = styled.div`
-  width: 45%;
-  height: 50%;
+  width: 80%;
+  height: 80%;
+  background: red;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
+  @media (max-width: 1680px) {
+    width: 95%;
+  }
+  @media (max-width: 1290px) {
+    width: 100%;
+  }
+
   @media (max-width: 480px) {
     width: 100%;
     height: 65%;
@@ -41,6 +48,16 @@ export const PlatsCards = styled.a`
   justify-content: center;
   align-items: center;
   border-radius: 15px;
+  @media (max-width: 1290px) {
+    width: ${(props) => props.widthCards1290};
+  }
+  @media (max-width: 1050px) {
+    height: ${(props) => props.heightCards1050};
+  }
+  @media (max-width: 480px) {
+    width: ${(props) => props.widthCardsMobile};
+    height: ${(props) => props.heightCardsMobile};
+  }
   :hover {
     width: ${(props) => props.widthHover};
     height: ${(props) => props.heightHover};
@@ -57,17 +74,26 @@ export const PlatsIcons = styled.div`
   height: ${(props) => props.heightIcon};
   background: #fff;
   border-radius: 50%;
+  @media (max-width: 1050px) {
+    width: ${(props) => props.widthIcon1050};
+    height: ${(props) => props.heightIcon1050};
+  }
 `;
 
 export const PlatsGroup = styled.div`
-  width: auto;
-  height: 350px;
+  width: 34%;
+  height: 390px;
+  background: yellow;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media (max-width: 1050px) {
+    height: 350px;
+  }
   @media (max-width: 480px) {
     height: auto;
+    width: 80%;
   }
 `;
 
@@ -82,8 +108,8 @@ export const PlatsTitle = styled.a`
 `;
 
 export const PlatsButton = styled.a`
-  width: 247px;
-  height: 49px;
+  width: 290px;
+  height: 90px;
   font-size: 20px;
   color: #fff;
   border-radius: 44px;
@@ -94,8 +120,16 @@ export const PlatsButton = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-column: ${(props) => props.gridColumn};
+  grid-row: ${(props) => props.gridRow};
   :hover {
     color: #11122d;
     background: #fff;
+  }
+  @media (max-width: 480px) {
+    grid-column: ${(props) => props.gridColumnMobile};
+    grid-row: ${(props) => props.gridRowMobile};
+    width: 248px;
+    height: 50px;
   }
 `;
