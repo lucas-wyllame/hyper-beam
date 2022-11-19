@@ -3,7 +3,7 @@ import HomeBanner from "../components/Home/homeBanner";
 import About from "../components/About/about";
 import LastEpisodes from "../components/LastEpisodes";
 import OurTeam from "../components/OurTeam";
-import AvailablePlats from "../components/AvailablePLats";
+import AvailablePlats from "../components/AvailablePlats";
 import Footer from "../components/Footer/footer";
 import { GlobalStyles } from "../styles/globalStyles";
 
