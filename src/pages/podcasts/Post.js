@@ -5,7 +5,7 @@ import Plats from "../../components/Plats";
 import Comments from "../../components/Comments";
 import Footer from "../../components/Footer/footer"
 
-export function Post() {
+export default function Post() {
   return (
     <>
       <Header />
