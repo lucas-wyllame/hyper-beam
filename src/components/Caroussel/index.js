@@ -196,7 +196,7 @@ export default function Carousel() {
         <Slider {...settings}>
           {TextInside.map((res) => {
             return (
-              <CarousselStyled>
+              <CarousselStyled key="">
                 <HyperCard
                   width={"225px"}
                   height={"225px"}

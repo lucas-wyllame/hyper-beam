@@ -88,7 +88,7 @@ export default function OurTeam() {
             <Slider style={{ width: "1000px" }} {...carousel}>
               {listCardsOurTeam.map((res) => {
                 return (
-                  <div
+                  <div key=""
                     style={{
                       width: "500px",
                       height: "500px",
