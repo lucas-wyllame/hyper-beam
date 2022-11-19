@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from "next/dist/client/router";
-import {Post} from "./Post"
+import Post from "./Post"
 
 export default function Podcasts() {
 
