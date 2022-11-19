@@ -17,6 +17,14 @@ const CardBanner = styled.div`
   p {
     color: #fff;
   }
+  @media (max-width: 1310px) {
+    width: 176px;
+    height: 176px;
+  }
+  @media (max-width: 962px) {
+    width: 146px;
+    height: 146px;
+  }
   @media (max-width: 480px) {
     width: ${(props) => props.widthMobile};
     height: ${(props) => props.heightMobile};

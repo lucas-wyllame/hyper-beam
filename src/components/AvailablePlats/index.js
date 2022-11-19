@@ -1,4 +1,5 @@
 import { Title, Desc } from "../Global/globalStyles";
+import { platsLinks } from "./platsLinks";
 import {
   Content,
   Plats,
@@ -10,57 +11,27 @@ import {
 } from "./styles";
 
 export default function AvailablePlats() {
-  const PlatsLinks = [
-    {
-      name: "Google Podcast",
-      url: "https://bit.ly/3QiAwf6",
-      width: "196px",
-      height: "196px",
-      widthIcon: "98px",
-      heightIcon: "98px",
-      fontSize: "20px",
-    },
-    {
-      name: "Spotify",
-      url: "https://spoti.fi/3QbrMHI",
-      width: "274px",
-      height: "274px",
-      widthHover: "288px",
-      heightHover: "288px",
-      widthHoverDiv: "146px",
-      heightHoverDiv: "146px",
-      widthIcon: "136px",
-      heightIcon: "136px",
-      backColor: "green",
-      fontSize: "28px",
-    },
-    {
-      name: "Pocket Casts",
-      url: "https://bit.ly/3PgAZ0e",
-      width: "196px",
-      height: "196px",
-      widthIcon: "98px",
-      heightIcon: "98px",
-      fontSize: "20px",
-    },
-  ];
   return (
     <Content>
       <Title>Plataformas disponíveis</Title>
       <Desc>Onde encontrar nosso podcast para escutar</Desc>
       <Plats>
-        {PlatsLinks.map((res, index) => {
+        {platsLinks.map((res, index) => {
           return (
             // eslint-disable-next-line react/jsx-key
             <PlatsGroup key={index}>
               <PlatsCards
                 width={res.width}
                 height={res.height}
+                widthCardsMobile={res.widthCardsMobile}
+                heightCardsMobile={res.heightCardsMobile}
                 backColor={res.backColor}
                 widthHover={res.widthHover}
                 heightHover={res.heightHover}
                 widthHoverDiv={res.widthHoverDiv}
                 heightHoverDiv={res.heightHoverDiv}
+                widthCards1290={res.widthCards1290}
+                heightCards1050={res.heightCards1050}
                 href={res.url}
                 target="_blank"
                 rel="noreferrer"

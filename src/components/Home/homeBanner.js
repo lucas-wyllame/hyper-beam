@@ -11,11 +11,25 @@ import {
   HyperText,
   RightArrow,
   LeftArrow,
+  PlayButton,
 } from "./styles";
 import Slider from "react-slick";
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import { gray } from "@mui/material/colors";
+import { createTheme } from "@mui/material/styles";
+import { purple } from "@mui/material/colors";
+import { ThemeProvider } from "styled-components";
+
+const theme = createTheme({
+  palette: {
+    secondary: {
+      main: "#9e9e9e",
+    },
+  },
+});
 
 function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
+  const { className, onClick } = props;
   return (
     <RightArrow
       className={className}
@@ -26,7 +40,7 @@ function SampleNextArrow(props) {
 }
 
 function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
+  const { className, onClick } = props;
   return (
     <LeftArrow
       className={className}
@@ -37,39 +51,17 @@ function SamplePrevArrow(props) {
 }
 
 export default function HomeBanner() {
-  var slider = ".slider";
   const TitleInsides = [
-    {
-      name: "Hyper Beam 1",
-      numero: 1,
-      foto: "linkgenericodefotourl",
-    },
-    {
-      name: "Hyper Beam 2",
-      numero: 2,
-      foto: "linkgenericodefotourl2",
-    },
-    {
-      name: "Hyper Beam 3",
-      numero: 3,
-      foto: "linkgenericodefotourl2",
-    },
-    {
-      name: "Hyper Beam 4",
-      numero: 4,
-      foto: "linkgenericodefotourl2",
-    },
-    {
-      name: "Hyper Beam 5",
-      numero: 5,
-      foto: "linkgenericodefotourl2",
-    },
-    {
-      name: "Hyper Beam 6",
-      numero: 5,
-      foto: "linkgenericodefotourl2",
-    },
+    { name: "Hyper Beam 1", image: "genericImageURLLink" },
+    { name: "Hyper Beam 2", image: "genericImageURLLink2" },
+    { name: "Hyper Beam 3", image: "genericImageURLLink3" },
+    { name: "Hyper Beam 4", image: "genericImageURLLink4" },
+    { name: "Hyper Beam 5", image: "genericImageURLLink5" },
+    { name: "Hyper Beam 6", image: "genericImageURLLink6" },
   ];
+
+  var slider = ".slider";
+
   var settings = {
     dots: false,
     infinite: true,
@@ -79,6 +71,22 @@ export default function HomeBanner() {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
+      {
+        breakpoint: 1176,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: slider.length > 1 ? true : false,
+        }
+      },
+      {
+        breakpoint: 962,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: slider.length > 1 ? true : false,
+        }
+      },
       {
         breakpoint: 480,
         settings: {
@@ -94,28 +102,33 @@ export default function HomeBanner() {
     <Content>
       <Banner>
         <TextsDiv>
-          <TitleInside margin={"10px 0"}>
-            Hyper Beam <div /> <span>03</span>
+          <TitleInside>
+            Hyper Beam
+            <ThemeProvider theme={theme}>
+              <FiberManualRecordIcon sx={{ color: "#9e9e9e" }} />
+            </ThemeProvider>
+            <span>03</span>
           </TitleInside>
           <Desc>Pokémon Unite e The World Ends with You</Desc>
-          <button>Play</button>
+          <PlayButton>Play</PlayButton>
         </TextsDiv>
-        <BigImg></BigImg>
+        <BigImg />
         <ListHomeBanner>
           <Slider {...settings}>
             {TitleInsides.map((res, index) => {
               return (
                 // eslint-disable-next-line react/jsx-key
-                <HyperCardGroup key={index}>
-                  <HyperCard
-                    width={"196px"}
-                    height={"196px"}
-                    widthMobile={"80%"}
-                    name={res.name}
-                    numero={res.numero}
-                  ></HyperCard>
-                  <HyperText>{res.name}</HyperText>
-                </HyperCardGroup>
+                <>
+                  <HyperCardGroup key={index}>
+                    <HyperCard
+                      width={"196px"}
+                      height={"196px"}
+                      widthMobile={"80%"}
+                      heightMobile={"196px"}
+                    ></HyperCard>
+                    <HyperText>{res.name}</HyperText>
+                  </HyperCardGroup>
+                </>
               );
             })}
           </Slider>

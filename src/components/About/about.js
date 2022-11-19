@@ -6,11 +6,11 @@ export default function About() {
     <Content>
       <LeftImage></LeftImage>
       <TextDiv>
-        <Title widthMobile={"294px"}>Somos o Hyper Beam</Title>
+        <Title>Somos o Hyper Beam</Title>
         <Desc
-          maxWidth={"72%"}
-          widthDescMobile={"276px"}
-          maxWidthMobile={"276px"}
+          // maxWidth={"72%"}
+          // widthDescMobile={"276px"}
+          // maxWidthMobile={"276px"}
         >
           A fagulha de amor aos games em forma de podcast.
         </Desc>

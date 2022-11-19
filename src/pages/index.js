@@ -13,12 +13,12 @@ export default function Home() {
   return (
     <>
       <Header />
-      {/* <HomeBanner /> */}
-      {/* <About /> */}
-      {/* <GlobalStyles /> */}
-      {/* <LastEpisodes /> */}
+      <HomeBanner />
+      <About />
+      <GlobalStyles />
+      <LastEpisodes />
       <OurTeam />
-      {/* <AvailablePlats /> */}
+      <AvailablePlats />
       <Footer /> 
     </>
   );

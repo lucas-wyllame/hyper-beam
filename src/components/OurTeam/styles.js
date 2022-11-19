@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: 716px;
-  background: blue;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -16,7 +15,9 @@ export const Content = styled.div`
     height: 1100px;
   }
   @media (max-width: 480px) {
-    height: 1100px;
+    height: 1350px;
+    background: green;
+    justify-content: normal;
   }
 `;
 
@@ -47,17 +48,16 @@ export const GlobalPeoples = styled.div`
 
   @media (max-width: 480px) {
     flex-direction: column;
-    width: 60%;
+    width: 68%;
     height: 1100px;
     justify-content: space-between;
-    margin-top: 50px;
   }
 `;
 
 export const GroupText = styled.div`
   width: 100%;
   height: 140px;
-  background: pink;
+  /* background: pink; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,7 +66,7 @@ export const GroupText = styled.div`
 export const Peoples = styled.div`
   width: 96%;
   height: 370px;
-  background: aqua;
+  /* background: aqua; */
   display: flex;
   flex-direction: column;
   @media (max-width: 1604px) {
@@ -89,7 +89,7 @@ export const Peoples = styled.div`
   }
   @media (max-width: 480px) {
     width: 90%;
-    height: 300px;
+    height: 350px;
   }
 `;
 
@@ -138,20 +138,6 @@ export const Buttons = styled.div`
   } */
 `;
 
-export const RightArrow = styled.img`
-  height: 39px;
-  width: 39px;
-  position: absolute;
-  left: 100%;
-  top: 50%;
-  z-index: 2;
-  /* @media (max-width: 480px) {
-    position: relative;
-    top: 10vw;
-    right: -34vw;
-  } */
-`;
-
 export const LeftArrow = styled.img`
   height: 39px;
   width: 39px;
@@ -159,9 +145,24 @@ export const LeftArrow = styled.img`
   top: 50%;
   left: -3vw;
   z-index: 2;
-  /* @media (max-width: 480px) {
+  @media (max-width: 480px) {
     position: relative;
-    top: 408.6vh;
-    left: 10vw;
-  } */
+    top: 139vh;
+    left: 13vw;
+  }
 `;
+
+export const RightArrow = styled.img`
+  height: 39px;
+  width: 39px;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  z-index: 2;
+  @media (max-width: 480px) {
+    position: relative;
+    top: 10.6vw;
+    left: 39vw;
+  }
+`;
+

@@ -66,7 +66,7 @@ export const CardAndText = styled.div`
 `;
 
 export const TextsDivEp = styled.div`
-  width: auto;
+  width: 60%;
   height: auto;
   margin-left: 62px;
   @media (max-width: 480px) {
@@ -184,7 +184,7 @@ export const ButtonSeeAll = styled.button`
   border: none;
   color: #a127ff;
   font-size: 20px;
-  margin-top: 19px;
+  margin-top: 52px;
   cursor: pointer;
   position: relative;
   left: 45%;
