@@ -17,7 +17,7 @@ export default function About() {
         <MoreInfs
           // widthMobile={"324px"}
           // heightMobile={"99px"}
-          fontSizeMobile={"14px"}
+          fontSizeMobile={"1.4rem"}
         >
           Lorem ipsum dolor sit amet, consectetur a elit. Sed dictum sodales
           rutrum. Praesent eget lobortis purus. Donec a finibus neque. Nu erat a
