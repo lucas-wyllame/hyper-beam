@@ -72,22 +72,6 @@ export default function HomeBanner() {
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
-        breakpoint: 1176,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          infinite: slider.length > 1 ? true : false,
-        }
-      },
-      {
-        breakpoint: 962,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          infinite: slider.length > 1 ? true : false,
-        }
-      },
-      {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
@@ -95,9 +79,32 @@ export default function HomeBanner() {
           infinite: slider.length > 1 ? true : false,
         },
       },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: slider.length > 1 ? true : false,
+        },
+      },
+      {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: slider.length > 1 ? true : false,
+        },
+      },
+      {
+        breakpoint: 1176,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: slider.length > 1 ? true : false,
+        },
+      },
     ],
   };
-
   return (
     <Content>
       <Banner>
