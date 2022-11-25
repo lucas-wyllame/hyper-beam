@@ -1,4 +1,4 @@
-import { Title, Desc } from "../Global/globalStyles";
+import { Desc, Title } from "@styles/globalStyles";
 import { platsLinks } from "./platsLinks";
 import {
   Content,

@@ -1,4 +1,4 @@
-import { Title, Desc } from "../Global/globalStyles";
+import { Title, Desc } from "@styles/globalStyles";
 import {
   Content,
   GlobalPeoples,

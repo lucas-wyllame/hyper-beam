@@ -1,4 +1,4 @@
-import { Title, Desc, MoreInfs } from "../Global/globalStyles";
+import { Desc, MoreInfs, Title } from "@styles/globalStyles";
 import { Content, LeftImage, TextDiv } from "./styles";
 
 export default function About() {
@@ -8,9 +8,9 @@ export default function About() {
       <TextDiv>
         <Title>Somos o Hyper Beam</Title>
         <Desc
-          // maxWidth={"72%"}
-          // widthDescMobile={"276px"}
-          // maxWidthMobile={"276px"}
+        // maxWidth={"72%"}
+        // widthDescMobile={"276px"}
+        // maxWidthMobile={"276px"}
         >
           A fagulha de amor aos games em forma de podcast.
         </Desc>

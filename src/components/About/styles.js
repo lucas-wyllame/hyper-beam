@@ -8,15 +8,19 @@ export const Content = styled.div`
   background: blue;
   justify-content: space-between;
   align-items: center;
-  @media (max-width: 1130px) {
+  /* @media (max-width: 1130px) {
     height: 350px;
   }
   @media (max-width: 870px) {
     height: 750px;
     flex-direction: column;
+  } */
+  @media(min-width: 1024px){
+    
   }
-  
   @media (max-width: 480px) {
+    width: 100%;
+    margin: 90px 0;
     height: 600px;
     flex-direction: column;
     justify-content: space-between;
@@ -28,7 +32,7 @@ export const LeftImage = styled.div`
   height: 100%;
   background: red;
   border-radius: 0 50px 50px 0;
-  @media (max-width: 870px) {
+  /* @media (max-width: 870px) {
     width: 90%;
     border-radius: 50px;
     height: 45%;
@@ -37,6 +41,9 @@ export const LeftImage = styled.div`
     width: 100%;
     height: 300px;
     border-radius: 0;
+  } */
+  @media(min-width: 1024px){
+    
   }
   @media (max-width: 480px) {
     width: 100%;
@@ -53,12 +60,15 @@ export const TextDiv = styled.div`
   display: flex;
   flex-direction: column;
   padding-left: 5px;
-  @media (max-width: 870px) {
+  /* @media (max-width: 870px) {
     width: 90%;
     height: 50%;
   }
   @media (max-width: 650px) {
     width: 100%;
+  } */
+  @media(min-width: 1024px){
+    
   }
   @media (max-width: 480px) {
     height: 40%;
