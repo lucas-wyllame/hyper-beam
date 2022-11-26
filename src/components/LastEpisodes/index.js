@@ -131,6 +131,10 @@ export default function LastEpisodes() {
                         height={"253px"}
                         position={"relative"}
                         top={"-35px"}
+                        widthLaptop={"304px"}
+                        heightLAwidthLaptop={"304px"}
+                        widthLaptopLarge={"337px"}
+                        heightLaptopLarge={"337px"}
                       />
                       <TextsDivEp>
                         <TitleInside margin={"10px 0"}>
@@ -140,10 +144,7 @@ export default function LastEpisodes() {
                           </ThemeProvider>
                           <span>{res.number}</span>
                         </TitleInside>
-                        <MoreInfs
-                          fontSize={"1.8rem"}
-                          width={"694px"}
-                        >
+                        <MoreInfs fontSize={"1.8rem"} width={"694px"}>
                           Lorem ipsum dolor sit amet, consectetur a elit. Sed
                           dictum sodales rutrum. Praesent eget lobortis purus.
                           Donec a finibus neque. Nu erat a cursus sodales. Fusce

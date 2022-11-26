@@ -72,23 +72,15 @@ export default function HomeBanner() {
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
-        breakpoint: 480,
+        breakpoint: 1337,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 4,
           slidesToScroll: 1,
           infinite: slider.length > 1 ? true : false,
         },
       },
       {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: slider.length > 1 ? true : false,
-        },
-      },
-      {
-        breakpoint: 1023,
+        breakpoint: 1100,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
@@ -96,9 +88,25 @@ export default function HomeBanner() {
         },
       },
       {
-        breakpoint: 1176,
+        breakpoint: 986,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: slider.length > 1 ? true : false,
+        },
+      },
+      {
+        breakpoint: 737,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: slider.length > 1 ? true : false,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
           slidesToScroll: 1,
           infinite: slider.length > 1 ? true : false,
         },
@@ -127,12 +135,7 @@ export default function HomeBanner() {
                 // eslint-disable-next-line react/jsx-key
                 <>
                   <HyperCardGroup key={index}>
-                    <HyperCard
-                      width={"196px"}
-                      height={"196px"}
-                      widthMobile={"80%"}
-                      heightMobile={"196px"}
-                    ></HyperCard>
+                    <HyperCard width={"196px"} height={"196px"}></HyperCard>
                     <HyperText>{res.name}</HyperText>
                   </HyperCardGroup>
                 </>

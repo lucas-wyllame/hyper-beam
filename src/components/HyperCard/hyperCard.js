@@ -19,21 +19,13 @@ const CardBanner = styled.div`
   }
 
   @media (min-width: 1024px) {
-    width: 304px;
-    height: 304px;
+    width: ${(props) => props.widthLaptop};
+    height: ${(props) => props.heightLaptop};
   }
   @media (min-width: 1440px) {
-    width: 337px;
-    height: 337px;
+    width: ${(props) => props.widthLaptopLarge};
+    height: ${(props) => props.heightLaptopLarge};
   }
-  /* @media (max-width: 1310px) {
-    width: 176px;
-    height: 176px;
-  }
-  @media (max-width: 962px) {
-    width: 146px;
-    height: 146px;
-  } */
 `;
 
 export default function HyperCard({
@@ -46,6 +38,10 @@ export default function HyperCard({
   margin,
   widthMobile,
   heightMobile,
+  widthLaptop,
+  heightLaptop,
+  widthLaptopLarge,
+  heightLaptopLarge,
 }) {
   return (
     <CardBanner
@@ -58,6 +54,10 @@ export default function HyperCard({
       margin={margin}
       widthMobile={widthMobile}
       heightMobile={heightMobile}
+      widthLaptop={widthLaptop}
+      heightLaptop={heightLaptop}
+      widthLaptopLarge={widthLaptopLarge}
+      heightLaptopLarge={heightLaptopLarge}
     >
       <p>{name}</p>
       <label>{numero}</label>

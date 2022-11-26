@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       {/* <Header /> */}
-      {/* <HomeBanner /> */}
+      <HomeBanner />
       <About />
       <GlobalStyles />
       <LastEpisodes />
