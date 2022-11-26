@@ -59,22 +59,24 @@ export const LeftArrow = styled.img`
   height: 39px;
   width: 39px;
   position: relative;
-  top: 391vh;
-  left: 50px;
+  top: 381vh;
+  left: 0;
   z-index: 2;
-  @media (min-width: 769px) {
-    top: 48.5vh;
-    left: 257px;
+  @media (min-width: 645px) {
+    top: 99.9vh;
+    left: 0px;
+  }
+  @media (min-width: 947px) {
+    top: 100.9vh;
+    left: 332px;
   }
   @media (min-width: 1024px) {
-    position: absolute;
-    top: 50%;
-    left: -6vw;
+    top: 108.9vh;
+    left: 332px;
   }
-  @media (min-width: 1176px) {
-    position: absolute;
-    left: -52px;
-    top: 50%;
+  @media (min-width: 1146px) {
+    top: 953px;
+    left: 434px;
   }
 `;
 
@@ -82,21 +84,23 @@ export const RightArrow = styled.img`
   height: 39px;
   width: 39px;
   position: relative;
-  top: 59px;
-  left: 160px;
+  top: 55px;
+  left: 186px;
   z-index: 2;
-  @media (min-width: 769px) {
+  @media (min-width: 645px) {
     top: 25px;
-    left: 350px;
+    left: 459px;
+  }
+  @media (min-width: 947px) {
+    top: 34px;
+    left: 402px;
   }
   @media (min-width: 1024px) {
-    position: absolute;
-    left: 680px;
-    top: 50%;
+    top: -22px;
+    left: 408px;
   }
-  @media (min-width: 1176px) {
-    position: absolute;
-    left: 1037px;
-    top: 50%;
+  @media (min-width: 1146px) {
+    top: -22px;
+    left: 552px;
   }
 `;
