@@ -15,13 +15,7 @@ export const Content = styled.div`
     height: 716px;
     justify-content: space-around;
   }
-  /* @media (max-width: 860px) {
-    height: 1200px;
-    justify-content: space-between;
-  }
-  @media (max-width: 700px) {
-    height: 1100px;
-  } */
+
 `;
 
 export const GroupText = styled.div`
