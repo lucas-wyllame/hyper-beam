@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: 3500px;
-  background: red;
+  background: green;
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (min-width: 375px) {
+  @media (min-width: 645px) {
     height: 1100px;
   }
 `;
@@ -32,7 +32,7 @@ export const PodcastsList = styled.div`
   }
   @media (max-width: 644px) {
     width: 225px;
-    height: 936px;
+    height: 3380px;
   }
 `;
 
