@@ -13,11 +13,11 @@ import {
 import { Icon } from "../../components/Footer/styles";
 import HyperCard from "../../components/HyperCard/hyperCard";
 import { Control } from "../../../public/icon/IconComTag";
-import { MoreInfs } from "../../styles/globalStyles";
 import { TitleInside } from "../Home/styles";
 import { ThemeProvider } from "styled-components";
 import { theme } from "../Home/homeBanner";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import { MoreInfs } from "@styles/globalStyles";
 
 export default function Podcast() {
   return (
