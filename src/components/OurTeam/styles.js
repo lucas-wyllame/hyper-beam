@@ -2,115 +2,105 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 100%;
-  height: 716px;
+  height: 1350px;
+  background: green;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   flex-direction: column;
-  @media (max-width: 860px) {
+  justify-content: normal;
+  align-items: center;
+  @media (min-width: 1024px) {
+    height: 716px;
+    justify-content: space-around;
+  }
+  /* @media (max-width: 860px) {
     height: 1200px;
     justify-content: space-between;
   }
   @media (max-width: 700px) {
     height: 1100px;
-  }
-  @media (max-width: 480px) {
-    height: 1350px;
-    background: green;
-    justify-content: normal;
-  }
-`;
-
-export const GlobalPeoples = styled.div`
-  width: 50%;
-  height: 370px;
-  background: red;
-  @media (max-width: 1604px) {
-    width: 55%;
-  }
-  @media (max-width: 1280px) {
-    width: 60%;
-  }
-  @media (max-width: 1024px) {
-    width: 65%;
-  }
-  @media (max-width: 860px) {
-    width: 35%;
-    height: 1000px;
-  }
-  @media (max-width: 700px) {
-    width: 35%;
-    height: 900px;
-  }
-  @media (max-width: 570px) {
-    width: 45%;
-  }
-
-  @media (max-width: 480px) {
-    flex-direction: column;
-    width: 68%;
-    height: 1100px;
-    justify-content: space-between;
-  }
+  } */
 `;
 
 export const GroupText = styled.div`
   width: 100%;
-  height: 140px;
-  /* background: pink; */
+  height: auto;
+  background: pink;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (min-width: 1024px) {
+  }
+`;
+
+export const GlobalPeoples = styled.div`
+  width: 68%;
+  max-width: 253px;
+  height: 1100px;
+  background: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px;
+  @media (min-width: 1024px) {
+    width: 986px;
+    max-width: 986px;
+    height: 370px;
+  }
+  @media (max-width: 1175px) {
+    width: 100%;
+    max-width: 655px;
+    height: 370px;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 253px;
+    height: auto;
+  }
 `;
 
 export const Peoples = styled.div`
-  width: 96%;
-  height: 370px;
-  /* background: aqua; */
+  width: 100%;
+  height: 350px;
+  background: aqua;
   display: flex;
   flex-direction: column;
-  @media (max-width: 1604px) {
-    height: 320px;
+  @media (min-width: 1024px) {
+    width: 286px;
+    height: 370px;
   }
-  @media (max-width: 1280px) {
-    height: 300px;
-  }
-  @media (max-width: 1024px) {
-    height: 280px;
-  }
-  @media (max-width: 860px) {
-    height: 330px;
-  }
-  @media (max-width: 700px) {
-    height: 290px;
-  }
-  @media (max-width: 570px) {
-    height: 300px;
-  }
-  @media (max-width: 480px) {
-    width: 90%;
-    height: 350px;
+  @media (max-width: 768px) {
+    height: auto;
   }
 `;
 
 export const CardsOurTeam = styled.div`
-  width: 95%;
-  height: 285px;
+  width: 253px;
+  height: 253px;
+  max-width: 253px;
+  max-height: 253px;
   background: #9697c7;
   border-radius: 20px;
   margin-bottom: 20px;
-  :hover {
-    width: 293px;
-    height: 293px;
-    background: yellow;
-  }
-  @media (max-width: 480px) {
-    width: 253px;
-    height: 253px;
+  @media (min-width: 1175px) {
+    width: 100%;
+    height: 254px;
+    max-width: 254px;
+    max-height: 254px;
     :hover {
-      width: 253px;
-      height: 253px;
-      background: #9697c7;
+      width: 293px;
+      height: 293px;
+      background: yellow;
+    }
+  }
+  @media (min-width: 1645px) {
+    width: 100%;
+    height: 285px;
+    max-width: 285px;
+    max-height: 285px;
+    :hover {
+      width: 293px;
+      height: 293px;
+      background: yellow;
     }
   }
 `;
@@ -122,20 +112,15 @@ export const NameCasters = styled.label`
     font-size: 23px;
     color: #ffe747;
   }
+  @media (min-width: 1024px) {
+  }
 `;
 
 export const FuncCasters = styled.label`
   font-size: 20px;
   color: #9a8dac;
-`;
-
-export const Buttons = styled.div`
-  width: 60px;
-  height: 60px;
-  margin-bottom: 20px;
-  /* @media (max-width: 480px) {
-    display: none;
-  } */
+  @media (min-width: 1024px) {
+  }
 `;
 
 export const LeftArrow = styled.img`
@@ -165,4 +150,3 @@ export const RightArrow = styled.img`
     left: 39vw;
   }
 `;
-

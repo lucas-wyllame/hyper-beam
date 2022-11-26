@@ -55,7 +55,25 @@ export default function OurTeam() {
     nextArrow: <SampleNextArrow />,
     responsive: [
       {
-        breakpoint: 860,
+        breakpoint: 1175,
+        settings: {
+          rows: 1,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: slider.length > 3 ? true : false,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          rows: 3,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: slider.length > 3 ? true : false,
+        },
+      },
+      {
+        breakpoint: 480,
         settings: {
           rows: 3,
           slidesToShow: 1,
@@ -81,7 +99,7 @@ export default function OurTeam() {
               return (
                 <>
                   <Peoples key={index}>
-                    <CardsOurTeam></CardsOurTeam>
+                    <CardsOurTeam/>
                     <NameCasters>
                       {res.name}
                       <span> {res.surname} </span>
