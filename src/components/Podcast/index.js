@@ -12,9 +12,12 @@ import {
 } from "../../components/LastEpisodes/styles";
 import { Icon } from "../../components/Footer/styles";
 import HyperCard from "../../components/HyperCard/hyperCard";
-import { TitleInside } from "../../components/LastEpisodes/styles";
 import { Control } from "../../../public/icon/IconComTag";
-import { MoreInfs } from "../../components/Global/globalStyles";
+import { MoreInfs } from "../../styles/globalStyles";
+import { TitleInside } from "../Home/styles";
+import { ThemeProvider } from "styled-components";
+import { theme } from "../Home/homeBanner";
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 
 export default function Podcast() {
   return (
@@ -22,28 +25,32 @@ export default function Podcast() {
       <BackBanner>
         <ItensBanner>
           <HyperCard
-            width={"340px"}
-            height={"340px"}
-            // top={"40px"}
-            // position={"relative"}
-            widthMobile={"100%"}
-            heightMobile={"280px"}
+            width={"275px"}
+            height={"275px"}
+            widthLaptop={"340px"}
+            heightLaptop={"340px"}
           ></HyperCard>
           <BannerInfos>
-            <TitleInside margin={"0px 0px"}>
-              Hyperbeam <div /> <span>03</span>
+            <TitleInside>
+              Hyper Beam
+              <ThemeProvider theme={theme}>
+                <FiberManualRecordIcon sx={{ color: "#9e9e9e" }} />
+              </ThemeProvider>
+              <span>03</span>
             </TitleInside>
             <IconAndButtons
-              width={"100%"}
-              margin={"0"}
-              alignItems={"center"}
-              heightMobile={"170px"}
+              height="150px"
+              margin="0"
+              alignItems="center"
+              heightLaptop="182px"
+              heightLaptopLarge="100px"
+              flexDLaptopLarge="row"
             >
               <Control />
-              <ButtonsEp widthButton={"202px"} width={"152px"}>
+              <ButtonsEp widthLaptop="202px" width="152px">
                 Pokémon Unite
               </ButtonsEp>
-              <ButtonsEp widthButton={"293px"} width={"219px"}>
+              <ButtonsEp widthLaptop="293px" width="219px">
                 The World Ends with You
               </ButtonsEp>
             </IconAndButtons>
@@ -52,13 +59,7 @@ export default function Podcast() {
       </BackBanner>
       {/* <SeparationDiv /> */}
       <Topic>
-        <MoreInfs
-          width={"929px"}
-          widthMobile={"300px"}
-          paddingTop={"45px"}
-          fontsize={"15px"}
-          heightMobile={"168px"}
-        >
+        <MoreInfs paddingTop="30px" fontSize="1.5rem">
           Lorem ipsum dolor sit amet, consectetur a elit. Sed dictum sodales
           rutrum. Praesent eget lobortis purus. Donec a finibus neque. Nu erat a
           cursus sodales. Fusce vel nulla aliquam, convallis odio semper,

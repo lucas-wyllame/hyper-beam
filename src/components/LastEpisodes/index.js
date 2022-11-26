@@ -154,7 +154,13 @@ export default function LastEpisodes() {
                       </TextsDivEp>
                     </CardAndText>
 
-                    <IconAndButtons>
+                    <IconAndButtons
+                      height="140px"
+                      widthLaptop="580px"
+                      heightLaptop="auto"
+                      flexDLaptop="row"
+                      margin="25px 0 90px 0"
+                    >
                       <Icon
                         onMouseOver={handleMouseOver}
                         onMouseOut={handleMouseOut}

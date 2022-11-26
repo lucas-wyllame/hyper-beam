@@ -2,60 +2,70 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 100%;
-  height: 700px;
+  height: auto;
   background: red;
   display: flex;
   flex-direction: column;
   align-items: center;
   /* justify-content: space-between; */
-  @media (max-width: 480px) {
-    height: 1050px;
+  @media (min-width: 1024px) {
+    height: 700px;
   }
 `;
 
 export const BackBanner = styled.div`
   width: 100%;
-  height: 400px;
+  height: 645px;
   background: purple;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  @media (max-width: 480px) {
-    height: 850px;
+  /* padding: 50px 33px; */
+  /* flex-direction: column; */
+  @media (min-width: 1024px) {
+    height: 400px;
   }
 `;
 
 export const ItensBanner = styled.div`
   width: 80%;
-  height: 340px;
+  height: 600px;
   background: blue;
   display: flex;
-  /* align-items: center; */
-  gap: 50px;
-  position: relative;
-  top: 60px;
-  @media (max-width: 480px) {
-    /* position: static; */
-    height: 600px;
-    flex-direction: column;
-    gap: 0;
-    top: 0;
+  align-items: center;
+  flex-direction: column;
+  position: static;
+  gap: 0;
+  top: 0;
+  @media (min-width: 1024px) {
+    position: relative;
+    height: 340px;
+    flex-direction: row;
+    gap: 50px;
+    top: 60px;
   }
 `;
 
 export const BannerInfos = styled.div`
-  width: 40%;
-  height: 145px;
+  width: 100%;
+  height: 220px;
   background: pink;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-top: 60px;
-  @media (max-width: 480px) {
-    width: 100%;
+  margin-left: 0px;
+  align-items: center;
+  @media (min-width: 1024px) {
+    width: 40%;
     height: 250px;
-    margin-left: 0px;
-    align-items: center;
+    margin-top: 0;
+    align-items: normal;
+  }
+  @media (min-width: 1330px) {
+    width: 55%;
+    max-width: 638px;
+    height: 135px;
   }
 `;
 
@@ -70,13 +80,13 @@ export const SeparationDiv = styled.div`
 
 export const Topic = styled.div`
   width: 80%;
-  height: 250px;
-  background: lightblue;
+  height: auto;
+  background: black;
   display: flex;
-  align-items: center;
+  align-items: normal;
   /* margin-bottom: -25px; */
-  @media (max-width: 480px) {
-    align-items: normal;
-    height: 490px;
+  @media (min-width: 1024px) {
+    height: 250px;
+    align-items: center;
   }
 `;

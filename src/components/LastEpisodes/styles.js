@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: auto;
-  background: pink;
+  /* background: pink; */
   margin: 20px 0;
   display: flex;
   flex-direction: column;
@@ -86,23 +86,26 @@ export const TextsDivEp = styled.div`
 
 export const IconAndButtons = styled.div`
   width: 100%;
-  height: 140px;
+  height: ${(props) => props.height};
+  background: yellow;
   margin-left: 0;
   margin-bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* background: yellow; */
   padding-left: 0px;
-  margin: 25px 0 90px 0;
+  margin: ${(props) => props.margin};
   /* justify-content: ${(props) => props.justifyContent}; */
-  /* align-items: ${(props) => props.alignItems}; */
+  align-items: ${(props) => props.alignItems};
   @media (min-width: 1024px) {
     align-items: center;
-    width: 580px;
-    margin: ${(props) => props.margin};
-    height: auto;
-    flex-direction: row;
+    width: ${(props) => props.widthLaptop};
+    height: ${(props) => props.heightLaptop};
+    flex-direction: ${(props) => props.flexDLaptop};
+  }
+  @media (min-width: 1330px) {
+    height: ${(props) => props.heightLaptopLarge};
+    flex-direction: ${(props) => props.flexDLaptopLarge};
   }
 `;
 
