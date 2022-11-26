@@ -57,7 +57,7 @@ export const TextPlats = styled.div`
 export const OtherPlats = styled.div`
   width: 80%;
   height: 155px;
-  background: red;
+  /* background: red; */
   display: grid;
   justify-content: space-between;
   grid-template-columns: 1fr 1fr 1fr;

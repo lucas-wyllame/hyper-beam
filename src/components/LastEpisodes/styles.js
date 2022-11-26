@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: auto;
-  background: pink;
+  /* background: pink; */
   margin: 20px 0;
   display: flex;
   flex-direction: column;
@@ -18,7 +18,7 @@ export const Content = styled.div`
 export const ListPodcasts = styled.div`
   width: 100%;
   height: auto;
-  background: blue;
+  /* background: blue; */
   margin: 20px 0;
   display: flex;
   flex-direction: column;
@@ -45,7 +45,7 @@ export const Background = styled.div`
 export const Block = styled.div`
   width: 90%;
   height: auto;
-  background: green;
+  /* background: green; */
   border-radius: 44px 44px 0px 0px;
   display: flex;
   flex-direction: column;
@@ -57,7 +57,7 @@ export const Block = styled.div`
 export const CardAndText = styled.div`
   width: 100%;
   height: auto;
-  background: orange;
+  /* background: orange; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,7 +71,7 @@ export const CardAndText = styled.div`
 export const TextsDivEp = styled.div`
   width: 100%;
   height: auto;
-  background: red;
+  /* background: red; */
   @media (min-width: 1024px) {
     width: 60%;
     margin-left: 62px;
@@ -86,7 +86,7 @@ export const IconAndButtons = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: yellow;
+  /* background: yellow; */
   padding-left: 0px;
   margin: 25px 0 70px 0;
   /* justify-content: ${(props) => props.justifyContent}; */

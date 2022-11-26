@@ -12,7 +12,7 @@ export const Content = styled.div`
   margin-top: 40px;
   @media (min-width: 1024px) {
     height: 900px;
-    margin-top: 0;
+    margin-top: 70px;
   }
 `;
 

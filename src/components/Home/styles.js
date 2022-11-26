@@ -20,7 +20,7 @@ export const LogoTop = styled.div`
 export const Content = styled.div`
   width: 100%;
   height: 790px;
-  background: #11129d;
+  /* background: #11129d; */
   margin: 20px 0;
   display: flex;
   justify-content: center;
@@ -51,7 +51,7 @@ export const TextsDiv = styled.div`
   width: 100%;
   border-radius: 44px;
   height: 40%;
-  background: lightblue;
+  /* background: lightblue; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,7 +94,7 @@ export const TitleInside = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: blue;
+  /* background: blue; */
   span {
     color: #ffe747;
     font-size: 2.5rem;
