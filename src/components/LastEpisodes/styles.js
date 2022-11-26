@@ -3,15 +3,18 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: auto;
-  /* background: pink; */
+  background: pink;
   margin: 20px 0;
   display: flex;
   flex-direction: column;
   padding: 0 20px;
   @media (min-width: 1024px) {
     width: 100%;
-    height: 800px;
+    height: 626px;
     padding: 0 88px;
+  }
+  @media (min-width: 1440px) {
+    height: 800px;
   }
 `;
 
@@ -38,6 +41,9 @@ export const Background = styled.div`
   display: flex;
   justify-content: center;
   @media (min-width: 1024px) {
+    height: 420px;
+  }
+  @media (min-width: 1440px) {
     height: 520px;
   }
 `;
@@ -88,7 +94,7 @@ export const IconAndButtons = styled.div`
   justify-content: space-between;
   /* background: yellow; */
   padding-left: 0px;
-  margin: 25px 0 70px 0;
+  margin: 25px 0 90px 0;
   /* justify-content: ${(props) => props.justifyContent}; */
   /* align-items: ${(props) => props.alignItems}; */
   @media (min-width: 1024px) {

@@ -2,26 +2,28 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 100%;
-  height: 214px;
+  height: 463px;
   background: #1b1b40;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  @media (max-width: 480px) {
-    flex-direction: column;
-    height: 463px;
-    justify-content: center;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    height: 214px;
+    justify-content: space-around;
+    flex-direction: row;
   }
 `;
 
 export const MainImage = styled.img`
-  width: 290px;
-  height: 124px;
+  width: 214px;
+  height: 92px;
   background: gray;
-  @media (max-width: 480px) {
-    width: 214px;
-    height: 92px;
-    margin-bottom: 50px;
+  margin-bottom: 50px;
+  @media (min-width: 1024px) {
+    width: 290px;
+    height: 124px;
+    margin-bottom: 0;
   }
 `;
 
@@ -31,9 +33,11 @@ export const Contacts = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @media (max-width: 480px) {
-    align-items: center;
-    margin-bottom: 80px;
+  align-items: center;
+  margin-bottom: 80px;
+  @media (min-width: 1024px) {
+    align-items: normal;
+    margin-bottom: 0;
   }
 `;
 
