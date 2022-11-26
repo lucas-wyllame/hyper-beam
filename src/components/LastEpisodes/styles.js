@@ -63,7 +63,7 @@ export const CardAndText = styled.div`
   align-items: center;
   border-radius: 44px 44px 0px 0px;
   @media (min-width: 1024px) {
-    height: 350px;
+    /* height: 350px; */
     flex-direction: row;
   }
 `;
@@ -92,6 +92,7 @@ export const IconAndButtons = styled.div`
   /* justify-content: ${(props) => props.justifyContent}; */
   /* align-items: ${(props) => props.alignItems}; */
   @media (min-width: 1024px) {
+    align-items: center;
     width: 580px;
     margin: ${(props) => props.margin};
     height: auto;
@@ -111,7 +112,8 @@ export const ButtonsEp = styled.div`
   justify-content: center;
   align-items: center;
   @media (min-width: 1024px) {
-    /* width: ${(props) => props.widthButton}; */
+    width: ${(props) => props.widthLaptop};
+    height: 49px;
     font-size: 2rem;
   }
 `;

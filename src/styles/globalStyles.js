@@ -19,6 +19,9 @@ export const Title = styled.p`
     font-size: 2.8rem;
   }
   @media (min-width: 1024px) {
+    font-size: 3.3rem;
+  }
+  @media (min-width: 1440px) {
     font-size: 4.5rem;
   }
 `;
@@ -33,6 +36,9 @@ export const Desc = styled.h1`
     font-size: 1.7rem;
   }
   @media (min-width: 1024px) {
+    font-size: 2.2rem;
+  }
+  @media (min-width: 1440px) {
     font-size: 2.8rem;
   }
 `;
@@ -45,7 +51,11 @@ export const MoreInfs = styled.h2`
     font-size: 1.5rem;
   }
   @media (min-width: 1024px) {
-    font-size: 2.3rem;
+    font-size: 2rem;
+    font-size: ${(props) => props.fontSizeLaptop};
+  }
+  @media (min-width: 1440px) {
+    font-size: 2.5rem;
     /* font-size: ${(props) => props.fontSizeLaptop}; */
   }
 `;

@@ -23,7 +23,6 @@ export const LeftImage = styled.div`
   max-width: 800px;
   margin: 0 0 30px 0;
   @media (min-width: 1024px) {
-    width: 45%;
     max-width: 800px;
     height: 100%;
     border-radius: 0 50px 50px 0;

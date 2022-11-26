@@ -168,10 +168,10 @@ export default function LastEpisodes() {
                         )}
                       </Icon>
 
-                      <ButtonsEp width={"152px"} widthButton={"202px"}>
+                      <ButtonsEp width={"152px"} widthLaptop={"202px"}>
                         Pokémon Unite
                       </ButtonsEp>
-                      <ButtonsEp width={"220px"} widthButton={"293px"}>
+                      <ButtonsEp width={"220px"} widthLaptop={"293px"}>
                         World Ends with You
                       </ButtonsEp>
                     </IconAndButtons>
