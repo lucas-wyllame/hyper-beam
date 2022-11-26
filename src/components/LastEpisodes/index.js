@@ -131,8 +131,8 @@ export default function LastEpisodes() {
                         height={"253px"}
                         position={"relative"}
                         top={"-35px"}
-                        widthLaptop={"304px"}
-                        heightLAwidthLaptop={"304px"}
+                        // widthLaptop={"304px"}
+                        // heightLAwidthLaptop={"304px"}
                         widthLaptopLarge={"337px"}
                         heightLaptopLarge={"337px"}
                       />
