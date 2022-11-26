@@ -7,7 +7,6 @@ import {
   Background,
   CardAndText,
   TextsDivEp,
-  TitleInside,
   IconAndButtons,
   ButtonsEp,
   ThinBarsGroup,
@@ -24,6 +23,10 @@ import { useRouter } from "next/router";
 import Slider from "react-slick";
 import { useState } from "react";
 import { Control } from "../../../public/icon/IconComTag";
+import { ThemeProvider } from "styled-components";
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import { theme } from "../Home/homeBanner";
+import { TitleInside } from "../Home/styles";
 
 function SampleNextArrow(props) {
   const { className, onClick } = props;
@@ -58,7 +61,6 @@ export default function LastEpisodes() {
     setIsHovering(false);
   };
 
-  const slider = ".slider";
   const router = useRouter();
 
   const handleClick = (e) => {
@@ -73,6 +75,8 @@ export default function LastEpisodes() {
     { number: "04" },
     { number: "05" },
   ];
+
+  const slider = ".slider";
 
   const settings = {
     appendDots: (dots) => (
@@ -112,10 +116,8 @@ export default function LastEpisodes() {
 
   return (
     <Content>
-      <Title margin={"0 0 0 18px"}>Episódios Recentes</Title>
-      <Desc maxWidth={"50%"} margin={"0 0 30px 18px"}>
-        Acompanhe nosso podcast e seus episódios
-      </Desc>
+      <Title>Episódios Recentes</Title>
+      <Desc>Acompanhe nosso podcast e seus episódios</Desc>
       <ListPodcasts>
         <Slider {...settings}>
           {listBackground.map((res, index) => {
@@ -125,21 +127,21 @@ export default function LastEpisodes() {
                   <Block>
                     <CardAndText>
                       <HyperCard
-                        width={"337px"}
-                        height={"337px"}
+                        width={"253px"}
+                        height={"253px"}
                         position={"relative"}
                         top={"-35px"}
-                        widthMobile={"253px"}
-                        heightMobile={"253px"}
-                      ></HyperCard>
+                      />
                       <TextsDivEp>
-                        <TitleInside margin={"10px 0"} marginMobile={"0px 0"}>
-                          Hyper Beam <div /> <span>{res.number}</span>
+                        <TitleInside margin={"10px 0"}>
+                          Hyper Beam{" "}
+                          <ThemeProvider theme={theme}>
+                            <FiberManualRecordIcon sx={{ color: "#9e9e9e" }} />
+                          </ThemeProvider>
+                          <span>{res.number}</span>
                         </TitleInside>
                         <MoreInfs
-                          widthMobile={"324px"}
-                          heightMobile={"174px"}
-                          fontSizeMobile={"18px"}
+                          fontSize={"1.8rem"}
                           width={"694px"}
                         >
                           Lorem ipsum dolor sit amet, consectetur a elit. Sed
@@ -151,7 +153,7 @@ export default function LastEpisodes() {
                       </TextsDivEp>
                     </CardAndText>
 
-                    <IconAndButtons pLMobile={"20px"}>
+                    <IconAndButtons>
                       <Icon
                         onMouseOver={handleMouseOver}
                         onMouseOut={handleMouseOut}
@@ -166,10 +168,10 @@ export default function LastEpisodes() {
                         )}
                       </Icon>
 
-                      <ButtonsEp widthButton={"202px"} widthMobile={"152px"}>
+                      <ButtonsEp width={"152px"} widthButton={"202px"}>
                         Pokémon Unite
                       </ButtonsEp>
-                      <ButtonsEp widthButton={"293px"} widthMobile={"219px"}>
+                      <ButtonsEp width={"220px"} widthButton={"293px"}>
                         World Ends with You
                       </ButtonsEp>
                     </IconAndButtons>
@@ -179,7 +181,7 @@ export default function LastEpisodes() {
             );
           })}
         </Slider>
-        <ButtonSeeAll onClick={handleClick}>Ver todos</ButtonSeeAll>
+        {/* <ButtonSeeAll onClick={handleClick}>Ver todos</ButtonSeeAll> */}
       </ListPodcasts>
     </Content>
   );

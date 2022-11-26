@@ -52,8 +52,8 @@ export const IconsRow = styled.div`
 `;
 
 export const Icon = styled.div`
-  width: 53px;
-  height: 53px;
+  width: ${(props) => props.widthIcon};
+  height: ${(props) => props.heightIcon};
   background: #a127ff;
   border-radius: 30px;
   display: flex;
@@ -62,10 +62,8 @@ export const Icon = styled.div`
   margin-right: 16px;
   color: #ffffff;
   position: relative;
-  @media (max-width: 480px) {
-    width: ${(props) => props.widthIcon};
-    height: ${(props) => props.heightIcon};
+  @media (min-width: 1024px) {
+    width: 53px;
+    height: 53px;
   }
 `;
-
-

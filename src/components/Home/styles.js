@@ -98,6 +98,7 @@ export const TitleInside = styled.div`
   span {
     color: #ffe747;
     font-size: 2.5rem;
+    font-weight: bold;
   }
   @media (min-width: 1024px) {
     font-size: 2.7rem;
@@ -131,12 +132,12 @@ export const BigImg = styled.div`
   width: 329px;
   height: 317px;
   position: absolute;
-  background: cyan;
-  background-image: url("/img/Pkm.png");
+  background: yellow;
+  bottom: 0;
+  /* background-image: url("/img/Pkm.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  background-position: center;
-  bottom: 0;
+  background-position: center; */
   @media (min-width: 1024px) {
     width: 387px;
     height: 375px;

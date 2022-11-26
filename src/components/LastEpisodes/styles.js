@@ -2,148 +2,117 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 100%;
-  height: 800px;
+  height: auto;
   background: pink;
   margin: 20px 0;
   display: flex;
   flex-direction: column;
-  padding: 0 88px;
-  @media (max-width: 480px) {
-    padding: 0;
-    height: 1200px;
+  padding: 0 20px;
+  @media (min-width: 1024px) {
+    width: 100%;
+    height: 800px;
+    padding: 0 88px;
   }
 `;
 
 export const ListPodcasts = styled.div`
   width: 100%;
-  height: 630px;
-  /* background: blue; */
+  height: auto;
+  background: blue;
   margin: 20px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @media (max-width: 480px) {
-    height: 1130px;
+  @media (min-width: 1024px) {
+    height: 630px;
   }
 `;
 
 export const Background = styled.div`
   width: 100%;
-  height: 520px;
+  height: auto;
   border-radius: 44px 44px 0px 0px;
   position: relative;
   top: 60px;
   background: purple;
   display: flex;
   justify-content: center;
-  @media (max-width: 480px) {
-    height: 900px;
-    justify-content: center;
+  @media (min-width: 1024px) {
+    height: 520px;
   }
 `;
 
 export const Block = styled.div`
   width: 90%;
-  height: 520px;
+  height: auto;
   background: green;
   border-radius: 44px 44px 0px 0px;
-  @media (max-width: 480px) {
-    height: 810px;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 1024px) {
+    height: 520px;
   }
 `;
 
 export const CardAndText = styled.div`
   width: 100%;
-  height: 350px;
+  height: auto;
   background: orange;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   border-radius: 44px 44px 0px 0px;
-  @media (max-width: 480px) {
-    height: 600px;
-    flex-direction: column;
-    align-items: center;
+  @media (min-width: 1024px) {
+    height: 350px;
+    flex-direction: row;
   }
 `;
 
 export const TextsDivEp = styled.div`
-  width: 60%;
+  width: 100%;
   height: auto;
-  margin-left: 62px;
-  @media (max-width: 480px) {
-    margin: 0 0 0 20px;
-    width: 329px;
-    height: 304px;
-  }
-`;
-
-export const TitleInside = styled.div`
-  width: 300px;
-  font-size: 38px;
-  margin: ${(props) => props.margin};
-  color: #fff;
-  font: Poppins;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  @media (max-width: 480px) {
-    font-size: 28px;
-    width: 70%;
-    margin: ${(props) => props.marginMobile};
-  }
-  span {
-    color: #ffe747;
-    @media (max-width: 480px) {
-      font-size: 29px;
-    }
-  }
-  div {
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    background: gray;
-    opacity: 1;
-    margin-top: 5px;
-    @media (max-width: 480px) {
-      width: 8px;
-      height: 8px;
-    }
+  background: red;
+  @media (min-width: 1024px) {
+    width: 60%;
+    margin-left: 62px;
   }
 `;
 
 export const IconAndButtons = styled.div`
-  width: 580px;
-  height: auto;
+  width: 100%;
+  height: 140px;
+  margin-left: 0;
+  margin-bottom: 0;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  margin: ${(props) => props.margin};
   background: yellow;
-  @media (max-width: 480px) {
-    flex-direction: column;
-    width: 100%;
-    height: 200px;
-    margin-left: 0;
-    margin-bottom: 0;
-    padding-left: ${(props) => props.pLMobile};
-    justify-content: ${(props) => props.justifyContent};
-    align-items: ${(props) => props.alignItems};
+  padding-left: 0px;
+  margin: 25px 0 70px 0;
+  /* justify-content: ${(props) => props.justifyContent}; */
+  /* align-items: ${(props) => props.alignItems}; */
+  @media (min-width: 1024px) {
+    width: 580px;
+    margin: ${(props) => props.margin};
+    height: auto;
+    flex-direction: row;
   }
 `;
 
 export const ButtonsEp = styled.div`
-  width: ${(props) => props.widthButton};
-  height: 49px;
+  width: ${(props) => props.width};
+  font-size: 1.5rem;
+  height: 36px;
   background: rgba(17, 18, 45, 0.6);
   border-radius: 44px;
   text-align: center;
-  font-size: 20px;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (max-width: 480px) {
-    width: ${(props) => props.widthMobile};
-    font-size: 15px;
+  @media (min-width: 1024px) {
+    /* width: ${(props) => props.widthButton}; */
+    font-size: 2rem;
   }
 `;
 
@@ -209,23 +178,23 @@ export const LeftArrow = styled.img`
   display: none;
 `;
 export const Dots = styled.div`
-  width: 100%;
-  height: 10px;
+  position: relative;
+  height: 20px;
+  bottom: -10px;
   display: flex;
   background: #11122d;
   justify-content: space-between;
   position: absolute;
   z-index: 2;
-  @media only screen and (max-width: 768px) {
-    position: relative;
-    height: 25px;
-    bottom: -10px;
+  @media (min-width: 1024px) {
+    width: 100%;
+    height: 10px;
   }
 `;
 
 export const LittleDots = styled.div`
   width: auto;
-  height: 10px;
+  height: 20px;
   background: #2e2f47;
   opacity: 1;
   display: flex;
@@ -234,8 +203,8 @@ export const LittleDots = styled.div`
   :hover {
     background: purple;
   }
-  @media (max-width: 480px) {
-    height: 25px;
+  @media (min-width: 1024px) {
+    height: 10px;
   }
 `;
 

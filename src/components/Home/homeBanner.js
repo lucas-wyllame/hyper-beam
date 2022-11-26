@@ -20,7 +20,7 @@ import { createTheme } from "@mui/material/styles";
 import { purple } from "@mui/material/colors";
 import { ThemeProvider } from "styled-components";
 
-const theme = createTheme({
+export const theme = createTheme({
   palette: {
     secondary: {
       main: "#9e9e9e",

@@ -38,13 +38,12 @@ export default function Podcast() {
               margin={"0"}
               alignItems={"center"}
               heightMobile={"170px"}
-              pLMobile={"0"}
             >
               <Control />
-              <ButtonsEp widthButton={"202px"} widthMobile={"152px"}>
+              <ButtonsEp widthButton={"202px"} width={"152px"}>
                 Pokémon Unite
               </ButtonsEp>
-              <ButtonsEp widthButton={"293px"} widthMobile={"219px"}>
+              <ButtonsEp widthButton={"293px"} width={"219px"}>
                 The World Ends with You
               </ButtonsEp>
             </IconAndButtons>
