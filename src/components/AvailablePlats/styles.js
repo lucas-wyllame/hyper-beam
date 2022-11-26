@@ -2,40 +2,56 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 100%;
-  height: 900px;
-  background: #11129d;
+  height: 1401px;
+  padding: 0 44px;
+  /* background: #11129d; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  @media (max-width: 480px) {
-    height: 1401px;
-    padding: 0;
-    margin-top: 40px;
+  margin-top: 40px;
+  @media (min-width: 1024px) {
+    height: 900px;
+    margin-top: 0;
   }
 `;
 
 export const Plats = styled.div`
-  width: 80%;
-  height: 80%;
-  background: red;
+  width: 100%;
+  height: 65%;
+  flex-direction: column;
+  /* background: red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 50px;
-  @media (max-width: 1680px) {
-    width: 95%;
+  margin-bottom: 56px;
+  margin-top: 45px;
+  @media (min-width: 1024px) {
+    width: 90%;
+    height: auto;
+    flex-direction: row;
+    margin-bottom: 50px;
   }
-  @media (max-width: 1290px) {
-    width: 100%;
+  @media (min-width: 1440px) {
+    width: 80%;
   }
+`;
 
-  @media (max-width: 480px) {
-    width: 100%;
-    height: 65%;
-    flex-direction: column;
-    margin-bottom: 56px;
-    margin-top: 45px;
+export const PlatsGroup = styled.div`
+  width: 100%;
+  height: auto;
+  /* background: yellow; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  :hover {
+    a{
+      color: ${(props) => props.colorHoverText};
+    }
+  }
+  @media (min-width: 1024px) {
+    width: 34%;
   }
 `;
 
@@ -48,16 +64,6 @@ export const PlatsCards = styled.a`
   justify-content: center;
   align-items: center;
   border-radius: 15px;
-  @media (max-width: 1290px) {
-    width: ${(props) => props.widthCards1290};
-  }
-  @media (max-width: 1050px) {
-    height: ${(props) => props.heightCards1050};
-  }
-  @media (max-width: 480px) {
-    width: ${(props) => props.widthCardsMobile};
-    height: ${(props) => props.heightCardsMobile};
-  }
   :hover {
     width: ${(props) => props.widthHover};
     height: ${(props) => props.heightHover};
@@ -67,6 +73,10 @@ export const PlatsCards = styled.a`
       background: ${(props) => props.backColor};
     }
   }
+  @media (min-width: 1024px) {
+    width: ${(props) => props.widthLaptop};
+    height: ${(props) => props.heightLaptop};
+  }
 `;
 
 export const PlatsIcons = styled.div`
@@ -74,48 +84,32 @@ export const PlatsIcons = styled.div`
   height: ${(props) => props.heightIcon};
   background: #fff;
   border-radius: 50%;
-  @media (max-width: 1050px) {
-    width: ${(props) => props.widthIcon1050};
-    height: ${(props) => props.heightIcon1050};
-  }
-`;
-
-export const PlatsGroup = styled.div`
-  width: 34%;
-  height: 390px;
-  background: yellow;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  @media (max-width: 1050px) {
-    height: 350px;
-  }
-  @media (max-width: 480px) {
-    height: auto;
-    width: 80%;
+  @media (min-width: 1024px) {
+    width: ${(props) => props.widthIconLaptop};
+    height: ${(props) => props.heightIconLaptop};
   }
 `;
 
 export const PlatsTitle = styled.a`
-  width: auto;
   font-size: ${(props) => props.fontSize};
   color: #ffffff;
   margin: ${(props) => props.margin};
-  font-weight: bold;
+  font-weight: ${(props) => props.fontWeight};
   padding-left: ${(props) => props.paddingLeft};
   padding-right: ${(props) => props.paddingRight};
+  @media (min-width: 1024px) {
+  }
 `;
 
-export const PlatsButton = styled.a`
-  width: 290px;
-  height: 90px;
-  font-size: 20px;
+export const PlatsButton = styled.button`
+  width: 248px;
+  height: 50px;
+  font-size: 2rem;
   color: #fff;
-  border-radius: 44px;
   background: none;
+  border-radius: 44px;
   border: 1px solid #ffffff;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -126,10 +120,8 @@ export const PlatsButton = styled.a`
     color: #11122d;
     background: #fff;
   }
-  @media (max-width: 480px) {
-    grid-column: ${(props) => props.gridColumnMobile};
-    grid-row: ${(props) => props.gridRowMobile};
-    width: 248px;
-    height: 50px;
+  @media (min-width: 1024px) {
+    grid-column: ${(props) => props.gridColumnLaptop};
+    grid-row: ${(props) => props.gridRowLaptop};
   }
 `;

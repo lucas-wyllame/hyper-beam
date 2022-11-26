@@ -13,25 +13,25 @@ import {
 export default function AvailablePlats() {
   return (
     <Content>
-      <Title>Plataformas disponíveis</Title>
-      <Desc>Onde encontrar nosso podcast para escutar</Desc>
+      <Title textAlign="center" margin="0 0 10px 0">
+        Plataformas disponíveis
+      </Title>
+      <Desc textAlignDesc="center">
+        Onde encontrar nosso podcast para escutar
+      </Desc>
       <Plats>
         {platsLinks.map((res, index) => {
           return (
             // eslint-disable-next-line react/jsx-key
-            <PlatsGroup key={index}>
+            <PlatsGroup colorHoverText={res.colorHoverText} key={index}>
               <PlatsCards
                 width={res.width}
                 height={res.height}
-                widthCardsMobile={res.widthCardsMobile}
-                heightCardsMobile={res.heightCardsMobile}
-                backColor={res.backColor}
                 widthHover={res.widthHover}
                 heightHover={res.heightHover}
+                backColor={res.backColor}
                 widthHoverDiv={res.widthHoverDiv}
                 heightHoverDiv={res.heightHoverDiv}
-                widthCards1290={res.widthCards1290}
-                heightCards1050={res.heightCards1050}
                 href={res.url}
                 target="_blank"
                 rel="noreferrer"
@@ -46,6 +46,7 @@ export default function AvailablePlats() {
                 target="_blank"
                 rel="noreferrer"
                 fontSize={res.fontSize}
+                fontWeight={res.fontWeight}
                 margin={"15px 0 0 0"}
               >
                 {res.name}

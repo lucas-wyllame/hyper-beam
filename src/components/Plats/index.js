@@ -38,10 +38,10 @@ export default function Plats() {
             href="https://bit.ly/3Qe9421"
             target="_blank"
             rel="noreferrer"
+            gridColumnLaptop={"1/2"}
+            gridRowLaptop={"1/2"}
             gridColumn={"1/2"}
             gridRow={"1/2"}
-            gridColumnMobile={"1/2"}
-            gridRowMobile={"1/2"}
           >
             Google Podcast
           </PlatsButton>
@@ -50,10 +50,10 @@ export default function Plats() {
             href="https://bit.ly/3Qe9421"
             target="_blank"
             rel="noreferrer"
-            gridColumn={"2/3"}
-            gridRow={"1/2"}
-            gridColumnMobile={"1/2"}
-            gridRowMobile={"2/3"}
+            gridColumnLaptop={"2/3"}
+            gridRowLaptop={"1/2"}
+            gridColumn={"1/2"}
+            gridRow={"2/3"}
           >
             Pocket Casts
           </PlatsButton>
@@ -61,10 +61,10 @@ export default function Plats() {
             href="https://bit.ly/3Qe9421"
             target="_blank"
             rel="noreferrer"
-            gridColumn={"3/4"}
-            gridRow={"1/2"}
-            gridColumnMobile={"1/2"}
-            gridRowMobile={"3/4"}
+            gridColumnLaptop={"3/4"}
+            gridRowLaptop={"1/2"}
+            gridColumn={"1/2"}
+            gridRow={"3/4"}
           >
             Podcast Addict
           </PlatsButton>
@@ -72,10 +72,10 @@ export default function Plats() {
             href="https://textoeditable.com.br/bloco-de-notas-online/"
             target="_blank"
             rel="noreferrer"
-            gridColumn={"2/3"}
-            gridRow={"2/3"}
-            gridColumnMobile={"1/2"}
-            gridRowMobile={"4/5"}
+            gridColumnLaptop={"2/3"}
+            gridRowLaptop={"2/3"}
+            gridColumn={"1/2"}
+            gridRow={"4/5"}
           >
             Sugerir Plataforma
           </PlatsButton>

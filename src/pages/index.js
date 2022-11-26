@@ -15,8 +15,8 @@ export default function Home() {
       {/* <About /> */}
       <GlobalStyles />
       {/* <LastEpisodes /> */}
-      <OurTeam />
-      {/* <AvailablePlats /> */}
+      {/* <OurTeam /> */}
+      <AvailablePlats />
       {/* <Footer /> */}
     </>
   );
