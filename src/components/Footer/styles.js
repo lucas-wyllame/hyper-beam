@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: 463px;
-  background: #1b1b40;
+  background: #1B1B40;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,7 +18,7 @@ export const Content = styled.div`
 export const MainImage = styled.img`
   width: 214px;
   height: 92px;
-  background: gray;
+  background: #fff;
   margin-bottom: 50px;
   @media (min-width: 1024px) {
     width: 290px;

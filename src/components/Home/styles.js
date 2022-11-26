@@ -34,7 +34,7 @@ export const Banner = styled.div`
   width: 95%;
   height: 610px;
   flex-direction: column;
-  background: purple;
+  background: #a57bca;
   border-radius: 44px;
   display: flex;
   align-items: center;

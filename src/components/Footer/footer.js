@@ -38,7 +38,7 @@ export default function Footer() {
 
   return (
     <Content>
-      <MainImage></MainImage>
+      <MainImage />
       <Contacts>
         <ContactTitle>Contatos e Redes</ContactTitle>
         <IconsRow>

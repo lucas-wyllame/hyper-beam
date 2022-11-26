@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: auto;
-  background: red;
+  /* background: red; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +16,7 @@ export const Content = styled.div`
 export const BackBanner = styled.div`
   width: 100%;
   height: 645px;
-  background: purple;
+  background: #a57bca;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -30,7 +30,7 @@ export const BackBanner = styled.div`
 export const ItensBanner = styled.div`
   width: 80%;
   height: 600px;
-  background: blue;
+  /* background: blue; */
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -49,7 +49,7 @@ export const ItensBanner = styled.div`
 export const BannerInfos = styled.div`
   width: 100%;
   height: 220px;
-  background: pink;
+  /* background: pink; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -72,7 +72,7 @@ export const BannerInfos = styled.div`
 export const SeparationDiv = styled.div`
   width: 100%;
   height: 60px;
-  background: green;
+  /* background: green; */
   @media (max-width: 480px) {
     height: 110px;
   }
@@ -81,7 +81,7 @@ export const SeparationDiv = styled.div`
 export const Topic = styled.div`
   width: 80%;
   height: auto;
-  background: black;
+  /* background: black; */
   display: flex;
   align-items: normal;
   /* margin-bottom: -25px; */
