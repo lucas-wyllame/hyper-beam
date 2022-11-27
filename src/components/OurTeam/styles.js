@@ -8,7 +8,7 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: normal;
   align-items: center;
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     height: 624px;
   }
   @media (min-width: 1024px) {

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: 3500px;
-  background: green;
+  /* background: green; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +15,7 @@ export const Content = styled.div`
 export const PodcastsList = styled.div`
   width: 225px;
   height: 3240px;
-  background: red;
+  /* background: red; */
   display: flex;
   flex-direction: column;
   @media (min-width: 1024px) {
@@ -39,7 +39,7 @@ export const PodcastsList = styled.div`
 export const CarousselStyled = styled.div`
   width: 100%;
   height: 270px;
-  background: blue;
+  /* background: blue; */
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -59,19 +59,19 @@ export const LeftArrow = styled.img`
   height: 39px;
   width: 39px;
   position: relative;
-  top: 381vh;
+  top: 3298px;
   left: 0;
   z-index: 2;
   @media (min-width: 645px) {
-    top: 99.9vh;
-    left: 0px;
+    top: 873px;
+    left: 160px;
   }
   @media (min-width: 947px) {
-    top: 100.9vh;
-    left: 332px;
+    top: 882.9px;
+    left: 328px;
   }
   @media (min-width: 1024px) {
-    top: 108.9vh;
+    top: 953.9px;
     left: 332px;
   }
   @media (min-width: 1146px) {
@@ -84,12 +84,12 @@ export const RightArrow = styled.img`
   height: 39px;
   width: 39px;
   position: relative;
-  top: 55px;
+  top: 19px;
   left: 186px;
   z-index: 2;
   @media (min-width: 645px) {
     top: 25px;
-    left: 459px;
+    left: 300px;
   }
   @media (min-width: 947px) {
     top: 34px;
