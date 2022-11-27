@@ -9,8 +9,6 @@ import {
   TextsDivEp,
   IconAndButtons,
   ButtonsEp,
-  ThinBarsGroup,
-  ThinBars,
   ButtonSeeAll,
   RightArrow,
   LeftArrow,
@@ -188,7 +186,7 @@ export default function LastEpisodes() {
             );
           })}
         </Slider>
-        {/* <ButtonSeeAll onClick={handleClick}>Ver todos</ButtonSeeAll> */}
+        <ButtonSeeAll onClick={handleClick}>Ver todos</ButtonSeeAll>
       </ListPodcasts>
     </Content>
   );

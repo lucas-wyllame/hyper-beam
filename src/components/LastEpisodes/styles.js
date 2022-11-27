@@ -10,11 +10,11 @@ export const Content = styled.div`
   padding: 0 20px;
   @media (min-width: 1024px) {
     width: 100%;
-    height: 626px;
+    height: 691px;
     padding: 0 88px;
   }
   @media (min-width: 1440px) {
-    height: 800px;
+    height: auto;
   }
 `;
 
@@ -37,7 +37,7 @@ export const Background = styled.div`
   border-radius: 44px 44px 0px 0px;
   position: relative;
   top: 60px;
-  background: purple;
+  background: #a57bca;
   display: flex;
   justify-content: center;
   @media (min-width: 1024px) {
@@ -127,37 +127,8 @@ export const ButtonsEp = styled.div`
   }
 `;
 
-export const ThinBarsGroup = styled.div`
-  width: 100%;
-  height: 20px;
-  background: #11122d;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 30px;
-  padding-left: 30px;
-  @media (max-width: 480px) {
-    padding-right: 9px;
-    padding-left: 9px;
-  }
-`;
-
-export const ThinBars = styled.button`
-  width: 330px;
-  height: 10px;
-  background: #fff;
-  border: none;
-  border-radius: 44px;
-  opacity: 0.12;
-  cursor: pointer;
-  @media (max-width: 480px) {
-    width: 58px;
-    height: 20px;
-  }
-`;
-
 export const ButtonSeeAll = styled.button`
-  width: 160px;
+  width: 184px;
   height: 49px;
   background: #ffe747;
   border-radius: 44px;
@@ -166,18 +137,15 @@ export const ButtonSeeAll = styled.button`
   font-size: 20px;
   margin-top: 52px;
   cursor: pointer;
-  position: relative;
-  left: 45%;
+  align-self: center;
   :hover {
     width: 161px;
     height: 51px;
     text-shadow: 0px 3px 6px #ff00c47a;
   }
-  @media (max-width: 480px) {
-    width: 184px;
-    height: 49px;
-    position: relative;
-    left: 95px;
+  @media (min-width: 1024px) {
+    width: 160px;
+    height: 50px;
   }
 `;
 
@@ -197,7 +165,9 @@ export const Dots = styled.div`
   justify-content: space-between;
   position: absolute;
   z-index: 2;
+  margin: -18px 0px;
   @media (min-width: 1024px) {
+    margin: 0;
     width: 100%;
     height: 10px;
   }

@@ -15,7 +15,6 @@ export const Content = styled.div`
     height: 716px;
     justify-content: space-around;
   }
-
 `;
 
 export const GroupText = styled.div`
@@ -122,11 +121,11 @@ export const LeftArrow = styled.img`
   height: 39px;
   width: 39px;
   position: relative;
-  top: 130vh;
+  top: 1108px;
   left: 50px;
   z-index: 2;
   @media (min-width: 769px) {
-    top: 48.5vh;
+    top: 414px;
     left: 257px;
   }
   @media (min-width: 1024px) {
@@ -154,7 +153,7 @@ export const RightArrow = styled.img`
   }
   @media (min-width: 1024px) {
     position: absolute;
-    left: 680px;
+    left: 615px;
     top: 50%;
   }
   @media (min-width: 1176px) {
