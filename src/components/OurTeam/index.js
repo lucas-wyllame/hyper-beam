@@ -2,7 +2,7 @@ import { Title, Desc } from "@styles/globalStyles";
 import {
   Content,
   GlobalPeoples,
-  Peoples,
+  Teste,
   CardsOurTeam,
   NameCasters,
   FuncCasters,
@@ -94,23 +94,23 @@ export default function OurTeam() {
         <Desc>A equipe que trabalha no Hyper Beam</Desc>
       </GroupText>
       <GlobalPeoples>
-          <Slider {...settings}>
-            {listCardsOurTeam.map((res, index) => {
-              return (
-                 // eslint-disable-next-line react/jsx-key
-                <>
-                  <Peoples key={index}>
-                    <CardsOurTeam />
-                    <NameCasters>
-                      {res.name}
-                      <span> {res.surname} </span>
-                    </NameCasters>
-                    <FuncCasters>{res.func}</FuncCasters>
-                  </Peoples>
-                </>
-              );
-            })}
-          </Slider>
+        <Slider {...settings}>
+          {listCardsOurTeam.map((res, index) => {
+            return (
+              // eslint-disable-next-line react/jsx-key
+              <>
+                <Teste key={index}>
+                  <CardsOurTeam />
+                  <NameCasters>
+                    {res.name}
+                    <span> {res.surname} </span>
+                  </NameCasters>
+                  <FuncCasters>{res.func}</FuncCasters>
+                </Teste>
+              </>
+            );
+          })}
+        </Slider>
       </GlobalPeoples>
     </Content>
   );

@@ -54,19 +54,13 @@ export const GlobalPeoples = styled.div`
   }
 `;
 
-export const Peoples = styled.div`
+export const Teste = styled.div`
   width: 100%;
-  height: 350px;
-  /* background: aqua; */
-  display: flex;
+  height: 370px;
+  background: green;
+  display: flex !important;
+  align-items: center;
   flex-direction: column;
-  @media (min-width: 1024px) {
-    width: 286px;
-    height: 370px;
-  }
-  @media (max-width: 768px) {
-    height: auto;
-  }
 `;
 
 export const CardsOurTeam = styled.div`
