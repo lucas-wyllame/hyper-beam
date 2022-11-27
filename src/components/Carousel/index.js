@@ -71,6 +71,7 @@ export default function Carousel() {
           rows: 12,
           infinite: slider.length > 1 ? true : false,
           centerMode: false,
+          // vertical: true,
         },
       },
     ],
