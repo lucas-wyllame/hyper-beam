@@ -5,6 +5,10 @@ export const Content = styled.div`
   height: 1401px;
   padding: 0 44px;
   /* background: #11129d; */
+  background-image: url("/img/degrade logo.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

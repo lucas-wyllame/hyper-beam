@@ -6,6 +6,7 @@ import {
   HyperText,
   RightArrow,
   LeftArrow,
+  CountLabel,
 } from "./styles";
 import HyperCard from "../HyperCard/hyperCard";
 import { casts } from "./casts";
@@ -36,10 +37,11 @@ export default function Carousel() {
   var slider = ".slider";
   var settings = {
     className: "center",
-    centerMode: true,
-    infinite: true,
+    centerMode: false,
+    infinite: false,
     centerPadding: "0px",
     slidesToShow: 4,
+    slidesToScroll: 4,
     speed: 500,
     rows: 3,
     slidesPerRow: 1,
@@ -95,6 +97,7 @@ export default function Carousel() {
             );
           })}
         </Slider>
+        <CountLabel>1/2</CountLabel>
       </PodcastsList>
     </Content>
   );

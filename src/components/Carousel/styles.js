@@ -4,6 +4,10 @@ export const Content = styled.div`
   width: 100%;
   height: 3500px;
   /* background: green; */
+  background-image: url("/img/degrade logo.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,5 +106,32 @@ export const RightArrow = styled.img`
   @media (min-width: 1146px) {
     top: -22px;
     left: 552px;
+  }
+`;
+
+export const CountLabel = styled.label`
+  width: 30px;
+  font-size: 1.8rem;
+  text-align: ${(props) => props.textAlignDesc};
+  position: relative;
+  bottom: 70px;
+  left: 100px;
+  color: #9a8dac;
+  font-weight: 500;
+  @media (min-width: 645px) {
+    bottom: 50px;
+    left: 240px;
+  }
+  @media (min-width: 947px) {
+    bottom: 40px;
+    left: 372px;
+  }
+  @media (min-width: 1024px) {
+    bottom: -4px;
+    left: 379px;
+  }
+  @media (min-width: 1146px) {
+    bottom: -3px;
+    left: 502px;
   }
 `;

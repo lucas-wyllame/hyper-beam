@@ -7,14 +7,37 @@ export const Top = styled.div`
   box-shadow: 0px 6px 16px #0000004f;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 `;
 
-export const LogoTop = styled.button`
+export const CenterLogoDiv = styled.div`
+  width: 57%;
+  height: 66px;
+  /* background: red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const LogoTop = styled.div`
   width: 53px;
   height: 53px;
   background: white;
   border-radius: 50%;
+  cursor: pointer;
+  /* margin: 0 500px; */
+`;
+
+export const SearchLogoBox = styled.div`
+  width: 35px;
+  height: 35px;
+  margin-right: 23px;
+  @media(min-width: 768px){
+    margin-right: 50px;
+  }
+  @media(min-width:1024px){
+    margin-right: 155px;
+  }
 `;
 
 export const Content = styled.div`

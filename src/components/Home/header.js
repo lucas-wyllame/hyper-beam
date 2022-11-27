@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
-import { Top, LogoTop } from "./styles";
+import { Top, LogoTop, CenterLogoDiv, SearchLogoBox } from "./styles";
+import SearchIcon from "@mui/icons-material/Search";
 
 export default function Header() {
   const router = useRouter();
@@ -11,7 +12,12 @@ export default function Header() {
 
   return (
     <Top>
-      <LogoTop onClick={handleClick} />
+      <CenterLogoDiv>
+        <LogoTop onClick={handleClick} />
+        <SearchLogoBox>
+          <SearchIcon sx={{ fontSize: 35, color: "#fff" }} />
+        </SearchLogoBox>
+      </CenterLogoDiv>
     </Top>
   );
 }
