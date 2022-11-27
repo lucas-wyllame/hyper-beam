@@ -70,6 +70,7 @@ export default function OurTeam() {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: slider.length > 3 ? true : false,
+          vertical: true,
         },
       },
       {
@@ -79,6 +80,7 @@ export default function OurTeam() {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: slider.length > 3 ? true : false,
+          vertical: true,
         },
       },
     ],
