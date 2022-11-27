@@ -167,7 +167,7 @@ export default function LastEpisodes() {
                         widthIcon={"40px"}
                         heightIcon={"40px"}
                       >
-                        <Control></Control>
+                        <Control />
                         {isHovering && (
                           <HoveringIcon>
                             Qual jogo aparece nesse episodio?

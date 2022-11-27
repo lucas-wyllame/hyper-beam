@@ -10,7 +10,7 @@ export const Top = styled.div`
   justify-content: center;
 `;
 
-export const LogoTop = styled.div`
+export const LogoTop = styled.button`
   width: 53px;
   height: 53px;
   background: white;
@@ -61,7 +61,7 @@ export const TextsDiv = styled.div`
   }
 `;
 
-export const PlayButton = styled.div`
+export const PlayButton = styled.button`
   width: 130px;
   height: 49px;
   font-size: 2rem;
@@ -72,11 +72,12 @@ export const PlayButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* :hover {
+  cursor: pointer;
+  :hover {
     width: 135px;
     height: 54px;
     text-shadow: 0px 3px 6px #ff00c47a;
-  } */
+  }
   @media (min-width: 1024px) {
     font-size: 2rem;
   }

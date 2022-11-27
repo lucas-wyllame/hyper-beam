@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: auto;
-  /* background: pink; */
+  background: pink;
   margin: 20px 0;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@ export const Content = styled.div`
 export const ListPodcasts = styled.div`
   width: 100%;
   height: auto;
-  /* background: blue; */
+  background: blue;
   margin: 20px 0;
   display: flex;
   flex-direction: column;
@@ -157,7 +157,6 @@ export const LeftArrow = styled.img`
   display: none;
 `;
 export const Dots = styled.div`
-  position: relative;
   height: 20px;
   bottom: -10px;
   display: flex;

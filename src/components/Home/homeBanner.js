@@ -19,6 +19,7 @@ import { gray } from "@mui/material/colors";
 import { createTheme } from "@mui/material/styles";
 import { purple } from "@mui/material/colors";
 import { ThemeProvider } from "styled-components";
+import { useRouter } from "next/router";
 
 export const theme = createTheme({
   palette: {
@@ -113,6 +114,14 @@ export default function HomeBanner() {
       },
     ],
   };
+
+  const router = useRouter();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    router.push("/podcasts/hyperbeam1");
+  };
+
   return (
     <Content>
       <Banner>
@@ -125,7 +134,7 @@ export default function HomeBanner() {
             <span>03</span>
           </TitleInside>
           <Desc>Pokémon Unite e The World Ends with You</Desc>
-          <PlayButton>Play</PlayButton>
+          <PlayButton onClick={handleClick}>Play</PlayButton>
         </TextsDiv>
         <BigImg />
         <ListHomeBanner>
