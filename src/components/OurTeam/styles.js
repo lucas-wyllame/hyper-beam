@@ -32,7 +32,7 @@ export const GlobalPeoples = styled.div`
   width: 68%;
   max-width: 253px;
   height: 1100px;
-  /* background: red; */
+  background: red;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -121,7 +121,7 @@ export const LeftArrow = styled.img`
   height: 39px;
   width: 39px;
   position: relative;
-  top: 1108px;
+  top: 1111px;
   left: 50px;
   z-index: 2;
   @media (min-width: 769px) {
@@ -131,11 +131,11 @@ export const LeftArrow = styled.img`
   @media (min-width: 1024px) {
     position: absolute;
     top: 50%;
-    left: -6vw;
+    left: -3.7vw;
   }
   @media (min-width: 1176px) {
     position: absolute;
-    left: -52px;
+    left: -39px;
     top: 50%;
   }
 `;
@@ -153,12 +153,12 @@ export const RightArrow = styled.img`
   }
   @media (min-width: 1024px) {
     position: absolute;
-    left: 615px;
+    left: 656px;
     top: 50%;
   }
   @media (min-width: 1176px) {
     position: absolute;
-    left: 959px;
+    left: 986px;
     top: 50%;
   }
 `;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: 3500px;
-  /* background: green; */
+  background: green;
   background-image: url("/img/degrade logo.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -19,7 +19,7 @@ export const Content = styled.div`
 export const PodcastsList = styled.div`
   width: 225px;
   height: 3240px;
-  /* background: red; */
+  background: red;
   display: flex;
   flex-direction: column;
   @media (min-width: 1024px) {

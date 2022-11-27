@@ -10,6 +10,8 @@ import {
 } from "./styles";
 import HyperCard from "../HyperCard/hyperCard";
 import { casts } from "./casts";
+import { useEffect, useState } from "react";
+import { SlickCss } from "../OurTeam/slickCss";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -18,6 +20,7 @@ function SampleNextArrow(props) {
       className={className}
       src="./icon/Grupo 22.svg"
       onClick={onClick}
+      id="nextBtn"
     />
   );
 }
@@ -29,11 +32,64 @@ function SamplePrevArrow(props) {
       className={className}
       src="./icon/Grupo 21.svg"
       onClick={onClick}
+      id="previousBtn"
     />
   );
 }
 
 export default function Carousel() {
+  const [offset, setOffset] = useState(0);
+  const [totalRecords, setTotalRecords] = useState(50);
+  const [currentPage, setCurrentPage] = useState(1);
+  // var itemsPerPage = 24;
+  // var itensTotal = casts.length;
+  // var totalNumberOfPages = itensTotal / itemsPerPage;
+
+  // async function handleNext() {
+  //   (console.log("ATIVOU ESSA FUNÇÃO NEXT"))
+  //   if (offset < totalNumberOfPages) {
+  //     var PreviousBtnStyle = await document?.getElementById("previousBtn");
+  //     if (offset > 0) {
+  //       PreviousBtnStyle.style.display = "flex";
+  //     } else {
+  //       PreviousBtnStyle.style.display = "none";
+  //     }
+  //     setCurrentPage(offset);
+  //     setOffset(offset + itemsPerPage);
+  //   }
+  // }
+
+  // async function handlePrev() {
+  //   if (offset > itemsPerPage) {
+  //     var PreviousBtnStyle = await document.getElementById("previousBtn");
+  //     setOffset(offset - itemsPerPage);
+  //     setCurrentPage(offset - 2 * itemsPerPage);
+
+  //     if (offset > 2 * itemsPerPage) {
+  //       PreviousBtnStyle.style.display = "flex";
+  //     } else {
+  //       PreviousBtnStyle.style.display = "none";
+  //     }
+  //   }
+  // }
+  // useEffect(() => {
+  //   async function FetchMyApi() {
+  //     var PreviousBtnStyle = await document.getElementById("previousBtn");
+  //     var NextBtnStyle = await document.getElementById("nextBtn");
+  //     setCurrentPage(0);
+
+  //     setOffset(itemsPerPage);
+  //     PreviousBtnStyle.style.display = "none";
+  //     NextBtnStyle.style.display = "flex";
+  //     // if (itemsPerPage > totalNumberOfPages) {
+  //     //   PreviousBtnStyle.style.display = "none";
+  //     // } else {
+  //     //   PreviousBtnStyle.style.display = "flex";
+  //     // }
+  //   }
+  //   FetchMyApi();
+  // }, []);
+
   var slider = ".slider";
   var settings = {
     className: "center",
@@ -82,6 +138,13 @@ export default function Carousel() {
   return (
     <Content>
       <PodcastsList>
+        <SlickCss
+          display={"flex"}
+          background={"blue"}
+          alignItems={"center"}
+          justifyContent={"center"}
+          flexDirection={"column"}
+        />
         <Slider {...settings}>
           {casts.map((res, index) => {
             return (

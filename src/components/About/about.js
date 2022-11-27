@@ -4,7 +4,7 @@ import { Content, LeftImage, TextDiv } from "./styles";
 export default function About() {
   return (
     <Content>
-      <LeftImage></LeftImage>
+      <LeftImage/>
       <TextDiv>
         <Title>Somos o Hyper Beam</Title>
         <Desc>A fagulha de amor aos games em forma de podcast.</Desc>

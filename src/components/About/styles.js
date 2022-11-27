@@ -18,7 +18,7 @@ export const Content = styled.div`
 export const LeftImage = styled.div`
   width: 100%;
   height: 253px;
-  background: red;
+  background:#6c7492;
   border-radius: 0;
   max-width: 800px;
   margin: 0 0 30px 0;

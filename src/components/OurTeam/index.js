@@ -11,6 +11,7 @@ import {
   GroupText,
 } from "./styles";
 import Slider from "react-slick";
+import { SlickCss } from "./slickCss";
 
 function SamplePrevArrow(props) {
   const { className, onClick } = props;
@@ -90,18 +91,16 @@ export default function OurTeam() {
     <Content>
       <GroupText>
         <Title>Nosso time</Title>
-        <Desc>
-          A equipe que trabalha no Hyper Beam
-        </Desc>
+        <Desc>A equipe que trabalha no Hyper Beam</Desc>
       </GroupText>
       <GlobalPeoples>
-        <>
           <Slider {...settings}>
             {listCardsOurTeam.map((res, index) => {
               return (
+                 // eslint-disable-next-line react/jsx-key
                 <>
                   <Peoples key={index}>
-                    <CardsOurTeam/>
+                    <CardsOurTeam />
                     <NameCasters>
                       {res.name}
                       <span> {res.surname} </span>
@@ -112,7 +111,6 @@ export default function OurTeam() {
               );
             })}
           </Slider>
-        </>
       </GlobalPeoples>
     </Content>
   );

@@ -11,7 +11,6 @@ export default function Podcasts() {
   return (
     <>
       <Header />
-
       {parametro === "podcasts" ? <Carousel /> : null}
       <Footer />
     </>
