@@ -107,13 +107,6 @@ export const RightArrow = styled.img`
   }
 `;
 
-export const CountLabel = styled.label`
-  font-size: 1.8rem;
-  text-align: ${(props) => props.textAlignDesc};
-  color: #9a8dac;
-  font-weight: 500;
-`;
-
 export const AlingArrowBaseDiv = styled.div`
   width: 225px;
   height: 94px;
@@ -148,3 +141,12 @@ export const AlingCountBaseDiv = styled.div`
   align-items: center;
   justify-content: center;
 `;
+
+export const CountLabel = styled.label`
+  font-size: 1.8rem;
+  text-align: ${(props) => props.textAlignDesc};
+  color: #9a8dac;
+  font-weight: 500;
+`;
+
+

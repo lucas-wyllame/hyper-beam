@@ -2,30 +2,19 @@ import HyperCard from "../HyperCard/hyperCard";
 import {
   Content,
   Banner,
-  TextsDiv,
-  Desc,
+  FeaturedPodcastInfo,
+  PlayButton,
+  PodcastTheme,
   BigImg,
   ListHomeBanner,
   HyperCardGroup,
   HyperText,
-  RightArrow,
   LeftArrow,
-  PlayButton,
+  RightArrow,
 } from "./styles";
 import Slider from "react-slick";
 import { useRouter } from "next/router";
 import { TitleInsideComponent } from "@styles/globalStyles";
-
-function SampleNextArrow(props) {
-  const { className, onClick } = props;
-  return (
-    <RightArrow
-      className={className}
-      src="./icon/Grupo 22.svg"
-      onClick={onClick}
-    />
-  );
-}
 
 function SamplePrevArrow(props) {
   const { className, onClick } = props;
@@ -33,6 +22,17 @@ function SamplePrevArrow(props) {
     <LeftArrow
       className={className}
       src="./icon/Grupo 21.svg"
+      onClick={onClick}
+    />
+  );
+}
+
+function SampleNextArrow(props) {
+  const { className, onClick } = props;
+  return (
+    <RightArrow
+      className={className}
+      src="./icon/Grupo 22.svg"
       onClick={onClick}
     />
   );
@@ -112,11 +112,11 @@ export default function HomeBanner() {
   return (
     <Content>
       <Banner>
-        <TextsDiv>
+        <FeaturedPodcastInfo>
           <TitleInsideComponent />
-          <Desc>Pokémon Unite e The World Ends with You</Desc>
+          <PodcastTheme>Pokémon Unite e The World Ends with You</PodcastTheme>
           <PlayButton onClick={handleClick}>Play</PlayButton>
-        </TextsDiv>
+        </FeaturedPodcastInfo>
         <BigImg />
         <ListHomeBanner>
           <Slider {...settings}>
@@ -125,7 +125,7 @@ export default function HomeBanner() {
                 // eslint-disable-next-line react/jsx-key
                 <>
                   <HyperCardGroup key={index}>
-                    <HyperCard width={"196px"} height={"196px"}></HyperCard>
+                    <HyperCard width={"196px"} height={"196px"} />
                     <HyperText>{res.name}</HyperText>
                   </HyperCardGroup>
                 </>

@@ -1,7 +1,7 @@
-import { EmailIcon } from "../../../public/icon/EmailIcon";
-import { TwitterIcon } from "../../../public/icon/TwitterIcon";
-import { InstagramIcon } from "../../../public/icon/InstagramIcon";
-import { YTIcon } from "../../../public/icon/YTIcon";
+import { EmailIcon } from "@icon/EmailIcon";
+import { TwitterIcon } from "@icon/TwitterIcon";
+import { YTIcon } from "@icon/YTIcon";
+import { InstagramIcon } from "@icon/InstagramIcon";
 
 import {
   Content,
@@ -27,12 +27,12 @@ export default function Footer() {
     {
       name: "Youtube",
       url: "https://www.youtube.com/channel/UCrB_y3PT-cLvv2WKB17B2lw",
-      icon: <InstagramIcon />,
+      icon: <YTIcon />,
     },
     {
       name: "Instagram",
       url: "https://www.instagram.com/davihayato/",
-      icon: <YTIcon />,
+      icon: <InstagramIcon />,
     },
   ];
 

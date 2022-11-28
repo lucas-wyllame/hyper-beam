@@ -1,8 +1,8 @@
 import {
   Content,
+  IframeSpotify,
   TextPlats,
   OtherPlats,
-  IframeSpotify,
 } from "./styles";
 import { Title, Desc } from "../../styles/globalStyles";
 import { PlatsButton } from "../../components/AvailablePlats/styles";

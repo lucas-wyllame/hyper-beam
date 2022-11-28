@@ -1,11 +1,11 @@
 import { Content, BackBanner, ItensBanner, BannerInfos, Topic } from "./styles";
+import HyperCard from "../../components/HyperCard/hyperCard";
+import { TitleInsideComponent, MoreInfs } from "@styles/globalStyles";
 import {
   IconAndButtons,
   ButtonsEp,
 } from "../../components/LastEpisodes/styles";
-import HyperCard from "../../components/HyperCard/hyperCard";
 import { Control } from "@icon/IconComTag";
-import { MoreInfs, TitleInsideComponent } from "@styles/globalStyles";
 
 export default function Podcast() {
   return (

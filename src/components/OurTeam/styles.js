@@ -55,7 +55,7 @@ export const GlobalPeoples = styled.div`
   }
 `;
 
-export const Teste = styled.div`
+export const Peoples = styled.div`
   width: 100%;
   height: 370px;
   /* background: green; */
@@ -163,46 +163,5 @@ export const RightArrow = styled.img`
   }
   @media (min-width: 1176px) {
     left: 986px;
-  }
-`;
-
-export const AlingArrowBaseDiv = styled.div`
-  width: 253px;
-  height: 160px;
-  /* background: gray; */
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  position: absolute;
-  top: 1033px;
-  left: 0px;
-  @media (min-width: 769px) {
-    width: 100%;
-    top: 292px;
-    left: 0px;
-  }
-  @media (min-width: 1024px) {
-    width: 100%;
-    height: 370px;
-    top: 0px;
-    left: 0px;
-    align-items: center;
-  }
-  @media (min-width: 1146px) {
-    width: 100%;
-    top: 0px;
-    left: 0px;
-  }
-`;
-
-export const AlingCountBaseDiv = styled.div`
-  width: 225px;
-  height: 39px;
-  /* background: pink; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @media (min-width: 1024px) {
-    width: 100%;
   }
 `;

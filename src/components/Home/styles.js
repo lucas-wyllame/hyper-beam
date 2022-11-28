@@ -29,7 +29,7 @@ export const Banner = styled.div`
   }
 `;
 
-export const TextsDiv = styled.div`
+export const FeaturedPodcastInfo = styled.div`
   width: 100%;
   border-radius: 44px;
   height: 40%;
@@ -68,7 +68,7 @@ export const PlayButton = styled.button`
   }
 `;
 
-export const Desc = styled.p`
+export const PodcastTheme = styled.p`
   font-size: 2.1rem;
   margin: 0 0 21px 0;
   color: #fff;
@@ -134,6 +134,18 @@ export const HyperText = styled.label`
   color: #9a8dac;
 `;
 
+export const LeftArrow = styled.img`
+  height: 39px;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: -3vw;
+  z-index: 2;
+  @media (max-width: 480px) {
+    left: -10vw;
+  }
+`;
+
 export const RightArrow = styled.img`
   height: 39px;
   width: auto;
@@ -146,14 +158,3 @@ export const RightArrow = styled.img`
   }
 `;
 
-export const LeftArrow = styled.img`
-  height: 39px;
-  width: auto;
-  position: absolute;
-  top: 50%;
-  left: -3vw;
-  z-index: 2;
-  @media (max-width: 480px) {
-    left: -10vw;
-  }
-`;

@@ -1,17 +1,15 @@
 import { Title, Desc } from "@styles/globalStyles";
 import {
   Content,
+  GroupText,
   GlobalPeoples,
-  Teste,
+  Peoples,
   CardsOurTeam,
+  CastersBox,
   NameCasters,
   FuncCasters,
   LeftArrow,
   RightArrow,
-  GroupText,
-  CastersBox,
-  AlingCountBaseDiv,
-  AlingArrowBaseDiv,
 } from "./styles";
 import Slider from "react-slick";
 
@@ -101,7 +99,7 @@ export default function OurTeam() {
             return (
               // eslint-disable-next-line react/jsx-key
               <>
-                <Teste key={index}>
+                <Peoples key={index}>
                   <CardsOurTeam />
                   <CastersBox>
                     <NameCasters>
@@ -110,7 +108,7 @@ export default function OurTeam() {
                     </NameCasters>
                     <FuncCasters>{res.func}</FuncCasters>
                   </CastersBox>
-                </Teste>
+                </Peoples>
               </>
             );
           })}

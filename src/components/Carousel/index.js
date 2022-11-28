@@ -4,11 +4,11 @@ import {
   PodcastsList,
   CarouselStyled,
   HyperText,
-  RightArrow,
   LeftArrow,
-  CountLabel,
-  AlingCountBaseDiv,
+  RightArrow,
   AlingArrowBaseDiv,
+  AlingCountBaseDiv,
+  CountLabel,
 } from "./styles";
 import HyperCard from "../HyperCard/hyperCard";
 import { casts } from "./casts";

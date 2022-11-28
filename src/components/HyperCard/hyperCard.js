@@ -14,10 +14,6 @@ const CardBanner = styled.div`
   bottom: 31px;
   margin: ${(props) => props.margin};
   border-radius: 15px;
-  p {
-    color: #fff;
-  }
-
   @media (min-width: 1024px) {
     width: ${(props) => props.widthLaptop};
     height: ${(props) => props.heightLaptop};

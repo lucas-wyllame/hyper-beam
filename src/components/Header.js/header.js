@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import {
   Top,
-  LogoTop,
   CenterLogoDiv,
+  LogoTop,
   SearchLogoBox,
   SearchBar,
   AfterSearch,
@@ -11,9 +11,6 @@ import {
 import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
 import HyperCard from "../HyperCard/hyperCard";
-import { ThemeProvider } from "styled-components";
-import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
-import { theme } from "../Home/homeBanner";
 import { Icon } from "../Footer/styles";
 import { Control } from "../../../public/icon/IconComTag";
 import { ButtonsEp } from "../LastEpisodes/styles";

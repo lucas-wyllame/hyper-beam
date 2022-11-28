@@ -1,11 +1,11 @@
-import { Desc, Title } from "@styles/globalStyles";
+import { Title, Desc } from "@styles/globalStyles";
 import { platsLinks } from "./platsLinks";
 import {
   Content,
   Plats,
+  PlatsGroup,
   PlatsCards,
   PlatsIcons,
-  PlatsGroup,
   PlatsTitle,
   PlatsButton,
 } from "./styles";
@@ -39,7 +39,7 @@ export default function AvailablePlats() {
                 <PlatsIcons
                   widthIcon={res.widthIcon}
                   heightIcon={res.heightIcon}
-                ></PlatsIcons>
+                />
               </PlatsCards>
               <PlatsTitle
                 href={res.url}

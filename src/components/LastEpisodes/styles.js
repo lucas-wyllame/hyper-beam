@@ -32,6 +32,54 @@ export const ListPodcasts = styled.div`
   }
 `;
 
+export const HoveringIcon = styled.label`
+  width: 334px;
+  height: 49px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 688px;
+  left: 0px;
+  z-index: 9;
+  color: #000;
+  font-size: 20px;
+  border-radius: 44px;
+  padding-left: 25px;
+  @media (min-width: 388px) {
+    font-size: 20px;
+  }
+  @media (min-width: 421px) {
+    top: 688px;
+  }
+  @media (min-width: 428px) {
+    top: 661px;
+  }
+  @media (min-width: 462px) {
+    top: 634px;
+  }
+  @media (min-width: 545px) {
+    top: 607px;
+  }
+  @media (min-width: 687px) {
+    top: 580px;
+  }
+  @media (min-width: 768px) {
+    top: 536px;
+  }
+  @media (min-width: 1024px) {
+    top: 420px;
+    width: 404px;
+    height: 49px;
+  }
+  @media (min-width: 1440px) {
+    top: 495px;
+    width: 404px;
+    height: 49px;
+  }
+`;
+
 export const Background = styled.div`
   width: 100%;
   height: auto;
@@ -152,13 +200,14 @@ export const ButtonSeeAll = styled.button`
   }
 `;
 
+export const LeftArrow = styled.img`
+  display: none;
+`;
+
 export const RightArrow = styled.img`
   display: none;
 `;
 
-export const LeftArrow = styled.img`
-  display: none;
-`;
 export const Dots = styled.div`
   height: 20px;
   bottom: -10px;
@@ -188,53 +237,5 @@ export const LittleDots = styled.div`
   }
   @media (min-width: 1024px) {
     height: 10px;
-  }
-`;
-
-export const HoveringIcon = styled.label`
-  width: 334px;
-  height: 49px;
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 688px;
-  left: 0px;
-  z-index: 9;
-  color: #000;
-  font-size: 20px;
-  border-radius: 44px;
-  padding-left: 25px;
-  @media (min-width: 388px) {
-    font-size: 20px;
-  }
-  @media (min-width: 421px) {
-    top: 688px;
-  }
-  @media (min-width: 428px) {
-    top: 661px;
-  }
-  @media (min-width: 462px) {
-    top: 634px;
-  }
-  @media (min-width: 545px) {
-    top: 607px;
-  }
-  @media (min-width: 687px) {
-    top: 580px;
-  }
-  @media (min-width: 768px) {
-    top: 536px;
-  }
-  @media (min-width: 1024px) {
-    top: 420px;
-    width: 404px;
-    height: 49px;
-  }
-  @media (min-width: 1440px) {
-    top: 495px;
-    width: 404px;
-    height: 49px;
   }
 `;

@@ -4,24 +4,35 @@ import { Icon } from "../Footer/styles";
 import {
   Content,
   ListPodcasts,
+  HoveringIcon,
   Background,
+  Block,
   CardAndText,
   TextsDivEp,
   IconAndButtons,
   ButtonsEp,
   ButtonSeeAll,
-  RightArrow,
   LeftArrow,
+  RightArrow,
   Dots,
   LittleDots,
-  HoveringIcon,
-  Block,
 } from "./styles";
 import { useRouter } from "next/router";
 import Slider from "react-slick";
 import { useState } from "react";
-import { Control } from "../../../public/icon/IconComTag";
+import { Control } from "@icon/IconComTag";
 import { TitleInsideComponent } from "@styles/globalStyles";
+
+function SamplePrevArrow(props) {
+  const { className, onClick } = props;
+  return (
+    <LeftArrow
+      className={className}
+      src="./icon/Grupo 21.svg"
+      onClick={onClick}
+    />
+  );
+}
 
 function SampleNextArrow(props) {
   const { className, onClick } = props;
@@ -34,16 +45,6 @@ function SampleNextArrow(props) {
   );
 }
 
-function SamplePrevArrow(props) {
-  const { className, onClick } = props;
-  return (
-    <LeftArrow
-      className={className}
-      src="./icon/Grupo 21.svg"
-      onClick={onClick}
-    />
-  );
-}
 
 export default function LastEpisodes() {
   const [isHovering, setIsHovering] = useState(false);
