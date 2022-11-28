@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const Content = styled.div`
   width: 100%;
-  margin: 90px 0;
+  margin: 74px 0 30px 0;
   /* background: blue; */
   height: auto;
   display: flex;
@@ -12,13 +12,14 @@ export const Content = styled.div`
     width: 100%;
     height: 476px;
     flex-direction: row;
+    margin: 91px 0 90px 0;
   }
 `;
 
 export const LeftImage = styled.div`
   width: 100%;
   height: 253px;
-  background:#6c7492;
+  background: #6c7492;
   border-radius: 0;
   max-width: 800px;
   margin: 0 0 30px 0;

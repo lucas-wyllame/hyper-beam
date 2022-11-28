@@ -2,17 +2,20 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 100%;
-  height: 1350px;
-  background: #1B1B36;
+  height: 1385px;
+  /* background: green; */
   display: flex;
   flex-direction: column;
   justify-content: normal;
   align-items: center;
   @media (min-width: 769px) {
-    height: 624px;
+    height: 647px;
   }
   @media (min-width: 1024px) {
-    height: 716px;
+    height: 620px;
+  }
+  @media (min-width: 1440px) {
+    height: 720px;
   }
 `;
 
@@ -23,8 +26,6 @@ export const GroupText = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (min-width: 1024px) {
-  }
 `;
 
 export const GlobalPeoples = styled.div`
@@ -40,12 +41,12 @@ export const GlobalPeoples = styled.div`
   @media (min-width: 1024px) {
     width: 986px;
     max-width: 986px;
-    height: 370px;
+    height: 418px;
   }
   @media (max-width: 1175px) {
     width: 100%;
     max-width: 655px;
-    height: 370px;
+    height: 384px;
   }
   @media (max-width: 768px) {
     width: 100%;
@@ -128,11 +129,11 @@ export const LeftArrow = styled.img`
   height: 39px;
   width: 39px;
   position: relative;
-  top: 1134px;
+  top: 1174px;
   left: 14px;
   z-index: 2;
   @media (min-width: 769px) {
-    top: 393px;
+    top: 433px;
     left: 215px;
   }
   @media (min-width: 1024px) {
@@ -149,11 +150,11 @@ export const RightArrow = styled.img`
   height: 39px;
   width: 39px;
   position: relative;
-  top: -17px;
+  top: 23px;
   left: 200px;
   z-index: 2;
   @media (min-width: 769px) {
-    top: -16px;
+    top: 24px;
     left: 401px;
   }
   @media (min-width: 1024px) {
@@ -167,7 +168,7 @@ export const RightArrow = styled.img`
 
 export const AlingArrowBaseDiv = styled.div`
   width: 253px;
-  height: 120px;
+  height: 160px;
   /* background: gray; */
   display: flex;
   align-items: flex-end;

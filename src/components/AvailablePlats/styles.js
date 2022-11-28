@@ -6,7 +6,7 @@ export const Content = styled.div`
   padding: 0 44px;
   /* background: #11129d; */
   background-image: url("/img/degrade logo.png");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
