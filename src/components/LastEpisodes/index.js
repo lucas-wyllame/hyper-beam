@@ -21,10 +21,7 @@ import { useRouter } from "next/router";
 import Slider from "react-slick";
 import { useState } from "react";
 import { Control } from "../../../public/icon/IconComTag";
-import { ThemeProvider } from "styled-components";
-import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
-import { theme } from "../Home/homeBanner";
-import { TitleInside } from "../Home/styles";
+import { TitleInsideComponent } from "@styles/globalStyles";
 
 function SampleNextArrow(props) {
   const { className, onClick } = props;
@@ -138,13 +135,7 @@ export default function LastEpisodes() {
                         heightLaptopLarge={"337px"}
                       />
                       <TextsDivEp>
-                        <TitleInside margin={"10px 0"}>
-                          Hyper Beam{" "}
-                          <ThemeProvider theme={theme}>
-                            <FiberManualRecordIcon sx={{ color: "#9e9e9e" }} />
-                          </ThemeProvider>
-                          <span>{res.number}</span>
-                        </TitleInside>
+                        <TitleInsideComponent />
                         <MoreInfs fontSize={"1.8rem"} width={"694px"}>
                           Lorem ipsum dolor sit amet, consectetur a elit. Sed
                           dictum sodales rutrum. Praesent eget lobortis purus.

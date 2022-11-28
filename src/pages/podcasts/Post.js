@@ -8,11 +8,9 @@ import Podcast from "src/components/Podcast";
 export default function Post() {
   return (
     <>
-      {/* <Header /> */}
       <Podcast />
       <Plats />
       <Comments />
-      {/* <Footer /> */}
     </>
   );
 }

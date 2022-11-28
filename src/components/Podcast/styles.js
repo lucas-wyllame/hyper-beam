@@ -69,15 +69,6 @@ export const BannerInfos = styled.div`
   }
 `;
 
-export const SeparationDiv = styled.div`
-  width: 100%;
-  height: 60px;
-  /* background: green; */
-  @media (max-width: 480px) {
-    height: 110px;
-  }
-`;
-
 export const Topic = styled.div`
   width: 80%;
   height: auto;

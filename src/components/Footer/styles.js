@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: 463px;
-  background: #1B1B40;
+  background: #1b1b40;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,6 +66,8 @@ export const Icon = styled.div`
   margin-right: 16px;
   color: #ffffff;
   position: relative;
+  grid-column: ${(props) => props.gridColumn};
+  grid-row: ${(props) => props.gridRow};
   @media (min-width: 1024px) {
     width: 53px;
     height: 53px;

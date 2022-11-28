@@ -1,5 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
+import { createTheme } from "@mui/material/styles";
+import { ThemeProvider } from "styled-components";
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 
 export const GlobalStyles = createGlobalStyle`
   .slick-dots li {
@@ -58,3 +61,52 @@ export const MoreInfs = styled.h2`
     /* font-size: ${(props) => props.fontSizeLaptop}; */
   }
 `;
+
+export const TitleInside = styled.div`
+  max-width: 220px;
+  font-size: 2.5rem;
+  margin: 12px 0;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background: blue; */
+  span {
+    color: #ffe747;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  @media (min-width: 1024px) {
+    font-size: 2.7rem;
+    span {
+      font-size: 2.7rem;
+    }
+  }
+  @media (min-width: 1440px) {
+    max-width: 240px;
+    font-size: 3rem;
+    span {
+      font-size: 3rem;
+    }
+  }
+`;
+
+export function TitleInsideComponent() {
+  const theme = createTheme({
+    palette: {
+      secondary: {
+        main: "#9e9e9e",
+      },
+    },
+  });
+  return (
+    <TitleInside>
+      Hyper Beam
+      <ThemeProvider theme={theme}>
+        <FiberManualRecordIcon sx={{ color: "#9e9e9e" }} />
+      </ThemeProvider>
+      <span>03</span>
+    </TitleInside>
+  );
+}

@@ -10,14 +10,12 @@ import { GlobalStyles } from "@styles/globalStyles";
 export default function Home() {
   return (
     <>
-      {/* <Header /> */}
       <HomeBanner />
       <About />
       <GlobalStyles />
       <LastEpisodes />
       <OurTeam />
       <AvailablePlats />
-      {/* <Footer /> */}
     </>
   );
 }

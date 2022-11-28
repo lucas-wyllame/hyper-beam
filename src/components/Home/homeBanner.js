@@ -3,7 +3,6 @@ import {
   Content,
   Banner,
   TextsDiv,
-  TitleInside,
   Desc,
   BigImg,
   ListHomeBanner,
@@ -14,20 +13,8 @@ import {
   PlayButton,
 } from "./styles";
 import Slider from "react-slick";
-import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
-import { gray } from "@mui/material/colors";
-import { createTheme } from "@mui/material/styles";
-import { purple } from "@mui/material/colors";
-import { ThemeProvider } from "styled-components";
 import { useRouter } from "next/router";
-
-export const theme = createTheme({
-  palette: {
-    secondary: {
-      main: "#9e9e9e",
-    },
-  },
-});
+import { TitleInsideComponent } from "@styles/globalStyles";
 
 function SampleNextArrow(props) {
   const { className, onClick } = props;
@@ -126,13 +113,7 @@ export default function HomeBanner() {
     <Content>
       <Banner>
         <TextsDiv>
-          <TitleInside>
-            Hyper Beam
-            <ThemeProvider theme={theme}>
-              <FiberManualRecordIcon sx={{ color: "#9e9e9e" }} />
-            </ThemeProvider>
-            <span>03</span>
-          </TitleInside>
+          <TitleInsideComponent />
           <Desc>Pokémon Unite e The World Ends with You</Desc>
           <PlayButton onClick={handleClick}>Play</PlayButton>
         </TextsDiv>

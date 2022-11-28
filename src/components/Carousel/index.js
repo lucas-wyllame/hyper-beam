@@ -139,13 +139,6 @@ export default function Carousel() {
   return (
     <Content>
       <PodcastsList>
-        {/* <SlickCss
-          display={"flex"}
-          background={"blue"}
-          alignItems={"center"}
-          justifyContent={"center"}
-          flexDirection={"column"}
-        /> */}
         <Slider {...settings}>
           {casts.map((res, index) => {
             return (

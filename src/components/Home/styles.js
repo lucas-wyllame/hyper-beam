@@ -4,10 +4,9 @@ export const Content = styled.div`
   width: 100%;
   height: 790px;
   /* background: #11129d; */
-  margin: 20px 0;
   display: flex;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 20px;
   @media (min-width: 1024px) {
     height: 650px;
   }
@@ -66,36 +65,6 @@ export const PlayButton = styled.button`
   }
   @media (min-width: 1440px) {
     font-size: 2rem;
-  }
-`;
-
-export const TitleInside = styled.div`
-  max-width: 220px;
-  font-size: 2.5rem;
-  margin: 12px 0;
-  color: #fff;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /* background: blue; */
-  span {
-    color: #ffe747;
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
-  @media (min-width: 1024px) {
-    font-size: 2.7rem;
-    span {
-      font-size: 2.7rem;
-    }
-  }
-  @media (min-width: 1440px) {
-    max-width: 240px;
-    font-size: 3rem;
-    span {
-      font-size: 3rem;
-    }
   }
 `;
 

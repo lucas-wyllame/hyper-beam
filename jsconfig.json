@@ -4,6 +4,7 @@
         "paths": {
             "@styles/*":["src/styles/*"],
             "~/*":["./src/"],
+            "@icon/*":["./public/icon/*"],
         }
     }
 }
