@@ -13,7 +13,7 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 50px;
   @media (min-width: 1024px) {
     height: 900px;
     margin-top: 70px;

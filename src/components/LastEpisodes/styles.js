@@ -4,7 +4,7 @@ export const Content = styled.div`
   width: 100%;
   height: auto;
   /* background: pink; */
-  margin: 20px 0;
+  margin: 40px 0;
   display: flex;
   flex-direction: column;
   padding: 0 20px;
@@ -28,55 +28,52 @@ export const ListPodcasts = styled.div`
   justify-content: space-between;
   position: relative;
   @media (min-width: 1024px) {
-    height: 630px;
+    height: 548px;
+  }
+  @media (min-width: 1440px) {
+    height: 654px;
   }
 `;
 
 export const HoveringIcon = styled.label`
   width: 334px;
-  height: 49px;
+  height: auto;
   background: white;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 688px;
+  top: 670px;
   left: 0px;
   z-index: 9;
   color: #000;
   font-size: 20px;
   border-radius: 44px;
-  padding-left: 25px;
-  @media (min-width: 388px) {
-    font-size: 20px;
-  }
-  @media (min-width: 421px) {
-    top: 688px;
-  }
+  padding: 0 25px;
   @media (min-width: 428px) {
-    top: 661px;
+    top: 643px;
   }
   @media (min-width: 462px) {
-    top: 634px;
+    top: 616px;
   }
   @media (min-width: 545px) {
-    top: 607px;
+    top: 589px;
   }
   @media (min-width: 687px) {
-    top: 580px;
+    top: 562px;
   }
   @media (min-width: 768px) {
-    top: 536px;
+    top: 523px;
   }
   @media (min-width: 1024px) {
-    top: 420px;
     width: 404px;
     height: 49px;
+    top: 420px;
+    padding: 0;
   }
   @media (min-width: 1440px) {
-    top: 495px;
-    width: 404px;
     height: 49px;
+    top: 495px;
   }
 `;
 
@@ -186,7 +183,7 @@ export const ButtonSeeAll = styled.button`
   border: none;
   color: #a127ff;
   font-size: 20px;
-  margin-top: 52px;
+  margin-top: 80px;
   cursor: pointer;
   align-self: center;
   :hover {

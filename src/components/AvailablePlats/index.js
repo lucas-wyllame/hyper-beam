@@ -13,10 +13,10 @@ import {
 export default function AvailablePlats() {
   return (
     <Content>
-      <Title textAlign="center" margin="0 0 10px 0">
+      <Title textAlign="center" margin="0 0 22px 0">
         Plataformas disponíveis
       </Title>
-      <Desc textAlignDesc="center">
+      <Desc margin="0" textAlignDesc="center">
         Onde encontrar nosso podcast para escutar
       </Desc>
       <Plats>

@@ -45,7 +45,6 @@ function SampleNextArrow(props) {
   );
 }
 
-
 export default function LastEpisodes() {
   const [isHovering, setIsHovering] = useState(false);
 
@@ -114,8 +113,8 @@ export default function LastEpisodes() {
 
   return (
     <Content>
-      <Title>Episódios Recentes</Title>
-      <Desc>Acompanhe nosso podcast e seus episódios</Desc>
+      <Title margin="0">Episódios Recentes</Title>
+      <Desc margin="0">Acompanhe nosso podcast e seus episódios</Desc>
       <ListPodcasts>
         {isHovering && (
           <HoveringIcon>Qual jogo aparece nesse episodio?</HoveringIcon>
@@ -146,7 +145,6 @@ export default function LastEpisodes() {
                         </MoreInfs>
                       </TextsDivEp>
                     </CardAndText>
-
                     <IconAndButtons
                       height="140px"
                       widthLaptop="580px"

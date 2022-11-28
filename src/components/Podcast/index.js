@@ -40,7 +40,7 @@ export default function Podcast() {
         </ItensBanner>
       </BackBanner>
       <Topic>
-        <MoreInfs paddingTop="30px" fontSize="1.5rem">
+        <MoreInfs fontSize="1.5rem">
           Lorem ipsum dolor sit amet, consectetur a elit. Sed dictum sodales
           rutrum. Praesent eget lobortis purus. Donec a finibus neque. Nu erat a
           cursus sodales. Fusce vel nulla aliquam, convallis odio semper,

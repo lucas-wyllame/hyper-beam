@@ -31,7 +31,7 @@ export const Title = styled.p`
 export const Desc = styled.h1`
   font-size: 1.6rem;
   text-align: ${(props) => props.textAlignDesc};
-  margin: 0;
+  margin: ${(props) => props.margin};
   color: #9a8dac;
   font-weight: 500;
   @media (min-width: 768px) {
@@ -49,6 +49,7 @@ export const MoreInfs = styled.h2`
   font-size: ${(props) => props.fontSize};
   padding-top: ${(props) => props.paddingTop};
   color: #ffffff;
+  margin: 0;
   @media (min-width: 768px) {
     font-size: 1.5rem;
   }
@@ -100,7 +101,7 @@ export const Icon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 16px;
+  /* margin-right: 16px; */
   color: #ffffff;
   position: relative;
   grid-column: ${(props) => props.gridColumn};

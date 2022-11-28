@@ -28,16 +28,14 @@ export const MainImage = styled.img`
 `;
 
 export const Contacts = styled.div`
-  width: auto;
+  width: 260px;
   height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 80px;
   @media (min-width: 1024px) {
     align-items: normal;
-    margin-bottom: 0;
   }
 `;
 

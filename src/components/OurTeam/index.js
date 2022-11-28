@@ -90,8 +90,8 @@ export default function OurTeam() {
   return (
     <Content>
       <GroupText>
-        <Title>Nosso time</Title>
-        <Desc>A equipe que trabalha no Hyper Beam</Desc>
+        <Title margin="0 0 5px 0">Nosso time</Title>
+        <Desc margin="0">A equipe que trabalha no Hyper Beam</Desc>
       </GroupText>
       <GlobalPeoples>
         <Slider {...settings}>

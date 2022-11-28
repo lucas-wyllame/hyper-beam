@@ -35,7 +35,7 @@ export const TextDiv = styled.div`
   width: 50%;
   height: auto;
   /* background: green; */
-  padding-left: 18px;
+  padding: 0 18px;
   width: 100%;
   display: flex;
   flex-direction: column;

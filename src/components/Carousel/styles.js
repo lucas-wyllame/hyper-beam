@@ -23,6 +23,7 @@ export const PodcastsList = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  margin-bottom: 70px;
   @media (min-width: 1024px) {
     width: 1062px;
     height: 950px;

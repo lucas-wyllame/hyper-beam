@@ -53,19 +53,18 @@ export const BannerInfos = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 60px;
-  margin-left: 0px;
   align-items: center;
+  margin-top: 60px;
   @media (min-width: 1024px) {
     width: 40%;
     height: 250px;
-    margin-top: 0;
-    align-items: normal;
+    margin-top: -60px;
   }
   @media (min-width: 1330px) {
     width: 55%;
     max-width: 638px;
     height: 135px;
+    align-items: normal;
   }
 `;
 
@@ -74,10 +73,10 @@ export const Topic = styled.div`
   height: auto;
   /* background: black; */
   display: flex;
-  align-items: normal;
-  /* margin-bottom: -25px; */
+  padding: 30px 0;
   @media (min-width: 1024px) {
     height: 250px;
     align-items: center;
+    margin-top: 38px;
   }
 `;
