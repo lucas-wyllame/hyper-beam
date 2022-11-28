@@ -32,8 +32,6 @@ export default function HyperCard({
   position,
   width,
   height,
-  name,
-  numero,
   top,
   margin,
   widthMobile,
@@ -48,8 +46,6 @@ export default function HyperCard({
       position={position}
       width={width}
       height={height}
-      name={name}
-      numero={numero}
       top={top}
       margin={margin}
       widthMobile={widthMobile}
@@ -58,9 +54,6 @@ export default function HyperCard({
       heightLaptop={heightLaptop}
       widthLaptopLarge={widthLaptopLarge}
       heightLaptopLarge={heightLaptopLarge}
-    >
-      <p>{name}</p>
-      <label>{numero}</label>
-    </CardBanner>
+    />
   );
 }

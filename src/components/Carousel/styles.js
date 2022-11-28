@@ -5,7 +5,7 @@ export const Content = styled.div`
   height: 3500px;
   background: green;
   background-image: url("/img/degrade logo.png");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
@@ -24,15 +24,15 @@ export const PodcastsList = styled.div`
   flex-direction: column;
   @media (min-width: 1024px) {
     width: 1062px;
-    height: 936px;
+    height: 844px;
   }
   @media (max-width: 1145px) {
     width: 816px;
-    height: 936px;
+    height: 889px;
   }
   @media (max-width: 946px) {
     width: 540px;
-    height: 936px;
+    height: 888px;
   }
   @media (max-width: 644px) {
     width: 225px;
@@ -40,21 +40,21 @@ export const PodcastsList = styled.div`
   }
 `;
 
-export const CarousselStyled = styled.div`
+export const Teste2 = styled.div`
   width: 100%;
   height: 270px;
-  /* background: blue; */
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
+  background: blue;
+  display: flex !important;
+  align-items: center;
+  flex-direction: column;
   @media (min-width: 1024px) {
-    height: 312px;
+    height: auto;
   }
 `;
 
 export const HyperText = styled.label`
-  width: 60%;
-  font-size: 17px;
+  width: 86%;
+  font-size: 1.7rem;
   color: #9a8dac;
   padding-left: 60px;
 `;
@@ -67,20 +67,20 @@ export const LeftArrow = styled.img`
   left: 0;
   z-index: 2;
   @media (min-width: 645px) {
-    top: 873px;
-    left: 160px;
+    top: 868.3px;
+    left: 201px;
   }
   @media (min-width: 947px) {
-    top: 882.9px;
-    left: 328px;
+    top: 869px;
+    left: 294px;
   }
   @media (min-width: 1024px) {
-    top: 953.9px;
-    left: 332px;
+    top: 824.3px;
+    left: 299px;
   }
   @media (min-width: 1146px) {
-    top: 953px;
-    left: 434px;
+    top: 821px;
+    left: 429px;
   }
 `;
 
@@ -92,20 +92,20 @@ export const RightArrow = styled.img`
   left: 186px;
   z-index: 2;
   @media (min-width: 645px) {
-    top: 25px;
+    top: 19px;
     left: 300px;
   }
   @media (min-width: 947px) {
-    top: 34px;
-    left: 402px;
+    top: 20px;
+    left: 482px;
   }
   @media (min-width: 1024px) {
-    top: -22px;
-    left: 408px;
+    top: 32px;
+    left: 485px;
   }
   @media (min-width: 1146px) {
-    top: -22px;
-    left: 552px;
+    top: 28.7px;
+    left: 588px;
   }
 `;
 
@@ -119,19 +119,19 @@ export const CountLabel = styled.label`
   color: #9a8dac;
   font-weight: 500;
   @media (min-width: 645px) {
-    bottom: 50px;
-    left: 240px;
+    bottom: 34px;
+    left: 257px;
   }
   @media (min-width: 947px) {
-    bottom: 40px;
-    left: 372px;
+    bottom: 33px;
+    left: 398px;
   }
   @media (min-width: 1024px) {
-    bottom: -4px;
-    left: 379px;
+    bottom: 50px;
+    left: 397px;
   }
   @media (min-width: 1146px) {
-    bottom: -3px;
-    left: 502px;
+    bottom: 22px;
+    left: 520px;
   }
 `;

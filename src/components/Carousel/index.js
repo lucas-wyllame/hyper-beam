@@ -7,6 +7,7 @@ import {
   RightArrow,
   LeftArrow,
   CountLabel,
+  Teste2,
 } from "./styles";
 import HyperCard from "../HyperCard/hyperCard";
 import { casts } from "./casts";
@@ -138,25 +139,23 @@ export default function Carousel() {
   return (
     <Content>
       <PodcastsList>
-        <SlickCss
+        {/* <SlickCss
           display={"flex"}
           background={"blue"}
           alignItems={"center"}
           justifyContent={"center"}
           flexDirection={"column"}
-        />
+        /> */}
         <Slider {...settings}>
           {casts.map((res, index) => {
             return (
-              <CarousselStyled key={index}>
+              <Teste2 key={index}>
                 <HyperCard
                   width={"225px"}
                   height={"225px"}
-                  name={res.name}
-                  numero={res.numero}
                 ></HyperCard>
                 <HyperText>{res.name}</HyperText>
-              </CarousselStyled>
+              </Teste2>
             );
           })}
         </Slider>
