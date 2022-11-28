@@ -11,7 +11,7 @@ export const Top = styled.div`
 `;
 
 export const CenterLogoDiv = styled.div`
-  width: 57%;
+  width: 51.5%;
   height: 66px;
   /* background: red; */
   display: flex;

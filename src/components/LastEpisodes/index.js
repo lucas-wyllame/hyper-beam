@@ -119,6 +119,9 @@ export default function LastEpisodes() {
       <Title>Episódios Recentes</Title>
       <Desc>Acompanhe nosso podcast e seus episódios</Desc>
       <ListPodcasts>
+        {isHovering && (
+          <HoveringIcon>Qual jogo aparece nesse episodio?</HoveringIcon>
+        )}
         <Slider {...settings}>
           {listBackground.map((res, index) => {
             return (
@@ -166,11 +169,6 @@ export default function LastEpisodes() {
                         heightIcon={"40px"}
                       >
                         <Control />
-                        {isHovering && (
-                          <HoveringIcon>
-                            Qual jogo aparece nesse episodio?
-                          </HoveringIcon>
-                        )}
                       </Icon>
 
                       <ButtonsEp width={"152px"} widthLaptop={"202px"}>

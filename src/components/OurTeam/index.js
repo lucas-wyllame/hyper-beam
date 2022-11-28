@@ -115,9 +115,6 @@ export default function OurTeam() {
             );
           })}
         </Slider>
-        <AlingArrowBaseDiv>
-          <AlingCountBaseDiv></AlingCountBaseDiv>
-        </AlingArrowBaseDiv>
       </GlobalPeoples>
     </Content>
   );

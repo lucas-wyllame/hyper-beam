@@ -26,6 +26,7 @@ export const ListPodcasts = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
   @media (min-width: 1024px) {
     height: 630px;
   }
@@ -189,13 +190,49 @@ export const LittleDots = styled.div`
 `;
 
 export const HoveringIcon = styled.label`
+  width: 334px;
+  height: 49px;
   background: white;
-  width: 320px;
-  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  color: #000;
+  top: 688px;
+  left: 0px;
   z-index: 9;
-  top: 80px;
-  left: -37px;
+  color: #000;
   font-size: 20px;
+  border-radius: 44px;
+  padding-left: 25px;
+  @media (min-width: 388px) {
+    font-size: 20px;
+  }
+  @media (min-width: 421px) {
+    top: 688px;
+  }
+  @media (min-width: 428px) {
+    top: 661px;
+  }
+  @media (min-width: 462px) {
+    top: 634px;
+  }
+  @media (min-width: 545px) {
+    top: 607px;
+  }
+  @media (min-width: 687px) {
+    top: 580px;
+  }
+  @media (min-width: 768px) {
+    top: 536px;
+  }
+  @media (min-width: 1024px) {
+    top: 420px;
+    width: 404px;
+    height: 49px;
+  }
+  @media (min-width: 1440px) {
+    top: 495px;
+    width: 404px;
+    height: 49px;
+  }
 `;
