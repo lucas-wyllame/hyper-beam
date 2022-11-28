@@ -2,12 +2,13 @@ import Slider from "react-slick";
 import {
   Content,
   PodcastsList,
-  CarousselStyled,
+  CarouselStyled,
   HyperText,
   RightArrow,
   LeftArrow,
   CountLabel,
-  Teste2,
+  AlingCountBaseDiv,
+  AlingArrowBaseDiv,
 } from "./styles";
 import HyperCard from "../HyperCard/hyperCard";
 import { casts } from "./casts";
@@ -149,17 +150,18 @@ export default function Carousel() {
         <Slider {...settings}>
           {casts.map((res, index) => {
             return (
-              <Teste2 key={index}>
-                <HyperCard
-                  width={"225px"}
-                  height={"225px"}
-                ></HyperCard>
+              <CarouselStyled key={index}>
+                <HyperCard width={"225px"} height={"225px"}></HyperCard>
                 <HyperText>{res.name}</HyperText>
-              </Teste2>
+              </CarouselStyled>
             );
           })}
         </Slider>
-        <CountLabel>1/2</CountLabel>
+        <AlingArrowBaseDiv>
+          <AlingCountBaseDiv>
+            <CountLabel>1/2</CountLabel>
+          </AlingCountBaseDiv>
+        </AlingArrowBaseDiv>
       </PodcastsList>
     </Content>
   );

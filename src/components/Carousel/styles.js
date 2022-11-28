@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: 3500px;
-  background: green;
+  /* background: green; */
   background-image: url("/img/degrade logo.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,9 +19,10 @@ export const Content = styled.div`
 export const PodcastsList = styled.div`
   width: 225px;
   height: 3240px;
-  background: red;
+  /* background: red; */
   display: flex;
   flex-direction: column;
+  position: relative;
   @media (min-width: 1024px) {
     width: 1062px;
     height: 844px;
@@ -40,10 +41,10 @@ export const PodcastsList = styled.div`
   }
 `;
 
-export const Teste2 = styled.div`
+export const CarouselStyled = styled.div`
   width: 100%;
   height: 270px;
-  background: blue;
+  /* background: blue; */
   display: flex !important;
   align-items: center;
   flex-direction: column;
@@ -63,24 +64,24 @@ export const LeftArrow = styled.img`
   height: 39px;
   width: 39px;
   position: relative;
-  top: 3298px;
-  left: 0;
+  top: 3308.5px;
+  left: 0px;
   z-index: 2;
   @media (min-width: 645px) {
-    top: 868.3px;
-    left: 201px;
+    top: 878.6px;
+    left: 157px;
   }
   @media (min-width: 947px) {
-    top: 869px;
-    left: 294px;
+    top: 879px;
+    left: 295px;
   }
   @media (min-width: 1024px) {
-    top: 824.3px;
-    left: 299px;
+    top: 841.8px;
+    left: 296px;
   }
   @media (min-width: 1146px) {
-    top: 821px;
-    left: 429px;
+    top: 841px;
+    left: 419px;
   }
 `;
 
@@ -88,50 +89,70 @@ export const RightArrow = styled.img`
   height: 39px;
   width: 39px;
   position: relative;
-  top: 19px;
+  top: 30px;
   left: 186px;
   z-index: 2;
   @media (min-width: 645px) {
-    top: 19px;
-    left: 300px;
+    top: 30px;
+    left: 343px;
   }
   @media (min-width: 947px) {
-    top: 20px;
-    left: 482px;
+    top: 30px;
+    left: 481px;
   }
   @media (min-width: 1024px) {
-    top: 32px;
-    left: 485px;
+    top: 49px;
+    left: 482px;
   }
   @media (min-width: 1146px) {
-    top: 28.7px;
-    left: 588px;
+    top: 48.7px;
+    left: 605px;
   }
 `;
 
 export const CountLabel = styled.label`
-  width: 30px;
   font-size: 1.8rem;
   text-align: ${(props) => props.textAlignDesc};
-  position: relative;
-  bottom: 70px;
-  left: 100px;
   color: #9a8dac;
   font-weight: 500;
+`;
+
+export const AlingArrowBaseDiv = styled.div`
+  width: 225px;
+  height: 94px;
+  /* background: gray; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: absolute;
+  top: 3234px;
+  left: 0px;
   @media (min-width: 645px) {
-    bottom: 34px;
-    left: 257px;
+    width: 540px;
+    top: 804px;
+    left: 0px;
   }
   @media (min-width: 947px) {
-    bottom: 33px;
-    left: 398px;
+    width: 816px;
+    top: 804px;
+    left: 0px;
   }
   @media (min-width: 1024px) {
-    bottom: 50px;
-    left: 397px;
+    top: 766px;
+    left: 0px;
   }
   @media (min-width: 1146px) {
-    bottom: 22px;
-    left: 520px;
+    width: 1062px;
+    top: 766px;
+    left: 0px;
   }
+`;
+
+export const AlingCountBaseDiv = styled.div`
+  width: 225px;
+  height: 39px;
+  /* background: pink; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
