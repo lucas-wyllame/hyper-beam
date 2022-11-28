@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 100%;
-  height: 3500px;
+  height: 3890px;
   /* background: green; */
   background-image: url("/img/degrade logo.png");
   background-size: cover;
@@ -25,19 +25,19 @@ export const PodcastsList = styled.div`
   position: relative;
   @media (min-width: 1024px) {
     width: 1062px;
-    height: 844px;
+    height: 950px;
   }
   @media (max-width: 1145px) {
     width: 816px;
-    height: 889px;
+    height: 950px;
   }
   @media (max-width: 946px) {
     width: 540px;
-    height: 888px;
+    height: 930px;
   }
   @media (max-width: 644px) {
     width: 225px;
-    height: 3380px;
+    height: 3686px;
   }
 `;
 
@@ -48,8 +48,10 @@ export const CarouselStyled = styled.div`
   display: flex !important;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 37px;
   @media (min-width: 1024px) {
     height: auto;
+    margin-bottom: 65px;
   }
 `;
 
@@ -64,23 +66,21 @@ export const LeftArrow = styled.img`
   height: 39px;
   width: 39px;
   position: relative;
-  top: 3308.5px;
+  top: 3715.5px;
   left: 0px;
   z-index: 2;
   @media (min-width: 645px) {
-    top: 878.6px;
-    left: 157px;
+    top: 952.6px;
+    left: 158px;
   }
   @media (min-width: 947px) {
-    top: 879px;
     left: 295px;
   }
   @media (min-width: 1024px) {
-    top: 841.8px;
+    top: 970.8px;
     left: 296px;
   }
   @media (min-width: 1146px) {
-    top: 841px;
     left: 419px;
   }
 `;
@@ -89,23 +89,20 @@ export const RightArrow = styled.img`
   height: 39px;
   width: 39px;
   position: relative;
-  top: 30px;
+  top: -7px;
   left: 186px;
   z-index: 2;
   @media (min-width: 645px) {
-    top: 30px;
-    left: 343px;
+    left: 344px;
   }
   @media (min-width: 947px) {
-    top: 30px;
     left: 481px;
   }
   @media (min-width: 1024px) {
-    top: 49px;
+    top: -16px;
     left: 482px;
   }
   @media (min-width: 1146px) {
-    top: 48.7px;
     left: 605px;
   }
 `;
@@ -125,26 +122,21 @@ export const AlingArrowBaseDiv = styled.div`
   align-items: flex-end;
   justify-content: center;
   position: absolute;
-  top: 3234px;
+  top: 3641px;
   left: 0px;
   @media (min-width: 645px) {
-    width: 540px;
-    top: 804px;
-    left: 0px;
+    width: 100%;
+    top: 878px;
   }
   @media (min-width: 947px) {
-    width: 816px;
-    top: 804px;
-    left: 0px;
+    width: 100%;
   }
   @media (min-width: 1024px) {
-    top: 766px;
-    left: 0px;
+    width: 100%;
+    top: 896px;
   }
   @media (min-width: 1146px) {
-    width: 1062px;
-    top: 766px;
-    left: 0px;
+    width: 100%;
   }
 `;
 
