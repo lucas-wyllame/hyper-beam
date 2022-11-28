@@ -93,7 +93,7 @@ export default function LastEpisodes() {
     ),
     customPaging: (pagi, i, dots) => <LittleDots></LittleDots>,
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -131,8 +131,6 @@ export default function LastEpisodes() {
                         height={"253px"}
                         position={"relative"}
                         top={"-35px"}
-                        // widthLaptop={"304px"}
-                        // heightLAwidthLaptop={"304px"}
                         widthLaptopLarge={"337px"}
                         heightLaptopLarge={"337px"}
                       />
