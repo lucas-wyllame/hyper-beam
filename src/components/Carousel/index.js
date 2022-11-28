@@ -42,54 +42,54 @@ export default function Carousel() {
   const [offset, setOffset] = useState(0);
   const [totalRecords, setTotalRecords] = useState(50);
   const [currentPage, setCurrentPage] = useState(1);
-  // var itemsPerPage = 24;
-  // var itensTotal = casts.length;
-  // var totalNumberOfPages = itensTotal / itemsPerPage;
+  var itemsPerPage = 12;
+  var itensTotal = casts.length;
+  var totalNumberOfPages = itensTotal / itemsPerPage;
 
-  // async function handleNext() {
-  //   (console.log("ATIVOU ESSA FUNÇÃO NEXT"))
-  //   if (offset < totalNumberOfPages) {
-  //     var PreviousBtnStyle = await document?.getElementById("previousBtn");
-  //     if (offset > 0) {
-  //       PreviousBtnStyle.style.display = "flex";
-  //     } else {
-  //       PreviousBtnStyle.style.display = "none";
-  //     }
-  //     setCurrentPage(offset);
-  //     setOffset(offset + itemsPerPage);
-  //   }
-  // }
+  async function handleNext() {
+    (console.log("ATIVOU ESSA FUNÇÃO NEXT"))
+    if (offset < totalNumberOfPages) {
+      var PreviousBtnStyle = await document?.getElementById("previousBtn");
+      if (offset > 0) {
+        PreviousBtnStyle.style.display = "flex";
+      } else {
+        PreviousBtnStyle.style.display = "none";
+      }
+      setCurrentPage(offset);
+      setOffset(offset + itemsPerPage);
+    }
+  }
 
-  // async function handlePrev() {
-  //   if (offset > itemsPerPage) {
-  //     var PreviousBtnStyle = await document.getElementById("previousBtn");
-  //     setOffset(offset - itemsPerPage);
-  //     setCurrentPage(offset - 2 * itemsPerPage);
+  async function handlePrev() {
+    if (offset > itemsPerPage) {
+      var PreviousBtnStyle = await document.getElementById("previousBtn");
+      setOffset(offset - itemsPerPage);
+      setCurrentPage(offset - 2 * itemsPerPage);
 
-  //     if (offset > 2 * itemsPerPage) {
-  //       PreviousBtnStyle.style.display = "flex";
-  //     } else {
-  //       PreviousBtnStyle.style.display = "none";
-  //     }
-  //   }
-  // }
-  // useEffect(() => {
-  //   async function FetchMyApi() {
-  //     var PreviousBtnStyle = await document.getElementById("previousBtn");
-  //     var NextBtnStyle = await document.getElementById("nextBtn");
-  //     setCurrentPage(0);
+      if (offset > 2 * itemsPerPage) {
+        PreviousBtnStyle.style.display = "flex";
+      } else {
+        PreviousBtnStyle.style.display = "none";
+      }
+    }
+  }
+  useEffect(() => {
+    async function FetchMyApi() {
+      var PreviousBtnStyle = await document.getElementById("previousBtn");
+      var NextBtnStyle = await document.getElementById("nextBtn");
+      setCurrentPage(0);
 
-  //     setOffset(itemsPerPage);
-  //     PreviousBtnStyle.style.display = "none";
-  //     NextBtnStyle.style.display = "flex";
-  //     // if (itemsPerPage > totalNumberOfPages) {
-  //     //   PreviousBtnStyle.style.display = "none";
-  //     // } else {
-  //     //   PreviousBtnStyle.style.display = "flex";
-  //     // }
-  //   }
-  //   FetchMyApi();
-  // }, []);
+      setOffset(itemsPerPage);
+      PreviousBtnStyle.style.display = "none";
+      NextBtnStyle.style.display = "flex";
+      if (itemsPerPage > totalNumberOfPages) {
+        PreviousBtnStyle.style.display = "flex";
+      } else {
+        PreviousBtnStyle.style.display = "flex";
+      }
+    }
+    FetchMyApi();
+  }, []);
 
   var slider = ".slider";
   var settings = {
@@ -102,8 +102,8 @@ export default function Carousel() {
     speed: 500,
     rows: 3,
     slidesPerRow: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    nextArrow: <SampleNextArrow onClick={handleNext}/>,
+    prevArrow: <SamplePrevArrow onClick={handlePrev}/>,
     responsive: [
       {
         breakpoint: 1149,
