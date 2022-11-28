@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: 1350px;
-  /* background: green; */
+  background: #1B1B36;
   display: flex;
   flex-direction: column;
   justify-content: normal;
@@ -13,7 +13,6 @@ export const Content = styled.div`
   }
   @media (min-width: 1024px) {
     height: 716px;
-    justify-content: space-around;
   }
 `;
 
@@ -37,6 +36,7 @@ export const GlobalPeoples = styled.div`
   flex-direction: column;
   justify-content: space-between;
   margin-top: 50px;
+  position: relative;
   @media (min-width: 1024px) {
     width: 986px;
     max-width: 986px;
@@ -61,7 +61,6 @@ export const Teste = styled.div`
   display: flex !important;
   align-items: center;
   flex-direction: column;
- 
 `;
 
 export const CardsOurTeam = styled.div`
@@ -129,22 +128,20 @@ export const LeftArrow = styled.img`
   height: 39px;
   width: 39px;
   position: relative;
-  top: 1111px;
-  left: 50px;
+  top: 1134px;
+  left: 14px;
   z-index: 2;
   @media (min-width: 769px) {
-    top: 414px;
-    left: 257px;
+    top: 393px;
+    left: 215px;
   }
   @media (min-width: 1024px) {
-    position: absolute;
-    top: 50%;
-    left: -3.7vw;
+    top: 186px;
+    left: -40px;
   }
   @media (min-width: 1176px) {
-    position: absolute;
-    left: -39px;
-    top: 50%;
+    top: 186px;
+    left: -40px;
   }
 `;
 
@@ -152,21 +149,59 @@ export const RightArrow = styled.img`
   height: 39px;
   width: 39px;
   position: relative;
-  top: 59px;
-  left: 160px;
+  top: -17px;
+  left: 200px;
   z-index: 2;
   @media (min-width: 769px) {
-    top: 25px;
-    left: 350px;
+    top: -16px;
+    left: 401px;
   }
   @media (min-width: 1024px) {
-    position: absolute;
-    left: 656px;
-    top: 50%;
+    top: -223px;
+    left: 655px;
   }
   @media (min-width: 1176px) {
-    position: absolute;
     left: 986px;
-    top: 50%;
+  }
+`;
+
+export const AlingArrowBaseDiv = styled.div`
+  width: 253px;
+  height: 120px;
+  /* background: gray; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: absolute;
+  top: 1033px;
+  left: 0px;
+  @media (min-width: 769px) {
+    width: 100%;
+    top: 292px;
+    left: 0px;
+  }
+  @media (min-width: 1024px) {
+    width: 100%;
+    height: 370px;
+    top: 0px;
+    left: 0px;
+    align-items: center;
+  }
+  @media (min-width: 1146px) {
+    width: 100%;
+    top: 0px;
+    left: 0px;
+  }
+`;
+
+export const AlingCountBaseDiv = styled.div`
+  width: 225px;
+  height: 39px;
+  /* background: pink; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (min-width: 1024px) {
+    width: 100%;
   }
 `;

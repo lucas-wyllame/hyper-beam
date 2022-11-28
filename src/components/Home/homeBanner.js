@@ -20,7 +20,6 @@ import { createTheme } from "@mui/material/styles";
 import { purple } from "@mui/material/colors";
 import { ThemeProvider } from "styled-components";
 import { useRouter } from "next/router";
-import { SlickCss } from "../OurTeam/slickCss";
 
 export const theme = createTheme({
   palette: {

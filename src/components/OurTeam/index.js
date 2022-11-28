@@ -10,9 +10,10 @@ import {
   RightArrow,
   GroupText,
   CastersBox,
+  AlingCountBaseDiv,
+  AlingArrowBaseDiv,
 } from "./styles";
 import Slider from "react-slick";
-import { SlickCss } from "./slickCss";
 
 function SamplePrevArrow(props) {
   const { className, onClick } = props;
@@ -114,6 +115,9 @@ export default function OurTeam() {
             );
           })}
         </Slider>
+        <AlingArrowBaseDiv>
+          <AlingCountBaseDiv></AlingCountBaseDiv>
+        </AlingArrowBaseDiv>
       </GlobalPeoples>
     </Content>
   );

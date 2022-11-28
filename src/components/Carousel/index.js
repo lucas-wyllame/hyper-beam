@@ -13,7 +13,6 @@ import {
 import HyperCard from "../HyperCard/hyperCard";
 import { casts } from "./casts";
 import { useEffect, useState } from "react";
-import { SlickCss } from "../OurTeam/slickCss";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
