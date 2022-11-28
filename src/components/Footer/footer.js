@@ -9,8 +9,8 @@ import {
   Contacts,
   ContactTitle,
   IconsRow,
-  Icon,
 } from "./styles";
+import { Icon } from "@styles/globalStyles";
 
 export default function Footer() {
   const listLinks = [

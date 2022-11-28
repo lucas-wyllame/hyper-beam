@@ -4,7 +4,7 @@ import {
   TextPlats,
   OtherPlats,
 } from "./styles";
-import { Title, Desc } from "../../styles/globalStyles";
+import { Title, Desc } from "@styles/globalStyles";
 import { PlatsButton } from "../../components/AvailablePlats/styles";
 import { buttons } from "./buttons";
 

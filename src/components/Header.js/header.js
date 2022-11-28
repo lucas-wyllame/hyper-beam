@@ -11,8 +11,8 @@ import {
 import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
 import HyperCard from "../HyperCard/hyperCard";
-import { Icon } from "../Footer/styles";
-import { Control } from "../../../public/icon/IconComTag";
+import { Icon } from "@styles/globalStyles";
+import { Control } from "@icon/IconComTag";
 import { ButtonsEp } from "../LastEpisodes/styles";
 import { TitleInsideComponent } from "@styles/globalStyles";
 

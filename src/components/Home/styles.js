@@ -9,6 +9,7 @@ export const Content = styled.div`
   margin-top: 20px;
   @media (min-width: 1024px) {
     height: 650px;
+    margin-top: 30px;
   }
 `;
 
@@ -157,4 +158,3 @@ export const RightArrow = styled.img`
     right: -10vw;
   }
 `;
-

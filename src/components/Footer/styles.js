@@ -54,22 +54,3 @@ export const IconsRow = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
-
-export const Icon = styled.div`
-  width: ${(props) => props.widthIcon};
-  height: ${(props) => props.heightIcon};
-  background: #a127ff;
-  border-radius: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 16px;
-  color: #ffffff;
-  position: relative;
-  grid-column: ${(props) => props.gridColumn};
-  grid-row: ${(props) => props.gridRow};
-  @media (min-width: 1024px) {
-    width: 53px;
-    height: 53px;
-  }
-`;

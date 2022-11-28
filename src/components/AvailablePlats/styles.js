@@ -11,7 +11,7 @@ export const Content = styled.div`
   background-position: center;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   margin-top: 40px;
   @media (min-width: 1024px) {
