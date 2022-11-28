@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { Top, LogoTop, CenterLogoDiv, SearchLogoBox } from "./styles";
+import { Top, LogoTop, CenterLogoDiv, SearchLogoBox } from "./stylesHeader";
 import SearchIcon from "@mui/icons-material/Search";
 
 export default function Header() {
