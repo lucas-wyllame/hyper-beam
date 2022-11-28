@@ -32,7 +32,7 @@ export const GlobalPeoples = styled.div`
   width: 68%;
   max-width: 253px;
   height: 1100px;
-  background: red;
+  /* background: red; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -57,10 +57,11 @@ export const GlobalPeoples = styled.div`
 export const Teste = styled.div`
   width: 100%;
   height: 370px;
-  background: green;
+  /* background: green; */
   display: flex !important;
   align-items: center;
   flex-direction: column;
+ 
 `;
 
 export const CardsOurTeam = styled.div`
@@ -92,6 +93,19 @@ export const CardsOurTeam = styled.div`
       height: 293px;
       background: yellow;
     }
+  }
+`;
+
+export const CastersBox = styled.div`
+  width: 253px;
+  display: flex;
+  /* background: green; */
+  flex-direction: column;
+  @media (min-width: 1175px) {
+    width: 254px;
+  }
+  @media (min-width: 1645px) {
+    width: 285px;
   }
 `;
 

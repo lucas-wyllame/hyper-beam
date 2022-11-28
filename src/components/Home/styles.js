@@ -179,7 +179,7 @@ export const BigImg = styled.div`
 export const ListHomeBanner = styled.div`
   width: 68%;
   height: 200px;
-  background: red;
+  /* background: red; */
   position: absolute;
   left: 16vw;
   bottom: -150px;

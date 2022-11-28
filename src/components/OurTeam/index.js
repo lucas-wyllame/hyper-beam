@@ -9,6 +9,7 @@ import {
   LeftArrow,
   RightArrow,
   GroupText,
+  CastersBox,
 } from "./styles";
 import Slider from "react-slick";
 import { SlickCss } from "./slickCss";
@@ -101,11 +102,13 @@ export default function OurTeam() {
               <>
                 <Teste key={index}>
                   <CardsOurTeam />
-                  <NameCasters>
-                    {res.name}
-                    <span> {res.surname} </span>
-                  </NameCasters>
-                  <FuncCasters>{res.func}</FuncCasters>
+                  <CastersBox>
+                    <NameCasters>
+                      {res.name}
+                      <span> {res.surname} </span>
+                    </NameCasters>
+                    <FuncCasters>{res.func}</FuncCasters>
+                  </CastersBox>
                 </Teste>
               </>
             );
