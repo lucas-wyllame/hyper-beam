@@ -72,7 +72,7 @@ export const TitleInside = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: blue;
+  /* background: blue; */
   span {
     color: #ffe747;
     font-size: 2.5rem;
