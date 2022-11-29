@@ -75,7 +75,6 @@ export default function Header() {
                 widthLaptop="230px"
                 heightLaptop="36px"
                 fontSizeLaptop="15px"
-                
               >
                 The World Ends with You
               </ButtonsEp>

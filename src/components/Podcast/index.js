@@ -24,15 +24,26 @@ export default function Podcast() {
               height="150px"
               margin="0"
               alignItems="center"
+              widthLaptop="90%"
               heightLaptop="182px"
               heightLaptopLarge="100px"
               flexDLaptopLarge="row"
             >
               <Control />
-              <ButtonsEp widthLaptop="202px" width="152px">
+              <ButtonsEp
+                widthLaptop="202px"
+                width="152px"
+                heightLaptop="49px"
+                fontSizeLaptop="2rem"
+              >
                 Pokémon Unite
               </ButtonsEp>
-              <ButtonsEp widthLaptop="293px" width="219px">
+              <ButtonsEp
+                widthLaptop="293px"
+                width="219px"
+                heightLaptop="49px"
+                fontSizeLaptop="2rem"
+              >
                 The World Ends with You
               </ButtonsEp>
             </IconAndButtons>
