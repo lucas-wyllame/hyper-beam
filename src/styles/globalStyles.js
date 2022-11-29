@@ -72,7 +72,7 @@ export const TitleInside = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* background: blue; */
+  background: blue;
   span {
     color: #ffe747;
     font-size: 2.5rem;
@@ -107,19 +107,19 @@ export const Icon = styled.div`
   grid-column: ${(props) => props.gridColumn};
   grid-row: ${(props) => props.gridRow};
   @media (min-width: 1024px) {
-    width: 53px;
-    height: 53px;
+    width: ${(props) => props.widthIconLaptop};
+    height: ${(props) => props.heightIconLaptop};
   }
 `;
 
-export function TitleInsideComponent() {
-  const theme = createTheme({
-    palette: {
-      secondary: {
-        main: "#9e9e9e",
-      },
+export const theme = createTheme({
+  palette: {
+    secondary: {
+      main: "#9e9e9e",
     },
-  });
+  },
+});
+export function TitleInsideComponent() {
   return (
     <TitleInside>
       Hyper Beam

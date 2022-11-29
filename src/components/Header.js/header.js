@@ -6,7 +6,10 @@ import {
   SearchLogoBox,
   SearchBar,
   AfterSearch,
-  IconAndButtonGrid,
+  InfoSearch,
+  IconAndTagRow,
+  IconAndTagBox,
+  TitleInsideComponentSearch,
 } from "./styles";
 import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
@@ -14,7 +17,6 @@ import HyperCard from "../HyperCard/hyperCard";
 import { Icon } from "@styles/globalStyles";
 import { Control } from "@icon/IconComTag";
 import { ButtonsEp } from "../LastEpisodes/styles";
-import { TitleInsideComponent } from "@styles/globalStyles";
 
 export default function Header() {
   const [isClicked, setIsClicked] = useState(false);
@@ -51,33 +53,34 @@ export default function Header() {
       {showResult ? (
         <AfterSearch>
           <HyperCard width="104px" height="104px" />
-          <TitleInsideComponent />
-          <IconAndButtonGrid>
-            <Icon
-              grid-column="1/2"
-              grid-row="1/2"
-              widthIcon={"42px"}
-              heightIcon={"42px"}
-            >
-              <Control />
-            </Icon>
-            <ButtonsEp
-              grid-column="2/3"
-              grid-row="1/2"
-              width={"159px"}
-              widthLaptop={"202px"}
-            >
-              Pokémon Unite
-            </ButtonsEp>
-            <ButtonsEp
-              grid-column="1/3"
-              grid-row="2/3"
-              width={"230px"}
-              widthLaptop={"293px"}
-            >
-              The World Ends with You
-            </ButtonsEp>
-          </IconAndButtonGrid>
+          <InfoSearch>
+            <TitleInsideComponentSearch />
+            <IconAndTagBox>
+              <IconAndTagRow>
+                <Icon
+                  widthIcon="42px"
+                  heightIcon="42px"
+                  widthIconLaptop="42px"
+                  heightIconLaptop="42px"
+                  fontSizeLaptop="15px"
+                >
+                  <Control />
+                </Icon>
+                <ButtonsEp width="159px" widthLaptop="150px">
+                  Pokémon Unite
+                </ButtonsEp>
+              </IconAndTagRow>
+              <ButtonsEp
+                width="230px"
+                widthLaptop="230px"
+                heightLaptop="36px"
+                fontSizeLaptop="15px"
+                
+              >
+                The World Ends with You
+              </ButtonsEp>
+            </IconAndTagBox>
+          </InfoSearch>
         </AfterSearch>
       ) : (
         ""

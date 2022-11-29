@@ -17,7 +17,7 @@ export default function Podcast() {
             height={"275px"}
             widthLaptop={"340px"}
             heightLaptop={"340px"}
-          ></HyperCard>
+          />
           <BannerInfos>
             <TitleInsideComponent />
             <IconAndButtons

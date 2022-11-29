@@ -157,14 +157,26 @@ export default function LastEpisodes() {
                         onMouseOut={handleMouseOut}
                         widthIcon={"40px"}
                         heightIcon={"40px"}
+                        widthIconLaptop="53px"
+                        heightIconLaptop="53px"
                       >
                         <Control />
                       </Icon>
 
-                      <ButtonsEp width={"152px"} widthLaptop={"202px"}>
+                      <ButtonsEp
+                        width="152px"
+                        widthLaptop="202px"
+                        heightLaptop="49px"
+                        fontSizeLaptop="2rem"
+                      >
                         Pokémon Unite
                       </ButtonsEp>
-                      <ButtonsEp width={"220px"} widthLaptop={"293px"}>
+                      <ButtonsEp
+                        width="220px"
+                        widthLaptop="293px"
+                        heightLaptop="49px"
+                        fontSizeLaptop="2rem"
+                      >
                         World Ends with You
                       </ButtonsEp>
                     </IconAndButtons>

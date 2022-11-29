@@ -166,12 +166,10 @@ export const ButtonsEp = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-column: ${(props) => props.gridColumn};
-  grid-row: ${(props) => props.gridRow};
   @media (min-width: 1024px) {
     width: ${(props) => props.widthLaptop};
-    height: 49px;
-    font-size: 2rem;
+    height: ${(props) => props.heightLaptop};
+    font-size: ${(props) => props.fontSizeLaptop};
   }
 `;
 
