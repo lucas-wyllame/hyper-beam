@@ -23,21 +23,18 @@ export const Content = styled.div`
 export const Plats = styled.div`
   width: 100%;
   height: 65%;
-  flex-direction: column;
   /* background: red; */
+  flex-direction: column;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 56px;
   margin-top: 45px;
   @media (min-width: 1024px) {
-    width: 90%;
+    width: 880px;
     height: auto;
     flex-direction: row;
     margin-bottom: 50px;
-  }
-  @media (min-width: 1440px) {
-    width: 80%;
   }
 `;
 
@@ -74,7 +71,7 @@ export const PlatsCards = styled.a`
     div {
       width: ${(props) => props.widthHoverDiv};
       height: ${(props) => props.heightHoverDiv};
-      background: ${(props) => props.backColor};
+      background-image: ${(props) => props.imageHover};
     }
   }
   @media (min-width: 1024px) {
@@ -86,7 +83,10 @@ export const PlatsCards = styled.a`
 export const PlatsIcons = styled.div`
   width: ${(props) => props.widthIcon};
   height: ${(props) => props.heightIcon};
-  background: #fff;
+  background-color: #000;
+  background-image: ${(props) => props.image};
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 50%;
   @media (min-width: 1024px) {
     width: ${(props) => props.widthIconLaptop};

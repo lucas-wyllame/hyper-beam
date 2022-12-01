@@ -8,12 +8,12 @@ import { GlobalStyles } from "@styles/globalStyles";
 export default function Home() {
   return (
     <>
-      {/* <HomeBanner /> */}
-      {/* <About /> */}
-      {/* <GlobalStyles /> */}
-      {/* <LastEpisodes /> */}
+      <HomeBanner />
+      <About />
+      <GlobalStyles />
+      <LastEpisodes />
       <OurTeam />
-      {/* <AvailablePlats /> */}
+      <AvailablePlats />
     </>
   );
 }

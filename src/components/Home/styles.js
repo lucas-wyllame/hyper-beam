@@ -86,7 +86,7 @@ export const BigImg = styled.div`
   width: 329px;
   height: 317px;
   position: absolute;
-  background: yellow;
+  background: #ffe747;
   bottom: 0;
   /* background-image: url("/img/Pkm.png");
   background-size: 100% auto;
@@ -117,6 +117,10 @@ export const ListHomeBanner = styled.div`
     width: 85%;
     bottom: -140px;
     left: 7%;
+  }
+  @media (min-width: 1440px) {
+    width: 80%;
+    left: 10%;
   }
 `;
 

@@ -39,6 +39,8 @@ function SampleNextArrow(props) {
 }
 
 export default function OurTeam() {
+  const [all, setAll] = useState([]);
+
   var slider = ".slider";
   const listCardsOurTeam = [
     { name: "Leandro", surname: "Radnas", func: "Host e Caster" },
@@ -52,7 +54,6 @@ export default function OurTeam() {
   let name;
   let nameUrl;
 
-  const [all, setAll] = useState([]);
   useEffect(() => {
     async function FetchMyApi() {
       let items = await ConnectContent();
@@ -120,8 +121,13 @@ export default function OurTeam() {
               <>
                 <Peoples key={index}>
                   <CardsOurTeam
-                    image={`url(${res.fields.profilePicture?.fields.file.url})` || ""}
-                    imageHover={`url(${res.fields.profilePictureHover?.fields.file.url})` || ""}
+                    image={
+                      `url(${res.fields.profilePicture?.fields.file.url})` || ""
+                    }
+                    imageHover={
+                      `url(${res.fields.profilePictureHover?.fields.file.url})` ||
+                      ""
+                    }
                   />
                   <CastersBox>
                     <NameCasters>

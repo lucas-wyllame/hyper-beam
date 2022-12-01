@@ -70,7 +70,7 @@ export const CardsOurTeam = styled.div`
   max-width: 253px;
   max-height: 253px;
   background-image: ${(props) => props.image};
-  background-color: gray;
+  background-color: #9697c7;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 20px;
