@@ -12,9 +12,9 @@ import {
   RightArrow,
 } from "./styles";
 import Slider from "react-slick";
-import { ConnectContent } from '../../ConfigContent';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { ConnectContent } from "../../ConfigContent";
+import { useEffect } from "react";
+import { useState } from "react";
 
 function SamplePrevArrow(props) {
   const { className, onClick } = props;
@@ -49,7 +49,6 @@ export default function OurTeam() {
     { name: "Walter", surname: "Com Dablio", func: "Editor" },
   ];
 
- 
   let name;
   let nameUrl;
 
@@ -57,13 +56,14 @@ export default function OurTeam() {
   useEffect(() => {
     async function FetchMyApi() {
       let items = await ConnectContent();
-      let allContent = await items.filter(x => x.sys.contentType.sys.id == "collaborators");
-      setAll(allContent)
+      let allContent = await items.filter(
+        (x) => x.sys.contentType.sys.id == "collaborators"
+      );
+      setAll(allContent);
     }
     FetchMyApi();
   }, []);
-  
-  
+
   const settings = {
     dots: false,
     infinite: false,
@@ -104,7 +104,7 @@ export default function OurTeam() {
       },
     ],
   };
-  
+
   return (
     <Content>
       {console.log("La ele", all)}
@@ -119,7 +119,10 @@ export default function OurTeam() {
               // eslint-disable-next-line react/jsx-key
               <>
                 <Peoples key={index}>
-                  <CardsOurTeam />
+                  <CardsOurTeam
+                    image={`url(${res.fields.profilePicture?.fields.file.url})` || ""}
+                    imageHover={`url(${res.fields.profilePictureHover?.fields.file.url})` || ""}
+                  />
                   <CastersBox>
                     <NameCasters>
                       {res.fields.name}

@@ -69,7 +69,10 @@ export const CardsOurTeam = styled.div`
   height: 253px;
   max-width: 253px;
   max-height: 253px;
-  background: #9697c7;
+  background-image: ${(props) => props.image};
+  background-color: gray;
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 20px;
   margin-bottom: 20px;
   @media (min-width: 1175px) {
@@ -80,7 +83,8 @@ export const CardsOurTeam = styled.div`
     :hover {
       width: 293px;
       height: 293px;
-      background: yellow;
+      background-color: yellow;
+      background-image: ${(props) => props.imageHover};
     }
   }
   @media (min-width: 1645px) {
@@ -91,7 +95,6 @@ export const CardsOurTeam = styled.div`
     :hover {
       width: 293px;
       height: 293px;
-      background: yellow;
     }
   }
 `;
