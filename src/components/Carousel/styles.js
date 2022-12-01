@@ -108,7 +108,7 @@ export const RightArrow = styled.img`
   }
 `;
 
-export const AlingArrowBaseDiv = styled.div`
+export const AlignArrowBaseDiv = styled.div`
   width: 225px;
   height: 94px;
   /* background: gray; */
@@ -134,7 +134,7 @@ export const AlingArrowBaseDiv = styled.div`
   }
 `;
 
-export const AlingCountBaseDiv = styled.div`
+export const AlignCountBaseDiv = styled.div`
   width: 225px;
   height: 39px;
   /* background: pink; */

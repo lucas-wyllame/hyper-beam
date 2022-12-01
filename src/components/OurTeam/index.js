@@ -12,6 +12,9 @@ import {
   RightArrow,
 } from "./styles";
 import Slider from "react-slick";
+import { ConnectContent } from '../../ConfigContent';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 function SamplePrevArrow(props) {
   const { className, onClick } = props;
@@ -46,6 +49,21 @@ export default function OurTeam() {
     { name: "Walter", surname: "Com Dablio", func: "Editor" },
   ];
 
+ 
+  let name;
+  let nameUrl;
+
+  const [all, setAll] = useState([]);
+  useEffect(() => {
+    async function FetchMyApi() {
+      let items = await ConnectContent();
+      let allContent = await items.filter(x => x.sys.contentType.sys.id == "collaborators");
+      setAll(allContent)
+    }
+    FetchMyApi();
+  }, []);
+  
+  
   const settings = {
     dots: false,
     infinite: false,
@@ -86,16 +104,17 @@ export default function OurTeam() {
       },
     ],
   };
-
+  
   return (
     <Content>
+      {console.log("La ele", all)}
       <GroupText>
         <Title margin="0 0 5px 0">Nosso time</Title>
         <Desc margin="0">A equipe que trabalha no Hyper Beam</Desc>
       </GroupText>
       <GlobalPeoples>
         <Slider {...settings}>
-          {listCardsOurTeam.map((res, index) => {
+          {all.map((res, index) => {
             return (
               // eslint-disable-next-line react/jsx-key
               <>
@@ -103,10 +122,10 @@ export default function OurTeam() {
                   <CardsOurTeam />
                   <CastersBox>
                     <NameCasters>
-                      {res.name}
-                      <span> {res.surname} </span>
+                      {res.fields.name}
+                      <span> {res.fields.surname} </span>
                     </NameCasters>
-                    <FuncCasters>{res.func}</FuncCasters>
+                    <FuncCasters>{res.fields.role}</FuncCasters>
                   </CastersBox>
                 </Peoples>
               </>

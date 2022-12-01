@@ -6,52 +6,61 @@ import {
   HyperText,
   LeftArrow,
   RightArrow,
-  AlingArrowBaseDiv,
-  AlingCountBaseDiv,
+  AlignArrowBaseDiv,
+  AlignCountBaseDiv,
   CountLabel,
 } from "./styles";
 import HyperCard from "../HyperCard/hyperCard";
 import { casts } from "./casts";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <RightArrow
-      className={className}
-      src="./icon/Grupo 22.svg"
-      onClick={onClick}
-      id="nextBtn"
-    />
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <LeftArrow
-      className={className}
-      src="./icon/Grupo 21.svg"
-      onClick={onClick}
-      id="previousBtn"
-    />
-  );
-}
 
 export default function Carousel() {
   const [offset, setOffset] = useState(0);
+  const sliderRef = useRef();
   const [totalRecords, setTotalRecords] = useState(50);
   const [currentPage, setCurrentPage] = useState(1);
+
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <RightArrow
+        className={className}
+        src="./icon/Grupo 22.svg"
+        onClick={() => handleNext()}
+        id="nextBtn"
+        
+      />
+    );
+  }
+  
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <LeftArrow
+        className={className}
+        src="./icon/Grupo 21.svg"
+        onClick={() => handlePrev()}
+        id="previousBtn"
+      />
+    );
+  }
   var itemsPerPage = 12;
-  var itensTotal = casts.length;
-  var totalNumberOfPages = itensTotal / itemsPerPage;
+  var itemsTotal = casts.length;
+  var totalNumberOfPages = itemsTotal / itemsPerPage;
+
 
   async function handleNext() {
     (console.log("ATIVOU ESSA FUNÇÃO NEXT"))
-    if (offset < totalNumberOfPages) {
-      var PreviousBtnStyle = await document?.getElementById("previousBtn");
+    sliderRef?.current?.slickNext();
+    (console.log("offset", offset))
+  
+   
+    var PreviousBtnStyle = document?.getElementById("previousBtn");
+    PreviousBtnStyle.style.display = "none";
+    if (offset <= itemsTotal) {
       if (offset > 0) {
-        PreviousBtnStyle.style.display = "flex";
+        console.log("heeeeey", PreviousBtnStyle)
       } else {
         PreviousBtnStyle.style.display = "none";
       }
@@ -61,32 +70,31 @@ export default function Carousel() {
   }
 
   async function handlePrev() {
-    if (offset > itemsPerPage) {
-      var PreviousBtnStyle = await document.getElementById("previousBtn");
-      setOffset(offset - itemsPerPage);
-      setCurrentPage(offset - 2 * itemsPerPage);
+    (console.log("ATIVOU ESSA FUNÇÃO PREV"));
+    sliderRef?.current?.slickPrev();
+    // if (offset > itemsPerPage) {
+    //   var PreviousBtnStyle = await document.getElementById("previousBtn");
+    //   setOffset(offset - itemsPerPage);
+    //   setCurrentPage(offset - 2 * itemsPerPage);
 
-      if (offset > 2 * itemsPerPage) {
-        PreviousBtnStyle.style.display = "flex";
-      } else {
-        PreviousBtnStyle.style.display = "none";
-      }
-    }
+    //   if (offset > 2 * itemsPerPage) {
+    //     PreviousBtnStyle.style.display = "flex";
+    //   } else {
+    //     PreviousBtnStyle.style.display = "none";
+    //   }
+    // }
   }
   useEffect(() => {
     async function FetchMyApi() {
-      var PreviousBtnStyle = await document.getElementById("previousBtn");
-      var NextBtnStyle = await document.getElementById("nextBtn");
       setCurrentPage(0);
 
       setOffset(itemsPerPage);
-      PreviousBtnStyle.style.display = "none";
-      NextBtnStyle.style.display = "flex";
-      if (itemsPerPage > totalNumberOfPages) {
-        PreviousBtnStyle.style.display = "flex";
-      } else {
-        PreviousBtnStyle.style.display = "flex";
-      }
+     
+      // if (itemsPerPage > totalNumberOfPages) {
+      //   PreviousBtnStyle.style.display = "flex";
+      // } else {
+      //   PreviousBtnStyle.style.display = "flex";
+      // }
     }
     FetchMyApi();
   }, []);
@@ -102,8 +110,8 @@ export default function Carousel() {
     speed: 500,
     rows: 3,
     slidesPerRow: 1,
-    nextArrow: <SampleNextArrow onClick={handleNext}/>,
-    prevArrow: <SamplePrevArrow onClick={handlePrev}/>,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 1149,
@@ -139,7 +147,7 @@ export default function Carousel() {
   return (
     <Content>
       <PodcastsList>
-        <Slider {...settings}>
+        <Slider ref={sliderRef} {...settings}>
           {casts.map((res, index) => {
             return (
               <CarouselStyled key={index}>
@@ -149,11 +157,11 @@ export default function Carousel() {
             );
           })}
         </Slider>
-        <AlingArrowBaseDiv>
-          <AlingCountBaseDiv>
+        <AlignArrowBaseDiv>
+          <AlignCountBaseDiv>
             <CountLabel>1/2</CountLabel>
-          </AlingCountBaseDiv>
-        </AlingArrowBaseDiv>
+          </AlignCountBaseDiv>
+        </AlignArrowBaseDiv>
       </PodcastsList>
     </Content>
   );
