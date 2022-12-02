@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 100%;
-  height: 1385px;
+  height: 650px;
   /* background: green; */
   display: flex;
   flex-direction: column;
@@ -49,8 +49,8 @@ export const GlobalPeoples = styled.div`
     height: 384px;
   }
   @media (max-width: 768px) {
-    width: 100%;
-    max-width: 253px;
+    width: 281px;
+    /* max-width: 253px; */
     height: auto;
   }
 `;
@@ -119,8 +119,6 @@ export const NameCasters = styled.label`
     font-size: 23px;
     color: #ffe747;
   }
-  @media (min-width: 1024px) {
-  }
 `;
 
 export const FuncCasters = styled.label`
@@ -132,12 +130,12 @@ export const LeftArrow = styled.img`
   height: 39px;
   width: 39px;
   position: relative;
-  top: 1174px;
-  left: 14px;
+  top: 433px;
+  left: 86px;
   z-index: 2;
   @media (min-width: 769px) {
     top: 433px;
-    left: 215px;
+    left: 263px;
   }
   @media (min-width: 1024px) {
     top: 186px;
@@ -153,12 +151,12 @@ export const RightArrow = styled.img`
   height: 39px;
   width: 39px;
   position: relative;
-  top: 23px;
-  left: 200px;
+  top: 24px;
+  left: 157px;
   z-index: 2;
   @media (min-width: 769px) {
     top: 24px;
-    left: 401px;
+    left: 354px;
   }
   @media (min-width: 1024px) {
     top: -223px;
@@ -166,5 +164,46 @@ export const RightArrow = styled.img`
   }
   @media (min-width: 1176px) {
     left: 986px;
+  }
+`;
+
+export const AlingArrowBaseDiv = styled.div`
+  width: 253px;
+  height: 160px;
+  /* background: gray; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: absolute;
+  top: 292px;
+  left: 14px;
+  @media (min-width: 769px) {
+    width: 100%;
+    top: 292px;
+    left: 0px;
+  }
+  @media (min-width: 1024px) {
+    width: 100%;
+    height: 370px;
+    top: 0px;
+    left: 0px;
+    align-items: center;
+  }
+  @media (min-width: 1146px) {
+    width: 100%;
+    top: 0px;
+    left: 0px;
+  }
+`;
+
+export const AlingCountBaseDiv = styled.div`
+  width: 130px;
+  height: 39px;
+  /* background: pink; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (min-width: 1024px) {
+    width: 100%;
   }
 `;

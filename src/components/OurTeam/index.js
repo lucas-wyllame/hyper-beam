@@ -10,6 +10,8 @@ import {
   FuncCasters,
   LeftArrow,
   RightArrow,
+  AlingCountBaseDiv,
+  AlingArrowBaseDiv,
 } from "./styles";
 import Slider from "react-slick";
 import { ConnectContent } from "../../ConfigContent";
@@ -41,16 +43,6 @@ function SampleNextArrow(props) {
 export default function OurTeam() {
   const [all, setAll] = useState([]);
 
-  var slider = ".slider";
-  const listCardsOurTeam = [
-    { name: "Leandro", surname: "Radnas", func: "Host e Caster" },
-    { name: "Leo", surname: "Dratini", func: "Caster" },
-    { name: "Davi", surname: "Hayato", func: "Caster" },
-    { name: "Lucas", surname: "SuP", func: "Dev" },
-    { name: "Gabriel", surname: "C4rds", func: "Dev" },
-    { name: "Walter", surname: "Com Dablio", func: "Editor" },
-  ];
-
   let name;
   let nameUrl;
 
@@ -64,6 +56,8 @@ export default function OurTeam() {
     }
     FetchMyApi();
   }, []);
+
+  var slider = ".slider";
 
   const settings = {
     dots: false,
@@ -86,21 +80,19 @@ export default function OurTeam() {
       {
         breakpoint: 768,
         settings: {
-          rows: 3,
+          rows: 1,
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: slider.length > 3 ? true : false,
-          vertical: true,
         },
       },
       {
         breakpoint: 480,
         settings: {
-          rows: 3,
+          rows: 1,
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: slider.length > 3 ? true : false,
-          vertical: true,
         },
       },
     ],
@@ -141,6 +133,9 @@ export default function OurTeam() {
             );
           })}
         </Slider>
+        {/* <AlingArrowBaseDiv> */}
+          {/* <AlingCountBaseDiv /> */}
+        {/* </AlingArrowBaseDiv> */}
       </GlobalPeoples>
     </Content>
   );

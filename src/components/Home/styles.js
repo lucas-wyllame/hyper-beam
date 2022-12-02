@@ -96,13 +96,25 @@ export const BigImg = styled.div`
     width: 387px;
     height: 375px;
     max-width: 540px;
-    position: absolute;
     right: 80px;
-    bottom: 0;
   }
   @media (min-width: 1440px) {
     width: 532px;
     height: 513px;
+  }
+`;
+export const DivToCentralizeListHomeBanner = styled.div`
+  width: 100%;
+  height: 160px;
+  /* background: gray; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: absolute;
+  top: 580px;
+  left: 0px;
+  @media (min-width: 1024px) {
+    top: 465px;
   }
 `;
 
@@ -110,17 +122,8 @@ export const ListHomeBanner = styled.div`
   width: 68%;
   height: 200px;
   /* background: red; */
-  position: absolute;
-  left: 16vw;
-  bottom: -150px;
-  @media (min-width: 1024px) {
-    width: 85%;
-    bottom: -140px;
-    left: 7%;
-  }
   @media (min-width: 1440px) {
-    width: 80%;
-    left: 10%;
+    width: 1090px;
   }
 `;
 

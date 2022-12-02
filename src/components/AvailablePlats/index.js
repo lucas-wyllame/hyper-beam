@@ -39,7 +39,10 @@ export default function AvailablePlats() {
         {all.slice(0, 3).map((res, index) => {
           return (
             // eslint-disable-next-line react/jsx-key
-            <PlatsGroup colorHoverText={res.fields.styling?.colorHoverText} key={index}>
+            <PlatsGroup
+              colorHoverText={res.fields.styling?.colorHoverText}
+              key={index}
+            >
               <PlatsCards
                 width={res.fields.styling?.width}
                 height={res.fields.styling?.height}
@@ -77,6 +80,7 @@ export default function AvailablePlats() {
       {all.slice(3).map((res, index) => {
         return (
           <PlatsButton
+            key={index}
             href="https://bit.ly/3Qe9421"
             target="_blank"
             rel="noreferrer"

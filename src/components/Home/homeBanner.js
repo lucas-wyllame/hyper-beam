@@ -11,6 +11,7 @@ import {
   HyperText,
   LeftArrow,
   RightArrow,
+  DivToCentralizeListHomeBanner,
 } from "./styles";
 import Slider from "react-slick";
 import { useRouter } from "next/router";
@@ -118,21 +119,23 @@ export default function HomeBanner() {
           <PlayButton onClick={handleClick}>Play</PlayButton>
         </FeaturedPodcastInfo>
         <BigImg />
-        <ListHomeBanner>
-          <Slider {...settings}>
-            {TitleInsides.map((res, index) => {
-              return (
-                // eslint-disable-next-line react/jsx-key
-                <>
-                  <HyperCardGroup key={index}>
-                    <HyperCard width={"196px"} height={"196px"} />
-                    <HyperText>{res.name}</HyperText>
-                  </HyperCardGroup>
-                </>
-              );
-            })}
-          </Slider>
-        </ListHomeBanner>
+        <DivToCentralizeListHomeBanner>
+          <ListHomeBanner>
+            <Slider {...settings}>
+              {TitleInsides.map((res, index) => {
+                return (
+                  // eslint-disable-next-line react/jsx-key
+                  <>
+                    <HyperCardGroup key={index}>
+                      <HyperCard width={"196px"} height={"196px"} />
+                      <HyperText>{res.name}</HyperText>
+                    </HyperCardGroup>
+                  </>
+                );
+              })}
+            </Slider>
+          </ListHomeBanner>
+        </DivToCentralizeListHomeBanner>
       </Banner>
     </Content>
   );
