@@ -17,6 +17,8 @@ export default function Post() {
         (x) => x.sys.contentType.sys.id == "podcast" && x.fields.number == numberUrl,
         console.log("numeroX", x.fields.number)
       );
+      console.log("filtro", items.filter(
+        (x) => x.fields.number == numberUrl));
       setAll(allContent);
     }
     FetchMyApi();
