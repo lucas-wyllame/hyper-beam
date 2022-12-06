@@ -16,8 +16,6 @@ export default function Post() {
       let allContent = await items.filter(
         (x) => x.sys.contentType.sys.id == "podcast" && x.fields.number == numberUrl
       );
-      console.log("filtro", items.filter(
-        (x) => x.sys.contentType.sys.id == "podcast" && x.fields.number == numberUrl));
       setAll(allContent);
     }
     FetchMyApi();
@@ -25,6 +23,7 @@ export default function Post() {
 
   return (
     <>
+    {console.log("La ele2", all)}
       <PodcastHeader
         title={all.map((res) => {return(res.fields.title)})}
         number={all.map((res) => {return(res.fields.number)})}
