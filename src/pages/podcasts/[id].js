@@ -9,7 +9,7 @@ export default function Podcasts() {
   useEffect(() => {
       async function fetchUrl() {
         const url = window.location.href;
-        setName(url.replace("http://localhost:3000/podcasts/", ""));
+        setName(url.replace("https://hyper-beam.vercel.app/", ""));
     }
     fetchUrl();
 }, []);

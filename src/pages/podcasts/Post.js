@@ -11,8 +11,8 @@ export default function Post() {
     async function FetchMyApi() {
       let items = await ConnectContent();
       console.log(items);
-      console.log("url", url.replace("http://localhost:3000/podcasts/hyperbeam", ""))
-      let numberUrl = url.replace("http://localhost:3000/podcasts/hyperbeam", "");
+      console.log("url", url.replace("https://hyper-beam.vercel.app/podcasts/hyperbeam", ""))
+      let numberUrl = url.replace("https://hyper-beam.vercel.app/podcasts/hyperbeam", "");
       let allContent = await items.filter(
         (x) => x.sys.contentType.sys.id == "podcast" && x.fields.number == numberUrl
       );
