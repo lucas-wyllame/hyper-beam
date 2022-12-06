@@ -25,14 +25,13 @@ export default function Post() {
 
   return (
     <>
-      {console.log("filtrado", all)}
       <PodcastHeader
-        title={all.map((res) => res[0].fields.title)}
-        number={all.map((res) => res[0].fields.number)}
-        gameTags={all.map((res) => res[0].fields.gameTags)}
-        desc={all.map((res) => res[0].fields.description)}
+        title={all.map((res) => {return(res.fields.title)})}
+        number={all.map((res) => {return(res.fields.number)})}
+        gameTags={all.map((res) => {return(res.fields.gameTags)})}
+        desc={all.map((res) => {return(res.fields.description)})}
       />
-      <SpotifyAndOtherPlats url={all.map((res) => res[0].fields.podcastUrl)} />
+      <SpotifyAndOtherPlats url={all.map((res) => res.fields.podcastUrl)} />
       <Comments />
     </>
   );
