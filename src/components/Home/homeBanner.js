@@ -107,7 +107,7 @@ export default function HomeBanner() {
 
   const handleClick = (e) => {
     e.preventDefault();
-    router.push("/podcasts/hyperbeam1");
+    router.push("/podcasts/hyperbeam3");
   };
 
   return (

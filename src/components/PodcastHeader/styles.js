@@ -49,7 +49,6 @@ export const ItensBanner = styled.div`
 export const BannerInfos = styled.div`
   width: 100%;
   height: 220px;
-  /* background: pink; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -61,8 +60,7 @@ export const BannerInfos = styled.div`
     margin-top: -60px;
   }
   @media (min-width: 1330px) {
-    width: 55%;
-    max-width: 638px;
+    width: 70%;
     height: 135px;
     align-items: normal;
   }
@@ -71,7 +69,6 @@ export const BannerInfos = styled.div`
 export const Topic = styled.div`
   width: 80%;
   height: auto;
-  /* background: black; */
   display: flex;
   padding: 30px 0;
   @media (min-width: 1024px) {

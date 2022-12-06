@@ -148,10 +148,13 @@ export const IconAndButtons = styled.div`
     width: ${(props) => props.widthLaptop};
     height: ${(props) => props.heightLaptop};
     flex-direction: ${(props) => props.flexDLaptop};
+    justify-content: start;
   }
   @media (min-width: 1330px) {
+    width: auto;
     height: ${(props) => props.heightLaptopLarge};
     flex-direction: ${(props) => props.flexDLaptopLarge};
+    justify-content: start;
   }
 `;
 
@@ -166,6 +169,8 @@ export const ButtonsEp = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 25px;
+  margin: 0 10px;
   @media (min-width: 1024px) {
     width: ${(props) => props.widthLaptop};
     height: ${(props) => props.heightLaptop};

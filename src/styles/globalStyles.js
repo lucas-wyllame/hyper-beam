@@ -119,14 +119,14 @@ export const theme = createTheme({
     },
   },
 });
-export function TitleInsideComponent() {
+export function TitleInsideComponent(props) {
   return (
     <TitleInside>
       Hyper Beam
       <ThemeProvider theme={theme}>
         <FiberManualRecordIcon sx={{ color: "#9e9e9e" }} />
       </ThemeProvider>
-      <span>03</span>
+      <span>0{props.number}</span>
     </TitleInside>
   );
 }

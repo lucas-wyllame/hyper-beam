@@ -7,7 +7,7 @@ import {
 } from "../../components/LastEpisodes/styles";
 import { Control } from "@icon/IconComTag";
 
-export default function Podcast() {
+export default function PodcastHeader(props) {
   return (
     <Content>
       <BackBanner>
@@ -19,7 +19,7 @@ export default function Podcast() {
             heightLaptop={"340px"}
           />
           <BannerInfos>
-            <TitleInsideComponent />
+            <TitleInsideComponent number={props.number} />
             <IconAndButtons
               height="150px"
               margin="0"
@@ -30,32 +30,24 @@ export default function Podcast() {
               flexDLaptopLarge="row"
             >
               <Control />
-              <ButtonsEp
-                widthLaptop="202px"
-                width="152px"
-                heightLaptop="49px"
-                fontSizeLaptop="2rem"
-              >
-                Pokémon Unite
-              </ButtonsEp>
-              <ButtonsEp
-                widthLaptop="293px"
-                width="219px"
-                heightLaptop="49px"
-                fontSizeLaptop="2rem"
-              >
-                The World Ends with You
-              </ButtonsEp>
+              {props.gameTags[0]?.map((res) => (
+                <ButtonsEp
+                  key=""
+                  widthLaptop="auto"
+                  width="auto"
+                  heightLaptop="49px"
+                  fontSizeLaptop="2rem"
+                >
+                  {res}
+                </ButtonsEp>
+              ))}
             </IconAndButtons>
           </BannerInfos>
         </ItensBanner>
       </BackBanner>
       <Topic>
         <MoreInfs fontSize="1.5rem">
-          Lorem ipsum dolor sit amet, consectetur a elit. Sed dictum sodales
-          rutrum. Praesent eget lobortis purus. Donec a finibus neque. Nu erat a
-          cursus sodales. Fusce vel nulla aliquam, convallis odio semper,
-          finibus purus. orci, non malesuada augue.
+          {props.desc}
         </MoreInfs>
       </Topic>
     </Content>

@@ -1,19 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/dist/client/router";
-import Post from "./Post"
+import Post from "./Post";
 
 export default function Podcasts() {
+  const router = useRouter();
+  const parametro = router.query.id;
+  const [name, setName] = useState();
+  useEffect(() => {
+      async function fetchUrl() {
+        const url = window.location.href;
+        setName(url.replace("http://localhost:3000/podcasts/", ""));
+    }
+    fetchUrl();
+}, []);
 
-    const router = useRouter();
-    const parametro = router.query.id;
 
-    const nome = "hyperbeam1"
-
-    return(
-        <>
-        {parametro === nome?<Post/>
-        :null
-        }
-        </>
-    )
+  return <>{parametro === name ? <Post /> : null}</>;
 }

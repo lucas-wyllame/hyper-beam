@@ -5,14 +5,14 @@ import {
   OtherPlats,
 } from "./styles";
 import { Title, Desc } from "@styles/globalStyles";
-import { PlatsButton } from "../../components/AvailablePlats/styles";
+import { PlatsButton } from "../AvailablePlats/styles";
 import { buttons } from "./buttons";
 
-export default function Plats() {
+export default function SpotifyAndOtherPlats(props) {
   return (
     <Content>
       <IframeSpotify
-        src="https://open.spotify.com/embed/episode/1wO15cj7a7gtlIGcfEPbNw?utm_source=generator"
+        src={props.url}
         frameBorder="0"
         allowfullscreen=""
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
