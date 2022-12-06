@@ -25,7 +25,7 @@ export default function Post() {
 
   return (
     <>
-      {console.log("filtrado", all.map((res) => res[0].fields))}
+      {console.log("filtrado", all.map((res) => res))}
       <PodcastHeader
         title={all.map((res) => res[0].fields.title)}
         number={all.map((res) => res[0].fields.number)}
