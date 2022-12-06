@@ -14,8 +14,7 @@ export default function Post() {
       console.log("url", url.replace("https://hyper-beam.vercel.app/podcasts/hyperbeam", ""))
       let numberUrl = url.replace("https://hyper-beam.vercel.app/podcasts/hyperbeam", "");
       let allContent = await items.filter(
-        (x) => x.sys.contentType.sys.id == "podcast" && x.fields.number == numberUrl,
-        console.log("numeroX", x.fields.number)
+        (x) => x.sys.contentType.sys.id == "podcast" && x.fields.number == numberUrl
       );
       console.log("filtro", items.filter(
         (x) => x.fields.number == numberUrl));
