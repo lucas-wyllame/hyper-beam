@@ -17,7 +17,7 @@ export default function Post() {
         (x) => x.sys.contentType.sys.id == "podcast" && x.fields.number == numberUrl
       );
       console.log("filtro", items.filter(
-        (x) => x.fields.number == numberUrl));
+        (x) => x.sys.contentType.sys.id == "podcast" && x.fields.number == numberUrl));
       setAll(allContent);
     }
     FetchMyApi();
@@ -25,7 +25,7 @@ export default function Post() {
 
   return (
     <>
-      {console.log("filtrado", all.map((res) => res.fields))}
+      {console.log("filtrado", all.map((res) => res))}
       <PodcastHeader
         title={all.map((res) => res.fields.title)}
         number={all.map((res) => res.fields.number)}
