@@ -32,7 +32,7 @@ export default function Post() {
         gameTags={all.map((res) => res[0].fields.gameTags)}
         desc={all.map((res) => res[0].fields.description)}
       />
-      <SpotifyAndOtherPlats url={all.map((res) => res.fields.podcastUrl)} />
+      <SpotifyAndOtherPlats url={all.map((res) => res[0].fields.podcastUrl)} />
       <Comments />
     </>
   );
