@@ -130,6 +130,7 @@ export const ListHomeBanner = styled.div`
 export const HyperCardGroup = styled.div`
   height: 220px;
   // background: green;
+  cursor: pointer;
   display: flex !important;
   align-items: center;
   flex-direction: column;

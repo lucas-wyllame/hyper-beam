@@ -16,6 +16,9 @@ import {
 import Slider from "react-slick";
 import { useRouter } from "next/router";
 import { TitleInsideComponent } from "@styles/globalStyles";
+import { useEffect } from "react";
+import { ConnectContent } from "../../ConfigContent";
+import { useState } from "react";
 
 function SamplePrevArrow(props) {
   const { className, onClick } = props;
@@ -40,6 +43,20 @@ function SampleNextArrow(props) {
 }
 
 export default function HomeBanner() {
+  const [all, setAll] = useState([]);
+  const [lastPodcast, setLastPodcast] = useState([])
+  useEffect(() => {
+    async function FetchMyApi() {
+      let items = await ConnectContent();
+      let allContent = await items.filter(
+        (x) => x.sys.contentType.sys.id == "podcast"
+      );
+      setAll(allContent);
+      setLastPodcast(allContent[allContent.length - 1]);
+    }
+    FetchMyApi();
+  }, []);
+
   const TitleInsides = [
     { name: "Hyper Beam 1", image: "genericImageURLLink" },
     { name: "Hyper Beam 2", image: "genericImageURLLink2" },
@@ -105,32 +122,34 @@ export default function HomeBanner() {
 
   const router = useRouter();
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    router.push("/podcasts/hyperbeam3");
+  const handleClick = (link) => {
+    router.push(`/podcasts/${link}`);
   };
 
   return (
     <Content>
+      {console.log("la ele infinito", all)}
       <Banner>
         <FeaturedPodcastInfo>
-          <TitleInsideComponent />
-          <PodcastTheme>Pokémon Unite e The World Ends with You</PodcastTheme>
-          <PlayButton onClick={handleClick}>Play</PlayButton>
+          <TitleInsideComponent number={lastPodcast.fields?.number}/>
+          <PodcastTheme>{lastPodcast.fields?.title}</PodcastTheme>
+          <PlayButton onClick={() => handleClick(lastPodcast.fields?.pathUrl)}>Play</PlayButton>
         </FeaturedPodcastInfo>
         <BigImg />
         <DivToCentralizeListHomeBanner>
           <ListHomeBanner>
             <Slider {...settings}>
-              {TitleInsides.map((res, index) => {
+              {all.reverse().slice(0, 10).map((res, index) => {
                 return (
                   // eslint-disable-next-line react/jsx-key
                   <>
-                    <HyperCardGroup key={index}>
-                      <HyperCard width={"196px"} height={"196px"} />
-                      <HyperText>{res.name}</HyperText>
+                    <HyperCardGroup onClick={() => handleClick(res.fields?.pathUrl)} key={index}>
+                      <HyperCard  width={"196px"} height={"196px"} />
+                      <HyperText>Hyper Beam {res.fields.number}</HyperText>
                     </HyperCardGroup>
+                    
                   </>
+                  
                 );
               })}
             </Slider>
