@@ -10,9 +10,7 @@ export default function Post() {
     const url = window.location.href;
     async function FetchMyApi() {
       let items = await ConnectContent();
-      console.log(items);
-      console.log("url", url.replace("https://hyper-beam.vercel.app/podcasts/hyperbeam", ""))
-      let numberUrl = url.replace("https://hyper-beam.vercel.app/podcasts/hyperbeam", "");
+      let numberUrl = url.replace("http://localhost:3000/podcasts/hyperbeam", "");
       let allContent = await items.filter(
         (x) => x.sys.contentType.sys.id == "podcast" && x.fields.number == numberUrl
       );
@@ -23,7 +21,6 @@ export default function Post() {
 
   return (
     <>
-    {console.log("La ele2", all)}
       <PodcastHeader
         title={all.map((res) => {return(res.fields.title)})}
         number={all.map((res) => {return(res.fields.number)})}

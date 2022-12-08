@@ -100,7 +100,6 @@ export default function OurTeam() {
 
   return (
     <Content>
-      {console.log("La ele", all)}
       <GroupText>
         <Title margin="0 0 5px 0">Nosso time</Title>
         <Desc margin="0">A equipe que trabalha no Hyper Beam</Desc>

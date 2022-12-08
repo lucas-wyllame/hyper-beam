@@ -28,7 +28,6 @@ export default function AvailablePlats() {
 
   return (
     <Content>
-      {console.log("La ele", all)}
       <Title textAlign="center" margin="0 0 22px 0">
         Plataformas disponíveis
       </Title>

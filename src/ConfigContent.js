@@ -20,7 +20,6 @@ export const ConnectContent = async() => {
         result = result.items
     } catch (err) {
         console.error(err)
-        console.log("conectou")
       }
       return result;
   }

@@ -51,9 +51,7 @@ export default function Carousel() {
 
 
   async function handleNext() {
-    (console.log("ATIVOU ESSA FUNÇÃO NEXT"))
     sliderRef?.current?.slickNext();
-    (console.log("offset", offset))
   
    
     var PreviousBtnStyle = document?.getElementById("previousBtn");
@@ -70,7 +68,6 @@ export default function Carousel() {
   }
 
   async function handlePrev() {
-    (console.log("ATIVOU ESSA FUNÇÃO PREV"));
     sliderRef?.current?.slickPrev();
     // if (offset > itemsPerPage) {
     //   var PreviousBtnStyle = await document.getElementById("previousBtn");
