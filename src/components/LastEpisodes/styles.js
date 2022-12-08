@@ -133,7 +133,7 @@ export const TextsDivEp = styled.div`
 export const IconAndButtons = styled.div`
   width: 100%;
   height: ${(props) => props.height};
-  /* background: yellow; */
+  background: yellow;
   margin-left: 0;
   margin-bottom: 0;
   display: flex;
@@ -232,6 +232,7 @@ export const LittleDots = styled.div`
   display: flex;
   justify-content: space-between;
   border-radius: 50px;
+  /* background-color: ${(props) => (props.clicked ? "purple" : "red")}; */
   :hover {
     background: purple;
   }

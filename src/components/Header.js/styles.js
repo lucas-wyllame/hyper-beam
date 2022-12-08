@@ -146,7 +146,7 @@ export const IconAndTagRow = styled.div`
   }
 `;
 
-export function TitleInsideComponentSearch() {
+export function TitleInsideComponentSearch(props) {
   const TitleInsideSearch = styled.div`
     width: 180px;
     font-size: 2rem;
@@ -166,7 +166,7 @@ export function TitleInsideComponentSearch() {
       <ThemeProvider theme={theme}>
         <FiberManualRecordIcon sx={{ color: "#9e9e9e" }} />
       </ThemeProvider>
-      <span>03</span>
+      <span>{props.number}</span>
     </TitleInsideSearch>
   );
 }

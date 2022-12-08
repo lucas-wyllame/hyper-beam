@@ -3,7 +3,6 @@ import {
   Content,
   PodcastsList,
   CarouselStyled,
-  HyperText,
   LeftArrow,
   RightArrow,
   AlignArrowBaseDiv,
@@ -11,11 +10,13 @@ import {
   CountLabel,
 } from "./styles";
 import HyperCard from "../HyperCard/hyperCard";
-import { casts } from "./casts";
 import { useEffect, useState, useRef } from "react";
-
+import { ConnectContent } from "src/ConfigContent";
+import { TitleInsideComponentSearch } from "../Header.js/styles";
+import { useRouter } from "next/router";
 
 export default function Carousel() {
+  const [all, setAll] = useState([]);
   const [offset, setOffset] = useState(0);
   const sliderRef = useRef();
   const [totalRecords, setTotalRecords] = useState(50);
@@ -29,11 +30,10 @@ export default function Carousel() {
         src="./icon/Grupo 22.svg"
         onClick={() => handleNext()}
         id="nextBtn"
-        
       />
     );
   }
-  
+
   function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -45,53 +45,62 @@ export default function Carousel() {
       />
     );
   }
-  var itemsPerPage = 12;
-  var itemsTotal = casts.length;
-  var totalNumberOfPages = itemsTotal / itemsPerPage;
+  // var itemsPerPage = 12;
+  // var itemsTotal = casts.length;
+  // var totalNumberOfPages = itemsTotal / itemsPerPage;
 
+  // async function handleNext() {
+  //   sliderRef?.current?.slickNext();
 
-  async function handleNext() {
-    sliderRef?.current?.slickNext();
-  
-   
-    var PreviousBtnStyle = document?.getElementById("previousBtn");
-    PreviousBtnStyle.style.display = "none";
-    if (offset <= itemsTotal) {
-      if (offset > 0) {
-        console.log("heeeeey", PreviousBtnStyle)
-      } else {
-        PreviousBtnStyle.style.display = "none";
-      }
-      setCurrentPage(offset);
-      setOffset(offset + itemsPerPage);
-    }
-  }
+  //   var PreviousBtnStyle = document?.getElementById("previousBtn");
+  //   PreviousBtnStyle.style.display = "none";
+  //   if (offset <= itemsTotal) {
+  //     if (offset > 0) {
+  //       console.log("heeeeey", PreviousBtnStyle);
+  //     } else {
+  //       PreviousBtnStyle.style.display = "none";
+  //     }
+  //     setCurrentPage(offset);
+  //     setOffset(offset + itemsPerPage);
+  //   }
+  // }
 
-  async function handlePrev() {
-    sliderRef?.current?.slickPrev();
-    // if (offset > itemsPerPage) {
-    //   var PreviousBtnStyle = await document.getElementById("previousBtn");
-    //   setOffset(offset - itemsPerPage);
-    //   setCurrentPage(offset - 2 * itemsPerPage);
+  // async function handlePrev() {
+  //   sliderRef?.current?.slickPrev();
+  // if (offset > itemsPerPage) {
+  //   var PreviousBtnStyle = await document.getElementById("previousBtn");
+  //   setOffset(offset - itemsPerPage);
+  //   setCurrentPage(offset - 2 * itemsPerPage);
 
-    //   if (offset > 2 * itemsPerPage) {
-    //     PreviousBtnStyle.style.display = "flex";
-    //   } else {
-    //     PreviousBtnStyle.style.display = "none";
-    //   }
-    // }
-  }
+  //   if (offset > 2 * itemsPerPage) {
+  //     PreviousBtnStyle.style.display = "flex";
+  //   } else {
+  //     PreviousBtnStyle.style.display = "none";
+  //   }
+  // }
+  // }
+  // useEffect(() => {
+  //   async function FetchMyApi() {
+  //     setCurrentPage(0);
+
+  //     setOffset(itemsPerPage);
+
+  // if (itemsPerPage > totalNumberOfPages) {
+  //   PreviousBtnStyle.style.display = "flex";
+  // } else {
+  //   PreviousBtnStyle.style.display = "flex";
+  // }
+  //   }
+  //   FetchMyApi();
+  // }, []);
+
   useEffect(() => {
     async function FetchMyApi() {
-      setCurrentPage(0);
-
-      setOffset(itemsPerPage);
-     
-      // if (itemsPerPage > totalNumberOfPages) {
-      //   PreviousBtnStyle.style.display = "flex";
-      // } else {
-      //   PreviousBtnStyle.style.display = "flex";
-      // }
+      let items = await ConnectContent();
+      let allContent = await items.filter(
+        (x) => x.sys.contentType.sys.id == "podcast"
+      );
+      setAll(allContent);
     }
     FetchMyApi();
   }, []);
@@ -141,22 +150,31 @@ export default function Carousel() {
     ],
   };
 
+  const router = useRouter();
+
+  const handleClick = (link) => {
+    router.push(`/podcasts/${link}`);
+  };
+
   return (
     <Content>
       <PodcastsList>
         <Slider ref={sliderRef} {...settings}>
-          {casts.map((res, index) => {
+          {all.map((res, index) => {
             return (
-              <CarouselStyled key={index}>
+              <CarouselStyled
+                onClick={() => handleClick(res.fields?.pathUrl)}
+                key={index}
+              >
                 <HyperCard width={"225px"} height={"225px"}></HyperCard>
-                <HyperText>{res.name}</HyperText>
+                <TitleInsideComponentSearch number={res.fields?.number} />
               </CarouselStyled>
             );
           })}
         </Slider>
         <AlignArrowBaseDiv>
           <AlignCountBaseDiv>
-            <CountLabel>1/2</CountLabel>
+            {/* <CountLabel>1/2</CountLabel> */}
           </AlignCountBaseDiv>
         </AlignArrowBaseDiv>
       </PodcastsList>

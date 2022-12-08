@@ -30,9 +30,9 @@ export default function PodcastHeader(props) {
               flexDLaptopLarge="row"
             >
               <Control />
-              {props.gameTags[0]?.map((res) => (
+              {props.gameTags[0]?.map((res, index) => (
                 <ButtonsEp
-                  key=""
+                  key={index}
                   widthLaptop="auto"
                   width="auto"
                   heightLaptop="49px"
@@ -46,9 +46,7 @@ export default function PodcastHeader(props) {
         </ItensBanner>
       </BackBanner>
       <Topic>
-        <MoreInfs fontSize="1.5rem">
-          {props.desc}
-        </MoreInfs>
+        <MoreInfs fontSize="1.5rem">{props.desc}</MoreInfs>
       </Topic>
     </Content>
   );

@@ -19,9 +19,10 @@ import {
 } from "./styles";
 import { useRouter } from "next/router";
 import Slider from "react-slick";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Control } from "@icon/IconComTag";
 import { TitleInsideComponent } from "@styles/globalStyles";
+import { ConnectContent } from "src/ConfigContent";
 
 function SamplePrevArrow(props) {
   const { className, onClick } = props;
@@ -47,6 +48,27 @@ function SampleNextArrow(props) {
 
 export default function LastEpisodes() {
   const [isHovering, setIsHovering] = useState(false);
+  const [all, setAll] = useState([]);
+  const [clicked, setClicked] = useState(false);
+
+  function teste() {
+    let liTeste =
+      document.getElementsByClassName("slick-active div").style?.background;
+    liTeste = "red !important";
+    console.log("AQQ TESTLI", liTeste);
+  }
+
+  useEffect(() => {
+    async function FetchMyApi() {
+      let items = await ConnectContent();
+      let allContent = await items.filter(
+        (x) => x.sys.contentType.sys.id == "podcast"
+      );
+      setAll(allContent.reverse());
+    }
+    FetchMyApi();
+    teste();
+  }, []);
 
   const handleMouseOver = () => {
     setIsHovering(true);
@@ -62,14 +84,6 @@ export default function LastEpisodes() {
     e.preventDefault();
     router.push("/podcasts");
   };
-
-  const listBackground = [
-    { number: "01" },
-    { number: "02" },
-    { number: "03" },
-    { number: "04" },
-    { number: "05" },
-  ];
 
   const slider = ".slider";
 
@@ -88,7 +102,7 @@ export default function LastEpisodes() {
         </ul>
       </Dots>
     ),
-    customPaging: (pagi, i, dots) => <LittleDots></LittleDots>,
+    customPaging: (pagi, i, dots) => <LittleDots />,
     dots: true,
     infinite: false,
     speed: 500,
@@ -96,7 +110,7 @@ export default function LastEpisodes() {
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 4000,
     responsive: [
       {
@@ -113,6 +127,7 @@ export default function LastEpisodes() {
 
   return (
     <Content>
+      {console.log("la ele infinito", all)}
       <Title margin="0">Episódios Recentes</Title>
       <Desc margin="0">Acompanhe nosso podcast e seus episódios</Desc>
       <ListPodcasts>
@@ -120,7 +135,7 @@ export default function LastEpisodes() {
           <HoveringIcon>Qual jogo aparece nesse episodio?</HoveringIcon>
         )}
         <Slider {...settings}>
-          {listBackground.map((res, index) => {
+          {all.map((res, index) => {
             return (
               <>
                 <Background key={index}>
@@ -135,13 +150,9 @@ export default function LastEpisodes() {
                         heightLaptopLarge={"337px"}
                       />
                       <TextsDivEp>
-                        <TitleInsideComponent />
+                        <TitleInsideComponent number={res.fields?.number} />
                         <MoreInfs fontSize={"1.8rem"} width={"694px"}>
-                          Lorem ipsum dolor sit amet, consectetur a elit. Sed
-                          dictum sodales rutrum. Praesent eget lobortis purus.
-                          Donec a finibus neque. Nu erat a cursus sodales. Fusce
-                          vel nulla aliquam, convallis odio semper, finibus
-                          purus. orci, non malesuada augue.
+                          {res.fields.description}
                         </MoreInfs>
                       </TextsDivEp>
                     </CardAndText>
@@ -163,22 +174,17 @@ export default function LastEpisodes() {
                         <Control />
                       </Icon>
 
-                      <ButtonsEp
-                        width="152px"
-                        widthLaptop="202px"
-                        heightLaptop="49px"
-                        fontSizeLaptop="2rem"
-                      >
-                        Pokémon Unite
-                      </ButtonsEp>
-                      <ButtonsEp
-                        width="220px"
-                        widthLaptop="293px"
-                        heightLaptop="49px"
-                        fontSizeLaptop="2rem"
-                      >
-                        World Ends with You
-                      </ButtonsEp>
+                      {res.fields.gameTags?.map((res, index) => (
+                        <ButtonsEp
+                          key={index}
+                          width="auto"
+                          widthLaptop="auto"
+                          heightLaptop="49px"
+                          fontSizeLaptop="2rem"
+                        >
+                          {res}
+                        </ButtonsEp>
+                      ))}
                     </IconAndButtons>
                   </Block>
                 </Background>
