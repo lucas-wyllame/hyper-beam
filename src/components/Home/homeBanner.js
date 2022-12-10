@@ -144,12 +144,10 @@ export default function HomeBanner() {
                   // eslint-disable-next-line react/jsx-key
                   <>
                     <HyperCardGroup onClick={() => handleClick(res.fields?.pathUrl)} key={index}>
-                      <HyperCard  width={"196px"} height={"196px"} />
-                      <HyperText>Hyper Beam {res.fields.number}</HyperText>
+                      <HyperCard backgroundImg={`url(${res.fields?.littleImage?.fields.file.url})`} width={"196px"} height={"196px"} />
+                      <HyperText>Hyper Beam {res.fields?.number < 10? 0: ""}{res.fields?.number}</HyperText>
                     </HyperCardGroup>
-                    
                   </>
-                  
                 );
               })}
             </Slider>

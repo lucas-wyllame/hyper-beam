@@ -166,7 +166,7 @@ export default function Carousel() {
                 onClick={() => handleClick(res.fields?.pathUrl)}
                 key={index}
               >
-                <HyperCard width={"225px"} height={"225px"}></HyperCard>
+                <HyperCard backgroundImg={`url(${res.fields?.littleImage?.fields.file.url})`} width={"225px"} height={"225px"}></HyperCard>
                 <TitleInsideComponentSearch number={res.fields?.number} />
               </CarouselStyled>
             );

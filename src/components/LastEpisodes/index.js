@@ -132,16 +132,17 @@ export default function LastEpisodes() {
       <Desc margin="0">Acompanhe nosso podcast e seus episódios</Desc>
       <ListPodcasts>
         {isHovering && (
-          <HoveringIcon>Qual jogo aparece nesse episodio?</HoveringIcon>
+          <HoveringIcon>Sobre o que falamos nesse episodio?</HoveringIcon>
         )}
         <Slider {...settings}>
-          {all.map((res, index) => {
+          {all.slice(0, 5).map((res, index) => {
             return (
               <>
                 <Background key={index}>
                   <Block>
                     <CardAndText>
                       <HyperCard
+                        backgroundImg={`url(${res.fields?.littleImage?.fields.file.url})`}
                         width={"253px"}
                         height={"253px"}
                         position={"relative"}

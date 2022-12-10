@@ -166,7 +166,7 @@ export function TitleInsideComponentSearch(props) {
       <ThemeProvider theme={theme}>
         <FiberManualRecordIcon sx={{ color: "#9e9e9e" }} />
       </ThemeProvider>
-      <span>{props.number}</span>
+      <span>{props.number < 10? 0: ""}{props.number}</span>
     </TitleInsideSearch>
   );
 }

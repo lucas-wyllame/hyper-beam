@@ -13,6 +13,7 @@ export default function PodcastHeader(props) {
       <BackBanner>
         <ItensBanner>
           <HyperCard
+            backgroundImg={props.backgroundImg}
             width={"275px"}
             height={"275px"}
             widthLaptop={"340px"}
