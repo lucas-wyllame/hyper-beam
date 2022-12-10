@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/dist/client/router";
 import Post from "./Post";
+const envUrl = require('../../envUrl.json')
 
 export default function Podcasts() {
   const router = useRouter();
@@ -9,11 +10,13 @@ export default function Podcasts() {
   useEffect(() => {
       async function fetchUrl() {
         const url = window.location.href;
-        setName(url.replace("http://localhost:3000/podcasts/", ""));
+        setName(url.replace(`${envUrl.link}/podcasts/`, ""));
+        console.log("name",name)
     }
     fetchUrl();
 }, []);
 
 
-  return <>{parametro === name ? <Post /> : null}</>;
+  return <>{
+    parametro === name ? <Post /> : console.log("name2",name)}</>;
 }

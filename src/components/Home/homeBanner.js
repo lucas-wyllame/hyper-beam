@@ -139,7 +139,7 @@ export default function HomeBanner() {
         <DivToCentralizeListHomeBanner>
           <ListHomeBanner>
             <Slider {...settings}>
-              {all.reverse().slice(0, 10).map((res, index) => {
+              {all.reverse().slice(1, 10).map((res, index) => {
                 return (
                   // eslint-disable-next-line react/jsx-key
                   <>

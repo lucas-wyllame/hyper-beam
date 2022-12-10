@@ -3,6 +3,7 @@ import PodcastHeader from "src/components/PodcastHeader";
 import SpotifyAndOtherPlats from "src/components/SpotifyAndOtherPlats";
 import Comments from "src/components/Comments";
 import { ConnectContent } from "src/ConfigContent";
+const envUrl = require('../../envUrl.json')
 
 export default function Post() {
   const [all, setAll] = useState([]);
@@ -10,7 +11,7 @@ export default function Post() {
     const url = window.location.href;
     async function FetchMyApi() {
       let items = await ConnectContent();
-      let numberUrl = url.replace("http://localhost:3000/podcasts/hyperbeam", "");
+      let numberUrl = url.replace(`${envUrl.link}/podcasts/hyperbeam`, "");
       let allContent = await items.filter(
         (x) => x.sys.contentType.sys.id == "podcast" && x.fields.number == numberUrl
       );
