@@ -6,10 +6,10 @@ export const Content = styled.div`
   /* background: #11129d; */
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 80px;
   @media (min-width: 1024px) {
     height: 650px;
-    margin-top: 30px;
+    margin-top: 100px;
   }
 `;
 

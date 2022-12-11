@@ -12,6 +12,12 @@ export const Top = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  position: fixed;
+  z-index: 999;
+  top: -1px;
+  @media (min-width: 1024px) {
+    top: 0;
+  }
 `;
 
 export const CenterLogoDiv = styled.div`

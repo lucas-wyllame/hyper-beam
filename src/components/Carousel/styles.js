@@ -11,6 +11,7 @@ export const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
   @media (min-width: 645px) {
     height: 1100px;
   }
