@@ -123,9 +123,21 @@ export const DivToCentralizeListHomeBanner = styled.div`
 `;
 
 export const ListHomeBanner = styled.div`
-  width: 68%;
+  width: 242px;
   height: 200px;
   /* background: red; */
+  @media (min-width: 738px) {
+    width: 443px;
+  }
+  @media (min-width: 987px) {
+    width: 662px;
+  }
+  @media (min-width: 1101px) {
+    width: 900px;
+  }
+  @media (min-width: 1338px) {
+    width: 68%;
+  }
   @media (min-width: 1440px) {
     width: 1090px;
   }
@@ -152,10 +164,10 @@ export const LeftArrow = styled.img`
   width: auto;
   position: absolute;
   top: 50%;
-  left: -3vw;
+  left: -39px;
   z-index: 2;
-  @media (max-width: 480px) {
-    left: -10vw;
+  @media (min-width: 1024px) {
+    left: -3vw;
   }
 `;
 
@@ -163,10 +175,10 @@ export const RightArrow = styled.img`
   height: 39px;
   width: auto;
   position: absolute;
-  right: -3vw;
+  right: -39px;
   top: 50%;
   z-index: 2;
-  @media (max-width: 480px) {
-    right: -10vw;
+  @media (min-width: 1024px) {
+    right: -3vw;
   }
 `;
