@@ -17,7 +17,10 @@ export const Banner = styled.div`
   width: 95%;
   height: 610px;
   flex-direction: column;
-  background: #a57bca;
+  background-color: #a57bca;
+  background-image: ${(props) => props.image};
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 44px;
   display: flex;
   align-items: center;
@@ -86,7 +89,9 @@ export const BigImg = styled.div`
   width: 329px;
   height: 317px;
   position: absolute;
-  background: #ffe747;
+  background-image: ${(props) => props.image};
+  background-size: cover;
+  background-repeat: no-repeat;
   bottom: 0;
   /* background-image: url("/img/Pkm.png");
   background-size: 100% auto;

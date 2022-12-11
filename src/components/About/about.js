@@ -5,6 +5,7 @@ import { Content, LeftImage, TextDiv } from "./styles";
 
 export default function About() {
   const [all, setAll] = useState([]);
+  const [aboutContent, setAboutContent] = useState([]);
 
   useEffect(() => {
     async function FetchMyApi() {
@@ -13,25 +14,27 @@ export default function About() {
         (x) => x.sys.contentType.sys.id == "apresentation"
       );
       setAll(allContent);
+      setAboutContent(allContent?.map((res) => res?.fields));
     }
     FetchMyApi();
   }, []);
   return (
     <Content>
-      {console.log("About(apresentation) all", all)}
-      <LeftImage />
+      {console.log("About(apresentation) all", aboutContent)}
+      <LeftImage
+        image={
+          `url(${aboutContent[0]?.apresentationImage?.fields?.file?.url})` || ""
+        }
+      />
       <TextDiv>
         <Title margin="0 0 5px 0">Somos o Hyper Beam</Title>
         <Desc margin="0 0 22px 0">
           A fagulha de amor aos games em forma de podcast.
         </Desc>
-        {all.map((res, index) => {
-          return (
-            <MoreInfs key={index} fontSize={"1.4rem"}>
-              {res.fields.apresentationText}
-            </MoreInfs>
-          );
-        })}
+
+        <MoreInfs fontSize={"1.4rem"}>
+          {aboutContent[0]?.apresentationText}
+        </MoreInfs>
       </TextDiv>
     </Content>
   );

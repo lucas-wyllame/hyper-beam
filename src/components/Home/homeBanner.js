@@ -44,7 +44,7 @@ function SampleNextArrow(props) {
 
 export default function HomeBanner() {
   const [all, setAll] = useState([]);
-  const [lastPodcast, setLastPodcast] = useState([])
+  const [lastPodcast, setLastPodcast] = useState([]);
   useEffect(() => {
     async function FetchMyApi() {
       let items = await ConnectContent();
@@ -128,28 +128,45 @@ export default function HomeBanner() {
 
   return (
     <Content>
-      {console.log("la ele infinito", all)}
-      <Banner>
+      {console.log("Home banner all", all)}
+      <Banner image={`url(${lastPodcast.fields?.bigImage?.fields.file.url})`}>
         <FeaturedPodcastInfo>
-          <TitleInsideComponent number={lastPodcast.fields?.number}/>
+          <TitleInsideComponent number={lastPodcast.fields?.number} />
           <PodcastTheme>{lastPodcast.fields?.title}</PodcastTheme>
-          <PlayButton onClick={() => handleClick(lastPodcast.fields?.pathUrl)}>Play</PlayButton>
+          <PlayButton onClick={() => handleClick(lastPodcast.fields?.pathUrl)}>
+            Play
+          </PlayButton>
         </FeaturedPodcastInfo>
-        <BigImg />
+        <BigImg
+          image={`url(${lastPodcast.fields?.detachedImage?.fields.file.url})`}
+        />
         <DivToCentralizeListHomeBanner>
           <ListHomeBanner>
             <Slider {...settings}>
-              {all.reverse().slice(1, 10).map((res, index) => {
-                return (
-                  // eslint-disable-next-line react/jsx-key
-                  <>
-                    <HyperCardGroup onClick={() => handleClick(res.fields?.pathUrl)} key={index}>
-                      <HyperCard backgroundImg={`url(${res.fields?.littleImage?.fields.file.url})`} width={"196px"} height={"196px"} />
-                      <HyperText>Hyper Beam {res.fields?.number < 10? 0: ""}{res.fields?.number}</HyperText>
-                    </HyperCardGroup>
-                  </>
-                );
-              })}
+              {all
+                .reverse()
+                .slice(1, 10)
+                .map((res, index) => {
+                  return (
+                    // eslint-disable-next-line react/jsx-key
+                    <>
+                      <HyperCardGroup
+                        onClick={() => handleClick(res.fields?.pathUrl)}
+                        key={index}
+                      >
+                        <HyperCard
+                          backgroundImg={`url(${res.fields?.littleImage?.fields?.file.url})`}
+                          width={"196px"}
+                          height={"196px"}
+                        />
+                        <HyperText>
+                          Hyper Beam {res.fields?.number < 10 ? 0 : ""}
+                          {res.fields?.number}
+                        </HyperText>
+                      </HyperCardGroup>
+                    </>
+                  );
+                })}
             </Slider>
           </ListHomeBanner>
         </DivToCentralizeListHomeBanner>

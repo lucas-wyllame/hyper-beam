@@ -142,7 +142,7 @@ export default function LastEpisodes() {
                   <Block>
                     <CardAndText>
                       <HyperCard
-                        backgroundImg={`url(${res.fields?.littleImage?.fields.file.url})`}
+                        backgroundImg={`url(${res.fields?.littleImage?.fields?.file.url})`}
                         width={"253px"}
                         height={"253px"}
                         position={"relative"}

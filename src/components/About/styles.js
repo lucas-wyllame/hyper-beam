@@ -19,9 +19,9 @@ export const Content = styled.div`
 export const LeftImage = styled.div`
   width: 100%;
   height: 253px;
-  background-image: url("img/Grupo 25.png");
-  background: url("img/Grupo 25.png") no-repeat center padding-box;
+  background-image: ${(props) => props.image};
   background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 0;
   max-width: 800px;
   margin: 0 0 30px 0;
