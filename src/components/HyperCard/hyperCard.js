@@ -23,29 +23,25 @@ const CardBanner = styled.div`
 `;
 
 export default function HyperCard({
-  position,
   width,
   height,
+  backgroundImg,
+  position,
   top,
   margin,
-  widthMobile,
-  heightMobile,
   widthLaptop,
   heightLaptop,
   widthLaptopLarge,
   heightLaptopLarge,
-  backgroundImg
 }) {
   return (
     <CardBanner
-      backgroundImg={backgroundImg}
-      position={position}
       width={width}
       height={height}
+      backgroundImg={backgroundImg}
+      position={position}
       top={top}
       margin={margin}
-      widthMobile={widthMobile}
-      heightMobile={heightMobile}
       widthLaptop={widthLaptop}
       heightLaptop={heightLaptop}
       widthLaptopLarge={widthLaptopLarge}

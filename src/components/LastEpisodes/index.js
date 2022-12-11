@@ -125,6 +125,10 @@ export default function LastEpisodes() {
     ],
   };
 
+  const handleClickUniqueEp = (link) => {
+    router.push(`/podcasts/${link}`);
+  };
+
   return (
     <Content>
       {console.log("la ele infinito", all)}
@@ -149,9 +153,10 @@ export default function LastEpisodes() {
                         top={"-35px"}
                         widthLaptopLarge={"337px"}
                         heightLaptopLarge={"337px"}
+                        onClick={() => console.log("CLICOU")}
                       />
                       <TextsDivEp>
-                        <TitleInsideComponent number={res.fields?.number} />
+                        <TitleInsideComponent cursor="pointer" number={res.fields?.number} />
                         <MoreInfs fontSize={"1.8rem"} width={"694px"}>
                           {res.fields.description}
                         </MoreInfs>

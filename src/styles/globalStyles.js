@@ -64,7 +64,7 @@ export const MoreInfs = styled.h2`
 `;
 
 export const TitleInside = styled.div`
-  max-width: 220px;
+  width: 220px;
   font-size: 2.5rem;
   margin: 12px 0;
   color: #fff;
@@ -72,6 +72,7 @@ export const TitleInside = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: ${(props) => props.cursor};
   /* background: blue; */
   span {
     color: #ffe747;
@@ -79,13 +80,15 @@ export const TitleInside = styled.div`
     font-weight: bold;
   }
   @media (min-width: 1024px) {
+    width: 230px;
     font-size: 2.7rem;
+    margin: 0;
     span {
       font-size: 2.7rem;
     }
   }
   @media (min-width: 1440px) {
-    max-width: 240px;
+    width: 250px;
     font-size: 3rem;
     span {
       font-size: 3rem;
@@ -121,12 +124,15 @@ export const theme = createTheme({
 });
 export function TitleInsideComponent(props) {
   return (
-    <TitleInside>
+    <TitleInside cursor={props.cursor}>
       Hyper Beam
       <ThemeProvider theme={theme}>
-        <FiberManualRecordIcon sx={{ color: "#9e9e9e" }} />
+        <FiberManualRecordIcon sx={{ fontSize: "15px", color: "#9e9e9e" }} />
       </ThemeProvider>
-      <span>{props.number < 10? 0: ""}{props.number}</span>
+      <span>
+        {props.number < 10 ? 0 : ""}
+        {props.number}
+      </span>
     </TitleInside>
   );
 }

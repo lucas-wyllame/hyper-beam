@@ -3,14 +3,7 @@ import { TwitterIcon } from "@icon/TwitterIcon";
 import { YTIcon } from "@icon/YTIcon";
 import { InstagramIcon } from "@icon/InstagramIcon";
 
-import {
-  Content,
-  MainImage,
-  Contacts,
-  ContactTitle,
-  IconsRow,
-} from "./styles";
-import { Icon } from "@styles/globalStyles";
+import { Content, MainImage, Contacts, ContactTitle, IconsRow } from "./styles";
 
 export default function Footer() {
   const listLinks = [
@@ -45,11 +38,9 @@ export default function Footer() {
           {listLinks.map((res, index) => {
             return (
               // eslint-disable-next-line react/jsx-key
-              <Icon key={index}>
-                <a href={res.url} target="_blank" rel="noreferrer">
-                  {res.icon}
-                </a>
-              </Icon>
+              <a key={index} href={res.url} target="_blank" rel="noreferrer">
+                {res.icon}
+              </a>
             );
           })}
         </IconsRow>

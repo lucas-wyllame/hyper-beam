@@ -35,12 +35,11 @@ export const Banner = styled.div`
 
 export const FeaturedPodcastInfo = styled.div`
   width: 100%;
-  border-radius: 44px;
-  height: 40%;
+  /* border-radius: 44px; */
+  height: 201px;
   /* background: lightblue; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding: 0 34px;
   @media (min-width: 1024px) {
     width: 45%;

@@ -1,22 +1,6 @@
 import { useRouter } from "next/router";
-import {
-  Top,
-  CenterLogoDiv,
-  LogoTop,
-  SearchLogoBox,
-  SearchBar,
-  AfterSearch,
-  InfoSearch,
-  IconAndTagRow,
-  IconAndTagBox,
-  TitleInsideComponentSearch,
-} from "./styles";
-import SearchIcon from "@mui/icons-material/Search";
+import { Top, CenterLogoDiv, LogoTop } from "./styles";
 import { useState } from "react";
-import HyperCard from "../HyperCard/hyperCard";
-import { Icon } from "@styles/globalStyles";
-import { Control } from "@icon/IconComTag";
-import { ButtonsEp } from "../LastEpisodes/styles";
 
 export default function Header() {
   const [isClicked, setIsClicked] = useState(false);
@@ -34,23 +18,23 @@ export default function Header() {
       <Top>
         <CenterLogoDiv>
           <LogoTop onClick={handleClick} />
-          <SearchLogoBox>
+          {/* <SearchLogoBox>
             <SearchIcon
               onClick={(e) => setIsClicked(!isClicked)}
               sx={{ fontSize: 35, color: "#fff" }}
             />
-          </SearchLogoBox>
+          </SearchLogoBox> */}
         </CenterLogoDiv>
       </Top>
-      {isClicked ? (
+      {/* {isClicked ? (
         <SearchBar
           onChange={() => setShowResult(!showResult)}
           placeholder="Pesquise aqui..."
         />
       ) : (
         ""
-      )}
-      {showResult ? (
+      )} */}
+      {/* {showResult ? (
         <AfterSearch>
           <HyperCard width="104px" height="104px" />
           <InfoSearch>
@@ -83,7 +67,7 @@ export default function Header() {
         </AfterSearch>
       ) : (
         ""
-      )}
+      )} */}
     </>
   );
 }

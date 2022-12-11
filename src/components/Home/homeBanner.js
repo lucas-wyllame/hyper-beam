@@ -131,7 +131,7 @@ export default function HomeBanner() {
       {console.log("Home banner all", all)}
       <Banner image={`url(${lastPodcast.fields?.bigImage?.fields.file.url})`}>
         <FeaturedPodcastInfo>
-          <TitleInsideComponent number={lastPodcast.fields?.number} />
+          <TitleInsideComponent margin="12px 0" number={lastPodcast.fields?.number} />
           <PodcastTheme>{lastPodcast.fields?.title}</PodcastTheme>
           <PlayButton onClick={() => handleClick(lastPodcast.fields?.pathUrl)}>
             Play
