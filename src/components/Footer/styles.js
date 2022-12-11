@@ -15,10 +15,12 @@ export const Content = styled.div`
   }
 `;
 
-export const MainImage = styled.img`
+export const MainImage = styled.div`
   width: 214px;
   height: 92px;
-  background: #fff;
+  background-image: ${(props) => props.footerLogo};
+  background-size: cover;
+  background-repeat: no-repeat;
   margin-bottom: 50px;
   @media (min-width: 1024px) {
     width: 290px;

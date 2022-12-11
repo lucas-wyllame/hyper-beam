@@ -35,7 +35,10 @@ export const CenterLogoDiv = styled.div`
 export const LogoTop = styled.div`
   width: 53px;
   height: 53px;
-  background: white;
+  /* background-color: #fff; */
+  background-image: ${(props) => props.headerLogo};
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 50%;
   cursor: pointer;
   /* margin: 0 500px; */
@@ -56,7 +59,7 @@ export const SearchLogoBox = styled.div`
 export const SearchBar = styled.input`
   width: 100%;
   height: 66px;
-  background: #1B1B36;
+  background: #1b1b36;
   border: 0px;
   font-size: 2rem;
   padding-left: 18px;
@@ -172,7 +175,10 @@ export function TitleInsideComponentSearch(props) {
       <ThemeProvider theme={theme}>
         <FiberManualRecordIcon sx={{ color: "#9e9e9e" }} />
       </ThemeProvider>
-      <span>{props.number < 10? 0: ""}{props.number}</span>
+      <span>
+        {props.number < 10 ? 0 : ""}
+        {props.number}
+      </span>
     </TitleInsideSearch>
   );
 }

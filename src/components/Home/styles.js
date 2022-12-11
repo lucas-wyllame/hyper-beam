@@ -166,9 +166,6 @@ export const LeftArrow = styled.img`
   top: 50%;
   left: -39px;
   z-index: 2;
-  @media (min-width: 1024px) {
-    left: -3vw;
-  }
 `;
 
 export const RightArrow = styled.img`
@@ -178,7 +175,4 @@ export const RightArrow = styled.img`
   right: -39px;
   top: 50%;
   z-index: 2;
-  @media (min-width: 1024px) {
-    right: -3vw;
-  }
 `;

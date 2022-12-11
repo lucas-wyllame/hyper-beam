@@ -5,7 +5,7 @@ import { InstagramIcon } from "@icon/InstagramIcon";
 
 import { Content, MainImage, Contacts, ContactTitle, IconsRow } from "./styles";
 
-export default function Footer() {
+export default function Footer(props) {
   const listLinks = [
     {
       name: "E-mail",
@@ -31,7 +31,7 @@ export default function Footer() {
 
   return (
     <Content>
-      <MainImage />
+      <MainImage footerLogo={props.footerLogo} />
       <Contacts>
         <ContactTitle>Contatos e Redes</ContactTitle>
         <IconsRow>

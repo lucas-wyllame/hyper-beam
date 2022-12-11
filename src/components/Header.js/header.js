@@ -1,10 +1,9 @@
 import { useRouter } from "next/router";
 import { Top, CenterLogoDiv, LogoTop } from "./styles";
-import { useState } from "react";
 
-export default function Header() {
-  const [isClicked, setIsClicked] = useState(false);
-  const [showResult, setShowResult] = useState(false);
+export default function Header(props) {
+  // const [isClicked, setIsClicked] = useState(false);
+  // const [showResult, setShowResult] = useState(false);
 
   const router = useRouter();
 
@@ -17,7 +16,7 @@ export default function Header() {
     <>
       <Top>
         <CenterLogoDiv>
-          <LogoTop onClick={handleClick} />
+          <LogoTop headerLogo={props.headerLogo} onClick={handleClick} />
           {/* <SearchLogoBox>
             <SearchIcon
               onClick={(e) => setIsClicked(!isClicked)}

@@ -57,15 +57,6 @@ export default function HomeBanner() {
     FetchMyApi();
   }, []);
 
-  const TitleInsides = [
-    { name: "Hyper Beam 1", image: "genericImageURLLink" },
-    { name: "Hyper Beam 2", image: "genericImageURLLink2" },
-    { name: "Hyper Beam 3", image: "genericImageURLLink3" },
-    { name: "Hyper Beam 4", image: "genericImageURLLink4" },
-    { name: "Hyper Beam 5", image: "genericImageURLLink5" },
-    { name: "Hyper Beam 6", image: "genericImageURLLink6" },
-  ];
-
   var slider = ".slider";
 
   var settings = {
