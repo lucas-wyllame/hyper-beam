@@ -18,7 +18,7 @@ import { TitleInsideComponentSearch } from "../Header/styles";
 import { useRouter } from "next/router";
 
 export default function Carousel() {
-  var itemsPerPage = 4;
+  var itemsPerPage = 3;
   const [all, setAll] = useState([]);
   const [offset, setOffset] = useState(0);
   const sliderRef = useRef();
@@ -111,9 +111,15 @@ export default function Carousel() {
       setCurrentPage(0);
       setOffset(itemsPerPage);
       setTotalRecords(allContent.length);
-      NextBtnStyle.style.backgroundColor = "purple";
-      PreviousBtnStyle.style.display = "flex";
-      PreviousBtnStyle.style.backgroundColor = "transparent";
+      if(totalRecords < itemsPerPage){
+        PreviousBtnStyle.style.display = "none";
+        NextBtnStyle.style.display = "none";
+      }else{
+
+        NextBtnStyle.style.backgroundColor = "purple";
+        PreviousBtnStyle.style.display = "flex";
+        PreviousBtnStyle.style.backgroundColor = "transparent";
+      }
       
     }
     FetchMyApi();
