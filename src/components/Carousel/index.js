@@ -28,7 +28,7 @@ export default function Carousel() {
       <RightArrow
         className={className}
         src="./icon/Grupo 22.svg"
-        onClick={() => handleNext()}
+        onClick={onClick}
         id="nextBtn"
       />
     );
@@ -40,7 +40,7 @@ export default function Carousel() {
       <LeftArrow
         className={className}
         src="./icon/Grupo 21.svg"
-        onClick={() => handlePrev()}
+        onClick={onClick}
         id="previousBtn"
       />
     );
@@ -144,7 +144,6 @@ export default function Carousel() {
           rows: 12,
           infinite: slider.length > 1 ? true : false,
           centerMode: false,
-          // vertical: true,
         },
       },
     ],

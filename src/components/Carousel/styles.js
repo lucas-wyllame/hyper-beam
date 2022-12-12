@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 100%;
-  height: 3890px;
-  /* background: green; */
+  height: auto;
+  background: green;
   background-image: url("/img/degrade logo.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -11,7 +11,7 @@ export const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 100px;
   @media (min-width: 645px) {
     height: 1100px;
   }
@@ -20,7 +20,7 @@ export const Content = styled.div`
 export const PodcastsList = styled.div`
   width: 225px;
   height: 3240px;
-  /* background: red; */
+  background: red;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -39,7 +39,7 @@ export const PodcastsList = styled.div`
   }
   @media (max-width: 644px) {
     width: 225px;
-    height: 3686px;
+    height: auto;
   }
 `;
 
