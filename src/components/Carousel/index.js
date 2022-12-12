@@ -17,7 +17,7 @@ import { TitleInsideComponentSearch } from "../Header/styles";
 import { useRouter } from "next/router";
 
 export default function Carousel() {
-  var itemsPerPage = 3;
+  var itemsPerPage = 1;
   const [all, setAll] = useState([]);
   const [offset, setOffset] = useState(0);
   const [totalRecords, setTotalRecords] = useState(50);
@@ -34,19 +34,19 @@ export default function Carousel() {
       }
       NextBtnStyle.style.backgroundImage =
         "url('./icon/purpleArrowTurnRight.svg')";
-      setCurrentPage(offset);
-      setOffset(offset + itemsPerPage);
     } else {
       NextBtnStyle.style.backgroundImage =
         "url('./icon/blueArrowTurnLeft.svg')";
     }
-    if (totalRecords - offset <= itemsPerPage) {
+    if (totalRecords - offset < itemsPerPage) {
       NextBtnStyle.style.backgroundImage =
         "url('./icon/blueArrowTurnRight.svg')";
     } else {
       NextBtnStyle.style.display = "flex";
       NextBtnStyle.style.backgroundImage =
         "url('./icon/purpleArrowTurnRight.svg')";
+      setCurrentPage(offset);
+      setOffset(offset + itemsPerPage);
     }
   }
 
@@ -65,7 +65,7 @@ export default function Carousel() {
       }
       if (totalRecords - offset >= itemsPerPage) {
         NextBtnStyle.style.backgroundImage =
-          "url('./icon/blueArrowTurnLeft.svg')";
+          "url('./icon/purpleArrowTurnRight.svg')";
       } else {
         NextBtnStyle.style.display = "flex";
         NextBtnStyle.style.backgroundImage =
@@ -78,6 +78,7 @@ export default function Carousel() {
     async function FetchMyApi() {
       var PreviousBtnStyle = await document.getElementById("previousBtn");
       var NextBtnStyle = await document.getElementById("nextBtn");
+      var CounterLabel = await document.getElementById("counter");
       let items = await ConnectContent();
       let allContent = await items.filter(
         (x) => x.sys.contentType.sys.id == "podcast"
@@ -89,11 +90,13 @@ export default function Carousel() {
       if (allContent.length <= itemsPerPage) {
         PreviousBtnStyle.style.display = "none";
         NextBtnStyle.style.display = "none";
+        CounterLabel.style.display = "none";
       } else {
         NextBtnStyle.style.backgroundImage =
           "url('./icon/purpleArrowTurnRight.svg')";
         PreviousBtnStyle.style.display = "flex";
         NextBtnStyle.style.display = "flex";
+        CounterLabel.style.display = "block";
       }
     }
     FetchMyApi();
@@ -126,7 +129,10 @@ export default function Carousel() {
         <PageButtons>
           <AlignCountBaseDiv>
             <LeftArrow id="previousBtn" onClick={() => handlePrev()} />
-            <CountLabel>1/2</CountLabel>
+            <CountLabel id="counter">
+              {currentPage / itemsPerPage + 1}/
+              {Math.round(totalRecords / itemsPerPage)}
+            </CountLabel>
             <RightArrow id="nextBtn" onClick={() => handleNext()} />
           </AlignCountBaseDiv>
         </PageButtons>

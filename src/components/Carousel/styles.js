@@ -13,7 +13,7 @@ export const Content = styled.div`
   align-items: center;
   margin-top: 100px;
   @media (min-width: 645px) {
-    min-height: 500px;
+    min-height: 635px;
     height: auto;
   }
 `;
