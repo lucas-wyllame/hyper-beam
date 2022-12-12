@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: auto;
-  background: green;
+  /* background: green; */
   background-image: url("/img/degrade logo.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -21,7 +21,7 @@ export const Content = styled.div`
 export const PodcastsList = styled.div`
   width: 225px;
   height: auto;
-  background: red;
+  /* background: red; */
   display: flex;
   position: relative;
   margin-bottom: 70px;
@@ -29,7 +29,7 @@ export const PodcastsList = styled.div`
   @media (min-width: 1024px) {
     width: 1080px;
     /* height: 950px; */
-    column-gap: 60px;
+    gap: 60px;
     margin-bottom: 0;
     align-items: center;
   }
@@ -50,7 +50,7 @@ export const PodcastsList = styled.div`
 export const CarouselStyled = styled.div`
   width: 225px;
   height: 270px;
-  background: blue;
+  /* background: blue; */
   display: flex !important;
   align-items: center;
   flex-direction: column;
@@ -72,14 +72,14 @@ export const HyperText = styled.label`
 export const LeftArrow = styled.div`
   height: 39px;
   width: 39px;
-  background-image: url("./icon/Grupo 21.svg");
+  background-image: url("./icon/blueArrowTurnLeft.svg");
   cursor: pointer;
 `;
 
 export const RightArrow = styled.div`
   height: 39px;
   width: 39px;
-  background-image: url("./icon/Grupo 22.svg");
+  background-image: url("./icon/purpleArrowTurnRight.svg");
   cursor: pointer;
 `;
 
@@ -110,12 +110,12 @@ export const AlignArrowBaseDiv = styled.div`
 `;
 
 export const AlignCountBaseDiv = styled.div`
-  width: 225px;
+  width: 200px;
   height: 39px;
-  /* background: pink; */
+  /* background: cyan; */
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
 `;
 
 export const CountLabel = styled.label`
@@ -127,11 +127,11 @@ export const CountLabel = styled.label`
 
 export const PageButtons = styled.div`
   width: 100%;
-  height: 5vh;
-  background: pink;
+  height: 39px;
+  /* background: pink; */
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
 export const PageButton = styled.div`

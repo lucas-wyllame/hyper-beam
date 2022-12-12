@@ -18,7 +18,7 @@ import { TitleInsideComponentSearch } from "../Header/styles";
 import { useRouter } from "next/router";
 
 export default function Carousel() {
-  var itemsPerPage = 7;
+  var itemsPerPage = 3;
   const [all, setAll] = useState([]);
   const [offset, setOffset] = useState(0);
   const [totalRecords, setTotalRecords] = useState(50);
@@ -30,23 +30,24 @@ export default function Carousel() {
       var PreviousBtnStyle = await document.getElementById("previousBtn");
       if (offset > 0) {
         PreviousBtnStyle.style.display = "flex";
-        PreviousBtnStyle.style.backgroundColor = "purple";
-      } else {
-        // PreviousBtnStyle.style.display = "none";
-        PreviousBtnStyle.style.backgroundColor = "transparent";
+        PreviousBtnStyle.style.backgroundImage =
+          "url('./icon/purpleArrowTurnLeft.svg')";
       }
-      NextBtnStyle.style.backgroundColor = "purple";
+      NextBtnStyle.style.backgroundImage =
+        "url('./icon/purpleArrowTurnRight.svg')";
       setCurrentPage(offset);
       setOffset(offset + itemsPerPage);
     } else {
-      // NextBtnStyle.style.display = "none";
-      NextBtnStyle.style.backgroundColor = "transparent";
+      NextBtnStyle.style.backgroundImage =
+        "url('./icon/blueArrowTurnLeft.svg')";
     }
     if (totalRecords - offset <= itemsPerPage) {
-      NextBtnStyle.style.backgroundColor = "transparent";
+      NextBtnStyle.style.backgroundImage =
+        "url('./icon/blueArrowTurnRight.svg')";
     } else {
       NextBtnStyle.style.display = "flex";
-      NextBtnStyle.style.backgroundColor = "purple";
+      NextBtnStyle.style.backgroundImage =
+        "url('./icon/purpleArrowTurnRight.svg')";
     }
   }
 
@@ -59,16 +60,17 @@ export default function Carousel() {
 
       if (offset > 2 * itemsPerPage) {
         PreviousBtnStyle.style.display = "flex";
-        PreviousBtnStyle.style.backgroundColor = "purple";
       } else {
-        // PreviousBtnStyle.style.display = "none";
-        PreviousBtnStyle.style.backgroundColor = "transparent";
+        PreviousBtnStyle.style.backgroundImage =
+          "url('./icon/blueArrowTurnLeft.svg')";
       }
       if (totalRecords - offset >= itemsPerPage) {
-        NextBtnStyle.style.backgroundColor = "transparent";
+        NextBtnStyle.style.backgroundImage =
+          "url('./icon/blueArrowTurnLeft.svg')";
       } else {
         NextBtnStyle.style.display = "flex";
-        NextBtnStyle.style.backgroundColor = "purple";
+        NextBtnStyle.style.backgroundImage =
+          "url('./icon/purpleArrowTurnRight.svg')";
       }
     }
   }
@@ -85,13 +87,14 @@ export default function Carousel() {
       setCurrentPage(0);
       setOffset(itemsPerPage);
       setTotalRecords(allContent.length);
-      if (totalRecords < itemsPerPage) {
+      if (allContent.length <= itemsPerPage) {
         PreviousBtnStyle.style.display = "none";
         NextBtnStyle.style.display = "none";
       } else {
-        NextBtnStyle.style.backgroundColor = "purple";
+        NextBtnStyle.style.backgroundImage =
+          "url('./icon/purpleArrowTurnRight.svg')";
         PreviousBtnStyle.style.display = "flex";
-        PreviousBtnStyle.style.backgroundColor = "transparent";
+        NextBtnStyle.style.display = "flex";
       }
     }
     FetchMyApi();
@@ -122,12 +125,11 @@ export default function Carousel() {
           );
         })}
         <PageButtons>
-          <LeftArrow id="previousBtn" onClick={() => handlePrev()}>
-            {/* <label>Mais Recente</label> */}
-          </LeftArrow>
-          <RightArrow id="nextBtn" onClick={() => handleNext()}>
-            {/* <label>Mais Antigo</label> */}
-          </RightArrow>
+          <AlignCountBaseDiv>
+            <LeftArrow id="previousBtn" onClick={() => handlePrev()} />
+            <CountLabel>1/2</CountLabel>
+            <RightArrow id="nextBtn" onClick={() => handleNext()} />
+          </AlignCountBaseDiv>
         </PageButtons>
       </PodcastsList>
     </Content>
