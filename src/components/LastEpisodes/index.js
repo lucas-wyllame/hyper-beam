@@ -168,7 +168,7 @@ export default function LastEpisodes() {
                       </TextsDivEp>
                     </CardAndText>
                     <IconAndButtons
-                      height="140px"
+                      gap="15px"
                       widthLaptop="580px"
                       heightLaptop="auto"
                       flexDLaptop="row"
