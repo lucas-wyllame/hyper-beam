@@ -136,6 +136,7 @@ export const TextsDivEp = styled.div`
 export const IconAndButtons = styled.div`
   width: 100%;
   height: ${(props) => props.height};
+  background: yellow;
   margin-left: 0;
   margin-bottom: 0;
   display: flex;
