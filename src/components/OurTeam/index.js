@@ -15,7 +15,7 @@ import {
 } from "./styles";
 import Slider from "react-slick";
 import { ConnectContent } from "../../ConfigContent";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 
 function SamplePrevArrow(props) {
@@ -109,8 +109,8 @@ export default function OurTeam() {
           {all.map((res, index) => {
             return (
               // eslint-disable-next-line react/jsx-key
-              <>
-                <Peoples key={index}>
+              <React.Fragment key={index}>
+                <Peoples>
                   <CardsOurTeam
                     image={
                       `url(${res.fields.profilePicture?.fields.file.url})` || ""
@@ -128,12 +128,12 @@ export default function OurTeam() {
                     <FuncCasters>{res.fields.role}</FuncCasters>
                   </CastersBox>
                 </Peoples>
-              </>
+              </React.Fragment>
             );
           })}
         </Slider>
         {/* <AlingArrowBaseDiv> */}
-          {/* <AlingCountBaseDiv /> */}
+        {/* <AlingCountBaseDiv /> */}
         {/* </AlingArrowBaseDiv> */}
       </GlobalPeoples>
     </Content>

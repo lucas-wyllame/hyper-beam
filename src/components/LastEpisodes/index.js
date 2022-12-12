@@ -19,7 +19,7 @@ import {
 } from "./styles";
 import { useRouter } from "next/router";
 import Slider from "react-slick";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Control } from "@icon/IconComTag";
 import { TitleInsideComponent } from "@styles/globalStyles";
 import { ConnectContent } from "src/ConfigContent";
@@ -131,7 +131,7 @@ export default function LastEpisodes() {
 
   return (
     <Content>
-      {console.log("la ele infinito", all)}
+      {console.log("LastEpisodes all", all)}
       <Title margin="0">Episódios Recentes</Title>
       <Desc margin="0">Acompanhe nosso podcast e seus episódios</Desc>
       <ListPodcasts>
@@ -141,8 +141,10 @@ export default function LastEpisodes() {
         <Slider {...settings}>
           {all.slice(0, 5).map((res, index) => {
             return (
-              <>
-                <Background key={index} image={`url(${res.fields?.bigImage?.fields.file.url})`}>
+              <React.Fragment key={index}>
+                <Background
+                  image={`url(${res.fields?.bigImage?.fields.file.url})`}
+                >
                   <Block>
                     <CardAndText>
                       <HyperCard
@@ -156,7 +158,10 @@ export default function LastEpisodes() {
                         onClick={() => console.log("CLICOU")}
                       />
                       <TextsDivEp>
-                        <TitleInsideComponent cursor="pointer" number={res.fields?.number} />
+                        <TitleInsideComponent
+                          cursor="pointer"
+                          number={res.fields?.number}
+                        />
                         <MoreInfs fontSize={"1.8rem"} width={"694px"}>
                           {res.fields.description}
                         </MoreInfs>
@@ -194,12 +199,12 @@ export default function LastEpisodes() {
                     </IconAndButtons>
                   </Block>
                 </Background>
-              </>
+              </React.Fragment>
             );
           })}
         </Slider>
       </ListPodcasts>
-        <ButtonSeeAll onClick={handleClick}>Ver todos</ButtonSeeAll>
+      <ButtonSeeAll onClick={handleClick}>Ver todos</ButtonSeeAll>
     </Content>
   );
 }

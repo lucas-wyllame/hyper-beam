@@ -15,7 +15,7 @@ export default function Header(props) {
   return (
     <>
       <Top>
-        <CenterLogoDiv>
+        {/* <CenterLogoDiv> */}
           <LogoTop headerLogo={props.headerLogo} onClick={handleClick} />
           {/* <SearchLogoBox>
             <SearchIcon
@@ -23,7 +23,7 @@ export default function Header(props) {
               sx={{ fontSize: 35, color: "#fff" }}
             />
           </SearchLogoBox> */}
-        </CenterLogoDiv>
+        {/* </CenterLogoDiv> */}
       </Top>
       {/* {isClicked ? (
         <SearchBar

@@ -16,7 +16,7 @@ import {
 import Slider from "react-slick";
 import { useRouter } from "next/router";
 import { TitleInsideComponent } from "@styles/globalStyles";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { ConnectContent } from "../../ConfigContent";
 import { useState } from "react";
 
@@ -114,7 +114,10 @@ export default function HomeBanner() {
       {console.log("Home banner all", all)}
       <Banner image={`url(${lastPodcast.fields?.bigImage?.fields.file.url})`}>
         <FeaturedPodcastInfo>
-          <TitleInsideComponent margin="12px 0" number={lastPodcast.fields?.number} />
+          <TitleInsideComponent
+            margin="12px 0"
+            number={lastPodcast.fields?.number}
+          />
           <PodcastTheme>{lastPodcast.fields?.title}</PodcastTheme>
           <PlayButton onClick={() => handleClick(lastPodcast.fields?.pathUrl)}>
             Play
@@ -126,29 +129,26 @@ export default function HomeBanner() {
         <DivToCentralizeListHomeBanner>
           <ListHomeBanner>
             <Slider {...settings}>
-              {all
-                .slice(1, 10)
-                .map((res, index) => {
-                  return (
-                    // eslint-disable-next-line react/jsx-key
-                    <>
-                      <HyperCardGroup
-                        onClick={() => handleClick(res.fields?.pathUrl)}
-                        key={index}
-                      >
-                        <HyperCard
-                          backgroundImg={`url(${res.fields?.littleImage?.fields?.file.url})`}
-                          width={"196px"}
-                          height={"196px"}
-                        />
-                        <HyperText>
-                          Hyper Beam {res.fields?.number < 10 ? 0 : ""}
-                          {res.fields?.number}
-                        </HyperText>
-                      </HyperCardGroup>
-                    </>
-                  );
-                })}
+              {all.slice(1, 10).map((res, index) => {
+                return (
+                  // eslint-disable-next-line react/jsx-key
+                  <React.Fragment key={index}>
+                    <HyperCardGroup
+                      onClick={() => handleClick(res.fields?.pathUrl)}
+                    >
+                      <HyperCard
+                        backgroundImg={`url(${res.fields?.littleImage?.fields?.file.url})`}
+                        width={"196px"}
+                        height={"196px"}
+                      />
+                      <HyperText>
+                        Hyper Beam {res.fields?.number < 10 ? 0 : ""}
+                        {res.fields?.number}
+                      </HyperText>
+                    </HyperCardGroup>
+                  </React.Fragment>
+                );
+              })}
             </Slider>
           </ListHomeBanner>
         </DivToCentralizeListHomeBanner>

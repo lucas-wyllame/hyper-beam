@@ -23,7 +23,7 @@ export const Content = styled.div`
 export const Plats = styled.div`
   width: 100%;
   height: 65%;
-  background: red;
+  /* background: red; */
   flex-direction: column;
   display: flex;
   justify-content: space-between;

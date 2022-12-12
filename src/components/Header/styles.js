@@ -11,7 +11,7 @@ export const Top = styled.div`
   box-shadow: 0px 6px 16px #0000004f;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   position: fixed;
   z-index: 999;
   top: -1px;
