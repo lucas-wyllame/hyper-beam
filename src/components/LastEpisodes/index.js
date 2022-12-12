@@ -125,10 +125,6 @@ export default function LastEpisodes() {
     ],
   };
 
-  const handleClickUniqueEp = (link) => {
-    router.push(`/podcasts/${link}`);
-  };
-
   return (
     <Content>
       {console.log("LastEpisodes all", all)}
@@ -147,21 +143,25 @@ export default function LastEpisodes() {
                 >
                   <Block>
                     <CardAndText>
-                      <HyperCard
-                        backgroundImg={`url(${res.fields?.littleImage?.fields?.file.url})`}
-                        width={"253px"}
-                        height={"253px"}
-                        position={"relative"}
-                        top={"-35px"}
-                        widthLaptopLarge={"337px"}
-                        heightLaptopLarge={"337px"}
-                        onClick={() => console.log("CLICOU")}
-                      />
-                      <TextsDivEp>
-                        <TitleInsideComponent
-                          cursor="pointer"
-                          number={res.fields?.number}
+                      <a href={`/podcasts/${res.fields?.pathUrl}`}>
+                        <HyperCard
+                          backgroundImg={`url(${res.fields?.littleImage?.fields?.file.url})`}
+                          width={"253px"}
+                          height={"253px"}
+                          position={"relative"}
+                          top={"-35px"}
+                          widthLaptopLarge={"337px"}
+                          heightLaptopLarge={"337px"}
+                          // onClick={window.location.href=`/podcasts`}
                         />
+                      </a>
+                      <TextsDivEp>
+                        <a href={`/podcasts/${res.fields?.pathUrl}`}>
+                          <TitleInsideComponent
+                            cursor="pointer"
+                            number={res.fields?.number}
+                          />
+                        </a>
                         <MoreInfs fontSize={"1.8rem"} width={"694px"}>
                           {res.fields.description}
                         </MoreInfs>
