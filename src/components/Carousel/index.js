@@ -1,4 +1,3 @@
-import Slider from "react-slick";
 import {
   Content,
   PodcastsList,
