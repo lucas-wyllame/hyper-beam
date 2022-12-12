@@ -12,7 +12,7 @@ import {
 import HyperCard from "../HyperCard/hyperCard";
 import { useEffect, useState, useRef } from "react";
 import { ConnectContent } from "src/ConfigContent";
-import { TitleInsideComponentSearch } from "../Header.js/styles";
+import { TitleInsideComponentSearch } from "../Header/styles";
 import { useRouter } from "next/router";
 
 export default function Carousel() {

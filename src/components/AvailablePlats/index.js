@@ -1,5 +1,4 @@
 import { Title, Desc } from "@styles/globalStyles";
-import { platsLinks } from "./platsLinks";
 import {
   Content,
   Plats,
@@ -14,7 +13,6 @@ import { ConnectContent } from "src/ConfigContent";
 
 export default function AvailablePlats() {
   const [all, setAll] = useState([]);
-  var teste;
   useEffect(() => {
     async function FetchMyApi() {
       let items = await ConnectContent();

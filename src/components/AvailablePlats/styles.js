@@ -23,7 +23,7 @@ export const Content = styled.div`
 export const Plats = styled.div`
   width: 100%;
   height: 65%;
-  /* background: red; */
+  background: red;
   flex-direction: column;
   display: flex;
   justify-content: space-between;
@@ -32,7 +32,7 @@ export const Plats = styled.div`
   margin-top: 45px;
   @media (min-width: 1024px) {
     width: 880px;
-    height: auto;
+    height: 346px;
     flex-direction: row;
     margin-bottom: 50px;
   }

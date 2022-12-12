@@ -142,7 +142,7 @@ export default function LastEpisodes() {
           {all.slice(0, 5).map((res, index) => {
             return (
               <>
-                <Background key={index}>
+                <Background key={index} image={`url(${res.fields?.bigImage?.fields.file.url})`}>
                   <Block>
                     <CardAndText>
                       <HyperCard

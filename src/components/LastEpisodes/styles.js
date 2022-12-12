@@ -83,7 +83,10 @@ export const Background = styled.div`
   border-radius: 44px 44px 0px 0px;
   position: relative;
   top: 60px;
-  background: #a57bca;
+  background-color: #a57bca;
+  background-image: ${(props) => props.image};
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   @media (min-width: 1024px) {
