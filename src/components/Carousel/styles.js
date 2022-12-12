@@ -13,24 +13,27 @@ export const Content = styled.div`
   align-items: center;
   margin-top: 100px;
   @media (min-width: 645px) {
-    height: 1100px;
+    min-height: 500px;
+    height: auto;
   }
 `;
 
 export const PodcastsList = styled.div`
   width: 225px;
-  height: 3240px;
+  height: auto;
   background: red;
   display: flex;
   position: relative;
   margin-bottom: 70px;
   flex-wrap: wrap;
-  gap: 60px;
   @media (min-width: 1024px) {
     width: 1080px;
-    height: 950px;
+    /* height: 950px; */
+    column-gap: 60px;
+    margin-bottom: 0;
+    align-items: center;
   }
-  @media (max-width: 1145px) {
+  /* @media (max-width: 1145px) {
     width: 816px;
     height: 950px;
   }
@@ -41,7 +44,7 @@ export const PodcastsList = styled.div`
   @media (max-width: 644px) {
     width: 225px;
     height: auto;
-  }
+  } */
 `;
 
 export const CarouselStyled = styled.div`
@@ -55,7 +58,7 @@ export const CarouselStyled = styled.div`
   /* margin-right: 45px; */
   @media (min-width: 1024px) {
     height: auto;
-    margin-bottom: 65px;
+    margin-bottom: 0;
   }
 `;
 
@@ -66,49 +69,18 @@ export const HyperText = styled.label`
   padding-left: 60px;
 `;
 
-export const LeftArrow = styled.img`
+export const LeftArrow = styled.div`
   height: 39px;
   width: 39px;
-  position: relative;
-  top: 3715.5px;
-  left: 0px;
-  z-index: 2;
-  @media (min-width: 645px) {
-    top: 952.6px;
-    left: 158px;
-  }
-  @media (min-width: 947px) {
-    left: 295px;
-  }
-  @media (min-width: 1024px) {
-    top: 970.8px;
-    left: 296px;
-  }
-  @media (min-width: 1146px) {
-    left: 419px;
-  }
+  background-image: url("./icon/Grupo 21.svg");
+  cursor: pointer;
 `;
 
-export const RightArrow = styled.img`
+export const RightArrow = styled.div`
   height: 39px;
   width: 39px;
-  position: relative;
-  top: -7px;
-  left: 186px;
-  z-index: 2;
-  @media (min-width: 645px) {
-    left: 344px;
-  }
-  @media (min-width: 947px) {
-    left: 481px;
-  }
-  @media (min-width: 1024px) {
-    top: -16px;
-    left: 482px;
-  }
-  @media (min-width: 1146px) {
-    left: 605px;
-  }
+  background-image: url("./icon/Grupo 22.svg");
+  cursor: pointer;
 `;
 
 export const AlignArrowBaseDiv = styled.div`
@@ -156,9 +128,10 @@ export const CountLabel = styled.label`
 export const PageButtons = styled.div`
   width: 100%;
   height: 5vh;
+  background: pink;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 `;
 
 export const PageButton = styled.div`
@@ -168,7 +141,7 @@ export const PageButton = styled.div`
   justify-content: center;
   cursor: pointer;
   margin-right: 10px;
-  label{
+  label {
     color: #fff;
     font-size: 15px;
     cursor: pointer;
@@ -177,5 +150,3 @@ export const PageButton = styled.div`
     width: 30vw;
   }
 `;
-
-

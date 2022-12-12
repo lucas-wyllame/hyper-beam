@@ -9,45 +9,21 @@ import {
   AlignCountBaseDiv,
   CountLabel,
   PageButtons,
-  PageButton
+  PageButton,
 } from "./styles";
 import HyperCard from "../HyperCard/hyperCard";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { ConnectContent } from "src/ConfigContent";
 import { TitleInsideComponentSearch } from "../Header/styles";
 import { useRouter } from "next/router";
 
 export default function Carousel() {
-  var itemsPerPage = 3;
+  var itemsPerPage = 7;
   const [all, setAll] = useState([]);
   const [offset, setOffset] = useState(0);
-  const sliderRef = useRef();
   const [totalRecords, setTotalRecords] = useState(50);
   const [currentPage, setCurrentPage] = useState(1);
 
-  function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <RightArrow
-        className={className}
-        src="./icon/Grupo 22.svg"
-        onClick={onClick}
-        id="nextBtn"
-      />
-    );
-  }
-
-  function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <LeftArrow
-        className={className}
-        src="./icon/Grupo 21.svg"
-        onClick={onClick}
-        id="previousBtn"
-      />
-    );
-  }
   async function handleNext() {
     var NextBtnStyle = await document.getElementById("nextBtn");
     if (offset <= totalRecords) {
@@ -62,18 +38,16 @@ export default function Carousel() {
       NextBtnStyle.style.backgroundColor = "purple";
       setCurrentPage(offset);
       setOffset(offset + itemsPerPage);
-    }
-    else{
+    } else {
       // NextBtnStyle.style.display = "none";
-        NextBtnStyle.style.backgroundColor = "transparent";
-    }
-    if(totalRecords - offset <= itemsPerPage){
       NextBtnStyle.style.backgroundColor = "transparent";
-    }else{
+    }
+    if (totalRecords - offset <= itemsPerPage) {
+      NextBtnStyle.style.backgroundColor = "transparent";
+    } else {
       NextBtnStyle.style.display = "flex";
       NextBtnStyle.style.backgroundColor = "purple";
     }
-    
   }
 
   async function handlePrev() {
@@ -90,9 +64,9 @@ export default function Carousel() {
         // PreviousBtnStyle.style.display = "none";
         PreviousBtnStyle.style.backgroundColor = "transparent";
       }
-      if(totalRecords - offset >= itemsPerPage){
+      if (totalRecords - offset >= itemsPerPage) {
         NextBtnStyle.style.backgroundColor = "transparent";
-      }else{
+      } else {
         NextBtnStyle.style.display = "flex";
         NextBtnStyle.style.backgroundColor = "purple";
       }
@@ -111,63 +85,17 @@ export default function Carousel() {
       setCurrentPage(0);
       setOffset(itemsPerPage);
       setTotalRecords(allContent.length);
-      if(totalRecords < itemsPerPage){
+      if (totalRecords < itemsPerPage) {
         PreviousBtnStyle.style.display = "none";
         NextBtnStyle.style.display = "none";
-      }else{
-
+      } else {
         NextBtnStyle.style.backgroundColor = "purple";
         PreviousBtnStyle.style.display = "flex";
         PreviousBtnStyle.style.backgroundColor = "transparent";
       }
-      
     }
     FetchMyApi();
   }, []);
-
-  var slider = ".slider";
-  var settings = {
-    className: "center",
-    centerMode: false,
-    infinite: false,
-    centerPadding: "0px",
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    speed: 500,
-    rows: 1,
-    slidesPerRow: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1149,
-        settings: {
-          slidesToShow: 3,
-          rows: 3,
-          infinite: slider.length > 1 ? true : false,
-          centerMode: false,
-        },
-      },
-      {
-        breakpoint: 946,
-        settings: {
-          slidesToShow: 2,
-          rows: 3,
-          infinite: slider.length > 1 ? true : false,
-          centerMode: false,
-        },
-      },
-      {
-        breakpoint: 644,
-        settings: {
-          slidesToShow: 1,
-          rows: 12,
-          infinite: slider.length > 1 ? true : false,
-          centerMode: false,
-        },
-      },
-    ],
-  };
 
   const router = useRouter();
 
@@ -194,12 +122,12 @@ export default function Carousel() {
           );
         })}
         <PageButtons>
-          <PageButton id="previousBtn" onClick={() => handlePrev()}>
-            <label>Mais Recente</label>
-          </PageButton>
-          <PageButton id="nextBtn" onClick={() => handleNext()}>
-            <label>Mais Antigo</label>
-          </PageButton>
+          <LeftArrow id="previousBtn" onClick={() => handlePrev()}>
+            {/* <label>Mais Recente</label> */}
+          </LeftArrow>
+          <RightArrow id="nextBtn" onClick={() => handleNext()}>
+            {/* <label>Mais Antigo</label> */}
+          </RightArrow>
         </PageButtons>
       </PodcastsList>
     </Content>
