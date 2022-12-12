@@ -51,8 +51,8 @@ export default function HomeBanner() {
       let allContent = await items.filter(
         (x) => x.sys.contentType.sys.id == "podcast"
       );
-      setAll(allContent);
       setLastPodcast(allContent[allContent.length - 1]);
+      setAll(allContent.reverse());
     }
     FetchMyApi();
   }, []);
@@ -127,7 +127,6 @@ export default function HomeBanner() {
           <ListHomeBanner>
             <Slider {...settings}>
               {all
-                .reverse()
                 .slice(1, 10)
                 .map((res, index) => {
                   return (
