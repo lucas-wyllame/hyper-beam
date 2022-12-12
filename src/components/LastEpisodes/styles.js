@@ -14,7 +14,7 @@ export const Content = styled.div`
     padding: 0 88px;
   }
   @media (min-width: 1440px) {
-    height: auto;
+    height: 850px;
   }
 `;
 
@@ -31,7 +31,7 @@ export const ListPodcasts = styled.div`
     height: 548px;
   }
   @media (min-width: 1440px) {
-    height: 654px;
+    height: 534px;
   }
 `;
 
@@ -189,8 +189,8 @@ export const ButtonSeeAll = styled.button`
   border: none;
   color: #a127ff;
   font-size: 20px;
-  margin-top: 80px;
   cursor: pointer;
+  margin-top: 50px;
   align-self: center;
   :hover {
     width: 161px;

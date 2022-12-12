@@ -3,11 +3,12 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: 650px;
-  /* background: green; */
+  background: #1B1B36;
   display: flex;
   flex-direction: column;
-  justify-content: normal;
+  justify-content: center;
   align-items: center;
+
   @media (min-width: 769px) {
     height: 647px;
   }
@@ -15,7 +16,7 @@ export const Content = styled.div`
     height: 620px;
   }
   @media (min-width: 1440px) {
-    height: 720px;
+    height: 740px;
   }
 `;
 

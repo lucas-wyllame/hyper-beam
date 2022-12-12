@@ -22,11 +22,12 @@ export const PodcastsList = styled.div`
   height: 3240px;
   background: red;
   display: flex;
-  flex-direction: column;
   position: relative;
   margin-bottom: 70px;
+  flex-wrap: wrap;
+  gap: 60px;
   @media (min-width: 1024px) {
-    width: 1062px;
+    width: 1080px;
     height: 950px;
   }
   @media (max-width: 1145px) {
@@ -44,13 +45,14 @@ export const PodcastsList = styled.div`
 `;
 
 export const CarouselStyled = styled.div`
-  width: 100%;
+  width: 225px;
   height: 270px;
-  /* background: blue; */
+  background: blue;
   display: flex !important;
   align-items: center;
   flex-direction: column;
   margin-bottom: 37px;
+  /* margin-right: 45px; */
   @media (min-width: 1024px) {
     height: auto;
     margin-bottom: 65px;
@@ -149,6 +151,31 @@ export const CountLabel = styled.label`
   text-align: ${(props) => props.textAlignDesc};
   color: #9a8dac;
   font-weight: 500;
+`;
+
+export const PageButtons = styled.div`
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const PageButton = styled.div`
+  width: 7vw;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 10px;
+  label{
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 768px) {
+    width: 30vw;
+  }
 `;
 
 

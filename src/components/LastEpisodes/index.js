@@ -198,8 +198,8 @@ export default function LastEpisodes() {
             );
           })}
         </Slider>
-        <ButtonSeeAll onClick={handleClick}>Ver todos</ButtonSeeAll>
       </ListPodcasts>
+        <ButtonSeeAll onClick={handleClick}>Ver todos</ButtonSeeAll>
     </Content>
   );
 }
