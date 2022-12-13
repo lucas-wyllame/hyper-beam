@@ -75,7 +75,7 @@ export const SearchBar = styled.input`
   @media (min-width: 1024px) {
     padding-left: 90px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1366px) {
     padding-left: 140px;
   }
 `;
@@ -100,7 +100,7 @@ export const AfterSearch = styled.div`
   @media (min-width: 1024px) {
     padding: 0 0 0 90px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1366px) {
     padding: 0 0 0 140px;
   }
 `;

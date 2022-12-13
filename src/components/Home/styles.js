@@ -66,9 +66,6 @@ export const PlayButton = styled.button`
   @media (min-width: 1024px) {
     font-size: 2rem;
   }
-  @media (min-width: 1440px) {
-    font-size: 2rem;
-  }
 `;
 
 export const PodcastTheme = styled.p`
@@ -79,7 +76,7 @@ export const PodcastTheme = styled.p`
   @media (min-width: 1024px) {
     font-size: 2.3rem;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1366px) {
     font-size: 2.5rem;
   }
 `;
@@ -135,12 +132,12 @@ export const ListHomeBanner = styled.div`
   @media (min-width: 1101px) {
     width: 900px;
   }
-  @media (min-width: 1338px) {
-    width: 68%;
-  }
-  @media (min-width: 1440px) {
+  @media (min-width: 1366px) {
     width: 1090px;
   }
+  /* @media (min-width: 1440px) {
+    width: 1090px;
+  } */
 `;
 
 export const HyperCardGroup = styled.div`

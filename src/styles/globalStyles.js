@@ -26,7 +26,7 @@ export const Title = styled.p`
   @media (min-width: 1024px) {
     font-size: 3.3rem;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1366px) {
     font-size: 4.5rem;
   }
 `;
@@ -43,7 +43,7 @@ export const Desc = styled.h1`
   @media (min-width: 1024px) {
     font-size: 2.2rem;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1366px) {
     font-size: 2.8rem;
   }
 `;
@@ -59,12 +59,6 @@ export const MoreInfs = styled.h2`
   -webkit-line-clamp: ${(props) => props.wbkLineClamp};
   -webkit-box-orient: ${(props) => props.wbkBoxOrient};
   white-space: ${(props) => props.whiteSpace};
-  /* text-overflow: ellipsis;
-  overflow: hidden;
-  display: -webkit-box !important;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  white-space: normal; */
   @media (min-width: 768px) {
     font-size: 1.5rem;
   }
@@ -73,9 +67,8 @@ export const MoreInfs = styled.h2`
     font-size: ${(props) => props.fontSizeLaptop};
     -webkit-line-clamp: ${(props) => props.wbkLineClampLaptop};
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1366px) {
     font-size: 2.5rem;
-    /* font-size: ${(props) => props.fontSizeLaptop}; */
   }
 `;
 
@@ -103,7 +96,7 @@ export const TitleInside = styled.div`
       font-size: 2.7rem;
     }
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1366px) {
     width: 250px;
     font-size: 3rem;
     span {

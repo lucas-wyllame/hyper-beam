@@ -69,7 +69,7 @@ export default function HomeBanner() {
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
-        breakpoint: 1439,
+        breakpoint: 1365,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,

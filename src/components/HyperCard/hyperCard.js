@@ -17,7 +17,7 @@ const CardBanner = styled.div`
     width: ${(props) => props.widthLaptop};
     height: ${(props) => props.heightLaptop};
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1366px) {
     width: ${(props) => props.widthLaptopLarge};
     height: ${(props) => props.heightLaptopLarge};
   }

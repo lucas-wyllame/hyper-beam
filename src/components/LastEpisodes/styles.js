@@ -13,7 +13,7 @@ export const Content = styled.div`
     height: 643px;
     padding: 0 88px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1366px) {
     height: 850px;
   }
 `;
@@ -30,7 +30,7 @@ export const ListPodcasts = styled.div`
   @media (min-width: 1024px) {
     height: 548px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1366px) {
     height: 534px;
   }
 `;
@@ -71,7 +71,7 @@ export const HoveringIcon = styled.label`
     top: 420px;
     padding: 0;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1366px) {
     height: 49px;
     top: 495px;
   }
@@ -94,7 +94,7 @@ export const Background = styled.div`
   @media (min-width: 1024px) {
     height: 420px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1366px) {
     height: 520px;
   }
 `;
@@ -177,6 +177,7 @@ export const ButtonsEp = styled.div`
   align-items: center;
   padding: 0 25px;
   margin: 0 -3px;
+  max-width: max-content;
   @media (min-width: 1024px) {
     width: ${(props) => props.widthLaptop};
     height: ${(props) => props.heightLaptop};
