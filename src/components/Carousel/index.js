@@ -15,9 +15,10 @@ import { useEffect, useState } from "react";
 import { ConnectContent } from "src/ConfigContent";
 import { TitleInsideComponentSearch } from "../Header/styles";
 import { useRouter } from "next/router";
+import { ContentPasteSearchOutlined } from "@mui/icons-material";
 
 export default function Carousel() {
-  var itemsPerPage = 1;
+  var itemsPerPage = 3;
   const [all, setAll] = useState([]);
   const [offset, setOffset] = useState(0);
   const [totalRecords, setTotalRecords] = useState(50);
@@ -25,28 +26,24 @@ export default function Carousel() {
 
   async function handleNext() {
     var NextBtnStyle = await document.getElementById("nextBtn");
-    if (offset <= totalRecords) {
-      var PreviousBtnStyle = await document.getElementById("previousBtn");
-      if (offset > 0) {
-        PreviousBtnStyle.style.display = "flex";
-        PreviousBtnStyle.style.backgroundImage =
-          "url('./icon/purpleArrowTurnLeft.svg')";
-      }
-      NextBtnStyle.style.backgroundImage =
-        "url('./icon/purpleArrowTurnRight.svg')";
-    } else {
-      NextBtnStyle.style.backgroundImage =
-        "url('./icon/blueArrowTurnLeft.svg')";
-    }
-    if (totalRecords - offset < itemsPerPage) {
-      NextBtnStyle.style.backgroundImage =
-        "url('./icon/blueArrowTurnRight.svg')";
-    } else {
-      NextBtnStyle.style.display = "flex";
-      NextBtnStyle.style.backgroundImage =
-        "url('./icon/purpleArrowTurnRight.svg')";
+    var PreviousBtnStyle = await document.getElementById("previousBtn");
+    console.log("esquilo",offset);
+    if (offset < totalRecords) {
       setCurrentPage(offset);
       setOffset(offset + itemsPerPage);
+    } 
+     if(offset + 1 >= totalRecords){
+      NextBtnStyle.style.backgroundImage =
+      "url('./icon/blueArrowRight.svg')";
+      // setCurrentPage(offset);
+      // setOffset(offset + itemsPerPage);
+    }
+    if(offset >= itemsPerPage){
+      PreviousBtnStyle.style.backgroundImage =
+          "url('./icon/purpleArrowLeft.svg')";
+    }else{
+      PreviousBtnStyle.style.backgroundImage =
+          "url('./icon/blueArrowLeft.svg')";
     }
   }
 
@@ -61,16 +58,16 @@ export default function Carousel() {
         PreviousBtnStyle.style.display = "flex";
       } else {
         PreviousBtnStyle.style.backgroundImage =
-          "url('./icon/blueArrowTurnLeft.svg')";
+          "url('./icon/blueArrowLeft.svg')";
       }
-      if (totalRecords - offset >= itemsPerPage) {
-        NextBtnStyle.style.backgroundImage =
-          "url('./icon/purpleArrowTurnRight.svg')";
-      } else {
-        NextBtnStyle.style.display = "flex";
-        NextBtnStyle.style.backgroundImage =
-          "url('./icon/purpleArrowTurnRight.svg')";
-      }
+    if (totalRecords - offset >= itemsPerPage) {
+      NextBtnStyle.style.backgroundImage =
+        "url('./icon/purpleArrowRight.svg')";
+    } else {
+      NextBtnStyle.style.display = "flex";
+      NextBtnStyle.style.backgroundImage =
+        "url('./icon/purpleArrowRight.svg')";
+    }
     }
   }
 
@@ -87,16 +84,14 @@ export default function Carousel() {
       setCurrentPage(0);
       setOffset(itemsPerPage);
       setTotalRecords(allContent.length);
-      if (allContent.length <= itemsPerPage) {
-        PreviousBtnStyle.style.display = "none";
-        NextBtnStyle.style.display = "none";
-        CounterLabel.style.display = "none";
-      } else {
+      if(itemsPerPage < allContent.length){
         NextBtnStyle.style.backgroundImage =
-          "url('./icon/purpleArrowTurnRight.svg')";
-        PreviousBtnStyle.style.display = "flex";
-        NextBtnStyle.style.display = "flex";
-        CounterLabel.style.display = "block";
+          "url('./icon/purpleArrowRight.svg')";
+          PreviousBtnStyle.style.backgroundImage =
+            "url('./icon/blueArrowLeft.svg')";
+            CounterLabel.style.display = "flex";
+      }else{
+        CounterLabel.style.display = "none";
       }
     }
     FetchMyApi();
@@ -131,7 +126,7 @@ export default function Carousel() {
             <LeftArrow id="previousBtn" onClick={() => handlePrev()} />
             <CountLabel id="counter">
               {currentPage / itemsPerPage + 1}/
-              {Math.round(totalRecords / itemsPerPage)}
+              {Math.ceil(totalRecords / itemsPerPage)}
             </CountLabel>
             <RightArrow id="nextBtn" onClick={() => handleNext()} />
           </AlignCountBaseDiv>
