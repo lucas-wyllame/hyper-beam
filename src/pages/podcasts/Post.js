@@ -31,7 +31,7 @@ export default function Post() {
         desc={all.map((res) => {return(res.fields.description)})}
       />
       <SpotifyAndOtherPlats url={all.map((res) => res.fields.podcastUrl)} />
-      <Comments />
+      <Comments url={all.map((res) => {return(res.fields.title)})} />
     </>
   );
 }
