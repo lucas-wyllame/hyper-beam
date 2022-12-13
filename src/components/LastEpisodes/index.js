@@ -29,7 +29,7 @@ function SamplePrevArrow(props) {
   return (
     <LeftArrow
       className={className}
-      src="./icon/blueArrowTurnLeft.svg"
+      src="./icon/blueArrowLeft.svg"
       onClick={onClick}
     />
   );
@@ -40,7 +40,7 @@ function SampleNextArrow(props) {
   return (
     <RightArrow
       className={className}
-      src="./icon/purpleArrowTurnRight.svg"
+      src="./icon/purpleArrowRight.svg"
       onClick={onClick}
     />
   );

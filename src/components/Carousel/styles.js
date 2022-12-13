@@ -72,14 +72,14 @@ export const HyperText = styled.label`
 export const LeftArrow = styled.div`
   height: 39px;
   width: 39px;
-  background-image: url("./icon/blueArrowTurnLeft.svg");
+  background-image: url("./icon/blueArrowLeft.svg");
   cursor: pointer;
 `;
 
 export const RightArrow = styled.div`
   height: 39px;
   width: 39px;
-  background-image: url("./icon/purpleArrowTurnRight.svg");
+  background-image: url("./icon/purpleArrowRight.svg");
   cursor: pointer;
 `;
 
