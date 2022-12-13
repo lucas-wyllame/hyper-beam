@@ -20,27 +20,27 @@ import React, { useEffect } from "react";
 import { ConnectContent } from "../../ConfigContent";
 import { useState } from "react";
 
-function SamplePrevArrow(props) {
-  const { className, onClick } = props;
-  return (
-    <LeftArrow
-      className={className}
-      src="./icon/blueArrowLeft.svg"
-      onClick={onClick}
-    />
-  );
-}
+// function SamplePrevArrow(props) {
+//   const { className, onClick } = props;
+//   return (
+//     <LeftArrow
+//       className={className}
+//       src="./icon/blueArrowLeft.svg"
+//       onClick={onClick}
+//     />
+//   );
+// }
 
-function SampleNextArrow(props) {
-  const { className, onClick } = props;
-  return (
-    <RightArrow
-      className={className}
-      src="./icon/purpleArrowRight.svg"
-      onClick={onClick}
-    />
-  );
-}
+// function SampleNextArrow(props) {
+//   const { className, onClick } = props;
+//   return (
+//     <RightArrow
+//       className={className}
+//       src="./icon/purpleArrowRight.svg"
+//       onClick={onClick}
+//     />
+//   );
+// }
 
 export default function HomeBanner() {
   const [all, setAll] = useState([]);
@@ -65,8 +65,8 @@ export default function HomeBanner() {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    // nextArrow: <SampleNextArrow />,
+    // prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 1365,

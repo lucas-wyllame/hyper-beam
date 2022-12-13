@@ -135,9 +135,6 @@ export const ListHomeBanner = styled.div`
   @media (min-width: 1366px) {
     width: 1090px;
   }
-  /* @media (min-width: 1440px) {
-    width: 1090px;
-  } */
 `;
 
 export const HyperCardGroup = styled.div`
@@ -157,8 +154,8 @@ export const HyperText = styled.label`
 `;
 
 export const LeftArrow = styled.img`
-  height: 39px;
   width: auto;
+  height: 39px;
   position: absolute;
   top: 50%;
   left: -39px;
@@ -166,8 +163,8 @@ export const LeftArrow = styled.img`
 `;
 
 export const RightArrow = styled.img`
-  height: 39px;
   width: auto;
+  height: 39px;
   position: absolute;
   right: -39px;
   top: 50%;

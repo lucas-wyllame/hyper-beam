@@ -12,6 +12,45 @@ export const GlobalStyles = createGlobalStyle`
   li.slick-active > div{
 		background-color: #A127FF;
   } 
+  .slick-prev {
+    width: 39px;
+    height: 39px;
+    position: absolute;
+    top: 50%;
+    left: -39px;
+    z-index: 2;
+  }
+  .slick-next {
+    width: 39px;
+    height: 39px;
+    position: absolute;
+    right: -39px;
+    top: 50%;
+    z-index: 2;
+  }
+  button.slick-arrow.slick-prev, div.styles__LeftArrow-sc-gziwbd-8.ilDHSB.slick-arrow.slick-prev{
+    background-image:  url("./icon/purpleArrowLeft.svg");
+    background-size: contain;
+    z-index: 9;
+  }
+  button.slick-arrow.slick-prev.slick-disabled, div.styles__LeftArrow-sc-gziwbd-8.ilDHSB.slick-arrow.slick-prev.slick-disabled{
+    background-image:  url("./icon/blueArrowLeft.svg");
+    background-size: contain;
+    z-index: 9;
+  }
+  button.slick-arrow.slick-next, div.styles__RightArrow-sc-gziwbd-9.eUCWcC.slick-arrow.slick-next{
+    background-image:  url("./icon/purpleArrowRight.svg");
+    background-size: contain;
+    z-index: 9;
+  }
+  button.slick-arrow.slick-next.slick-disabled, div.styles__RightArrow-sc-gziwbd-9.eUCWcC.slick-arrow.slick-next.slick-disabled{
+    background-image:  url("./icon/blueArrowRight.svg");
+    background-size: contain;
+    z-index: 9;
+  }
+  .slick-prev:before, .slick-next:before {
+    content: ""
+  }
 `;
 
 export const Title = styled.p`

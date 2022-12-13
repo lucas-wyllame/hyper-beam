@@ -127,7 +127,7 @@ export const FuncCasters = styled.label`
   color: #9a8dac;
 `;
 
-export const LeftArrow = styled.img`
+export const LeftArrow = styled.div`
   height: 39px;
   width: 39px;
   position: relative;
@@ -148,7 +148,7 @@ export const LeftArrow = styled.img`
   }
 `;
 
-export const RightArrow = styled.img`
+export const RightArrow = styled.div`
   height: 39px;
   width: 39px;
   position: relative;

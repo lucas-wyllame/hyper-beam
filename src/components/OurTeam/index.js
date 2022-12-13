@@ -19,22 +19,22 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 
 function SamplePrevArrow(props) {
-  const { className, onClick } = props;
+  const { className, onClick, style } = props;
   return (
     <LeftArrow
       className={className}
-      src="./icon/blueArrowLeft.svg"
+      style={{ ...style, backgroundColor: "none", borderStyle: "0" }}
       onClick={onClick}
     />
   );
 }
 
 function SampleNextArrow(props) {
-  const { className, onClick } = props;
+  const { className, onClick, style } = props;
   return (
     <RightArrow
       className={className}
-      src="./icon/purpleArrowRight.svg"
+      style={{ ...style, backgroundColor: "none", borderStyle: "0" }}
       onClick={onClick}
     />
   );
