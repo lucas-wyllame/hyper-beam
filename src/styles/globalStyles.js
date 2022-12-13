@@ -10,7 +10,7 @@ export const GlobalStyles = createGlobalStyle`
     height: 10px;
   }
   li.slick-active > div{
-		background-color: purple;
+		background-color: #A127FF;
   } 
 `;
 

@@ -42,17 +42,22 @@ export default function AvailablePlats(props) {
               key={index}
             >
               <PlatsCards
-                width={res.fields.styling?.width}
-                height={res.fields.styling?.height}
+                widthLaptop={res.fields.styling?.widthLaptop}
+                heightLaptop={res.fields.styling?.heightLaptop}
+                widthHoverLaptop={res.fields.styling?.widthHoverLaptop}
+                heightHoverLaptop={res.fields.styling?.heightHoverLaptop}
+                
+
+                widthIconLaptop={res.fields.styling?.widthIconLaptop}
+                heightIconLaptop={res.fields.styling?.heightIconLaptop}
+                widthHoverIconLaptop={res.fields.styling?.widthHoverIconLaptop}
+                heightHoverIconLaptop={res.fields.styling?.heightHoverIconLaptop}
+
+                href={res.fields.url}
+                filter={res.fields.styling?.filter}
                 platsCardsPicture={
                   `url(${res.fields.cardPicture?.fields.file.url})` || ""
                 }
-                widthHover={res.fields.styling?.widthHover}
-                heightHover={res.fields.styling?.heightHover}
-                widthHoverDiv={res.fields.styling?.widthHoverDiv}
-                heightHoverDiv={res.fields.styling?.heightHoverDiv}
-                href={res.fields.url}
-                filter={res.fields.styling?.filter}
                 imageIconHover={
                   `url(${res.fields.iconHover?.fields.file.url})` || ""
                 }
@@ -88,7 +93,7 @@ export default function AvailablePlats(props) {
             rel="noreferrer"
           >
             {res.fields.platformName}
-          </PlatsButton>
+          </PlatsButton>  
         );
       })}
     </Content>

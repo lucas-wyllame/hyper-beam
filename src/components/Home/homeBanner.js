@@ -137,7 +137,7 @@ export default function HomeBanner() {
                       onClick={() => handleClick(res.fields?.pathUrl)}
                     >
                       <HyperCard
-                        backgroundImg={`url(${res.fields?.littleImage?.fields?.file.url})`}
+                        hyperCardImg={`url(${res.fields?.littleImage?.fields?.file.url})`}
                         width={"196px"}
                         height={"196px"}
                       />

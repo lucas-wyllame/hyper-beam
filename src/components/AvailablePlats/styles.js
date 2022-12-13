@@ -16,7 +16,7 @@ export const Content = styled.div`
   margin-top: 50px;
   @media (min-width: 1024px) {
     height: 900px;
-    margin-top: 70px;
+    margin-top: 0px;
   }
 `;
 
@@ -47,7 +47,7 @@ export const PlatsGroup = styled.div`
   align-items: center;
   justify-content: center;
   :hover {
-    a{
+    a {
       color: ${(props) => props.colorHoverText};
     }
   }
@@ -57,9 +57,8 @@ export const PlatsGroup = styled.div`
 `;
 
 export const PlatsCards = styled.a`
-  width: ${(props) => props.width};
-  height: ${(props) => props.height};
-  background-color: #7c7da2;
+  width: 196px;
+  height: 196px;
   background-image: ${(props) => props.platsCardsPicture};
   background-size: cover;
   background-repeat: no-repeat;
@@ -69,19 +68,28 @@ export const PlatsCards = styled.a`
   justify-content: center;
   align-items: center;
   border-radius: 15px;
-  :hover {
-    width: ${(props) => props.widthHover};
-    height: ${(props) => props.heightHover};
-    filter: ${(props) => props.filter};
-    div {
-      width: ${(props) => props.widthHoverDiv};
-      height: ${(props) => props.heightHoverDiv};
-      background-image: ${(props) => props.imageIconHover};
-    }
+  div {
+    width: 98px;
+    height: 98px;
+    background-image: ${(props) => props.imageIcon};
   }
   @media (min-width: 1024px) {
     width: ${(props) => props.widthLaptop};
     height: ${(props) => props.heightLaptop};
+    div {
+      width: ${(props) => props.widthIconLaptop};
+      height: ${(props) => props.heightIconLaptop};
+    }
+    :hover {
+      width: ${(props) => props.widthHoverLaptop};
+      height: ${(props) => props.heightHoverLaptop};
+      filter: ${(props) => props.filter};
+      div {
+        width: ${(props) => props.widthHoverIconLaptop};
+        height: ${(props) => props.heightHoverIconLaptop};
+        background-image: ${(props) => props.imageIconHover};
+      }
+    }
   }
 `;
 

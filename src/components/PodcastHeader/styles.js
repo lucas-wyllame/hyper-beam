@@ -17,14 +17,18 @@ export const Content = styled.div`
 export const BackBanner = styled.div`
   width: 100%;
   height: auto;
-  background: #a57bca;
+  background-color: #a57bca;
+  background-image: ${(props) => props.backgroundImg};
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  /* padding: 50px 33px; */
-  /* flex-direction: column; */
+  padding: 50px 0;
   @media (min-width: 1024px) {
     height: 400px;
+    padding: 0;
   }
 `;
 

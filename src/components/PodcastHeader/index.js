@@ -10,10 +10,10 @@ import { Control } from "@icon/IconComTag";
 export default function PodcastHeader(props) {
   return (
     <Content>
-      <BackBanner>
+      <BackBanner backgroundImg={props.backgroundImg}>
         <ItensBanner>
           <HyperCard
-            backgroundImg={props.backgroundImg}
+            hyperCardImg={props.hyperCardImage}
             width={"275px"}
             height={"275px"}
             widthLaptop={"340px"}
@@ -26,7 +26,7 @@ export default function PodcastHeader(props) {
               margin="0"
               alignItems="center"
               widthLaptop="90%"
-              heightLaptop="182px"
+              heightLaptop="216px"
               heightLaptopLarge="100px"
               flexDLaptopLarge="row"
             >

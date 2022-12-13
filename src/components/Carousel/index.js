@@ -113,7 +113,7 @@ export default function Carousel() {
               key={index}
             >
               <HyperCard
-                backgroundImg={`url(${res.fields?.littleImage?.fields.file.url})`}
+                hyperCardImg={`url(${res.fields?.littleImage?.fields.file.url})`}
                 width={"225px"}
                 height={"225px"}
               ></HyperCard>

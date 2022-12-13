@@ -16,6 +16,7 @@ import {
   RightArrow,
   Dots,
   LittleDots,
+  BackgroundOverlay,
 } from "./styles";
 import { useRouter } from "next/router";
 import Slider from "react-slick";
@@ -141,11 +142,12 @@ export default function LastEpisodes() {
                 <Background
                   image={`url(${res.fields?.bigImage?.fields.file.url})`}
                 >
+                  {/* <BackgroundOverlay /> */}
                   <Block>
                     <CardAndText>
                       <a href={`/podcasts/${res.fields?.pathUrl}`}>
                         <HyperCard
-                          backgroundImg={`url(${res.fields?.littleImage?.fields?.file.url})`}
+                          hyperCardImg={`url(${res.fields?.littleImage?.fields?.file.url})`}
                           width={"253px"}
                           height={"253px"}
                           position={"relative"}
@@ -194,7 +196,6 @@ export default function LastEpisodes() {
                       >
                         <Control />
                       </Icon>
-
                       {res.fields.gameTags?.map((res, index) => (
                         <ButtonsEp
                           key={index}
@@ -209,6 +210,7 @@ export default function LastEpisodes() {
                     </IconAndButtons>
                   </Block>
                 </Background>
+                
               </React.Fragment>
             );
           })}

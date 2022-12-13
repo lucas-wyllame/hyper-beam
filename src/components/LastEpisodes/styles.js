@@ -87,8 +87,10 @@ export const Background = styled.div`
   background-image: ${(props) => props.image};
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   justify-content: center;
+  z-index: 0;
   @media (min-width: 1024px) {
     height: 420px;
   }
@@ -174,7 +176,7 @@ export const ButtonsEp = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 25px;
-  margin: 0 10px;
+  margin: 0 -3px;
   @media (min-width: 1024px) {
     width: ${(props) => props.widthLaptop};
     height: ${(props) => props.heightLaptop};
@@ -236,11 +238,21 @@ export const LittleDots = styled.div`
   display: flex;
   justify-content: space-between;
   border-radius: 50px;
-  /* background-color: ${(props) => (props.clicked ? "purple" : "red")}; */
   :hover {
-    background: purple;
+    background: #a127ff;
   }
   @media (min-width: 1024px) {
     height: 10px;
   }
+`;
+
+export const BackgroundOverlay = styled.div`
+  width: 100%;
+  height: 520px;
+  background-color: black;
+  opacity: 0.1;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
 `;
