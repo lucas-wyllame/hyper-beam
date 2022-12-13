@@ -10,7 +10,7 @@ export const Content = styled.div`
   padding: 0 20px;
   @media (min-width: 1024px) {
     width: 100%;
-    height: 691px;
+    height: 643px;
     padding: 0 88px;
   }
   @media (min-width: 1440px) {
@@ -137,7 +137,7 @@ export const IconAndButtons = styled.div`
   width: 100%;
   height: auto;
   gap: ${(props) => props.gap};
-  background: yellow;
+  /* background: yellow; */
   margin-left: 0;
   margin-bottom: 0;
   display: flex;

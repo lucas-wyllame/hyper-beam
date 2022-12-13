@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: auto;
-  background: red;
+  /* background: red; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,7 +31,7 @@ export const BackBanner = styled.div`
 export const ItensBanner = styled.div`
   width: 80%;
   height: auto;
-  background: blue;
+  /* background: blue; */
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -51,7 +51,7 @@ export const BannerInfos = styled.div`
   width: 100%;
   height: auto;
   display: flex;
-  background: cyan;
+  /* background: cyan; */
   flex-direction: column;
   justify-content: space-between;
   align-items: center;

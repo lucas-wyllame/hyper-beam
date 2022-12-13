@@ -56,6 +56,12 @@ export const MoreInfs = styled.h2`
   @media (min-width: 1024px) {
     font-size: 2rem;
     font-size: ${(props) => props.fontSizeLaptop};
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    white-space: normal;
   }
   @media (min-width: 1440px) {
     font-size: 2.5rem;

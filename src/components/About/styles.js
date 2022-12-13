@@ -22,6 +22,7 @@ export const LeftImage = styled.div`
   background-image: ${(props) => props.image};
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   border-radius: 0;
   max-width: 800px;
   margin: 0 0 30px 0;

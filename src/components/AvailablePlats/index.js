@@ -11,7 +11,7 @@ import {
 import { useState, useEffect } from "react";
 import { ConnectContent } from "src/ConfigContent";
 
-export default function AvailablePlats() {
+export default function AvailablePlats(props) {
   const [all, setAll] = useState([]);
   useEffect(() => {
     async function FetchMyApi() {
