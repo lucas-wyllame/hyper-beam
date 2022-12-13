@@ -60,7 +60,7 @@ export const PlatsCards = styled.a`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
   background-color: #7c7da2;
-  background-image: ${(props) => props.image};
+  background-image: ${(props) => props.platsCardsPicture};
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -72,11 +72,11 @@ export const PlatsCards = styled.a`
   :hover {
     width: ${(props) => props.widthHover};
     height: ${(props) => props.heightHover};
-    filter: drop-shadow(0 0 100em #fff);
+    filter: ${(props) => props.filter};
     div {
       width: ${(props) => props.widthHoverDiv};
       height: ${(props) => props.heightHoverDiv};
-      background-image: ${(props) => props.imageHover};
+      background-image: ${(props) => props.imageIconHover};
     }
   }
   @media (min-width: 1024px) {

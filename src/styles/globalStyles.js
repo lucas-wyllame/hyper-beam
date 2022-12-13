@@ -9,6 +9,9 @@ export const GlobalStyles = createGlobalStyle`
     width: 100%;
     height: 10px;
   }
+  li.slick-active > div{
+		background-color: purple;
+  } 
 `;
 
 export const Title = styled.p`
@@ -50,18 +53,25 @@ export const MoreInfs = styled.h2`
   padding-top: ${(props) => props.paddingTop};
   color: #ffffff;
   margin: 0;
+  text-overflow: ${(props) => props.textOverflow};
+  overflow: ${(props) => props.overflow};
+  display: ${(props) => props.display};
+  -webkit-line-clamp: ${(props) => props.wbkLineClamp};
+  -webkit-box-orient: ${(props) => props.wbkBoxOrient};
+  white-space: ${(props) => props.whiteSpace};
+  /* text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  white-space: normal; */
   @media (min-width: 768px) {
     font-size: 1.5rem;
   }
   @media (min-width: 1024px) {
     font-size: 2rem;
     font-size: ${(props) => props.fontSizeLaptop};
-    text-overflow: ellipsis;
-    overflow: hidden;
-    display: -webkit-box !important;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    white-space: normal;
+    -webkit-line-clamp: ${(props) => props.wbkLineClampLaptop};
   }
   @media (min-width: 1440px) {
     font-size: 2.5rem;

@@ -162,7 +162,17 @@ export default function LastEpisodes() {
                             number={res.fields?.number}
                           />
                         </a>
-                        <MoreInfs fontSize={"1.8rem"} width={"694px"}>
+                        <MoreInfs
+                          textOverflow="ellipsis"
+                          overflow="hidden"
+                          display="-webkit-box !important"
+                          wbkLineClamp={4}
+                          wbkLineClampLaptop={5}
+                          wbkBoxOrient="vertical"
+                          whiteSpace="normal"
+                          fontSize="1.8rem"
+                          width="694px"
+                        >
                           {res.fields.description}
                         </MoreInfs>
                       </TextsDivEp>

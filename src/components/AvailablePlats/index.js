@@ -26,6 +26,7 @@ export default function AvailablePlats(props) {
 
   return (
     <Content>
+      {console.log("AvailablePlats all", all)}
       <Title textAlign="center" margin="0 0 22px 0">
         Plataformas disponíveis
       </Title>
@@ -43,12 +44,16 @@ export default function AvailablePlats(props) {
               <PlatsCards
                 width={res.fields.styling?.width}
                 height={res.fields.styling?.height}
+                platsCardsPicture={
+                  `url(${res.fields.cardPicture?.fields.file.url})` || ""
+                }
                 widthHover={res.fields.styling?.widthHover}
                 heightHover={res.fields.styling?.heightHover}
                 widthHoverDiv={res.fields.styling?.widthHoverDiv}
                 heightHoverDiv={res.fields.styling?.heightHoverDiv}
                 href={res.fields.url}
-                imageHover={
+                filter={res.fields.styling?.filter}
+                imageIconHover={
                   `url(${res.fields.iconHover?.fields.file.url})` || ""
                 }
                 target="_blank"
