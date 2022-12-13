@@ -26,6 +26,7 @@ export const Banner = styled.div`
   align-items: center;
   position: relative;
   justify-content: space-between;
+  background-position: center;
   @media (min-width: 1024px) {
     height: 488px;
     justify-content: space-between;
