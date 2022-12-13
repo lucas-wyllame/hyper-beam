@@ -23,7 +23,7 @@ export const Content = styled.div`
 export const GroupText = styled.div`
   width: 100%;
   height: auto;
-  background: pink;
+  /* background: pink; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,7 +33,7 @@ export const GlobalPeoples = styled.div`
   width: 68%;
   max-width: 253px;
   height: 1100px;
-  background: red;
+  /* background: red; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
