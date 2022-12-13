@@ -1,4 +1,3 @@
-import { Content, CommentBox } from "./styles";
 import Disqus from "disqus-react";
 import styled from "styled-components";
 import { useState, useEffect } from "react";
@@ -13,10 +12,12 @@ export default function Comments() {
   const [disqusId, setDisquisId] = useState("");
 
   useEffect(() => {
-    setDisquisId(window.location.href.toString().replace(`${envUrl.link}/podcasts/`, ''));
+    setDisquisId(
+      window.location.href.toString().replace(`${envUrl.link}/podcasts/`, "")
+    );
     setDisquisUrl(window.location.href.toString());
   }, []);
-  
+
   const disqusShortname = "hyper-beam";
   const disqusConfig = {
     url: disqusUrl,
@@ -26,14 +27,14 @@ export default function Comments() {
   return (
     <Content>
       <DisqusDiv>
-        {disqusUrl &&
-        <Disqus.DiscussionEmbed
-          shortname={disqusShortname}
-          config={disqusConfig}
-          theme="auto"
-        />
-        }
+        {disqusUrl && (
+          <Disqus.DiscussionEmbed
+            shortname={disqusShortname}
+            config={disqusConfig}
+            theme="auto"
+          />
+        )}
       </DisqusDiv>
-     </Content>
+    </Content>
   );
 }

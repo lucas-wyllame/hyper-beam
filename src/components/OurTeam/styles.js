@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: 650px;
-  background: #1B1B36;
+  background: #1b1b36;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +23,7 @@ export const Content = styled.div`
 export const GroupText = styled.div`
   width: 100%;
   height: auto;
-  /* background: pink; */
+  background: pink;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,26 +33,30 @@ export const GlobalPeoples = styled.div`
   width: 68%;
   max-width: 253px;
   height: 1100px;
-  /* background: red; */
+  background: red;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-bottom: 80px;
   position: relative;
   @media (min-width: 1024px) {
     width: 986px;
     max-width: 986px;
     height: 418px;
+    margin-bottom: 0;
+    margin-top: 50px;
   }
   @media (max-width: 1175px) {
     width: 100%;
     max-width: 655px;
     height: 384px;
+   
   }
   @media (max-width: 768px) {
     width: 281px;
     /* max-width: 253px; */
     height: auto;
+   
   }
 `;
 

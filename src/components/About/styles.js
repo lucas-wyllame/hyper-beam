@@ -37,7 +37,7 @@ export const LeftImage = styled.div`
 export const TextDiv = styled.div`
   width: 50%;
   height: auto;
-  background: green;
+  /* background: green; */
   padding: 0 18px;
   width: 100%;
   display: flex;
