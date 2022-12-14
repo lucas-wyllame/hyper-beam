@@ -26,7 +26,6 @@ import { Control } from "@icon/Control";
 import { TitleInsideComponent } from "@styles/globalStyles";
 import { ConnectContent } from "src/ConfigContent";
 
-
 function SamplePrevArrow(props) {
   const { className, onClick } = props;
   return (
@@ -191,6 +190,7 @@ export default function LastEpisodes() {
                       <Icon
                         onMouseOver={handleMouseOver}
                         onMouseOut={handleMouseOut}
+                        height="40px"
                         // widthIcon={"40px"}
                         // heightIcon={"40px"}
                         // widthIconLaptop="53px"
@@ -204,6 +204,7 @@ export default function LastEpisodes() {
                         <ButtonsEp
                           key={index}
                           width="auto"
+                          height="40px"
                           widthLaptop="auto"
                           heightLaptop="49px"
                           fontSizeLaptop="2rem"
@@ -214,7 +215,6 @@ export default function LastEpisodes() {
                     </IconAndButtons>
                   </Block>
                 </Background>
-                
               </React.Fragment>
             );
           })}

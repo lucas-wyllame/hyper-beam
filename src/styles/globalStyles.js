@@ -102,7 +102,7 @@ export const MoreInfs = styled.h2`
   -webkit-line-clamp: ${(props) => props.wbkLineClamp};
   -webkit-box-orient: ${(props) => props.wbkBoxOrient};
   white-space: ${(props) => props.whiteSpace};
-  span{
+  span {
     font-size: 21px;
     font-weight: bold;
   }
@@ -156,7 +156,7 @@ export const Icon = styled.div`
   /* width: ${(props) => props.widthIcon}; */
   /* height: ${(props) => props.heightIcon}; */
   width: 292px;
-  height: 40px;
+  height: ${(props) => props.height};
   background: #a127ff;
   border-radius: 30px;
   display: flex;

@@ -4,8 +4,8 @@ import {
   Plats,
   PlatsCards,
   PlatsIcons,
-  PlatsButton,
   Divider,
+  PlatsButton,
 } from "./styles";
 import { useState, useEffect } from "react";
 import { ConnectContent } from "src/ConfigContent";

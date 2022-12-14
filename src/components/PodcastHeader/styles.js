@@ -33,9 +33,9 @@ export const BackBanner = styled.div`
 `;
 
 export const ItensBanner = styled.div`
-  width: 80%;
+  width: 81%;
   height: auto;
-  /* background: blue; */
+  background: blue;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -59,7 +59,7 @@ export const BannerInfos = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-top: 60px;
+  /* margin-top: 60px; */
   @media (min-width: 1024px) {
     width: 40%;
     height: 250px;

@@ -3,11 +3,11 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: auto;
-  /* background: pink; */
+  background: pink;
   margin: 40px 0;
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
+  padding: 0 14px;
   @media (min-width: 1024px) {
     width: 100%;
     height: 643px;
@@ -139,7 +139,7 @@ export const IconAndButtons = styled.div`
   width: 100%;
   height: auto;
   gap: ${(props) => props.gap};
-  /* background: yellow; */
+  background: yellow;
   margin-left: 0;
   margin-bottom: 0;
   display: flex;
@@ -166,8 +166,8 @@ export const IconAndButtons = styled.div`
 
 export const ButtonsEp = styled.div`
   width: ${(props) => props.width};
+  height: ${(props) => props.height};
   font-size: 1.5rem;
-  height: 36px;
   background: rgba(17, 18, 45, 0.6);
   border-radius: 44px;
   text-align: center;

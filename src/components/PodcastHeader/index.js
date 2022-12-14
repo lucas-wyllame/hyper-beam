@@ -1,11 +1,17 @@
 import { Content, BackBanner, ItensBanner, BannerInfos, Topic } from "./styles";
 import HyperCard from "../../components/HyperCard/hyperCard";
-import { TitleInsideComponent, MoreInfs } from "@styles/globalStyles";
+import {
+  TitleInsideComponent,
+  MoreInfs,
+  Icon,
+  TextInsideIcon,
+} from "@styles/globalStyles";
 import {
   IconAndButtons,
   ButtonsEp,
 } from "../../components/LastEpisodes/styles";
-import { Control } from "@icon/ControlWithCircle";
+import { ControlWithCircle } from "@icon/ControlWithCircle";
+import { Control } from "@icon/Control";
 
 export default function PodcastHeader(props) {
   return (
@@ -24,18 +30,28 @@ export default function PodcastHeader(props) {
             <IconAndButtons
               gap="15px"
               margin="0"
-              alignItems="center"
+              alignItems="normal"
               widthLaptop="90%"
               heightLaptop="216px"
               heightLaptopLarge="100px"
               flexDLaptopLarge="row"
             >
-              <Control />
+              <Icon
+                height="49px"
+                // widthIcon={"40px"}
+                // heightIcon={"40px"}
+                // widthIconLaptop="53px"
+                // heightIconLaptop="53px"
+              >
+                <Control />
+                <TextInsideIcon>Assuntos desse episódio</TextInsideIcon>
+                {/* <ControlWithCircle /> */}
+              </Icon>
               {props.gameTags[0]?.map((res, index) => (
                 <ButtonsEp
                   key={index}
-                  widthLaptop="auto"
                   width="auto"
+                  height="49px"
                   heightLaptop="49px"
                   fontSizeLaptop="2rem"
                 >
