@@ -149,14 +149,15 @@ export const TitleInside = styled.div`
 `;
 
 export const Icon = styled.div`
-  width: ${(props) => props.widthIcon};
-  height: ${(props) => props.heightIcon};
+  /* width: ${(props) => props.widthIcon}; */
+  /* height: ${(props) => props.heightIcon}; */
+  width: 292px;
+  height: 40px;
   background: #a127ff;
   border-radius: 30px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  /* margin-right: 16px; */
+  padding-left: 10px;
   color: #ffffff;
   position: relative;
   grid-column: ${(props) => props.gridColumn};
@@ -165,6 +166,10 @@ export const Icon = styled.div`
     width: ${(props) => props.widthIconLaptop};
     height: ${(props) => props.heightIconLaptop};
   }
+`;
+
+export const TextInsideIcon = styled.div`
+  font-size: 1.5rem;
 `;
 
 export const theme = createTheme({

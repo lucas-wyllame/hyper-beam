@@ -177,11 +177,11 @@ export const ButtonsEp = styled.div`
   align-items: center;
   padding: 0 25px;
   margin: 0 -3px;
-  max-width: max-content;
   @media (min-width: 1024px) {
     width: ${(props) => props.widthLaptop};
     height: ${(props) => props.heightLaptop};
     font-size: ${(props) => props.fontSizeLaptop};
+    max-width: max-content;
   }
 `;
 

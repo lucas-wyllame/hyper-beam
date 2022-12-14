@@ -1,4 +1,4 @@
-export function Control(props) {
+export function ControlWithCircle(props) {
   return (
     <svg
       data-name="Icon com Tag"

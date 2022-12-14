@@ -5,7 +5,7 @@ import {
   IconAndButtons,
   ButtonsEp,
 } from "../../components/LastEpisodes/styles";
-import { Control } from "@icon/IconComTag";
+import { Control } from "@icon/ControlWithCircle";
 
 export default function PodcastHeader(props) {
   return (

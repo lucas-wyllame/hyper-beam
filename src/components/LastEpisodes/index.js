@@ -1,4 +1,4 @@
-import { Title, Desc, MoreInfs } from "@styles/globalStyles";
+import { Title, Desc, MoreInfs, TextInsideIcon } from "@styles/globalStyles";
 import HyperCard from "../HyperCard/hyperCard";
 import { Icon } from "@styles/globalStyles";
 import {
@@ -21,9 +21,11 @@ import {
 import { useRouter } from "next/router";
 import Slider from "react-slick";
 import React, { useEffect, useState } from "react";
-import { Control } from "@icon/IconComTag";
+import { ControlWithCircle } from "@icon/ControlWithCircle";
+import { Control } from "@icon/Control";
 import { TitleInsideComponent } from "@styles/globalStyles";
 import { ConnectContent } from "src/ConfigContent";
+
 
 function SamplePrevArrow(props) {
   const { className, onClick } = props;
@@ -132,9 +134,9 @@ export default function LastEpisodes() {
       <Title margin="0">Episódios Recentes</Title>
       <Desc margin="0">Acompanhe nosso podcast e seus episódios</Desc>
       <ListPodcasts>
-        {isHovering && (
+        {/* {isHovering && (
           <HoveringIcon>Sobre o que falamos nesse episodio?</HoveringIcon>
-        )}
+        )} */}
         <Slider {...settings}>
           {all.slice(0, 5).map((res, index) => {
             return (
@@ -189,12 +191,14 @@ export default function LastEpisodes() {
                       <Icon
                         onMouseOver={handleMouseOver}
                         onMouseOut={handleMouseOut}
-                        widthIcon={"40px"}
-                        heightIcon={"40px"}
-                        widthIconLaptop="53px"
-                        heightIconLaptop="53px"
+                        // widthIcon={"40px"}
+                        // heightIcon={"40px"}
+                        // widthIconLaptop="53px"
+                        // heightIconLaptop="53px"
                       >
                         <Control />
+                        <TextInsideIcon>Assuntos desse episódio</TextInsideIcon>
+                        {/* <ControlWithCircle /> */}
                       </Icon>
                       {res.fields.gameTags?.map((res, index) => (
                         <ButtonsEp
