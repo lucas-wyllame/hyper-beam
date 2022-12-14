@@ -179,7 +179,7 @@ export function TitleInsideComponentGray(props) {
     cursor: ${(props) => props.cursor};
     @media (min-width: 768px) {
       width: ${(props) => props.widthTablet};
-      font-size: 1.5rem;
+      font-size: ${(props.fontSizeTablet)};
     }
     @media (min-width: 1024px) {
       width: 180px;
@@ -189,7 +189,7 @@ export function TitleInsideComponentGray(props) {
       font-size: 2rem;
       color: ${(props) => props.colorSpan};
       @media (min-width: 768px) {
-        font-size: 1.5rem;
+        font-size: ${(props.fontSizeTablet)};
       }
       @media (min-width: 1024px) {
         font-size: 2rem;
@@ -203,6 +203,7 @@ export function TitleInsideComponentGray(props) {
       widthTablet={props.widthTablet}
       colorSpan={props.colorSpan}
       cursor={props.cursor}
+      fontSizeTablet={props.fontSizeTablet}
     >
       Hyper Beam
       <Circle

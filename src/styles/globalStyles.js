@@ -109,7 +109,8 @@ export const MoreInfs = styled.h2`
     font-weight: bold;
   }
   @media (min-width: 768px) {
-    font-size: 2.2rem;
+    font-size: ${(props) => props.fontSizeTablet};
+    -webkit-line-clamp: ${(props) => props.wbkLineClampTablet};
   }
   @media (min-width: 1024px) {
     font-size: 2rem;
@@ -117,7 +118,7 @@ export const MoreInfs = styled.h2`
     -webkit-line-clamp: ${(props) => props.wbkLineClampLaptop};
   }
   @media (min-width: 1366px) {
-    font-size: 2.5rem;
+    font-size: ${(props) => props.fontSizeLaptopLarge};
   }
 `;
 

@@ -42,7 +42,7 @@ export default function AvailablePlats(props) {
                   image={`url(${res.fields.icon?.fields.file.url})` || ""}
                 />
                 <Divider />
-                <MoreInfs fontSize={"1.4rem"}>
+                <MoreInfs fontSize={"1.4rem"} fontSizeLaptopLarge="2.5rem">
                   Escute o Hyper Beam no <br />
                   <span> {res.fields.platformName}</span>
                 </MoreInfs>

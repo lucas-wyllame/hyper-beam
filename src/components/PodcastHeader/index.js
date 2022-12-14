@@ -69,7 +69,7 @@ export default function PodcastHeader(props) {
         </ItensBanner>
       </BackBanner>
       <Topic>
-        <MoreInfs fontSize="1.5rem">{props.desc}</MoreInfs>
+        <MoreInfs fontSize="1.5rem" fontSizeLaptopLarge="2.5rem">{props.desc}</MoreInfs>
       </Topic>
     </Content>
   );

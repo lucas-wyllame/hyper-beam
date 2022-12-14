@@ -14,38 +14,50 @@ export const Content = styled.div`
   margin-top: 100px;
   @media (min-width: 645px) {
     min-height: 635px;
-    height: auto;
+  }
+  @media (min-width: 1024px) {
+   padding: 60px 0;
   }
 `;
 
 export const PodcastsList = styled.div`
-  width: 286px;
+  width: 100%;
   height: auto;
   /* background: red; */
   display: flex;
   position: relative;
   margin-bottom: 70px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0 37px;
+  @media (min-width: 768px) {
+  }
   @media (min-width: 1024px) {
-    width: 1080px;
     gap: 60px;
     margin-bottom: 0;
     align-items: center;
+    padding: 0 70px;
+  }
+  @media (min-width: 1366px) {
+    padding: 0 196px;
   }
 `;
 
 export const CarouselStyled = styled.div`
-  width: 286px;
+  width: 100%;
   height: auto;
-  background: #0a0b26;
+  background: #0A0B26;
   display: flex !important;
   flex-direction: column;
   margin-bottom: 37px;
   gap: 15px;
   padding: 25px 20px 40px;
   /* margin-right: 45px; */
+  @media (min-width: 768px) {
+    flex-direction: row;
+    padding: 0;
+    justify-content: space-around;
+  }
   @media (min-width: 1024px) {
-    height: auto;
     margin-bottom: 0;
   }
 `;
@@ -136,5 +148,23 @@ export const PageButton = styled.div`
   }
   @media only screen and (max-width: 768px) {
     width: 30vw;
+  }
+`;
+
+export const GroupingHyperCard = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* background: cyan; */
+  justify-content: center;
+  /* align-self:center; */
+  @media (min-width: 768px) {
+    width: 70%;
+  }
+  @media (min-width: 1024px) {
+    width: 75%;
+  }
+  @media (min-width: 1336px) {
+    width: 75%;
   }
 `;

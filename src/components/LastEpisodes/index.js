@@ -189,6 +189,7 @@ export default function LastEpisodes() {
                           wbkBoxOrient="vertical"
                           whiteSpace="normal"
                           fontSize="1.8rem"
+                          fontSizeLaptopLarge="2.5rem"
                           width="694px"
                         >
                           {res.fields.description}

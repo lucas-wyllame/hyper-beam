@@ -9,6 +9,7 @@ import {
   CountLabel,
   PageButtons,
   PageButton,
+  GroupingHyperCard,
 } from "./styles";
 import HyperCard from "../HyperCard/hyperCard";
 import { useEffect, useState } from "react";
@@ -16,7 +17,7 @@ import { ConnectContent } from "src/ConfigContent";
 import { TitleInsideComponentGray } from "../Header/styles";
 import { useRouter } from "next/router";
 import { ContentPasteSearchOutlined } from "@mui/icons-material";
-import { MoreInfs } from "@styles/globalStyles";
+import { MoreInfs, TitleInsideComponent } from "@styles/globalStyles";
 
 export default function Carousel() {
   var itemsPerPage = 4;
@@ -116,28 +117,40 @@ export default function Carousel() {
                 hyperCardImg={`url(${res.fields?.littleImage?.fields.file.url})`}
                 width="151px"
                 height="151px"
-                margin="0 0 13px 0"
+                widthTablet="171px"
+                heightTablet="171px"
+                widthLaptop="200px"
+                heightLaptop="200px"
+                // margin="0 0 13px 0"
               />
-              <TitleInsideComponentGray
-                width="155px"
-                number={res.fields?.number}
-                colorSpan="#FFE747"
-                cursor="pointer"
-                widthCircle="6px"
-                heightCircle="6px"
-              />
-              <MoreInfs
-                textOverflow="ellipsis"
-                overflow="hidden"
-                display="-webkit-box !important"
-                wbkLineClamp={9}
-                wbkLineClampLaptop={5}
-                wbkBoxOrient="vertical"
-                whiteSpace="normal"
-                fontSize="1.5rem"
-              >
-                {res.fields.description}
-              </MoreInfs>
+              <GroupingHyperCard>
+                <TitleInsideComponent
+                  width="170px"
+                  widthTablet="240px"
+                  number={res.fields?.number}
+                  colorSpan="#FFE747"
+                  cursor="pointer"
+                  widthCircle="6px"
+                  heightCircle="6px"
+                  fontSize="2.0rem"
+                  fontSizeTablet="2.8rem"
+                />
+                <MoreInfs
+                  textOverflow="ellipsis"
+                  overflow="hidden"
+                  display="-webkit-box !important"
+                  wbkLineClamp={9}
+                  wbkLineClampLaptop={4}
+                  wbkLineClampTablet={3}
+                  wbkBoxOrient="vertical"
+                  whiteSpace="normal"
+                  fontSize="1.9rem"
+                  fontSizeTablet={"1.7rem"}
+                  fontSizeLaptopLarge="1.9rem"
+                >
+                  {res.fields.description}
+                </MoreInfs>
+              </GroupingHyperCard>
             </CarouselStyled>
           );
         })}

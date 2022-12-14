@@ -32,7 +32,7 @@ export default function About() {
           A fagulha de amor aos games em forma de podcast.
         </Desc>
 
-        <MoreInfs fontSize={"1.4rem"}>
+        <MoreInfs fontSize={"1.4rem"} fontSizeTablet={"2.2rem"} fontSizeLaptopLarge="2.5rem">
           {aboutContent[0]?.apresentationText}
         </MoreInfs>
       </TextDiv>
