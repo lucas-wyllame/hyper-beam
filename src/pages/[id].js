@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from "next/dist/client/router";
-import Carousel from "../components/Carousel";
+import AllPodcasts from "../components/AllPodcasts";
 
 export default function Podcasts() {
   const router = useRouter();
@@ -8,7 +8,7 @@ export default function Podcasts() {
 
   return (
     <>
-      {parametro === "podcasts" ? <Carousel /> : null}
+      {parametro === "podcasts" ? <AllPodcasts /> : null}
     </>
   );
 }

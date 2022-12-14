@@ -140,12 +140,24 @@ export const ListHomeBanner = styled.div`
 
 export const HyperCardGroup = styled.div`
   height: 220px;
-  // background: green;
+  /* background: green; */
   cursor: pointer;
   display: flex !important;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
+  :hover {
+    div {
+      box-shadow: 0px 3px 8px #0000003d;
+      mix-blend-mode: soft-light;
+    }
+    div {
+      color: #ffe747;
+      div {
+        background-color: #ffe747;
+      }
+    }
+  }
 `;
 
 export const HyperText = styled.label`

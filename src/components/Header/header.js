@@ -37,7 +37,7 @@ export default function Header(props) {
         <AfterSearch>
           <HyperCard width="104px" height="104px" />
           <InfoSearch>
-            <TitleInsideComponentSearch />
+            <TitleInsideComponentGray />
             <IconAndTagBox>
               <IconAndTagRow>
                 <Icon

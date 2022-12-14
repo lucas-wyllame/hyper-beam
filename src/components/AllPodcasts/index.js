@@ -13,7 +13,7 @@ import {
 import HyperCard from "../HyperCard/hyperCard";
 import { useEffect, useState } from "react";
 import { ConnectContent } from "src/ConfigContent";
-import { TitleInsideComponentSearch } from "../Header/styles";
+import { TitleInsideComponentGray } from "../Header/styles";
 import { useRouter } from "next/router";
 import { ContentPasteSearchOutlined } from "@mui/icons-material";
 
@@ -117,7 +117,7 @@ export default function Carousel() {
                 width={"225px"}
                 height={"225px"}
               ></HyperCard>
-              <TitleInsideComponentSearch number={res.fields?.number} />
+              <TitleInsideComponentGray number={res.fields?.number} />
             </CarouselStyled>
           );
         })}

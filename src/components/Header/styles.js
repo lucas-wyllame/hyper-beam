@@ -155,8 +155,8 @@ export const IconAndTagRow = styled.div`
   }
 `;
 
-export function TitleInsideComponentSearch(props) {
-  const TitleInsideSearch = styled.div`
+export function TitleInsideComponentGray(props) {
+  const TitleInsideGray = styled.div`
     width: 180px;
     font-size: 2rem;
     color: #9a8dac;
@@ -165,20 +165,27 @@ export function TitleInsideComponentSearch(props) {
     align-items: center;
     justify-content: space-between;
     /* background: blue; */
+    :hover {
+      color: #ffe747;
+    }
     span {
       font-size: 2rem;
     }
   `;
+  const Circle = styled.div`
+    width: 8px;
+    height: 8px;
+    background: #9e9e9e;
+    border-radius: 50%;
+  `;
   return (
-    <TitleInsideSearch>
+    <TitleInsideGray>
       Hyper Beam
-      <ThemeProvider theme={theme}>
-        <FiberManualRecordIcon sx={{ color: "#9e9e9e" }} />
-      </ThemeProvider>
+      <Circle />
       <span>
         {props.number < 10 ? 0 : ""}
         {props.number}
       </span>
-    </TitleInsideSearch>
+    </TitleInsideGray>
   );
 }

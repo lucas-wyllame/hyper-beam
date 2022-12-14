@@ -19,6 +19,7 @@ import { TitleInsideComponent } from "@styles/globalStyles";
 import React, { useEffect } from "react";
 import { ConnectContent } from "../../ConfigContent";
 import { useState } from "react";
+import { TitleInsideComponentGray } from "../Header/styles";
 
 // function SamplePrevArrow(props) {
 //   const { className, onClick } = props;
@@ -141,10 +142,7 @@ export default function HomeBanner() {
                         width={"196px"}
                         height={"196px"}
                       />
-                      <HyperText>
-                        Hyper Beam {res.fields?.number < 10 ? 0 : ""}
-                        {res.fields?.number}
-                      </HyperText>
+                      <TitleInsideComponentGray number={res.fields?.number}  />
                     </HyperCardGroup>
                   </React.Fragment>
                 );
