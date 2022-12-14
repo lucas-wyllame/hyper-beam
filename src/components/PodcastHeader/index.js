@@ -26,7 +26,13 @@ export default function PodcastHeader(props) {
             heightLaptop={"340px"}
           />
           <BannerInfos>
-            <TitleInsideComponent number={props.number} />
+            <TitleInsideComponent
+              width="260px"
+              fontSize="3.1rem"
+              widthCircle="8px"
+              heightCircle="8px"
+              number={props.number}
+            />
             <IconAndButtons
               gap="15px"
               margin="0"

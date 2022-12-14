@@ -155,10 +155,21 @@ export const IconAndTagRow = styled.div`
   }
 `;
 
+export const Circle = styled.div`
+  width: ${(props) => props.widthCircle};
+  height: ${(props) => props.heightCircle};
+  background: #9e9e9e;
+  border-radius: 50%;
+  @media (min-width: 768px) {
+    width: ${(props) => props.widthCircleTablet};
+    height: ${(props) => props.heightCircleTablet};
+  }
+`;
+
 export function TitleInsideComponentGray(props) {
   const TitleInsideGray = styled.div`
-    width: 180px;
-    font-size: 2rem;
+    width: ${(props) => props.width};
+    font-size: 1.7rem;
     color: #9a8dac;
     font-weight: bold;
     display: flex;
@@ -167,7 +178,7 @@ export function TitleInsideComponentGray(props) {
     /* background: blue; */
     cursor: ${(props) => props.cursor};
     @media (min-width: 768px) {
-      width: 125px;
+      width: ${(props) => props.widthTablet};
       font-size: 1.5rem;
     }
     @media (min-width: 1024px) {
@@ -185,24 +196,21 @@ export function TitleInsideComponentGray(props) {
       }
     }
   `;
-  const Circle = styled.div`
-    width: 8px;
-    height: 8px;
-    background: #9e9e9e;
-    border-radius: 50%;
-    @media (min-width: 768px) {
-      width: 6px;
-      height: 6px;
-    }
-    @media (min-width: 1024px) {
-      width: 8px;
-    height: 8px;
-    }
-  `;
+
   return (
-    <TitleInsideGray colorSpan={props.colorSpan} cursor={props.cursor}>
+    <TitleInsideGray
+      width={props.width}
+      widthTablet={props.widthTablet}
+      colorSpan={props.colorSpan}
+      cursor={props.cursor}
+    >
       Hyper Beam
-      <Circle />
+      <Circle
+        widthCircle={props.widthCircle}
+        heightCircle={props.heightCircle}
+        widthCircleTablet={props.widthCircleTablet}
+        heightCircleTablet={props.heightCircleTablet}
+      />
       <span>
         {props.number < 10 ? 0 : ""}
         {props.number}

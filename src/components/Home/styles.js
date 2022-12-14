@@ -31,6 +31,7 @@ export const Banner = styled.div`
   position: relative;
   justify-content: space-between;
   background-position: center;
+  padding-top: 60px;
   @media (min-width: 768px) {
     width: 91%;
     height: 692px;
@@ -83,6 +84,9 @@ export const PodcastTheme = styled.p`
   margin: 0 0 21px 0;
   color: #fff;
   font-weight: bold;
+  @media (min-width: 768px) {
+    font-size: 2.5rem;
+  }
   @media (min-width: 1024px) {
     font-size: 2.3rem;
   }
@@ -103,11 +107,15 @@ export const BigImg = styled.div`
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center; */
+  @media (min-width: 768px) {
+    width: 487px;
+    height: 470px;
+    max-width: 540px;
+    right: 80px;
+  }
   @media (min-width: 1024px) {
     width: 387px;
     height: 375px;
-    max-width: 540px;
-    right: 80px;
   }
   @media (min-width: 1440px) {
     width: 532px;

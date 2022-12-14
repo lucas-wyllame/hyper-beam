@@ -52,6 +52,7 @@ export default function LastEpisodes() {
   const [isHovering, setIsHovering] = useState(false);
   const [all, setAll] = useState([]);
   const [clicked, setClicked] = useState(false);
+  const [state, setState] = useState();
 
   function teste() {
     let liTeste =
@@ -127,6 +128,10 @@ export default function LastEpisodes() {
     ],
   };
 
+  // var sizeScreen = window?.screen.width;
+  // setState(sizeScreen);
+  // console.log(sizeScreen);
+
   return (
     <Content>
       {console.log("LastEpisodes all", all)}
@@ -151,8 +156,10 @@ export default function LastEpisodes() {
                           hyperCardImg={`url(${res.fields?.littleImage?.fields?.file.url})`}
                           width={"253px"}
                           height={"253px"}
+                          widthTablet="337px"
+                          heightTablet="337px"
                           position={"relative"}
-                          top={"-35px"}
+                          top={"-20px"}
                           widthLaptopLarge={"337px"}
                           heightLaptopLarge={"337px"}
                           // onClick={window.location.href=`/podcasts`}
@@ -161,8 +168,16 @@ export default function LastEpisodes() {
                       <TextsDivEp>
                         <a href={`/podcasts/${res.fields?.pathUrl}`}>
                           <TitleInsideComponent
-                            cursor="pointer"
                             number={res.fields?.number}
+                            width="240px"
+                            widthTablet="310px"
+                            fontSize="2.8rem"
+                            fontSizeTablet="3.8rem"
+                            cursor="pointer"
+                            widthCircle="8px"
+                            heightCircle="8px"
+                            widthCircleTablet="10px"
+                            heightCircleTablet="10px"
                           />
                         </a>
                         <MoreInfs
@@ -193,12 +208,12 @@ export default function LastEpisodes() {
                         height="40px"
                         // widthIcon={"40px"}
                         // heightIcon={"40px"}
-                        // widthIconLaptop="53px"
-                        // heightIconLaptop="53px"
+                        widthIconLaptop="53px"
+                        heightIconLaptop="53px"
                       >
-                        <Control />
+                        <Control className="control" />
                         <TextInsideIcon>Assuntos desse episódio</TextInsideIcon>
-                        {/* <ControlWithCircle /> */}
+                        <ControlWithCircle className="controlWithCircle" />
                       </Icon>
                       {res.fields.gameTags?.map((res, index) => (
                         <ButtonsEp

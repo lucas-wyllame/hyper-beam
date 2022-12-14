@@ -119,9 +119,12 @@ export default function Carousel() {
                 margin="0 0 13px 0"
               />
               <TitleInsideComponentGray
+                width="155px"
                 number={res.fields?.number}
                 colorSpan="#FFE747"
                 cursor="pointer"
+                widthCircle="6px"
+                heightCircle="6px"
               />
               <MoreInfs
                 textOverflow="ellipsis"

@@ -14,8 +14,8 @@ const CardBanner = styled.div`
   cursor: pointer;
   z-index: 2;
   @media (min-width: 768px) {
-    width: 168px;
-    height: 168px;
+    width: ${(props) => props.widthTablet};
+    height: ${(props) => props.heightTablet};
   }
   @media (min-width: 1024px) {
     width: ${(props) => props.widthLaptop};
@@ -38,6 +38,8 @@ export default function HyperCard({
   heightLaptop,
   widthLaptopLarge,
   heightLaptopLarge,
+  widthTablet,
+  heightTablet,
 }) {
   return (
     <CardBanner
@@ -49,6 +51,8 @@ export default function HyperCard({
       margin={margin}
       widthLaptop={widthLaptop}
       heightLaptop={heightLaptop}
+      widthTablet={widthTablet}
+      heightTablet={heightTablet}
       widthLaptopLarge={widthLaptopLarge}
       heightLaptopLarge={heightLaptopLarge}
     />

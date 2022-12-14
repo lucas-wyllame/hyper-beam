@@ -28,7 +28,7 @@ export default function About() {
       />
       <TextDiv>
         <Title margin="0 0 5px 0">Somos o Hyper Beam</Title>
-        <Desc margin="0 0 22px 0">
+        <Desc mgBottomTablet="38px" margin="0 0 22px 0">
           A fagulha de amor aos games em forma de podcast.
         </Desc>
 

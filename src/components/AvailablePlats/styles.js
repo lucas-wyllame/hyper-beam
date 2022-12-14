@@ -23,7 +23,7 @@ export const Content = styled.div`
 export const Plats = styled.div`
   width: 100%;
   height: auto;
-  background: red;
+  /* background: red; */
   flex-direction: column;
   display: flex;
   row-gap: 14px;
@@ -47,6 +47,10 @@ export const PlatsCards = styled.a`
   padding-left: 15px;
   gap: 15px;
   border-radius: 15px;
+  @media (min-width: 768px) {
+    width: 502px;
+    height: 105px;
+  }
   @media (min-width: 1024px) {
   }
 `;

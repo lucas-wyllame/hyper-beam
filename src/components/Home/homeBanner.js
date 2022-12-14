@@ -124,7 +124,15 @@ export default function HomeBanner() {
       <Banner image={`url(${lastPodcast.fields?.bigImage?.fields.file.url})`}>
         <FeaturedPodcastInfo>
           <TitleInsideComponent
+            width="210px"
+            widthTablet="250px"
+            fontSize="2.5rem"
+            fontSizeTablet="3rem"
             margin="12px 0"
+            widthCircle="7px"
+            heightCircle="7px"
+            widthCircleTablet="8px"
+            heightCircleTablet="8px"
             number={lastPodcast.fields?.number}
           />
           <PodcastTheme>{lastPodcast.fields?.title}</PodcastTheme>
@@ -149,10 +157,18 @@ export default function HomeBanner() {
                         hyperCardImg={`url(${res.fields?.littleImage?.fields?.file.url})`}
                         width={"196px"}
                         height={"196px"}
+                        widthTablet="168px"
+                        heightTablet="168px"
                         widthLaptop={"196px"}
                         heightLaptop={"196px"}
                       />
-                      <TitleInsideComponentGray number={res.fields?.number} />
+                      <TitleInsideComponentGray
+                        width="145px"
+                        widthTablet="130px"
+                        widthCircle="6px"
+                        heightCircle="6px"
+                        number={res.fields?.number}
+                      />
                     </HyperCardGroup>
                   </React.Fragment>
                 );

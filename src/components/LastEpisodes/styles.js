@@ -10,7 +10,7 @@ export const Content = styled.div`
   padding: 0 14px;
   @media (min-width: 1024px) {
     width: 100%;
-    height: 643px;
+    height: 683px;
     padding: 0 88px;
   }
   @media (min-width: 1366px) {
@@ -22,7 +22,7 @@ export const ListPodcasts = styled.div`
   width: 100%;
   height: auto;
   /* background: blue; */
-  margin: 20px 0;
+  /* margin: 20px 0; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -139,7 +139,7 @@ export const IconAndButtons = styled.div`
   width: 100%;
   height: auto;
   gap: ${(props) => props.gap};
-  background: yellow;
+  /* background: yellow; */
   margin-left: 0;
   margin-bottom: 0;
   display: flex;
@@ -176,7 +176,11 @@ export const ButtonsEp = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 25px;
-  margin: 0 -3px;
+  /* margin: 0 -3px; */
+  @media (min-width: 768px) {
+    height: 56px;
+    font-size: 2rem;
+  }
   @media (min-width: 1024px) {
     width: ${(props) => props.widthLaptop};
     height: ${(props) => props.heightLaptop};
@@ -201,9 +205,10 @@ export const ButtonSeeAll = styled.button`
     height: 51px;
     text-shadow: 0px 3px 6px #ff00c47a;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     width: 160px;
     height: 50px;
+    margin-top: 70px;
   }
 `;
 

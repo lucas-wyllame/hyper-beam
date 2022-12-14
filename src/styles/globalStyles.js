@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { createTheme } from "@mui/material/styles";
 import { ThemeProvider } from "styled-components";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import { Circle } from "src/components/Header/styles";
 
 export const GlobalStyles = createGlobalStyle`
   .slick-dots li {
@@ -82,7 +83,7 @@ export const Desc = styled.h1`
   font-weight: 500;
   @media (min-width: 768px) {
     font-size: 2.5rem;
-    margin-bottom: 38px;
+    margin-bottom: ${(props) => props.mgBottomTablet};
   }
   @media (min-width: 1024px) {
     font-size: 2.2rem;
@@ -121,8 +122,8 @@ export const MoreInfs = styled.h2`
 `;
 
 export const TitleInside = styled.div`
-  width: 220px;
-  font-size: 2.5rem;
+  width: ${(props) => props.width};
+  font-size: ${(props) => props.fontSize};
   margin: 12px 0;
   color: #fff;
   font-weight: bold;
@@ -133,8 +134,15 @@ export const TitleInside = styled.div`
   /* background: blue; */
   span {
     color: #ffe747;
-    font-size: 2.5rem;
+    font-size: ${(props) => props.fontSize};
     font-weight: bold;
+  }
+  @media (min-width: 768px) {
+    width: ${(props) => props.widthTablet};
+    font-size: ${(props) => props.fontSizeTablet};
+    span {
+      font-size: ${(props) => props.fontSizeTablet};
+    }
   }
   @media (min-width: 1024px) {
     width: 230px;
@@ -162,19 +170,30 @@ export const Icon = styled.div`
   border-radius: 30px;
   display: flex;
   align-items: center;
-  padding-left: 10px;
+  padding-left: 5px;
   color: #ffffff;
   position: relative;
   grid-column: ${(props) => props.gridColumn};
   grid-row: ${(props) => props.gridRow};
+  @media (min-width: 768px) {
+    height: 56px;
+  }
   @media (min-width: 1024px) {
     width: ${(props) => props.widthIconLaptop};
     height: ${(props) => props.heightIconLaptop};
+    padding-left: 0px;
+    background: none;
   }
 `;
 
 export const TextInsideIcon = styled.div`
   font-size: 1.5rem;
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
+  @media (min-width: 1024px) {
+    display: none;
+  }
 `;
 
 export const theme = createTheme({
@@ -186,11 +205,20 @@ export const theme = createTheme({
 });
 export function TitleInsideComponent(props) {
   return (
-    <TitleInside cursor={props.cursor}>
+    <TitleInside
+      width={props.width}
+      widthTablet={props.widthTablet}
+      fontSize={props.fontSize}
+      cursor={props.cursor}
+      fontSizeTablet={props.fontSizeTablet}
+    >
       Hyper Beam
-      <ThemeProvider theme={theme}>
-        <FiberManualRecordIcon sx={{ fontSize: "15px", color: "#9e9e9e" }} />
-      </ThemeProvider>
+      <Circle
+        widthCircle={props.widthCircle}
+        heightCircle={props.heightCircle}
+        widthCircleTablet={props.widthCircleTablet}
+        heightCircleTablet={props.heightCircleTablet}
+      />
       <span>
         {props.number < 10 ? 0 : ""}
         {props.number}

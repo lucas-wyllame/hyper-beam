@@ -50,13 +50,11 @@ export const GlobalPeoples = styled.div`
     width: 100%;
     max-width: 655px;
     height: 384px;
-   
   }
   @media (max-width: 768px) {
     width: 281px;
     /* max-width: 253px; */
     height: auto;
-   
   }
 `;
 
@@ -124,11 +122,17 @@ export const NameCasters = styled.label`
     font-size: 23px;
     color: #ffe747;
   }
+  @media (min-width: 768px) {
+    text-align: center;
+  }
 `;
 
 export const FuncCasters = styled.label`
   font-size: 20px;
   color: #9a8dac;
+  @media (min-width: 768px) {
+    text-align: center;
+  }
 `;
 
 export const LeftArrow = styled.div`
