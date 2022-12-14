@@ -55,6 +55,8 @@ export default function AvailablePlats(props) {
         return (
           <PlatsButton
             key={index}
+            width="332px"
+            height="54px"
             href="https://bit.ly/3Qe9421"
             target="_blank"
             rel="noreferrer"

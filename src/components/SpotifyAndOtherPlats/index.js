@@ -1,9 +1,4 @@
-import {
-  Content,
-  IframeSpotify,
-  TextPlats,
-  OtherPlats,
-} from "./styles";
+import { Content, IframeSpotify, TextPlats, OtherPlats } from "./styles";
 import { Title, Desc } from "@styles/globalStyles";
 import { PlatsButton } from "../AvailablePlats/styles";
 import { buttons } from "./buttons";
@@ -34,6 +29,8 @@ export default function SpotifyAndOtherPlats(props) {
           {buttons.map((res, index) => {
             return (
               <PlatsButton
+                width="247px"
+                height="49px"
                 key={index}
                 href="https://bit.ly/3Qe9421"
                 target="_blank"

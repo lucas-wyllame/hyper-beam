@@ -66,8 +66,8 @@ export const Divider = styled.div`
 `;
 
 export const PlatsButton = styled.button`
-  width: 332px;
-  height: 54px;
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
   font-size: 2rem;
   color: #fff;
   background: none;
