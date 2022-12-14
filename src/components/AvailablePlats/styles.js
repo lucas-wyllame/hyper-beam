@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 100%;
-  height: 1401px;
-  padding: 0 44px;
+  height: auto;
+  padding: 0 14px;
   /* background: #11129d; */
   background-image: url("/img/degrade logo.png");
   background-size: cover;
@@ -13,7 +13,7 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  padding: 50px 14px;
   @media (min-width: 1024px) {
     height: 900px;
     margin-top: 0px;
@@ -22,11 +22,11 @@ export const Content = styled.div`
 
 export const Plats = styled.div`
   width: 100%;
-  height: 65%;
-  /* background: red; */
+  height: auto;
+  background: red;
   flex-direction: column;
   display: flex;
-  justify-content: space-between;
+  row-gap: 14px;
   align-items: center;
   margin-bottom: 56px;
   margin-top: 45px;
@@ -38,89 +38,36 @@ export const Plats = styled.div`
   }
 `;
 
-export const PlatsGroup = styled.div`
-  width: 100%;
-  height: auto;
-  /* background: yellow; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  :hover {
-    a {
-      color: ${(props) => props.colorHoverText};
-    }
-  }
-  @media (min-width: 1024px) {
-    width: 34%;
-  }
-`;
-
 export const PlatsCards = styled.a`
-  width: 196px;
-  height: 196px;
-  background-image: ${(props) => props.platsCardsPicture};
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin: 0px 0 0 0;
+  width: 100%;
+  height: 82px;
+  background: #a127ff;
   display: flex;
-  justify-content: center;
   align-items: center;
+  padding-left: 15px;
+  gap: 15px;
   border-radius: 15px;
-  div {
-    width: 98px;
-    height: 98px;
-    background-image: ${(props) => props.imageIcon};
-  }
   @media (min-width: 1024px) {
-    width: ${(props) => props.widthLaptop};
-    height: ${(props) => props.heightLaptop};
-    div {
-      width: ${(props) => props.widthIconLaptop};
-      height: ${(props) => props.heightIconLaptop};
-    }
-    :hover {
-      width: ${(props) => props.widthHoverLaptop};
-      height: ${(props) => props.heightHoverLaptop};
-      filter: ${(props) => props.filter};
-      div {
-        width: ${(props) => props.widthHoverIconLaptop};
-        height: ${(props) => props.heightHoverIconLaptop};
-        background-image: ${(props) => props.imageIconHover};
-      }
-    }
   }
 `;
 
 export const PlatsIcons = styled.div`
-  width: ${(props) => props.widthIcon};
-  height: ${(props) => props.heightIcon};
-  background-color: #000;
+  width: 48.79px;
+  height: 48.79px;
   background-image: ${(props) => props.image};
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 50%;
-  @media (min-width: 1024px) {
-    width: ${(props) => props.widthIconLaptop};
-    height: ${(props) => props.heightIconLaptop};
-  }
 `;
 
-export const PlatsTitle = styled.a`
-  font-size: ${(props) => props.fontSize};
-  color: #ffffff;
-  margin: ${(props) => props.margin};
-  font-weight: ${(props) => props.fontWeight};
-  padding-left: ${(props) => props.paddingLeft};
-  padding-right: ${(props) => props.paddingRight};
-  @media (min-width: 1024px) {
-  }
+export const Divider = styled.div`
+  width: 1px;
+  height: 51px;
+  background: #711bb4;
 `;
 
 export const PlatsButton = styled.button`
-  width: 248px;
-  height: 50px;
+  width: 332px;
+  height: 54px;
   font-size: 2rem;
   color: #fff;
   background: none;

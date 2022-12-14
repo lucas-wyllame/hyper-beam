@@ -102,6 +102,10 @@ export const MoreInfs = styled.h2`
   -webkit-line-clamp: ${(props) => props.wbkLineClamp};
   -webkit-box-orient: ${(props) => props.wbkBoxOrient};
   white-space: ${(props) => props.whiteSpace};
+  span{
+    font-size: 21px;
+    font-weight: bold;
+  }
   @media (min-width: 768px) {
     font-size: 1.5rem;
   }

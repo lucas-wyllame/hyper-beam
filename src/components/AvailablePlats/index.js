@@ -1,12 +1,11 @@
-import { Title, Desc } from "@styles/globalStyles";
+import { Title, Desc, MoreInfs } from "@styles/globalStyles";
 import {
   Content,
   Plats,
-  PlatsGroup,
   PlatsCards,
   PlatsIcons,
-  PlatsTitle,
   PlatsButton,
+  Divider,
 } from "./styles";
 import { useState, useEffect } from "react";
 import { ConnectContent } from "src/ConfigContent";
@@ -37,50 +36,18 @@ export default function AvailablePlats(props) {
         {all.slice(0, 3).map((res, index) => {
           return (
             // eslint-disable-next-line react/jsx-key
-            <PlatsGroup
-              colorHoverText={res.fields.styling?.colorHoverText}
-              key={index}
-            >
-              <PlatsCards
-                widthLaptop={res.fields.styling?.widthLaptop}
-                heightLaptop={res.fields.styling?.heightLaptop}
-                widthHoverLaptop={res.fields.styling?.widthHoverLaptop}
-                heightHoverLaptop={res.fields.styling?.heightHoverLaptop}
-                
-
-                widthIconLaptop={res.fields.styling?.widthIconLaptop}
-                heightIconLaptop={res.fields.styling?.heightIconLaptop}
-                widthHoverIconLaptop={res.fields.styling?.widthHoverIconLaptop}
-                heightHoverIconLaptop={res.fields.styling?.heightHoverIconLaptop}
-
-                href={res.fields.url}
-                filter={res.fields.styling?.filter}
-                platsCardsPicture={
-                  `url(${res.fields.cardPicture?.fields.file.url})` || ""
-                }
-                imageIconHover={
-                  `url(${res.fields.iconHover?.fields.file.url})` || ""
-                }
-                target="_blank"
-                rel="noreferrer"
-              >
+            <>
+              <PlatsCards>
                 <PlatsIcons
-                  widthIcon={res.fields.styling?.widthIcon}
-                  heightIcon={res.fields.styling?.heightIcon}
                   image={`url(${res.fields.icon?.fields.file.url})` || ""}
                 />
+                <Divider />
+                <MoreInfs fontSize={"1.4rem"}>
+                  Escute o Hyper Beam no <br />
+                  <span> {res.fields.platformName}</span>
+                </MoreInfs>
               </PlatsCards>
-              <PlatsTitle
-                href={res.fields.url}
-                target="_blank"
-                rel="noreferrer"
-                fontSize={res.fields.styling?.fontSize}
-                fontWeight={res.fields.styling?.fontWeight}
-                margin={"15px 0 0 0"}
-              >
-                {res.fields.platformName}
-              </PlatsTitle>
-            </PlatsGroup>
+            </>
           );
         })}
       </Plats>
@@ -93,7 +60,7 @@ export default function AvailablePlats(props) {
             rel="noreferrer"
           >
             {res.fields.platformName}
-          </PlatsButton>  
+          </PlatsButton>
         );
       })}
     </Content>
