@@ -16,9 +16,10 @@ import { ConnectContent } from "src/ConfigContent";
 import { TitleInsideComponentGray } from "../Header/styles";
 import { useRouter } from "next/router";
 import { ContentPasteSearchOutlined } from "@mui/icons-material";
+import { MoreInfs } from "@styles/globalStyles";
 
 export default function Carousel() {
-  var itemsPerPage = 3;
+  var itemsPerPage = 4;
   const [all, setAll] = useState([]);
   const [offset, setOffset] = useState(0);
   const [totalRecords, setTotalRecords] = useState(50);
@@ -27,23 +28,22 @@ export default function Carousel() {
   async function handleNext() {
     var NextBtnStyle = await document.getElementById("nextBtn");
     var PreviousBtnStyle = await document.getElementById("previousBtn");
-    console.log("esquilo",offset);
+    console.log("esquilo", offset);
     if (offset < totalRecords) {
       setCurrentPage(offset);
       setOffset(offset + itemsPerPage);
-    } 
-     if(offset + 1 >= totalRecords){
-      NextBtnStyle.style.backgroundImage =
-      "url('./icon/blueArrowRight.svg')";
+    }
+    if (offset + 1 >= totalRecords) {
+      NextBtnStyle.style.backgroundImage = "url('./icon/blueArrowRight.svg')";
       // setCurrentPage(offset);
       // setOffset(offset + itemsPerPage);
     }
-    if(offset >= itemsPerPage){
+    if (offset >= itemsPerPage) {
       PreviousBtnStyle.style.backgroundImage =
-          "url('./icon/purpleArrowLeft.svg')";
-    }else{
+        "url('./icon/purpleArrowLeft.svg')";
+    } else {
       PreviousBtnStyle.style.backgroundImage =
-          "url('./icon/blueArrowLeft.svg')";
+        "url('./icon/blueArrowLeft.svg')";
     }
   }
 
@@ -60,14 +60,14 @@ export default function Carousel() {
         PreviousBtnStyle.style.backgroundImage =
           "url('./icon/blueArrowLeft.svg')";
       }
-    if (totalRecords - offset >= itemsPerPage) {
-      NextBtnStyle.style.backgroundImage =
-        "url('./icon/purpleArrowRight.svg')";
-    } else {
-      NextBtnStyle.style.display = "flex";
-      NextBtnStyle.style.backgroundImage =
-        "url('./icon/purpleArrowRight.svg')";
-    }
+      if (totalRecords - offset >= itemsPerPage) {
+        NextBtnStyle.style.backgroundImage =
+          "url('./icon/purpleArrowRight.svg')";
+      } else {
+        NextBtnStyle.style.display = "flex";
+        NextBtnStyle.style.backgroundImage =
+          "url('./icon/purpleArrowRight.svg')";
+      }
     }
   }
 
@@ -84,13 +84,13 @@ export default function Carousel() {
       setCurrentPage(0);
       setOffset(itemsPerPage);
       setTotalRecords(allContent.length);
-      if(itemsPerPage < allContent.length){
+      if (itemsPerPage < allContent.length) {
         NextBtnStyle.style.backgroundImage =
           "url('./icon/purpleArrowRight.svg')";
-          PreviousBtnStyle.style.backgroundImage =
-            "url('./icon/blueArrowLeft.svg')";
-            CounterLabel.style.display = "flex";
-      }else{
+        PreviousBtnStyle.style.backgroundImage =
+          "url('./icon/blueArrowLeft.svg')";
+        CounterLabel.style.display = "flex";
+      } else {
         CounterLabel.style.display = "none";
       }
     }
@@ -114,10 +114,27 @@ export default function Carousel() {
             >
               <HyperCard
                 hyperCardImg={`url(${res.fields?.littleImage?.fields.file.url})`}
-                width={"225px"}
-                height={"225px"}
-              ></HyperCard>
-              <TitleInsideComponentGray number={res.fields?.number} />
+                width="151px"
+                height="151px"
+                margin="0 0 13px 0"
+              />
+              <TitleInsideComponentGray
+                number={res.fields?.number}
+                colorSpan="#FFE747"
+                cursor="pointer"
+              />
+              <MoreInfs
+                textOverflow="ellipsis"
+                overflow="hidden"
+                display="-webkit-box !important"
+                wbkLineClamp={9}
+                wbkLineClampLaptop={5}
+                wbkBoxOrient="vertical"
+                whiteSpace="normal"
+                fontSize="1.5rem"
+              >
+                {res.fields.description}
+              </MoreInfs>
             </CarouselStyled>
           );
         })}

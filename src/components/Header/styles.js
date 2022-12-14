@@ -165,11 +165,11 @@ export function TitleInsideComponentGray(props) {
     align-items: center;
     justify-content: space-between;
     /* background: blue; */
-    :hover {
-      color: #ffe747;
-    }
+    cursor: ${(props) => props.cursor};
+
     span {
       font-size: 2rem;
+      color: ${(props) => props.colorSpan};
     }
   `;
   const Circle = styled.div`
@@ -179,7 +179,7 @@ export function TitleInsideComponentGray(props) {
     border-radius: 50%;
   `;
   return (
-    <TitleInsideGray>
+    <TitleInsideGray colorSpan={props.colorSpan} cursor={props.cursor}>
       Hyper Beam
       <Circle />
       <span>

@@ -19,7 +19,7 @@ export const Content = styled.div`
 `;
 
 export const PodcastsList = styled.div`
-  width: 225px;
+  width: 286px;
   height: auto;
   /* background: red; */
   display: flex;
@@ -28,33 +28,21 @@ export const PodcastsList = styled.div`
   flex-wrap: wrap;
   @media (min-width: 1024px) {
     width: 1080px;
-    /* height: 950px; */
     gap: 60px;
     margin-bottom: 0;
     align-items: center;
   }
-  /* @media (max-width: 1145px) {
-    width: 816px;
-    height: 950px;
-  }
-  @media (max-width: 946px) {
-    width: 540px;
-    height: 930px;
-  }
-  @media (max-width: 644px) {
-    width: 225px;
-    height: auto;
-  } */
 `;
 
 export const CarouselStyled = styled.div`
-  width: 225px;
-  height: 270px;
-  /* background: blue; */
+  width: 286px;
+  height: auto;
+  background: #0a0b26;
   display: flex !important;
-  align-items: center;
   flex-direction: column;
   margin-bottom: 37px;
+  gap: 15px;
+  padding: 25px 20px 40px;
   /* margin-right: 45px; */
   @media (min-width: 1024px) {
     height: auto;
