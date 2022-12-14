@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: auto;
-  background: pink;
+  /* background: pink; */
   margin: 40px 0;
   display: flex;
   flex-direction: column;
