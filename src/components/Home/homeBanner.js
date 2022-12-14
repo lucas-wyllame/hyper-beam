@@ -85,8 +85,16 @@ export default function HomeBanner() {
           infinite: slider.length > 1 ? true : false,
         },
       },
+      // {
+      //   breakpoint: 986,
+      //   settings: {
+      //     slidesToShow: 2,
+      //     slidesToScroll: 1,
+      //     infinite: slider.length > 1 ? true : false,
+      //   },
+      // },
       {
-        breakpoint: 986,
+        breakpoint: 767,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
@@ -94,7 +102,7 @@ export default function HomeBanner() {
         },
       },
       {
-        breakpoint: 737,
+        breakpoint: 568,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -141,8 +149,10 @@ export default function HomeBanner() {
                         hyperCardImg={`url(${res.fields?.littleImage?.fields?.file.url})`}
                         width={"196px"}
                         height={"196px"}
+                        widthLaptop={"196px"}
+                        heightLaptop={"196px"}
                       />
-                      <TitleInsideComponentGray number={res.fields?.number}  />
+                      <TitleInsideComponentGray number={res.fields?.number} />
                     </HyperCardGroup>
                   </React.Fragment>
                 );

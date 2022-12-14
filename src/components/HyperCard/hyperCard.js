@@ -13,6 +13,10 @@ const CardBanner = styled.div`
   border-radius: 15px;
   cursor: pointer;
   z-index: 2;
+  @media (min-width: 768px) {
+    width: 168px;
+    height: 168px;
+  }
   @media (min-width: 1024px) {
     width: ${(props) => props.widthLaptop};
     height: ${(props) => props.heightLaptop};

@@ -64,7 +64,7 @@ export const Title = styled.p`
   color: #fff;
   font-weight: bold;
   @media (min-width: 768px) {
-    font-size: 2.8rem;
+    font-size: 4.1rem;
   }
   @media (min-width: 1024px) {
     font-size: 3.3rem;
@@ -81,7 +81,8 @@ export const Desc = styled.h1`
   color: #9a8dac;
   font-weight: 500;
   @media (min-width: 768px) {
-    font-size: 1.7rem;
+    font-size: 2.5rem;
+    margin-bottom: 38px;
   }
   @media (min-width: 1024px) {
     font-size: 2.2rem;
@@ -103,11 +104,11 @@ export const MoreInfs = styled.h2`
   -webkit-box-orient: ${(props) => props.wbkBoxOrient};
   white-space: ${(props) => props.whiteSpace};
   span {
-    font-size: 21px;
+    font-size: 2.1rem;
     font-weight: bold;
   }
   @media (min-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
   }
   @media (min-width: 1024px) {
     font-size: 2rem;
@@ -155,7 +156,7 @@ export const TitleInside = styled.div`
 export const Icon = styled.div`
   /* width: ${(props) => props.widthIcon}; */
   /* height: ${(props) => props.heightIcon}; */
-  width: 292px;
+  width: 100%;
   height: ${(props) => props.height};
   background: #a127ff;
   border-radius: 30px;

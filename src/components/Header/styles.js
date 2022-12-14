@@ -166,10 +166,23 @@ export function TitleInsideComponentGray(props) {
     justify-content: space-between;
     /* background: blue; */
     cursor: ${(props) => props.cursor};
-
+    @media (min-width: 768px) {
+      width: 125px;
+      font-size: 1.5rem;
+    }
+    @media (min-width: 1024px) {
+      width: 180px;
+      font-size: 2rem;
+    }
     span {
       font-size: 2rem;
       color: ${(props) => props.colorSpan};
+      @media (min-width: 768px) {
+        font-size: 1.5rem;
+      }
+      @media (min-width: 1024px) {
+        font-size: 2rem;
+      }
     }
   `;
   const Circle = styled.div`
@@ -177,6 +190,14 @@ export function TitleInsideComponentGray(props) {
     height: 8px;
     background: #9e9e9e;
     border-radius: 50%;
+    @media (min-width: 768px) {
+      width: 6px;
+      height: 6px;
+    }
+    @media (min-width: 1024px) {
+      width: 8px;
+    height: 8px;
+    }
   `;
   return (
     <TitleInsideGray colorSpan={props.colorSpan} cursor={props.cursor}>

@@ -3,10 +3,14 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: 790px;
-  /* background: #11129d; */
+  /* background: blue; */
   display: flex;
   justify-content: center;
   margin-top: 80px;
+  @media (min-width: 768px) {
+    height: 850px;
+    margin-top: 90px;
+  }
   @media (min-width: 1024px) {
     height: 650px;
     margin-top: 100px;
@@ -27,7 +31,12 @@ export const Banner = styled.div`
   position: relative;
   justify-content: space-between;
   background-position: center;
+  @media (min-width: 768px) {
+    width: 91%;
+    height: 692px;
+  }
   @media (min-width: 1024px) {
+    width: 95%;
     height: 488px;
     justify-content: space-between;
     flex-direction: row;
@@ -115,6 +124,9 @@ export const DivToCentralizeListHomeBanner = styled.div`
   position: absolute;
   top: 580px;
   left: 0px;
+  @media (min-width: 768px) {
+    top: 96%;
+  }
   @media (min-width: 1024px) {
     top: 465px;
   }
@@ -122,10 +134,13 @@ export const DivToCentralizeListHomeBanner = styled.div`
 
 export const ListHomeBanner = styled.div`
   width: 242px;
-  height: 200px;
+  height: auto;
   /* background: red; */
-  @media (min-width: 738px) {
-    width: 443px;
+  @media (min-width: 569px) {
+    width: 440px;
+  }
+  @media (min-width: 768px) {
+    width: 570px;
   }
   @media (min-width: 987px) {
     width: 662px;
@@ -157,6 +172,12 @@ export const HyperCardGroup = styled.div`
         background-color: #ffe747;
       }
     }
+  }
+  @media (min-width: 768px) {
+    height: 195px;
+  }
+  @media (min-width: 1024px) {
+    height: 220px;
   }
 `;
 
