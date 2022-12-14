@@ -73,7 +73,6 @@ export const CardsOurTeam = styled.div`
   max-width: 253px;
   max-height: 253px;
   background-image: ${(props) => props.image};
-  background-color: #9697c7;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 20px;
@@ -86,7 +85,6 @@ export const CardsOurTeam = styled.div`
     :hover {
       width: 293px;
       height: 293px;
-      background-color: yellow;
       background-image: ${(props) => props.imageHover};
     }
   }

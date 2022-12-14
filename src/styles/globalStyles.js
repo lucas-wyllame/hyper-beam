@@ -111,6 +111,9 @@ export const MoreInfs = styled.h2`
   @media (min-width: 768px) {
     font-size: ${(props) => props.fontSizeTablet};
     -webkit-line-clamp: ${(props) => props.wbkLineClampTablet};
+    span {
+      font-size: 2.7rem;
+    }
   }
   @media (min-width: 1024px) {
     font-size: 2rem;
@@ -119,6 +122,9 @@ export const MoreInfs = styled.h2`
   }
   @media (min-width: 1366px) {
     font-size: ${(props) => props.fontSizeLaptopLarge};
+    span {
+      font-size: 3.3rem;
+    }
   }
 `;
 
@@ -180,8 +186,7 @@ export const Icon = styled.div`
     height: 56px;
   }
   @media (min-width: 1024px) {
-    width: ${(props) => props.widthIconLaptop};
-    height: ${(props) => props.heightIconLaptop};
+    width: 53px;
     padding-left: 0px;
     background: none;
   }

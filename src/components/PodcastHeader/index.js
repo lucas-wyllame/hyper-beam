@@ -49,9 +49,9 @@ export default function PodcastHeader(props) {
                 // widthIconLaptop="53px"
                 // heightIconLaptop="53px"
               >
-                <Control />
+                <Control className="control"/>
                 <TextInsideIcon>Assuntos desse episódio</TextInsideIcon>
-                {/* <ControlWithCircle /> */}
+                <ControlWithCircle className="controlWithCircle" />
               </Icon>
               {props.gameTags[0]?.map((res, index) => (
                 <ButtonsEp

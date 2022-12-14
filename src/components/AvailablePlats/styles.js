@@ -33,7 +33,6 @@ export const Plats = styled.div`
   @media (min-width: 1024px) {
     width: 880px;
     height: 346px;
-    flex-direction: row;
     margin-bottom: 50px;
   }
 `;

@@ -158,6 +158,8 @@ export default function LastEpisodes() {
                           height={"253px"}
                           widthTablet="337px"
                           heightTablet="337px"
+                          widthLaptop={"253px"}
+                          heightLaptop={"253px"}
                           position={"relative"}
                           top={"-20px"}
                           widthLaptopLarge={"337px"}

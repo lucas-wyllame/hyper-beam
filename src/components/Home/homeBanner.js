@@ -164,7 +164,7 @@ export default function HomeBanner() {
                       />
                       <TitleInsideComponentGray
                         width="145px"
-                        widthTablet="130px"
+                        widthTablet="148px"
                         widthCircle="6px"
                         heightCircle="6px"
                         number={res.fields?.number}
