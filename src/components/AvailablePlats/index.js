@@ -36,7 +36,7 @@ export default function AvailablePlats(props) {
         {all.slice(0, 3).map((res, index) => {
           return (
             // eslint-disable-next-line react/jsx-key
-            <>
+            <a href={res.fields.url} target="_blank" rel="noreferrer">
               <PlatsCards>
                 <PlatsIcons
                   image={`url(${res.fields.icon?.fields.file.url})` || ""}
@@ -51,22 +51,17 @@ export default function AvailablePlats(props) {
                   <span> {res.fields.platformName}</span>
                 </MoreInfs>
               </PlatsCards>
-            </>
+            </a>
           );
         })}
       </Plats>
       {all.slice(3).map((res, index) => {
         return (
-          <PlatsButton
-            key={index}
-            width="332px"
-            height="54px"
-            href="https://bit.ly/3Qe9421"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {res.fields.platformName}
-          </PlatsButton>
+          <a target="_blank" rel="noreferrer" href={res.fields.url}>
+            <PlatsButton key={index} width="332px" height="54px">
+              {res.fields.platformName}
+            </PlatsButton>
+          </a>
         );
       })}
     </Content>
