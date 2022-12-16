@@ -119,6 +119,9 @@ export const MoreInfs = styled.h2`
     font-size: 2rem;
     font-size: ${(props) => props.fontSizeLaptop};
     -webkit-line-clamp: ${(props) => props.wbkLineClampLaptop};
+    span {
+      font-size: 3.3rem;
+    }
   }
   @media (min-width: 1366px) {
     font-size: ${(props) => props.fontSizeLaptopLarge};

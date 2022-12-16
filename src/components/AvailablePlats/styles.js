@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: auto;
-  padding: 0 14px;
   /* background: #11129d; */
   background-image: url("/img/degrade logo.png");
   background-size: cover;
@@ -15,7 +14,6 @@ export const Content = styled.div`
   align-items: center;
   padding: 50px 14px;
   @media (min-width: 1024px) {
-    height: 900px;
     margin-top: 0px;
   }
 `;
@@ -27,18 +25,21 @@ export const Plats = styled.div`
   flex-direction: column;
   display: flex;
   row-gap: 14px;
-  align-items: center;
-  margin-bottom: 56px;
+  margin-bottom: 25px;
   margin-top: 45px;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    margin-bottom: 40px;
+  }
   @media (min-width: 1024px) {
     width: 880px;
-    height: 346px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 `;
 
 export const PlatsCards = styled.a`
-  width: 100%;
+  width: 332px;
   height: 82px;
   background: #a127ff;
   display: flex;
@@ -47,10 +48,12 @@ export const PlatsCards = styled.a`
   gap: 15px;
   border-radius: 15px;
   @media (min-width: 768px) {
-    width: 502px;
+    width: 507px;
     height: 105px;
   }
   @media (min-width: 1024px) {
+    width: 608px;
+    height: 125px;
   }
 `;
 
@@ -60,6 +63,14 @@ export const PlatsIcons = styled.div`
   background-image: ${(props) => props.image};
   background-size: cover;
   background-repeat: no-repeat;
+  @media (min-width: 768px) {
+    width: 62px;
+    height: 62px;
+  }
+  @media (min-width: 1024px) {
+    width: 74px;
+    height: 74px;
+  }
 `;
 
 export const Divider = styled.div`
@@ -87,7 +98,11 @@ export const PlatsButton = styled.button`
     color: #11122d;
     background: #fff;
   }
+  @media (min-width: 768px) {
+    width: 502px;
+  }
   @media (min-width: 1024px) {
+    width: ${(props) => props.widthLaptop};
     grid-column: ${(props) => props.gridColumnLaptop};
     grid-row: ${(props) => props.gridRowLaptop};
   }

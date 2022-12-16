@@ -26,7 +26,7 @@ export default function AvailablePlats(props) {
   return (
     <Content>
       {console.log("AvailablePlats all", all)}
-      <Title textAlign="center" margin="0 0 22px 0">
+      <Title textAlign="center" margin="0 0 0px 0">
         Plataformas disponíveis
       </Title>
       <Desc margin="0" textAlignDesc="center">
@@ -45,6 +45,7 @@ export default function AvailablePlats(props) {
                 <MoreInfs
                   fontSize="1.4rem"
                   fontSizeTablet="1.9rem"
+                  fontSizeLaptop="2.3rem"
                   fontSizeLaptopLarge="2.3rem"
                 >
                   Escute o Hyper Beam no <br />
@@ -58,7 +59,7 @@ export default function AvailablePlats(props) {
       {all.slice(3).map((res, index) => {
         return (
           <a target="_blank" rel="noreferrer" href={res.fields.url}>
-            <PlatsButton key={index} width="332px" height="54px">
+            <PlatsButton key={index} width="332px" height="54px" widthLaptop="604px">
               {res.fields.platformName}
             </PlatsButton>
           </a>

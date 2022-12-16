@@ -7,14 +7,23 @@ export const Content = styled.div`
   margin: 40px 0;
   display: flex;
   flex-direction: column;
-  padding: 0 14px;
+  padding: 0 18px;
   @media (min-width: 1024px) {
     width: 100%;
     height: 683px;
-    padding: 0 88px;
   }
   @media (min-width: 1366px) {
     height: 850px;
+    padding: 0 88px;
+  }
+`;
+
+export const TextBox = styled.div`
+  @media (min-width: 768px) {
+    padding-left: 78px;
+  }
+  @media (min-width: 1024px) {
+    padding: 0;
   }
 `;
 
@@ -28,7 +37,7 @@ export const ListPodcasts = styled.div`
   justify-content: space-between;
   position: relative;
   @media (min-width: 1024px) {
-    height: 548px;
+    height: 435px;
   }
   @media (min-width: 1366px) {
     height: 534px;

@@ -74,7 +74,7 @@ export default function HomeBanner() {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 1,
-          infinite: slider.length > 1 ? true : false,
+          // infinite: slider.length > 1 ? true : false,
         },
       },
       {
@@ -82,23 +82,15 @@ export default function HomeBanner() {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          infinite: slider.length > 1 ? true : false,
+          // infinite: slider.length > 1 ? true : false,
         },
       },
-      // {
-      //   breakpoint: 986,
-      //   settings: {
-      //     slidesToShow: 2,
-      //     slidesToScroll: 1,
-      //     infinite: slider.length > 1 ? true : false,
-      //   },
-      // },
       {
         breakpoint: 767,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          infinite: slider.length > 1 ? true : false,
+          // infinite: slider.length > 1 ? true : false,
         },
       },
       {
@@ -106,7 +98,7 @@ export default function HomeBanner() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          infinite: slider.length > 1 ? true : false,
+          // infinite: slider.length > 1 ? true : false,
         },
       },
     ],

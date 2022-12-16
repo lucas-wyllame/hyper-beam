@@ -17,6 +17,7 @@ import {
   Dots,
   LittleDots,
   BackgroundOverlay,
+  TextBox,
 } from "./styles";
 import { useRouter } from "next/router";
 import Slider from "react-slick";
@@ -135,8 +136,10 @@ export default function LastEpisodes() {
   return (
     <Content>
       {console.log("LastEpisodes all", all)}
-      <Title margin="0">Episódios Recentes</Title>
-      <Desc margin="0">Acompanhe nosso podcast e seus episódios</Desc>
+      <TextBox>
+        <Title margin="0">Episódios Recentes</Title>
+        <Desc margin="0">Acompanhe nosso podcast e seus episódios</Desc>
+      </TextBox>
       <ListPodcasts>
         {/* {isHovering && (
           <HoveringIcon>Sobre o que falamos nesse episodio?</HoveringIcon>

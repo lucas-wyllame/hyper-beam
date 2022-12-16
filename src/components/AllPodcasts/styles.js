@@ -16,7 +16,7 @@ export const Content = styled.div`
     min-height: 635px;
   }
   @media (min-width: 1024px) {
-   padding: 60px 0;
+    padding: 60px 0;
   }
 `;
 
@@ -29,8 +29,6 @@ export const PodcastsList = styled.div`
   margin-bottom: 70px;
   flex-direction: column;
   padding: 0 37px;
-  @media (min-width: 768px) {
-  }
   @media (min-width: 1024px) {
     gap: 60px;
     margin-bottom: 0;
@@ -45,7 +43,7 @@ export const PodcastsList = styled.div`
 export const CarouselStyled = styled.div`
   width: 100%;
   height: auto;
-  background: #0A0B26;
+  background: #0a0b26;
   display: flex !important;
   flex-direction: column;
   margin-bottom: 37px;
@@ -54,10 +52,11 @@ export const CarouselStyled = styled.div`
   /* margin-right: 45px; */
   @media (min-width: 768px) {
     flex-direction: row;
-    padding: 0;
+    padding: 25px 20px 40px;
     justify-content: space-around;
   }
   @media (min-width: 1024px) {
+    padding: 25px 20px 40px;
     margin-bottom: 0;
   }
 `;
