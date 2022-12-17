@@ -18,7 +18,7 @@ import {
   LittleDots,
   BackgroundOverlay,
   TextBox,
-  OverlayDiv
+  OverlayDiv,
 } from "./styles";
 import { useRouter } from "next/router";
 import Slider from "react-slick";
@@ -60,7 +60,6 @@ export default function LastEpisodes() {
     let liTeste =
       document.getElementsByClassName("slick-active div").style?.background;
     liTeste = "red !important";
-    console.log("AQQ TESTLI", liTeste);
   }
 
   useEffect(() => {
@@ -115,7 +114,7 @@ export default function LastEpisodes() {
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 4000,
     responsive: [
       {
@@ -130,13 +129,8 @@ export default function LastEpisodes() {
     ],
   };
 
-  // var sizeScreen = window?.screen.width;
-  // setState(sizeScreen);
-  // console.log(sizeScreen);
-
   return (
     <Content>
-      {console.log("LastEpisodes all", all)}
       <TextBox>
         <Title margin="0">Episódios Recentes</Title>
         <Desc margin="0">Acompanhe nosso podcast e seus episódios</Desc>
@@ -153,91 +147,92 @@ export default function LastEpisodes() {
                   image={`url(${res.fields?.bigImage?.fields.file.url})`}
                 >
                   <OverlayDiv>
-                  {/* <BackgroundOverlay /> */}
-                  <Block>
-                    <CardAndText>
-                      <a href={`/podcasts/${res.fields?.pathUrl}`}>
-                        <HyperCard
-                          hyperCardImg={`url(${res.fields?.littleImage?.fields?.file.url})`}
-                          width={"253px"}
-                          height={"253px"}
-                          widthTablet="337px"
-                          heightTablet="337px"
-                          widthLaptop={"253px"}
-                          heightLaptop={"253px"}
-                          position={"relative"}
-                          top={"-20px"}
-                          widthLaptopLarge={"337px"}
-                          heightLaptopLarge={"337px"}
-                          // onClick={window.location.href=`/podcasts`}
-                        />
-                      </a>
-                      <TextsDivEp>
+                    {/* <BackgroundOverlay /> */}
+                    <Block>
+                      <CardAndText>
                         <a href={`/podcasts/${res.fields?.pathUrl}`}>
-                          <TitleInsideComponent
-                            number={res.fields?.number}
-                            width="240px"
-                            widthTablet="310px"
-                            fontSize="2.8rem"
-                            fontSizeTablet="3.8rem"
-                            cursor="pointer"
-                            widthCircle="8px"
-                            heightCircle="8px"
-                            widthCircleTablet="10px"
-                            heightCircleTablet="10px"
+                          <HyperCard
+                            hyperCardImg={`url(${res.fields?.littleImage?.fields?.file.url})`}
+                            width={"253px"}
+                            height={"253px"}
+                            widthTablet="337px"
+                            heightTablet="337px"
+                            widthLaptop={"253px"}
+                            heightLaptop={"253px"}
+                            position={"relative"}
+                            top={"-20px"}
+                            widthLaptopLarge={"337px"}
+                            heightLaptopLarge={"337px"}
+                            // onClick={window.location.href=`/podcasts`}
                           />
                         </a>
-                        <MoreInfs
-                          textOverflow="ellipsis"
-                          overflow="hidden"
-                          display="-webkit-box !important"
-                          wbkLineClamp={4}
-
-                          wbkLineClampLaptop={5}
-                          wbkBoxOrient="vertical"
-                          whiteSpace="normal"
-                          fontSize="1.8rem"
-                          fontSizeLaptopLarge="2.5rem"
-                          width="694px"
-                        >
-                          {res.fields.description}
-                        </MoreInfs>
-                      </TextsDivEp>
-                    </CardAndText>
-                    <IconAndButtons
-                      gap="15px"
-                      widthLaptop="580px"
-                      heightLaptop="auto"
-                      flexDLaptop="row"
-                      margin="25px 0 90px 0"
-                    >
-                      <Icon
-                        onMouseOver={handleMouseOver}
-                        onMouseOut={handleMouseOut}
-                        height="40px"
-                        // widthIcon={"40px"}
-                        // heightIcon={"40px"}
-                        widthIconLaptop="53px"
-                        heightIconLaptop="53px"
+                        <TextsDivEp>
+                          <a href={`/podcasts/${res.fields?.pathUrl}`}>
+                            <TitleInsideComponent
+                              number={res.fields?.number}
+                              width="240px"
+                              widthTablet="310px"
+                              fontSize="2.8rem"
+                              fontSizeTablet="3.8rem"
+                              cursor="pointer"
+                              widthCircle="8px"
+                              heightCircle="8px"
+                              widthCircleTablet="10px"
+                              heightCircleTablet="10px"
+                            />
+                          </a>
+                          <MoreInfs
+                            textOverflow="ellipsis"
+                            overflow="hidden"
+                            display="-webkit-box !important"
+                            wbkLineClamp={4}
+                            wbkLineClampLaptop={5}
+                            wbkBoxOrient="vertical"
+                            whiteSpace="normal"
+                            fontSize="1.8rem"
+                            fontSizeLaptopLarge="2.5rem"
+                            width="694px"
+                          >
+                            {res.fields.description}
+                          </MoreInfs>
+                        </TextsDivEp>
+                      </CardAndText>
+                      <IconAndButtons
+                        gap="15px"
+                        widthLaptop="580px"
+                        heightLaptop="auto"
+                        flexDLaptop="row"
+                        margin="25px 0 90px 0"
                       >
-                        <Control className="control" />
-                        <TextInsideIcon>Assuntos desse episódio</TextInsideIcon>
-                        <ControlWithCircle className="controlWithCircle" />
-                      </Icon>
-                      {res.fields.gameTags?.map((res, index) => (
-                        <ButtonsEp
-                          key={index}
-                          width="auto"
+                        <Icon
+                          onMouseOver={handleMouseOver}
+                          onMouseOut={handleMouseOut}
                           height="40px"
-                          widthLaptop="auto"
-                          heightLaptop="49px"
-                          fontSizeLaptop="2rem"
+                          // widthIcon={"40px"}
+                          // heightIcon={"40px"}
+                          widthIconLaptop="53px"
+                          heightIconLaptop="53px"
                         >
-                          {res}
-                        </ButtonsEp>
-                      ))}
-                    </IconAndButtons>
-                  </Block>
+                          <Control className="control" />
+                          <TextInsideIcon>
+                            Assuntos desse episódio
+                          </TextInsideIcon>
+                          <ControlWithCircle className="controlWithCircle" />
+                        </Icon>
+                        {res.fields.gameTags?.map((res, index) => (
+                          <ButtonsEp
+                            key={index}
+                            width="auto"
+                            height="40px"
+                            widthLaptop="auto"
+                            heightLaptop="49px"
+                            fontSizeLaptop="2rem"
+                          >
+                            {res}
+                          </ButtonsEp>
+                        ))}
+                      </IconAndButtons>
+                    </Block>
                   </OverlayDiv>
                 </Background>
               </React.Fragment>

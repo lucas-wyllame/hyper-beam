@@ -113,7 +113,6 @@ export default function HomeBanner() {
 
   return (
     <Content>
-      {console.log("Home banner all", all)}
       <Banner image={`url(${lastPodcast.fields?.bigImage?.fields.file.url})`}>
           <OverlayDiv>
         <FeaturedPodcastInfo>

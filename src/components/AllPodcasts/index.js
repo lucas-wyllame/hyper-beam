@@ -29,7 +29,6 @@ export default function Carousel() {
   async function handleNext() {
     var NextBtnStyle = await document.getElementById("nextBtn");
     var PreviousBtnStyle = await document.getElementById("previousBtn");
-    console.log("esquilo", offset);
     if (offset < totalRecords) {
       setCurrentPage(offset);
       setOffset(offset + itemsPerPage);

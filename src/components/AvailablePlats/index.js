@@ -25,7 +25,6 @@ export default function AvailablePlats(props) {
 
   return (
     <Content>
-      {console.log("AvailablePlats all", all)}
       <Title textAlign="center" margin="0 0 0px 0">
         Plataformas disponíveis
       </Title>
@@ -36,7 +35,12 @@ export default function AvailablePlats(props) {
         {all.slice(0, 3).map((res, index) => {
           return (
             // eslint-disable-next-line react/jsx-key
-            <a href={res.fields.url} target="_blank" rel="noreferrer">
+            <a
+              key={index}
+              href={res.fields.url}
+              target="_blank"
+              rel="noreferrer"
+            >
               <PlatsCards>
                 <PlatsIcons
                   image={`url(${res.fields.icon?.fields.file.url})` || ""}
@@ -59,7 +63,12 @@ export default function AvailablePlats(props) {
       {all.slice(3).map((res, index) => {
         return (
           <a target="_blank" rel="noreferrer" href={res.fields.url}>
-            <PlatsButton key={index} width="332px" height="54px" widthLaptop="604px">
+            <PlatsButton
+              key={index}
+              width="332px"
+              height="54px"
+              widthLaptop="604px"
+            >
               {res.fields.platformName}
             </PlatsButton>
           </a>

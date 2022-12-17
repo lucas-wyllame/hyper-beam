@@ -20,7 +20,6 @@ export default function About() {
   }, []);
   return (
     <Content>
-      {console.log("About(apresentation) all", aboutContent)}
       <LeftImage
         image={
           `url(${aboutContent[0]?.apresentationImage?.fields?.file?.url})` || ""
