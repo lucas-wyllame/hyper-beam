@@ -3,19 +3,20 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: 650px;
-  /* background: green; */
+  background: #1b1b36;
   display: flex;
   flex-direction: column;
-  justify-content: normal;
+  justify-content: center;
   align-items: center;
+
   @media (min-width: 769px) {
     height: 647px;
   }
   @media (min-width: 1024px) {
     height: 620px;
   }
-  @media (min-width: 1440px) {
-    height: 720px;
+  @media (min-width: 1366px) {
+    height: 740px;
   }
 `;
 
@@ -36,12 +37,14 @@ export const GlobalPeoples = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-bottom: 80px;
   position: relative;
   @media (min-width: 1024px) {
     width: 986px;
     max-width: 986px;
     height: 418px;
+    margin-bottom: 0;
+    margin-top: 50px;
   }
   @media (max-width: 1175px) {
     width: 100%;
@@ -70,7 +73,6 @@ export const CardsOurTeam = styled.div`
   max-width: 253px;
   max-height: 253px;
   background-image: ${(props) => props.image};
-  background-color: #9697c7;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 20px;
@@ -83,7 +85,6 @@ export const CardsOurTeam = styled.div`
     :hover {
       width: 293px;
       height: 293px;
-      background-color: yellow;
       background-image: ${(props) => props.imageHover};
     }
   }
@@ -119,14 +120,20 @@ export const NameCasters = styled.label`
     font-size: 23px;
     color: #ffe747;
   }
+  @media (min-width: 768px) {
+    text-align: center;
+  }
 `;
 
 export const FuncCasters = styled.label`
   font-size: 20px;
   color: #9a8dac;
+  @media (min-width: 768px) {
+    text-align: center;
+  }
 `;
 
-export const LeftArrow = styled.img`
+export const LeftArrow = styled.div`
   height: 39px;
   width: 39px;
   position: relative;
@@ -147,7 +154,7 @@ export const LeftArrow = styled.img`
   }
 `;
 
-export const RightArrow = styled.img`
+export const RightArrow = styled.div`
   height: 39px;
   width: 39px;
   position: relative;

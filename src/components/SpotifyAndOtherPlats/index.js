@@ -1,9 +1,4 @@
-import {
-  Content,
-  IframeSpotify,
-  TextPlats,
-  OtherPlats,
-} from "./styles";
+import { Content, IframeSpotify, OtherPlats, DivForGroupingPlatsButton } from "./styles";
 import { Title, Desc } from "@styles/globalStyles";
 import { PlatsButton } from "../AvailablePlats/styles";
 import { buttons } from "./buttons";
@@ -19,7 +14,7 @@ export default function SpotifyAndOtherPlats(props) {
         loading="lazy"
         fontSize="1px"
       />
-      <TextPlats>
+      <OtherPlats>
         <Title
           widthMobile={"256px"}
           textAlignMobile={"start"}
@@ -30,11 +25,14 @@ export default function SpotifyAndOtherPlats(props) {
         <Desc widthDescMobile={"294px"} maxWidth={"100%"}>
           Sem problema! Veja onde encontrar nosso podcast para escutar
         </Desc>
-        <OtherPlats>
+        <DivForGroupingPlatsButton>
           {buttons.map((res, index) => {
             return (
               <PlatsButton
                 key={index}
+                width="247px"
+                height="49px"
+                widthLaptop="247px"
                 href="https://bit.ly/3Qe9421"
                 target="_blank"
                 rel="noreferrer"
@@ -47,8 +45,8 @@ export default function SpotifyAndOtherPlats(props) {
               </PlatsButton>
             );
           })}
-        </OtherPlats>
-      </TextPlats>
+        </DivForGroupingPlatsButton>
+      </OtherPlats>
     </Content>
   );
 }

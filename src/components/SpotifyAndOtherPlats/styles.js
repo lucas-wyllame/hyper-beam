@@ -8,6 +8,9 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  @media (min-width: 768px) {
+    height: 730px;
+  }
   @media (min-width: 1024px) {
     height: 630px;
   }
@@ -23,24 +26,32 @@ export const IframeSpotify = styled.iframe`
   @media (min-width: 555px) {
     height: 152px;
   }
+  @media (min-width: 768px) {
+    width: 409px;
+    height: 730px;
+  }
   @media (min-width: 1024px) {
+    width: 100%;
     height: 232px;
   }
 `;
 
-export const TextPlats = styled.div`
+export const OtherPlats = styled.div`
   width: 85%;
   height: 500px;
   /* background: pink; */
   display: flex;
   align-items: center;
   flex-direction: column;
+  @media (min-width: 768px) {
+    height: 600px;
+  }
   @media (min-width: 1024px) {
     height: auto;
   }
 `;
 
-export const OtherPlats = styled.div`
+export const DivForGroupingPlatsButton = styled.div`
   width: 100%;
   height: 300px;
   /* background: red; */

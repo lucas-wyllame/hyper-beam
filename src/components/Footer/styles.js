@@ -22,6 +22,9 @@ export const MainImage = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 50px;
+  @media (min-width: 768px) {
+  margin-bottom: 0px;
+  }
   @media (min-width: 1024px) {
     width: 290px;
     height: 124px;

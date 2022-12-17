@@ -1,7 +1,7 @@
-export function Control(props) {
+export function ControlWithCircle(props) {
   return (
     <svg
-      data-name="Icon com Tag"
+      data-name="Control With Circle"
       xmlns="http://www.w3.org/2000/svg"
       width={53}
       height={53}

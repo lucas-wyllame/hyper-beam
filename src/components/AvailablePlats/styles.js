@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 100%;
-  height: 1401px;
-  padding: 0 44px;
+  height: auto;
   /* background: #11129d; */
   background-image: url("/img/degrade logo.png");
   background-size: cover;
@@ -13,101 +12,76 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  padding: 50px 14px;
   @media (min-width: 1024px) {
-    height: 900px;
-    margin-top: 70px;
+    margin-top: 0px;
   }
 `;
 
 export const Plats = styled.div`
   width: 100%;
-  height: 65%;
+  height: auto;
   /* background: red; */
   flex-direction: column;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 56px;
+  row-gap: 14px;
+  margin-bottom: 25px;
   margin-top: 45px;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    margin-bottom: 40px;
+  }
   @media (min-width: 1024px) {
     width: 880px;
-    height: auto;
-    flex-direction: row;
-    margin-bottom: 50px;
-  }
-`;
-
-export const PlatsGroup = styled.div`
-  width: 100%;
-  height: auto;
-  /* background: yellow; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  :hover {
-    a{
-      color: ${(props) => props.colorHoverText};
-    }
-  }
-  @media (min-width: 1024px) {
-    width: 34%;
+    margin-bottom: 30px;
   }
 `;
 
 export const PlatsCards = styled.a`
-  width: ${(props) => props.width};
-  height: ${(props) => props.height};
-  background: #7c7da2;
-  margin: 0px 0 0 0;
+  width: 332px;
+  height: 82px;
+  background: #a127ff;
   display: flex;
-  justify-content: center;
   align-items: center;
+  padding-left: 15px;
+  gap: 15px;
   border-radius: 15px;
-  :hover {
-    width: ${(props) => props.widthHover};
-    height: ${(props) => props.heightHover};
-    div {
-      width: ${(props) => props.widthHoverDiv};
-      height: ${(props) => props.heightHoverDiv};
-      background-image: ${(props) => props.imageHover};
-    }
+  @media (min-width: 768px) {
+    width: 507px;
+    height: 105px;
   }
   @media (min-width: 1024px) {
-    width: ${(props) => props.widthLaptop};
-    height: ${(props) => props.heightLaptop};
+    width: 608px;
+    height: 125px;
   }
 `;
 
 export const PlatsIcons = styled.div`
-  width: ${(props) => props.widthIcon};
-  height: ${(props) => props.heightIcon};
-  background-color: #000;
+  width: 48.79px;
+  height: 48.79px;
   background-image: ${(props) => props.image};
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 50%;
+  @media (min-width: 768px) {
+    width: 62px;
+    height: 62px;
+  }
   @media (min-width: 1024px) {
-    width: ${(props) => props.widthIconLaptop};
-    height: ${(props) => props.heightIconLaptop};
+    width: 74px;
+    height: 74px;
   }
 `;
 
-export const PlatsTitle = styled.a`
-  font-size: ${(props) => props.fontSize};
-  color: #ffffff;
-  margin: ${(props) => props.margin};
-  font-weight: ${(props) => props.fontWeight};
-  padding-left: ${(props) => props.paddingLeft};
-  padding-right: ${(props) => props.paddingRight};
-  @media (min-width: 1024px) {
-  }
+export const Divider = styled.div`
+  width: 1px;
+  height: 51px;
+  background: #711bb4;
 `;
 
 export const PlatsButton = styled.button`
-  width: 248px;
-  height: 50px;
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
   font-size: 2rem;
   color: #fff;
   background: none;
@@ -124,7 +98,11 @@ export const PlatsButton = styled.button`
     color: #11122d;
     background: #fff;
   }
+  @media (min-width: 768px) {
+    width: 502px;
+  }
   @media (min-width: 1024px) {
+    width: ${(props) => props.widthLaptop};
     grid-column: ${(props) => props.gridColumnLaptop};
     grid-row: ${(props) => props.gridRowLaptop};
   }

@@ -7,14 +7,23 @@ export const Content = styled.div`
   margin: 40px 0;
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
+  padding: 0 18px;
   @media (min-width: 1024px) {
     width: 100%;
-    height: 691px;
+    height: 683px;
+  }
+  @media (min-width: 1366px) {
+    height: 850px;
     padding: 0 88px;
   }
-  @media (min-width: 1440px) {
-    height: auto;
+`;
+
+export const TextBox = styled.div`
+  @media (min-width: 768px) {
+    padding-left: 78px;
+  }
+  @media (min-width: 1024px) {
+    padding: 0;
   }
 `;
 
@@ -22,16 +31,16 @@ export const ListPodcasts = styled.div`
   width: 100%;
   height: auto;
   /* background: blue; */
-  margin: 20px 0;
+  /* margin: 20px 0; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
   @media (min-width: 1024px) {
-    height: 548px;
+    height: 435px;
   }
-  @media (min-width: 1440px) {
-    height: 654px;
+  @media (min-width: 1366px) {
+    height: 534px;
   }
 `;
 
@@ -71,7 +80,7 @@ export const HoveringIcon = styled.label`
     top: 420px;
     padding: 0;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1366px) {
     height: 49px;
     top: 495px;
   }
@@ -83,13 +92,18 @@ export const Background = styled.div`
   border-radius: 44px 44px 0px 0px;
   position: relative;
   top: 60px;
-  background: #a57bca;
+  background-color: #a57bca;
+  background-image: ${(props) => props.image};
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   justify-content: center;
+  z-index: 0;
   @media (min-width: 1024px) {
     height: 420px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1366px) {
     height: 520px;
   }
 `;
@@ -132,7 +146,9 @@ export const TextsDivEp = styled.div`
 
 export const IconAndButtons = styled.div`
   width: 100%;
-  height: ${(props) => props.height};
+  height: auto;
+  gap: ${(props) => props.gap};
+  /* background: yellow; */
   margin-left: 0;
   margin-bottom: 0;
   display: flex;
@@ -159,8 +175,8 @@ export const IconAndButtons = styled.div`
 
 export const ButtonsEp = styled.div`
   width: ${(props) => props.width};
+  height: ${(props) => props.height};
   font-size: 1.5rem;
-  height: 36px;
   background: rgba(17, 18, 45, 0.6);
   border-radius: 44px;
   text-align: center;
@@ -169,11 +185,16 @@ export const ButtonsEp = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 25px;
-  margin: 0 10px;
+  /* margin: 0 -3px; */
+  @media (min-width: 768px) {
+    height: 56px;
+    font-size: 2rem;
+  }
   @media (min-width: 1024px) {
     width: ${(props) => props.widthLaptop};
     height: ${(props) => props.heightLaptop};
     font-size: ${(props) => props.fontSizeLaptop};
+    max-width: max-content;
   }
 `;
 
@@ -185,17 +206,18 @@ export const ButtonSeeAll = styled.button`
   border: none;
   color: #a127ff;
   font-size: 20px;
-  margin-top: 80px;
   cursor: pointer;
+  margin-top: 50px;
   align-self: center;
   :hover {
     width: 161px;
     height: 51px;
     text-shadow: 0px 3px 6px #ff00c47a;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     width: 160px;
     height: 50px;
+    margin-top: 70px;
   }
 `;
 
@@ -231,11 +253,39 @@ export const LittleDots = styled.div`
   display: flex;
   justify-content: space-between;
   border-radius: 50px;
-  /* background-color: ${(props) => (props.clicked ? "purple" : "red")}; */
   :hover {
-    background: purple;
+    background: #a127ff;
   }
   @media (min-width: 1024px) {
     height: 10px;
   }
 `;
+
+export const BackgroundOverlay = styled.div`
+  width: 100%;
+  height: 520px;
+  background-color: black;
+  opacity: 0.1;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+`;
+
+export const OverlayDiv = styled.div`
+ width: 100%;
+  height: auto;
+  border-radius: 44px 44px 0px 0px;
+  position: relative;
+  background: linear-gradient(90deg, rgba(2,0,36,0.5) 0%, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 35%);
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+  @media (min-width: 1024px) {
+    height: 420px;
+  }
+  @media (min-width: 1366px) {
+    height: 520px;
+  }
+`
+;

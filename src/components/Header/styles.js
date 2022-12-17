@@ -11,7 +11,7 @@ export const Top = styled.div`
   box-shadow: 0px 6px 16px #0000004f;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   position: fixed;
   z-index: 999;
   top: -1px;
@@ -75,7 +75,7 @@ export const SearchBar = styled.input`
   @media (min-width: 1024px) {
     padding-left: 90px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1366px) {
     padding-left: 140px;
   }
 `;
@@ -100,7 +100,7 @@ export const AfterSearch = styled.div`
   @media (min-width: 1024px) {
     padding: 0 0 0 90px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1366px) {
     padding: 0 0 0 140px;
   }
 `;
@@ -155,30 +155,67 @@ export const IconAndTagRow = styled.div`
   }
 `;
 
-export function TitleInsideComponentSearch(props) {
-  const TitleInsideSearch = styled.div`
-    width: 180px;
-    font-size: 2rem;
+export const Circle = styled.div`
+  width: ${(props) => props.widthCircle};
+  height: ${(props) => props.heightCircle};
+  background: #9e9e9e;
+  border-radius: 50%;
+  @media (min-width: 768px) {
+    width: ${(props) => props.widthCircleTablet};
+    height: ${(props) => props.heightCircleTablet};
+  }
+`;
+
+export function TitleInsideComponentGray(props) {
+  const TitleInsideGray = styled.div`
+    width: ${(props) => props.width};
+    font-size: 1.7rem;
     color: #9a8dac;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: space-between;
     /* background: blue; */
-    span {
+    cursor: ${(props) => props.cursor};
+    @media (min-width: 768px) {
+      width: ${(props) => props.widthTablet};
+      font-size: ${(props.fontSizeTablet)};
+    }
+    @media (min-width: 1024px) {
+      width: 180px;
       font-size: 2rem;
     }
+    span {
+      font-size: 2rem;
+      color: ${(props) => props.colorSpan};
+      @media (min-width: 768px) {
+        font-size: ${(props.fontSizeTablet)};
+      }
+      @media (min-width: 1024px) {
+        font-size: 2rem;
+      }
+    }
   `;
+
   return (
-    <TitleInsideSearch>
+    <TitleInsideGray
+      width={props.width}
+      widthTablet={props.widthTablet}
+      colorSpan={props.colorSpan}
+      cursor={props.cursor}
+      fontSizeTablet={props.fontSizeTablet}
+    >
       Hyper Beam
-      <ThemeProvider theme={theme}>
-        <FiberManualRecordIcon sx={{ color: "#9e9e9e" }} />
-      </ThemeProvider>
+      <Circle
+        widthCircle={props.widthCircle}
+        heightCircle={props.heightCircle}
+        widthCircleTablet={props.widthCircleTablet}
+        heightCircleTablet={props.heightCircleTablet}
+      />
       <span>
         {props.number < 10 ? 0 : ""}
         {props.number}
       </span>
-    </TitleInsideSearch>
+    </TitleInsideGray>
   );
 }

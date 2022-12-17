@@ -22,9 +22,14 @@ export const LeftImage = styled.div`
   background-image: ${(props) => props.image};
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   border-radius: 0;
   max-width: 800px;
   margin: 0 0 30px 0;
+  @media (min-width: 768px) {
+    height: 407px;
+    margin: 0 0 45px 0;
+  }
   @media (min-width: 1024px) {
     max-width: 800px;
     height: 100%;
@@ -34,15 +39,17 @@ export const LeftImage = styled.div`
 `;
 
 export const TextDiv = styled.div`
-  width: 50%;
+  width: 100%;
   height: auto;
   /* background: green; */
   padding: 0 18px;
-  width: 100%;
   display: flex;
   flex-direction: column;
+  @media (min-width: 768px) {
+    padding: 0 200px 0 99px;
+  }
   @media (min-width: 1024px) {
-    max-width: 850px;
-    padding-left: 5px;
+    width: 850px;
+    padding: 0 0 0 5px;
   }
 `;

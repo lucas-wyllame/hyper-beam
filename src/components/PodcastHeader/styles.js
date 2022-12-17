@@ -16,21 +16,38 @@ export const Content = styled.div`
 
 export const BackBanner = styled.div`
   width: 100%;
-  height: 645px;
-  background: #a57bca;
+  height: auto;
+  background-color: #a57bca;
+  background-image: ${(props) => props.backgroundImg};
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  /* padding: 50px 33px; */
-  /* flex-direction: column; */
   @media (min-width: 1024px) {
     height: 400px;
   }
 `;
 
+export const OverlayDiv = styled.div`
+  width: 100%;
+  height: auto;
+  background-color: green;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(90deg, rgba(2,0,36,0.5) 0%, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 35%);
+  justify-content: center;
+  padding: 50px 0;
+  @media (min-width: 1024px) {
+    height: 400px;
+    padding: 0;
+  }
+`;
+
 export const ItensBanner = styled.div`
-  width: 80%;
-  height: 600px;
+  width: 81%;
+  height: auto;
   /* background: blue; */
   display: flex;
   align-items: center;
@@ -49,12 +66,13 @@ export const ItensBanner = styled.div`
 
 export const BannerInfos = styled.div`
   width: 100%;
-  height: 220px;
+  height: auto;
   display: flex;
+  /* background: cyan; */
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-top: 60px;
+  /* margin-top: 60px; */
   @media (min-width: 1024px) {
     width: 40%;
     height: 250px;

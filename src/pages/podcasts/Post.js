@@ -24,13 +24,14 @@ export default function Post() {
     <>
       <PodcastHeader
         title={all.map((res) => {return(res.fields.title)})}
-        backgroundImg={`url(${all.map((res) => {return(res.fields?.littleImage?.fields.file.url)})})`}
+        backgroundImg={`url(${all.map((res) => {return(res.fields?.bigImage?.fields.file.url)})})`}
+        hyperCardImage={`url(${all.map((res) => {return(res.fields?.littleImage?.fields.file.url)})})`}
         number={all.map((res) => {return(res.fields.number)})}
         gameTags={all.map((res) => {return(res.fields.gameTags)})}
         desc={all.map((res) => {return(res.fields.description)})}
       />
       <SpotifyAndOtherPlats url={all.map((res) => res.fields.podcastUrl)} />
-      <Comments />
+      <Comments url={all.map((res) => {return(res.fields.title)})} />
     </>
   );
 }

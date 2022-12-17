@@ -1,4 +1,4 @@
-import { Title, Desc, MoreInfs } from "@styles/globalStyles";
+import { Title, Desc, MoreInfs, TextInsideIcon } from "@styles/globalStyles";
 import HyperCard from "../HyperCard/hyperCard";
 import { Icon } from "@styles/globalStyles";
 import {
@@ -16,11 +16,15 @@ import {
   RightArrow,
   Dots,
   LittleDots,
+  BackgroundOverlay,
+  TextBox,
+  OverlayDiv
 } from "./styles";
 import { useRouter } from "next/router";
 import Slider from "react-slick";
-import { useEffect, useState } from "react";
-import { Control } from "@icon/IconComTag";
+import React, { useEffect, useState } from "react";
+import { ControlWithCircle } from "@icon/ControlWithCircle";
+import { Control } from "@icon/Control";
 import { TitleInsideComponent } from "@styles/globalStyles";
 import { ConnectContent } from "src/ConfigContent";
 
@@ -29,7 +33,7 @@ function SamplePrevArrow(props) {
   return (
     <LeftArrow
       className={className}
-      src="./icon/Grupo 21.svg"
+      src="./icon/blueArrowLeft.svg"
       onClick={onClick}
     />
   );
@@ -40,7 +44,7 @@ function SampleNextArrow(props) {
   return (
     <RightArrow
       className={className}
-      src="./icon/Grupo 22.svg"
+      src="./icon/purpleArrowRight.svg"
       onClick={onClick}
     />
   );
@@ -50,6 +54,7 @@ export default function LastEpisodes() {
   const [isHovering, setIsHovering] = useState(false);
   const [all, setAll] = useState([]);
   const [clicked, setClicked] = useState(false);
+  const [state, setState] = useState();
 
   function teste() {
     let liTeste =
@@ -125,45 +130,82 @@ export default function LastEpisodes() {
     ],
   };
 
-  const handleClickUniqueEp = (link) => {
-    router.push(`/podcasts/${link}`);
-  };
+  // var sizeScreen = window?.screen.width;
+  // setState(sizeScreen);
+  // console.log(sizeScreen);
 
   return (
     <Content>
-      {console.log("la ele infinito", all)}
-      <Title margin="0">Episódios Recentes</Title>
-      <Desc margin="0">Acompanhe nosso podcast e seus episódios</Desc>
+      {console.log("LastEpisodes all", all)}
+      <TextBox>
+        <Title margin="0">Episódios Recentes</Title>
+        <Desc margin="0">Acompanhe nosso podcast e seus episódios</Desc>
+      </TextBox>
       <ListPodcasts>
-        {isHovering && (
+        {/* {isHovering && (
           <HoveringIcon>Sobre o que falamos nesse episodio?</HoveringIcon>
-        )}
+        )} */}
         <Slider {...settings}>
           {all.slice(0, 5).map((res, index) => {
             return (
-              <>
-                <Background key={index}>
+              <React.Fragment key={index}>
+                <Background
+                  image={`url(${res.fields?.bigImage?.fields.file.url})`}
+                >
+                  <OverlayDiv>
+                  {/* <BackgroundOverlay /> */}
                   <Block>
                     <CardAndText>
-                      <HyperCard
-                        backgroundImg={`url(${res.fields?.littleImage?.fields?.file.url})`}
-                        width={"253px"}
-                        height={"253px"}
-                        position={"relative"}
-                        top={"-35px"}
-                        widthLaptopLarge={"337px"}
-                        heightLaptopLarge={"337px"}
-                        onClick={() => console.log("CLICOU")}
-                      />
+                      <a href={`/podcasts/${res.fields?.pathUrl}`}>
+                        <HyperCard
+                          hyperCardImg={`url(${res.fields?.littleImage?.fields?.file.url})`}
+                          width={"253px"}
+                          height={"253px"}
+                          widthTablet="337px"
+                          heightTablet="337px"
+                          widthLaptop={"253px"}
+                          heightLaptop={"253px"}
+                          position={"relative"}
+                          top={"-20px"}
+                          widthLaptopLarge={"337px"}
+                          heightLaptopLarge={"337px"}
+                          // onClick={window.location.href=`/podcasts`}
+                        />
+                      </a>
                       <TextsDivEp>
-                        <TitleInsideComponent cursor="pointer" number={res.fields?.number} />
-                        <MoreInfs fontSize={"1.8rem"} width={"694px"}>
+                        <a href={`/podcasts/${res.fields?.pathUrl}`}>
+                          <TitleInsideComponent
+                            number={res.fields?.number}
+                            width="240px"
+                            widthTablet="310px"
+                            fontSize="2.8rem"
+                            fontSizeTablet="3.8rem"
+                            cursor="pointer"
+                            widthCircle="8px"
+                            heightCircle="8px"
+                            widthCircleTablet="10px"
+                            heightCircleTablet="10px"
+                          />
+                        </a>
+                        <MoreInfs
+                          textOverflow="ellipsis"
+                          overflow="hidden"
+                          display="-webkit-box !important"
+                          wbkLineClamp={4}
+
+                          wbkLineClampLaptop={5}
+                          wbkBoxOrient="vertical"
+                          whiteSpace="normal"
+                          fontSize="1.8rem"
+                          fontSizeLaptopLarge="2.5rem"
+                          width="694px"
+                        >
                           {res.fields.description}
                         </MoreInfs>
                       </TextsDivEp>
                     </CardAndText>
                     <IconAndButtons
-                      height="140px"
+                      gap="15px"
                       widthLaptop="580px"
                       heightLaptop="auto"
                       flexDLaptop="row"
@@ -172,18 +214,21 @@ export default function LastEpisodes() {
                       <Icon
                         onMouseOver={handleMouseOver}
                         onMouseOut={handleMouseOut}
-                        widthIcon={"40px"}
-                        heightIcon={"40px"}
+                        height="40px"
+                        // widthIcon={"40px"}
+                        // heightIcon={"40px"}
                         widthIconLaptop="53px"
                         heightIconLaptop="53px"
                       >
-                        <Control />
+                        <Control className="control" />
+                        <TextInsideIcon>Assuntos desse episódio</TextInsideIcon>
+                        <ControlWithCircle className="controlWithCircle" />
                       </Icon>
-
                       {res.fields.gameTags?.map((res, index) => (
                         <ButtonsEp
                           key={index}
                           width="auto"
+                          height="40px"
                           widthLaptop="auto"
                           heightLaptop="49px"
                           fontSizeLaptop="2rem"
@@ -193,13 +238,14 @@ export default function LastEpisodes() {
                       ))}
                     </IconAndButtons>
                   </Block>
+                  </OverlayDiv>
                 </Background>
-              </>
+              </React.Fragment>
             );
           })}
         </Slider>
-        <ButtonSeeAll onClick={handleClick}>Ver todos</ButtonSeeAll>
       </ListPodcasts>
+      <ButtonSeeAll onClick={handleClick}>Ver todos</ButtonSeeAll>
     </Content>
   );
 }

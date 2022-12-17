@@ -15,26 +15,26 @@ import {
 } from "./styles";
 import Slider from "react-slick";
 import { ConnectContent } from "../../ConfigContent";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 
 function SamplePrevArrow(props) {
-  const { className, onClick } = props;
+  const { className, onClick, style } = props;
   return (
     <LeftArrow
       className={className}
-      src="./icon/Grupo 21.svg"
+      style={{ ...style, backgroundColor: "none", borderStyle: "0" }}
       onClick={onClick}
     />
   );
 }
 
 function SampleNextArrow(props) {
-  const { className, onClick } = props;
+  const { className, onClick, style } = props;
   return (
     <RightArrow
       className={className}
-      src="./icon/Grupo 22.svg"
+      style={{ ...style, backgroundColor: "none", borderStyle: "0" }}
       onClick={onClick}
     />
   );
@@ -109,8 +109,8 @@ export default function OurTeam() {
           {all.map((res, index) => {
             return (
               // eslint-disable-next-line react/jsx-key
-              <>
-                <Peoples key={index}>
+              <React.Fragment key={index}>
+                <Peoples>
                   <CardsOurTeam
                     image={
                       `url(${res.fields.profilePicture?.fields.file.url})` || ""
@@ -128,12 +128,12 @@ export default function OurTeam() {
                     <FuncCasters>{res.fields.role}</FuncCasters>
                   </CastersBox>
                 </Peoples>
-              </>
+              </React.Fragment>
             );
           })}
         </Slider>
         {/* <AlingArrowBaseDiv> */}
-          {/* <AlingCountBaseDiv /> */}
+        {/* <AlingCountBaseDiv /> */}
         {/* </AlingArrowBaseDiv> */}
       </GlobalPeoples>
     </Content>

@@ -3,10 +3,14 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: 790px;
-  /* background: #11129d; */
+  /* background: blue; */
   display: flex;
   justify-content: center;
   margin-top: 80px;
+  @media (min-width: 768px) {
+    height: 850px;
+    margin-top: 90px;
+  }
   @media (min-width: 1024px) {
     height: 650px;
     margin-top: 100px;
@@ -26,7 +30,13 @@ export const Banner = styled.div`
   align-items: center;
   position: relative;
   justify-content: space-between;
+  background-position: center;
+  @media (min-width: 768px) {
+    width: 91%;
+    height: 692px;
+  }
   @media (min-width: 1024px) {
+    width: 95%;
     height: 488px;
     justify-content: space-between;
     flex-direction: row;
@@ -66,9 +76,6 @@ export const PlayButton = styled.button`
   @media (min-width: 1024px) {
     font-size: 2rem;
   }
-  @media (min-width: 1440px) {
-    font-size: 2rem;
-  }
 `;
 
 export const PodcastTheme = styled.p`
@@ -76,10 +83,13 @@ export const PodcastTheme = styled.p`
   margin: 0 0 21px 0;
   color: #fff;
   font-weight: bold;
+  @media (min-width: 768px) {
+    font-size: 2.5rem;
+  }
   @media (min-width: 1024px) {
     font-size: 2.3rem;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1366px) {
     font-size: 2.5rem;
   }
 `;
@@ -96,11 +106,15 @@ export const BigImg = styled.div`
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: center; */
+  @media (min-width: 768px) {
+    width: 487px;
+    height: 470px;
+    max-width: 540px;
+    right: 80px;
+  }
   @media (min-width: 1024px) {
     width: 387px;
     height: 375px;
-    max-width: 540px;
-    right: 80px;
   }
   @media (min-width: 1440px) {
     width: 532px;
@@ -117,6 +131,9 @@ export const DivToCentralizeListHomeBanner = styled.div`
   position: absolute;
   top: 580px;
   left: 0px;
+  @media (min-width: 768px) {
+    top: 96%;
+  }
   @media (min-width: 1024px) {
     top: 465px;
   }
@@ -124,10 +141,13 @@ export const DivToCentralizeListHomeBanner = styled.div`
 
 export const ListHomeBanner = styled.div`
   width: 242px;
-  height: 200px;
+  height: auto;
   /* background: red; */
-  @media (min-width: 738px) {
-    width: 443px;
+  @media (min-width: 569px) {
+    width: 440px;
+  }
+  @media (min-width: 768px) {
+    width: 570px;
   }
   @media (min-width: 987px) {
     width: 662px;
@@ -135,22 +155,37 @@ export const ListHomeBanner = styled.div`
   @media (min-width: 1101px) {
     width: 900px;
   }
-  @media (min-width: 1338px) {
-    width: 68%;
-  }
-  @media (min-width: 1440px) {
+  @media (min-width: 1366px) {
     width: 1090px;
   }
 `;
 
 export const HyperCardGroup = styled.div`
   height: 220px;
-  // background: green;
+  /* background: green; */
   cursor: pointer;
   display: flex !important;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
+  :hover {
+    div {
+      box-shadow: 0px 3px 8px #0000003d;
+      mix-blend-mode: soft-light;
+    }
+    div {
+      color: #ffe747;
+      div {
+        background-color: #ffe747;
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    height: 195px;
+  }
+  @media (min-width: 1024px) {
+    height: 220px;
+  }
 `;
 
 export const HyperText = styled.label`
@@ -160,8 +195,8 @@ export const HyperText = styled.label`
 `;
 
 export const LeftArrow = styled.img`
-  height: 39px;
   width: auto;
+  height: 39px;
   position: absolute;
   top: 50%;
   left: -39px;
@@ -169,10 +204,31 @@ export const LeftArrow = styled.img`
 `;
 
 export const RightArrow = styled.img`
-  height: 39px;
   width: auto;
+  height: 39px;
   position: absolute;
   right: -39px;
   top: 50%;
   z-index: 2;
+`;
+
+export const OverlayDiv = styled.div`
+  width: 100%;
+  height: 610px;
+  flex-direction: column;
+  background: linear-gradient(90deg, rgba(2,0,36,0.5) 0%, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 35%);
+  border-radius: 44px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-top: 60px;
+  justify-content: space-between;
+  @media (min-width: 768px) {
+    height: 692px;
+  }
+  @media (min-width: 1024px) {
+    height: 488px;
+    justify-content: space-between;
+    flex-direction: row;
+  }
 `;

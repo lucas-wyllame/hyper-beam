@@ -1,20 +1,17 @@
-import { Title, Desc } from "@styles/globalStyles";
-import { platsLinks } from "./platsLinks";
+import { Title, Desc, MoreInfs } from "@styles/globalStyles";
 import {
   Content,
   Plats,
-  PlatsGroup,
   PlatsCards,
   PlatsIcons,
-  PlatsTitle,
+  Divider,
   PlatsButton,
 } from "./styles";
 import { useState, useEffect } from "react";
 import { ConnectContent } from "src/ConfigContent";
 
-export default function AvailablePlats() {
+export default function AvailablePlats(props) {
   const [all, setAll] = useState([]);
-  var teste;
   useEffect(() => {
     async function FetchMyApi() {
       let items = await ConnectContent();
@@ -28,7 +25,8 @@ export default function AvailablePlats() {
 
   return (
     <Content>
-      <Title textAlign="center" margin="0 0 22px 0">
+      {console.log("AvailablePlats all", all)}
+      <Title textAlign="center" margin="0 0 0px 0">
         Plataformas disponíveis
       </Title>
       <Desc margin="0" textAlignDesc="center">
@@ -38,54 +36,33 @@ export default function AvailablePlats() {
         {all.slice(0, 3).map((res, index) => {
           return (
             // eslint-disable-next-line react/jsx-key
-            <PlatsGroup
-              colorHoverText={res.fields.styling?.colorHoverText}
-              key={index}
-            >
-              <PlatsCards
-                width={res.fields.styling?.width}
-                height={res.fields.styling?.height}
-                widthHover={res.fields.styling?.widthHover}
-                heightHover={res.fields.styling?.heightHover}
-                widthHoverDiv={res.fields.styling?.widthHoverDiv}
-                heightHoverDiv={res.fields.styling?.heightHoverDiv}
-                href={res.fields.url}
-                imageHover={
-                  `url(${res.fields.iconHover?.fields.file.url})` || ""
-                }
-                target="_blank"
-                rel="noreferrer"
-              >
+            <a href={res.fields.url} target="_blank" rel="noreferrer">
+              <PlatsCards>
                 <PlatsIcons
-                  widthIcon={res.fields.styling?.widthIcon}
-                  heightIcon={res.fields.styling?.heightIcon}
                   image={`url(${res.fields.icon?.fields.file.url})` || ""}
                 />
+                <Divider />
+                <MoreInfs
+                  fontSize="1.4rem"
+                  fontSizeTablet="1.9rem"
+                  fontSizeLaptop="2.3rem"
+                  fontSizeLaptopLarge="2.3rem"
+                >
+                  Escute o Hyper Beam no <br />
+                  <span> {res.fields.platformName}</span>
+                </MoreInfs>
               </PlatsCards>
-              <PlatsTitle
-                href={res.fields.url}
-                target="_blank"
-                rel="noreferrer"
-                fontSize={res.fields.styling?.fontSize}
-                fontWeight={res.fields.styling?.fontWeight}
-                margin={"15px 0 0 0"}
-              >
-                {res.fields.platformName}
-              </PlatsTitle>
-            </PlatsGroup>
+            </a>
           );
         })}
       </Plats>
       {all.slice(3).map((res, index) => {
         return (
-          <PlatsButton
-            key={index}
-            href="https://bit.ly/3Qe9421"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {res.fields.platformName}
-          </PlatsButton>
+          <a target="_blank" rel="noreferrer" href={res.fields.url}>
+            <PlatsButton key={index} width="332px" height="54px" widthLaptop="604px">
+              {res.fields.platformName}
+            </PlatsButton>
+          </a>
         );
       })}
     </Content>

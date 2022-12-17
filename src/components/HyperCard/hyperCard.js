@@ -3,7 +3,7 @@ import styled from "styled-components";
 const CardBanner = styled.div`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
-  background-image: ${(props) => props.backgroundImg};
+  background-image: ${(props) => props.hyperCardImg};
   background-size: cover;
   background-repeat: no-repeat;
   position: ${(props) => props.position};
@@ -12,11 +12,16 @@ const CardBanner = styled.div`
   margin: ${(props) => props.margin};
   border-radius: 15px;
   cursor: pointer;
+  z-index: 2;
+  @media (min-width: 768px) {
+    width: ${(props) => props.widthTablet};
+    height: ${(props) => props.heightTablet};
+  }
   @media (min-width: 1024px) {
     width: ${(props) => props.widthLaptop};
     height: ${(props) => props.heightLaptop};
   }
-  @media (min-width: 1440px) {
+  @media (min-width: 1366px) {
     width: ${(props) => props.widthLaptopLarge};
     height: ${(props) => props.heightLaptopLarge};
   }
@@ -25,7 +30,7 @@ const CardBanner = styled.div`
 export default function HyperCard({
   width,
   height,
-  backgroundImg,
+  hyperCardImg,
   position,
   top,
   margin,
@@ -33,17 +38,21 @@ export default function HyperCard({
   heightLaptop,
   widthLaptopLarge,
   heightLaptopLarge,
+  widthTablet,
+  heightTablet,
 }) {
   return (
     <CardBanner
       width={width}
       height={height}
-      backgroundImg={backgroundImg}
+      hyperCardImg={hyperCardImg}
       position={position}
       top={top}
       margin={margin}
       widthLaptop={widthLaptop}
       heightLaptop={heightLaptop}
+      widthTablet={widthTablet}
+      heightTablet={heightTablet}
       widthLaptopLarge={widthLaptopLarge}
       heightLaptopLarge={heightLaptopLarge}
     />
