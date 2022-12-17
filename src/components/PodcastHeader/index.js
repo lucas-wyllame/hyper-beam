@@ -1,10 +1,11 @@
-import { Content, BackBanner, ItensBanner, BannerInfos, Topic } from "./styles";
+import { Content, BackBanner, ItensBanner, BannerInfos, Topic, OverlayDiv } from "./styles";
 import HyperCard from "../../components/HyperCard/hyperCard";
 import {
   TitleInsideComponent,
   MoreInfs,
   Icon,
   TextInsideIcon,
+  
 } from "@styles/globalStyles";
 import {
   IconAndButtons,
@@ -17,6 +18,7 @@ export default function PodcastHeader(props) {
   return (
     <Content>
       <BackBanner backgroundImg={props.backgroundImg}>
+        <OverlayDiv>
         <ItensBanner>
           <HyperCard
             hyperCardImg={props.hyperCardImage}
@@ -67,6 +69,7 @@ export default function PodcastHeader(props) {
             </IconAndButtons>
           </BannerInfos>
         </ItensBanner>
+        </OverlayDiv>
       </BackBanner>
       <Topic>
         <MoreInfs fontSize="1.5rem" fontSizeLaptopLarge="2.5rem">{props.desc}</MoreInfs>

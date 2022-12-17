@@ -31,7 +31,6 @@ export const Banner = styled.div`
   position: relative;
   justify-content: space-between;
   background-position: center;
-  padding-top: 60px;
   @media (min-width: 768px) {
     width: 91%;
     height: 692px;
@@ -211,4 +210,25 @@ export const RightArrow = styled.img`
   right: -39px;
   top: 50%;
   z-index: 2;
+`;
+
+export const OverlayDiv = styled.div`
+  width: 100%;
+  height: 610px;
+  flex-direction: column;
+  background: linear-gradient(90deg, rgba(2,0,36,0.5) 0%, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 35%);
+  border-radius: 44px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-top: 60px;
+  justify-content: space-between;
+  @media (min-width: 768px) {
+    height: 692px;
+  }
+  @media (min-width: 1024px) {
+    height: 488px;
+    justify-content: space-between;
+    flex-direction: row;
+  }
 `;

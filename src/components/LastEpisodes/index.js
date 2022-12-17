@@ -18,6 +18,7 @@ import {
   LittleDots,
   BackgroundOverlay,
   TextBox,
+  OverlayDiv
 } from "./styles";
 import { useRouter } from "next/router";
 import Slider from "react-slick";
@@ -151,6 +152,7 @@ export default function LastEpisodes() {
                 <Background
                   image={`url(${res.fields?.bigImage?.fields.file.url})`}
                 >
+                  <OverlayDiv>
                   {/* <BackgroundOverlay /> */}
                   <Block>
                     <CardAndText>
@@ -190,6 +192,7 @@ export default function LastEpisodes() {
                           overflow="hidden"
                           display="-webkit-box !important"
                           wbkLineClamp={4}
+
                           wbkLineClampLaptop={5}
                           wbkBoxOrient="vertical"
                           whiteSpace="normal"
@@ -235,6 +238,7 @@ export default function LastEpisodes() {
                       ))}
                     </IconAndButtons>
                   </Block>
+                  </OverlayDiv>
                 </Background>
               </React.Fragment>
             );

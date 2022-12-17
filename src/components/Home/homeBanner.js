@@ -12,6 +12,7 @@ import {
   LeftArrow,
   RightArrow,
   DivToCentralizeListHomeBanner,
+  OverlayDiv
 } from "./styles";
 import Slider from "react-slick";
 import { useRouter } from "next/router";
@@ -114,6 +115,7 @@ export default function HomeBanner() {
     <Content>
       {console.log("Home banner all", all)}
       <Banner image={`url(${lastPodcast.fields?.bigImage?.fields.file.url})`}>
+          <OverlayDiv>
         <FeaturedPodcastInfo>
           <TitleInsideComponent
             width="210px"
@@ -126,7 +128,7 @@ export default function HomeBanner() {
             widthCircleTablet="8px"
             heightCircleTablet="8px"
             number={lastPodcast.fields?.number}
-          />
+            />
           <PodcastTheme>{lastPodcast.fields?.title}</PodcastTheme>
           <PlayButton onClick={() => handleClick(lastPodcast.fields?.pathUrl)}>
             Play
@@ -135,6 +137,7 @@ export default function HomeBanner() {
         <BigImg
           image={`url(${lastPodcast.fields?.detachedImage?.fields.file.url})`}
         />
+
         <DivToCentralizeListHomeBanner>
           <ListHomeBanner>
             <Slider {...settings}>
@@ -168,6 +171,7 @@ export default function HomeBanner() {
             </Slider>
           </ListHomeBanner>
         </DivToCentralizeListHomeBanner>
+        </OverlayDiv>
       </Banner>
     </Content>
   );

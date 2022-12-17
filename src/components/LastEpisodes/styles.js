@@ -271,3 +271,21 @@ export const BackgroundOverlay = styled.div`
   left: 0px;
   z-index: 1;
 `;
+
+export const OverlayDiv = styled.div`
+ width: 100%;
+  height: auto;
+  border-radius: 44px 44px 0px 0px;
+  position: relative;
+  background: linear-gradient(90deg, rgba(2,0,36,0.5) 0%, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 35%);
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+  @media (min-width: 1024px) {
+    height: 420px;
+  }
+  @media (min-width: 1366px) {
+    height: 520px;
+  }
+`
+;

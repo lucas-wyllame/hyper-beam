@@ -25,6 +25,19 @@ export const BackBanner = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  @media (min-width: 1024px) {
+    height: 400px;
+  }
+`;
+
+export const OverlayDiv = styled.div`
+  width: 100%;
+  height: auto;
+  background-color: green;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(90deg, rgba(2,0,36,0.5) 0%, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 35%);
+  justify-content: center;
   padding: 50px 0;
   @media (min-width: 1024px) {
     height: 400px;
