@@ -62,7 +62,7 @@ export default function AvailablePlats(props) {
       </Plats>
       {all.slice(3).map((res, index) => {
         return (
-          <a target="_blank" rel="noreferrer" href={res.fields.url}>
+          <a key={index} target="_blank" rel="noreferrer" href={res.fields.url}>
             <PlatsButton
               key={index}
               width="332px"
