@@ -150,7 +150,7 @@ export const PageButton = styled.div`
   }
 `;
 
-export const GroupingHyperCard = styled.div`
+export const GropingTexts = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;

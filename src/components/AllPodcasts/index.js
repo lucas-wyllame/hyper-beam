@@ -9,7 +9,7 @@ import {
   CountLabel,
   PageButtons,
   PageButton,
-  GroupingHyperCard,
+  GropingTexts,
 } from "./styles";
 import HyperCard from "../HyperCard/hyperCard";
 import { useEffect, useState } from "react";
@@ -122,7 +122,7 @@ export default function Carousel() {
                 heightLaptop="200px"
                 // margin="0 0 13px 0"
               />
-              <GroupingHyperCard>
+              <GropingTexts>
                 <TitleInsideComponent
                   width="170px"
                   widthTablet="240px"
@@ -149,7 +149,7 @@ export default function Carousel() {
                 >
                   {res.fields.description}
                 </MoreInfs>
-              </GroupingHyperCard>
+              </GropingTexts>
             </CarouselStyled>
           );
         })}
