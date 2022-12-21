@@ -1,4 +1,4 @@
 {
   "name": "local",
-  "link": "https://hyper-beam.vercel.app"
+  "link": "http://localhost:3000"
 }
