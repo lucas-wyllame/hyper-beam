@@ -9,7 +9,8 @@ export const Content = styled.div`
   align-items: center;
   justify-content: space-between;
   @media (min-width: 768px) {
-    height: 730px;
+    height: 790px;
+    margin-top: 20px;
   }
   @media (min-width: 1024px) {
     height: 630px;

@@ -9,7 +9,7 @@ export default function Footer(props) {
   const listLinks = [
     {
       name: "E-mail",
-      url: "https://linktr.ee/hyperbeamcast",
+      url: "mailto:hyperbeampodcast@gmail.com",
       icon: <EmailIcon />,
     },
     {

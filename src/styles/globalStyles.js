@@ -18,14 +18,14 @@ export const GlobalStyles = createGlobalStyle`
     height: 39px;
     position: absolute;
     top: 50%;
-    left: -39px;
+    left: -60px;
     z-index: 2;
   }
   .slick-next {
     width: 39px;
     height: 39px;
     position: absolute;
-    right: -39px;
+    right: -60px;
     top: 50%;
     z-index: 2;
   }

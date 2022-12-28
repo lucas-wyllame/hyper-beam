@@ -72,7 +72,7 @@ export default function PodcastHeader(props) {
         </OverlayDiv>
       </BackBanner>
       <Topic>
-        <MoreInfs fontSize="1.5rem" fontSizeLaptopLarge="2.5rem">{props.desc}</MoreInfs>
+        <MoreInfs fontSize="1.5rem" fontSizeTablet="2rem" fontSizeLaptopLarge="2.5rem">{props.desc}</MoreInfs>
       </Topic>
     </Content>
   );

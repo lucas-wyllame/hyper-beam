@@ -86,6 +86,19 @@ export const CardsOurTeam = styled.div`
       width: 293px;
       height: 293px;
       background-image: ${(props) => props.imageHover};
+      animation: fadeIn 1.5s;
+      -webkit-animation: fadeIn 1.5s;
+      -moz-animation: fadeIn 1.5s;
+      -o-animation: fadeIn 1.5s;
+      -ms-animation: fadeIn 1.5s;
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
     }
   }
   @media (min-width: 1645px) {

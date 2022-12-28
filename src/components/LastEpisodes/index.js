@@ -114,7 +114,7 @@ export default function LastEpisodes() {
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 4000,
     responsive: [
       {
@@ -198,7 +198,7 @@ export default function LastEpisodes() {
                         </TextsDivEp>
                       </CardAndText>
                       <IconAndButtons
-                        gap="15px"
+                        gap="8px"
                         widthLaptop="580px"
                         heightLaptop="auto"
                         flexDLaptop="row"

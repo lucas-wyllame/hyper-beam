@@ -68,10 +68,12 @@ export const PlayButton = styled.button`
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: transform 1s;
   :hover {
-    width: 135px;
-    height: 54px;
+    /* width: 135px; */
+    /* height: 54px; */
     text-shadow: 0px 3px 6px #ff00c47a;
+    transform: scale(1.03);
   }
   @media (min-width: 1024px) {
     font-size: 2rem;
@@ -216,7 +218,12 @@ export const OverlayDiv = styled.div`
   width: 100%;
   height: 610px;
   flex-direction: column;
-  background: linear-gradient(90deg, rgba(2,0,36,0.5) 0%, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 35%);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 0.5) 0%,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.5) 35%
+  );
   border-radius: 44px;
   display: flex;
   align-items: center;
