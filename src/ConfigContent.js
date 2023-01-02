@@ -1,4 +1,3 @@
-import { createClient } from 'contentful'
 const contentful = require("contentful")
 const config = require("./config.json")
 
