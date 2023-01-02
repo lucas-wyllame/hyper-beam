@@ -29,29 +29,28 @@ export const GlobalStyles = createGlobalStyle`
     top: 50%;
     z-index: 2;
   }
-  button.slick-arrow.slick-prev, 
-  div.styles__LeftArrow-sc-gziwbd-8.ilDHSB.slick-arrow.slick-prev{
+  button.slick-arrow.slick-prev{
     background-image:  url("./icon/purpleArrowLeft.svg");
     background-size: contain;
     z-index: 9;
   }
-  button.slick-arrow.slick-prev.slick-disabled, 
-  div.styles__LeftArrow-sc-gziwbd-8.ilDHSB.slick-arrow.slick-prev.slick-disabled{
+  button.slick-arrow.slick-prev.slick-disabled{
     background-image:  url("./icon/blueArrowLeft.svg");
     background-size: contain;
     z-index: 9;
   }
-  button.slick-arrow.slick-next, 
-  div.styles__RightArrow-sc-gziwbd-9.eUCWcC.slick-arrow.slick-next{
+  button.slick-arrow.slick-next{
     background-image:  url("./icon/purpleArrowRight.svg");
     background-size: contain;
     z-index: 9;
   }
-  button.slick-arrow.slick-next.slick-disabled, 
-  div.styles__RightArrow-sc-gziwbd-9.eUCWcC.slick-arrow.slick-next.slick-disabled{
+  button.slick-arrow.slick-next.slick-disabled{
     background-image:  url("./icon/blueArrowRight.svg");
     background-size: contain;
     z-index: 9;
+  }
+  #__next > div.styles__Content-sc-gziwbd-0.jihYEM > div.styles__GlobalPeoples-sc-gziwbd-2.crdfeT > div > button.slick-arrow.slick-prev.slick-disabled{
+    left: 10px;
   }
   .slick-prev:before, .slick-next:before {
     content: ""
@@ -71,11 +70,10 @@ export const Title = styled.p`
   }
   @media (min-width: 1024px) {
     font-size: 3.3rem;
-     margin: 0;
+    margin: 0;
   }
   @media (min-width: 1366px) {
     font-size: 4.5rem;
-   
   }
 `;
 

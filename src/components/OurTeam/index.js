@@ -18,27 +18,27 @@ import { ConnectContent } from "../../ConfigContent";
 import React, { useEffect } from "react";
 import { useState } from "react";
 
-function SamplePrevArrow(props) {
-  const { className, onClick, style } = props;
-  return (
-    <LeftArrow
-      className={className}
-      style={{ ...style, backgroundColor: "none", borderStyle: "0" }}
-      onClick={onClick}
-    />
-  );
-}
+// function SamplePrevArrow(props) {
+//   const { className, onClick, style } = props;
+//   return (
+//     <LeftArrow
+//       className={className}
+//       style={{ ...style, backgroundColor: "none", borderStyle: "0" }}
+//       onClick={onClick}
+//     />
+//   );
+// }
 
-function SampleNextArrow(props) {
-  const { className, onClick, style } = props;
-  return (
-    <RightArrow
-      className={className}
-      style={{ ...style, backgroundColor: "none", borderStyle: "0" }}
-      onClick={onClick}
-    />
-  );
-}
+// function SampleNextArrow(props) {
+//   const { className, onClick, style } = props;
+//   return (
+//     <RightArrow
+//       className={className}
+//       style={{ ...style, backgroundColor: "none", borderStyle: "0" }}
+//       onClick={onClick}
+//     />
+//   );
+// }
 
 export default function OurTeam() {
   const [all, setAll] = useState([]);
@@ -65,8 +65,8 @@ export default function OurTeam() {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    prevArrow: <SamplePrevArrow />,
-    nextArrow: <SampleNextArrow />,
+    // prevArrow: <SamplePrevArrow />,
+    // nextArrow: <SampleNextArrow />,
     responsive: [
       {
         breakpoint: 1175,
