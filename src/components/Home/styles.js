@@ -130,7 +130,7 @@ export const PodcastTheme = styled.p`
 `;
 
 export const BigImg = styled.div`
-  width: 329px;
+  width: 332px;
   height: 317px;
   position: absolute;
   background-image: ${(props) => props.image};
@@ -142,17 +142,17 @@ export const BigImg = styled.div`
   background-repeat: no-repeat;
   background-position: center; */
   @media (min-width: 768px) {
-    width: 487px;
+    width: 494px;
     height: 470px;
     max-width: 540px;
     right: 80px;
   }
   @media (min-width: 1024px) {
-    width: 387px;
+    width: 394px;
     height: 375px;
   }
   @media (min-width: 1440px) {
-    width: 532px;
+    width: 539px;
     height: 513px;
   }
 `;
