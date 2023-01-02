@@ -49,11 +49,6 @@ export const GlobalStyles = createGlobalStyle`
     background-size: contain;
     z-index: 9;
   }
- 
-  .styles__RightArrow-sc-gziwbd-9.gwXaLf.slick-arrow.slick-next {
-
-  left: 10px;
-}
   .slick-prev:before, .slick-next:before {
     content: ""
   }
