@@ -25,7 +25,7 @@ export const Banner = styled.div`
   background-image: ${(props) => props.image};
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 44px;
+  border-radius: 30px;
   display: flex;
   align-items: center;
   position: relative;
@@ -40,6 +40,38 @@ export const Banner = styled.div`
     height: 488px;
     justify-content: space-between;
     flex-direction: row;
+  }
+  @media (min-width: 1366px) {
+    height: 520px;
+  }
+`;
+
+export const OverlayDiv = styled.div`
+  width: 100%;
+  height: 610px;
+  flex-direction: column;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 0.5) 0%,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.5) 35%
+  );
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-top: 60px;
+  justify-content: space-between;
+  @media (min-width: 768px) {
+    height: 692px;
+  }
+  @media (min-width: 1024px) {
+    height: 488px;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  @media (min-width: 1366px) {
+    height: 520px;
   }
 `;
 
@@ -69,6 +101,7 @@ export const PlayButton = styled.button`
   align-items: center;
   cursor: pointer;
   transition: transform 1s;
+  transition: text-shadow 1s;
   :hover {
     /* width: 135px; */
     /* height: 54px; */
@@ -138,6 +171,9 @@ export const DivToCentralizeListHomeBanner = styled.div`
   }
   @media (min-width: 1024px) {
     top: 465px;
+  }
+  @media (min-width: 1366px) {
+    top: 497px;
   }
 `;
 
@@ -212,30 +248,4 @@ export const RightArrow = styled.img`
   right: -39px;
   top: 50%;
   z-index: 2;
-`;
-
-export const OverlayDiv = styled.div`
-  width: 100%;
-  height: 610px;
-  flex-direction: column;
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 0.5) 0%,
-    rgba(0, 0, 0, 0.5) 0%,
-    rgba(0, 0, 0, 0.5) 35%
-  );
-  border-radius: 44px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  padding-top: 60px;
-  justify-content: space-between;
-  @media (min-width: 768px) {
-    height: 692px;
-  }
-  @media (min-width: 1024px) {
-    height: 488px;
-    justify-content: space-between;
-    flex-direction: row;
-  }
 `;

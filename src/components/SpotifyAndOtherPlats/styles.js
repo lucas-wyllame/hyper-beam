@@ -9,11 +9,12 @@ export const Content = styled.div`
   align-items: center;
   justify-content: space-between;
   @media (min-width: 768px) {
-    height: 790px;
-    margin-top: 20px;
+    height: 890px;
+    margin-top: 30px;
   }
   @media (min-width: 1024px) {
-    height: 630px;
+    height: 590px;
+    margin-top: 0px;
   }
 `;
 

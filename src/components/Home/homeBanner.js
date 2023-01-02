@@ -12,7 +12,7 @@ import {
   LeftArrow,
   RightArrow,
   DivToCentralizeListHomeBanner,
-  OverlayDiv
+  OverlayDiv,
 } from "./styles";
 import Slider from "react-slick";
 import { useRouter } from "next/router";
@@ -132,28 +132,30 @@ export default function HomeBanner() {
   return (
     <Content>
       <Banner image={`url(${lastPodcast.fields?.bigImage?.fields.file.url})`}>
-          <OverlayDiv>
-        <FeaturedPodcastInfo>
-          <TitleInsideComponent
-            width="210px"
-            widthTablet="250px"
-            fontSize="2.5rem"
-            fontSizeTablet="3rem"
-            margin="12px 0"
-            widthCircle="7px"
-            heightCircle="7px"
-            widthCircleTablet="8px"
-            heightCircleTablet="8px"
-            number={lastPodcast.fields?.number}
+        <OverlayDiv>
+          <FeaturedPodcastInfo>
+            <TitleInsideComponent
+              width="210px"
+              widthTablet="250px"
+              fontSize="2.5rem"
+              fontSizeTablet="3rem"
+              margin="12px 0"
+              widthCircle="7px"
+              heightCircle="7px"
+              widthCircleTablet="8px"
+              heightCircleTablet="8px"
+              number={lastPodcast.fields?.number}
             />
-          <PodcastTheme>{lastPodcast.fields?.title}</PodcastTheme>
-          <PlayButton onClick={() => handleClick(lastPodcast.fields?.pathUrl)}>
-            Play
-          </PlayButton>
-        </FeaturedPodcastInfo>
-        <BigImg
-          image={`url(${lastPodcast.fields?.detachedImage?.fields.file.url})`}
-        />
+            <PodcastTheme>{lastPodcast.fields?.title}</PodcastTheme>
+            <PlayButton
+              onClick={() => handleClick(lastPodcast.fields?.pathUrl)}
+            >
+              Play
+            </PlayButton>
+          </FeaturedPodcastInfo>
+          <BigImg
+            image={`url(${lastPodcast.fields?.detachedImage?.fields.file.url})`}
+          />
 
         <DivToCentralizeListHomeBanner>
           <ListHomeBanner>

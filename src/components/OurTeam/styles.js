@@ -153,6 +153,10 @@ export const LeftArrow = styled.div`
   top: 433px;
   left: 86px;
   z-index: 2;
+  background-image:  url("./icon/purpleArrowLeft.svg");
+  :hover{
+    background-image:  url("./icon/purpleArrowLeft.svg");
+  }
   @media (min-width: 769px) {
     top: 433px;
     left: 263px;
@@ -174,6 +178,13 @@ export const RightArrow = styled.div`
   top: 24px;
   left: 157px;
   z-index: 2;
+  background-image:  url("./icon/purpleArrowRight.svg");
+  :hover{
+    background-image:  url("./icon/purpleArrowRight.svg");
+  }
+  .disabled{
+    background-image: none;
+  }
   @media (min-width: 769px) {
     top: 24px;
     left: 354px;

@@ -49,6 +49,7 @@ export const CarouselStyled = styled.div`
   margin-bottom: 37px;
   gap: 15px;
   padding: 25px 20px 40px;
+  border-radius: 15px;
   /* margin-right: 45px; */
   @media (min-width: 768px) {
     flex-direction: row;
@@ -56,7 +57,7 @@ export const CarouselStyled = styled.div`
     justify-content: space-around;
   }
   @media (min-width: 1024px) {
-    padding: 25px 20px 40px;
+    padding: 26px 20px 32px 40px;
     margin-bottom: 0;
   }
 `;

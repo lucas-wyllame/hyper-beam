@@ -29,26 +29,22 @@ export const GlobalStyles = createGlobalStyle`
     top: 50%;
     z-index: 2;
   }
-  button.slick-arrow.slick-prev, 
-  div.styles__LeftArrow-sc-gziwbd-8.ilDHSB.slick-arrow.slick-prev{
+  button.slick-arrow.slick-prev{
     background-image:  url("./icon/purpleArrowLeft.svg");
     background-size: contain;
     z-index: 9;
   }
-  button.slick-arrow.slick-prev.slick-disabled, 
-  div.styles__LeftArrow-sc-gziwbd-8.ilDHSB.slick-arrow.slick-prev.slick-disabled{
+  button.slick-arrow.slick-prev.slick-disabled{
     background-image:  url("./icon/blueArrowLeft.svg");
     background-size: contain;
     z-index: 9;
   }
-  button.slick-arrow.slick-next, 
-  div.styles__RightArrow-sc-gziwbd-9.eUCWcC.slick-arrow.slick-next{
+  button.slick-arrow.slick-next{
     background-image:  url("./icon/purpleArrowRight.svg");
     background-size: contain;
     z-index: 9;
   }
-  button.slick-arrow.slick-next.slick-disabled, 
-  div.styles__RightArrow-sc-gziwbd-9.eUCWcC.slick-arrow.slick-next.slick-disabled{
+  button.slick-arrow.slick-next.slick-disabled{
     background-image:  url("./icon/blueArrowRight.svg");
     background-size: contain;
     z-index: 9;
@@ -66,9 +62,12 @@ export const Title = styled.p`
   font-weight: bold;
   @media (min-width: 768px) {
     font-size: 4.1rem;
+    font-size: ${(props) => props.fontSizeTablet};
+    margin: ${(props) => props.marginTablet};
   }
   @media (min-width: 1024px) {
     font-size: 3.3rem;
+    margin: 0;
   }
   @media (min-width: 1366px) {
     font-size: 4.5rem;
@@ -83,10 +82,12 @@ export const Desc = styled.h1`
   font-weight: 500;
   @media (min-width: 768px) {
     font-size: 2.5rem;
-    margin-bottom: ${(props) => props.mgBottomTablet};
+    font-size: ${(props) => props.fontSizeTablet};
+    margin: ${(props) => props.marginTablet};
   }
   @media (min-width: 1024px) {
     font-size: 2.2rem;
+    margin-top: 6px;
   }
   @media (min-width: 1366px) {
     font-size: 2.8rem;
