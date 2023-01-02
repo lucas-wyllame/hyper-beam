@@ -17,7 +17,7 @@ import {
 import Slider from "react-slick";
 import { useRouter } from "next/router";
 import { TitleInsideComponent } from "@styles/globalStyles";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { ConnectContent } from "../../ConfigContent";
 import { useState } from "react";
 import { TitleInsideComponentGray } from "../Header/styles";
@@ -46,6 +46,8 @@ import { TitleInsideComponentGray } from "../Header/styles";
 
 export default function HomeBanner() {
   const [all, setAll] = useState([]);
+  const sliderRef = useRef();
+  const [activeSlide, setActiveSlide] = useState(0);
   const [lastPodcast, setLastPodcast] = useState([]);
   useEffect(() => {
     async function FetchMyApi() {
@@ -56,8 +58,15 @@ export default function HomeBanner() {
       setLastPodcast(allContent[allContent.length - 1]);
       setAll(allContent.reverse());
     }
+    // sliderRef.current.slickGoTo(5)
     FetchMyApi();
   }, []);
+
+  useEffect(() => {
+    if (window.innerWidth > 1100 && activeSlide > 5) {
+      sliderRef.current.slickGoTo(3)
+    }
+  }, [activeSlide, sliderRef.current])
 
   var slider = ".slider";
 
@@ -67,15 +76,20 @@ export default function HomeBanner() {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
+    initialSlide: 0,
+    mobileFirst: true,
     // nextArrow: <SampleNextArrow />,
     // prevArrow: <SamplePrevArrow />,
+    slickGoTo: 5,
+    transformEnabled: false,
     responsive: [
       {
         breakpoint: 1365,
         settings: {
+          // initialSlide: 0,
           slidesToShow: 4,
           slidesToScroll: 1,
-          // infinite: slider.length > 1 ? true : false,
+          infinite: slider.length > 1 ? true : false,
         },
       },
       {
@@ -83,23 +97,27 @@ export default function HomeBanner() {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          // infinite: slider.length > 1 ? true : false,
+          initialSlide: 6,
+          infinite: slider.length > 1 ? true : false,
         },
       },
       {
         breakpoint: 767,
         settings: {
+          initialSlide: 6,
           slidesToShow: 2,
           slidesToScroll: 1,
-          // infinite: slider.length > 1 ? true : false,
+          infinite: slider.length > 1 ? true : false,
         },
       },
       {
         breakpoint: 568,
         settings: {
+          initialSlide: 5,
           slidesToShow: 1,
           slidesToScroll: 1,
-          // infinite: slider.length > 1 ? true : false,
+          infinite: true,
+          slickGoTo: 5,
         },
       },
     ],
@@ -143,8 +161,9 @@ export default function HomeBanner() {
               {all.slice(1, 10).map((res, index) => {
                 return (
                   // eslint-disable-next-line react/jsx-key
-                  <React.Fragment key={index}>
+                  // <React.Fragment key={index}>
                     <HyperCardGroup
+                    key={index}
                       onClick={() => handleClick(res.fields?.pathUrl)}
                     >
                       <HyperCard
@@ -164,7 +183,7 @@ export default function HomeBanner() {
                         number={res.fields?.number}
                       />
                     </HyperCardGroup>
-                  </React.Fragment>
+                  // </React.Fragment>
                 );
               })}
             </Slider>
