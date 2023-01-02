@@ -16,13 +16,14 @@ export default function SpotifyAndOtherPlats(props) {
       />
       <OtherPlats>
         <Title
-          widthMobile={"256px"}
-          textAlignMobile={"start"}
-          margin={"0 38px 0 0"}
+          // margin={"0 38px 0 0"}
+          fontSizeTablet="3.5rem"
+          margin="0"
+          marginTablet="0"
         >
           Quer escutar em outra plataforma?
         </Title>
-        <Desc widthDescMobile={"294px"} maxWidth={"100%"}>
+        <Desc margin="10px 0 0 0" marginTablet="19px 0 0 0" fontSizeTablet="2.1rem" widthDescMobile={"294px"} maxWidth={"100%"}>
           Sem problema! Veja onde encontrar nosso podcast para escutar
         </Desc>
         <DivForGroupingPlatsButton>

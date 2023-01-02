@@ -27,11 +27,15 @@ export default function About() {
       />
       <TextDiv>
         <Title margin="0 0 5px 0">Somos o Hyper Beam</Title>
-        <Desc mgBottomTablet="38px" margin="0 0 22px 0">
+        <Desc margin="0 0 22px 0" marginTablet="0 0 38px 0">
           A fagulha de amor aos games em forma de podcast.
         </Desc>
 
-        <MoreInfs fontSize={"1.4rem"} fontSizeTablet={"2.2rem"} fontSizeLaptopLarge="2.5rem">
+        <MoreInfs
+          fontSize={"1.4rem"}
+          fontSizeTablet={"2.2rem"}
+          fontSizeLaptopLarge="2.5rem"
+        >
           {aboutContent[0]?.apresentationText}
         </MoreInfs>
       </TextDiv>

@@ -209,10 +209,13 @@ export const ButtonSeeAll = styled.button`
   cursor: pointer;
   margin-top: 50px;
   align-self: center;
+  transition: transform 0.5s;
+  transition: text-shadow 0.5s;
   :hover {
-    width: 161px;
-    height: 51px;
+    /* width: 161px; */
+    /* height: 51px; */
     text-shadow: 0px 3px 6px #ff00c47a;
+    transform: scale(1.01);
   }
   @media (min-width: 768px) {
     width: 160px;
@@ -273,11 +276,16 @@ export const BackgroundOverlay = styled.div`
 `;
 
 export const OverlayDiv = styled.div`
- width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 44px 44px 0px 0px;
   position: relative;
-  background: linear-gradient(90deg, rgba(2,0,36,0.5) 0%, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 35%);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 0.5) 0%,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.5) 35%
+  );
   display: flex;
   justify-content: center;
   z-index: 0;
@@ -287,5 +295,4 @@ export const OverlayDiv = styled.div`
   @media (min-width: 1366px) {
     height: 520px;
   }
-`
-;
+`;

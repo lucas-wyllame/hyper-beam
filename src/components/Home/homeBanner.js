@@ -12,7 +12,7 @@ import {
   LeftArrow,
   RightArrow,
   DivToCentralizeListHomeBanner,
-  OverlayDiv
+  OverlayDiv,
 } from "./styles";
 import Slider from "react-slick";
 import { useRouter } from "next/router";
@@ -114,62 +114,64 @@ export default function HomeBanner() {
   return (
     <Content>
       <Banner image={`url(${lastPodcast.fields?.bigImage?.fields.file.url})`}>
-          <OverlayDiv>
-        <FeaturedPodcastInfo>
-          <TitleInsideComponent
-            width="210px"
-            widthTablet="250px"
-            fontSize="2.5rem"
-            fontSizeTablet="3rem"
-            margin="12px 0"
-            widthCircle="7px"
-            heightCircle="7px"
-            widthCircleTablet="8px"
-            heightCircleTablet="8px"
-            number={lastPodcast.fields?.number}
+        <OverlayDiv>
+          <FeaturedPodcastInfo>
+            <TitleInsideComponent
+              width="210px"
+              widthTablet="250px"
+              fontSize="2.5rem"
+              fontSizeTablet="3rem"
+              margin="12px 0"
+              widthCircle="7px"
+              heightCircle="7px"
+              widthCircleTablet="8px"
+              heightCircleTablet="8px"
+              number={lastPodcast.fields?.number}
             />
-          <PodcastTheme>{lastPodcast.fields?.title}</PodcastTheme>
-          <PlayButton onClick={() => handleClick(lastPodcast.fields?.pathUrl)}>
-            Play
-          </PlayButton>
-        </FeaturedPodcastInfo>
-        <BigImg
-          image={`url(${lastPodcast.fields?.detachedImage?.fields.file.url})`}
-        />
+            <PodcastTheme>{lastPodcast.fields?.title}</PodcastTheme>
+            <PlayButton
+              onClick={() => handleClick(lastPodcast.fields?.pathUrl)}
+            >
+              Play
+            </PlayButton>
+          </FeaturedPodcastInfo>
+          <BigImg
+            image={`url(${lastPodcast.fields?.detachedImage?.fields.file.url})`}
+          />
 
-        <DivToCentralizeListHomeBanner>
-          <ListHomeBanner>
-            <Slider {...settings}>
-              {all.slice(1, 10).map((res, index) => {
-                return (
-                  // eslint-disable-next-line react/jsx-key
-                  <React.Fragment key={index}>
-                    <HyperCardGroup
-                      onClick={() => handleClick(res.fields?.pathUrl)}
-                    >
-                      <HyperCard
-                        hyperCardImg={`url(${res.fields?.littleImage?.fields?.file.url})`}
-                        width={"196px"}
-                        height={"196px"}
-                        widthTablet="168px"
-                        heightTablet="168px"
-                        widthLaptop={"196px"}
-                        heightLaptop={"196px"}
-                      />
-                      <TitleInsideComponentGray
-                        width="145px"
-                        widthTablet="148px"
-                        widthCircle="6px"
-                        heightCircle="6px"
-                        number={res.fields?.number}
-                      />
-                    </HyperCardGroup>
-                  </React.Fragment>
-                );
-              })}
-            </Slider>
-          </ListHomeBanner>
-        </DivToCentralizeListHomeBanner>
+          <DivToCentralizeListHomeBanner>
+            <ListHomeBanner>
+              <Slider {...settings}>
+                {all.slice(1, 10).map((res, index) => {
+                  return (
+                    // eslint-disable-next-line react/jsx-key
+                    <React.Fragment key={index}>
+                      <HyperCardGroup
+                        onClick={() => handleClick(res.fields?.pathUrl)}
+                      >
+                        <HyperCard
+                          hyperCardImg={`url(${res.fields?.littleImage?.fields?.file.url})`}
+                          width={"196px"}
+                          height={"196px"}
+                          widthTablet="168px"
+                          heightTablet="168px"
+                          widthLaptop={"196px"}
+                          heightLaptop={"196px"}
+                        />
+                        <TitleInsideComponentGray
+                          width="145px"
+                          widthTablet="148px"
+                          widthCircle="6px"
+                          heightCircle="6px"
+                          number={res.fields?.number}
+                        />
+                      </HyperCardGroup>
+                    </React.Fragment>
+                  );
+                })}
+              </Slider>
+            </ListHomeBanner>
+          </DivToCentralizeListHomeBanner>
         </OverlayDiv>
       </Banner>
     </Content>

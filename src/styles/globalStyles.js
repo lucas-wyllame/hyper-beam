@@ -66,12 +66,16 @@ export const Title = styled.p`
   font-weight: bold;
   @media (min-width: 768px) {
     font-size: 4.1rem;
+    font-size: ${(props) => props.fontSizeTablet};
+    margin: ${(props) => props.marginTablet};
   }
   @media (min-width: 1024px) {
     font-size: 3.3rem;
+     margin: 0;
   }
   @media (min-width: 1366px) {
     font-size: 4.5rem;
+   
   }
 `;
 
@@ -83,10 +87,12 @@ export const Desc = styled.h1`
   font-weight: 500;
   @media (min-width: 768px) {
     font-size: 2.5rem;
-    margin-bottom: ${(props) => props.mgBottomTablet};
+    font-size: ${(props) => props.fontSizeTablet};
+    margin: ${(props) => props.marginTablet};
   }
   @media (min-width: 1024px) {
     font-size: 2.2rem;
+    margin-top: 6px;
   }
   @media (min-width: 1366px) {
     font-size: 2.8rem;
