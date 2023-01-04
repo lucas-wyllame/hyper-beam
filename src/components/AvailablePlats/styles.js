@@ -77,6 +77,14 @@ export const Divider = styled.div`
   width: 1px;
   height: 51px;
   background: #711bb4;
+  @media (min-width: 768px) {
+    width: 1.2px;
+    height: 64px;
+  }
+  @media (min-width: 1024px) {
+    width: 1.3px;
+    height: 78px;
+  }
 `;
 
 export const PlatsButton = styled.button`

@@ -83,8 +83,15 @@ export const FeaturedPodcastInfo = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 34px;
+  @media (min-width: 768px) {
+    padding: 0 117px;
+    position: absolute;
+    top: 10px;
+  }
   @media (min-width: 1024px) {
+    padding: 0 34px;
     width: 45%;
+    top: 25%;
   }
 `;
 
@@ -145,9 +152,9 @@ export const BigImg = styled.div`
     width: 494px;
     height: 470px;
     max-width: 540px;
-    right: 80px;
   }
   @media (min-width: 1024px) {
+    right: 80px;
     width: 394px;
     height: 375px;
   }

@@ -64,9 +64,9 @@ export default function HomeBanner() {
 
   useEffect(() => {
     if (window.innerWidth > 1100 && activeSlide > 5) {
-      sliderRef.current.slickGoTo(3)
+      sliderRef.current.slickGoTo(3);
     }
-  }, [activeSlide, sliderRef.current])
+  }, [activeSlide, sliderRef.current]);
 
   var slider = ".slider";
 
@@ -157,15 +157,15 @@ export default function HomeBanner() {
             image={`url(${lastPodcast.fields?.detachedImage?.fields.file.url})`}
           />
 
-        <DivToCentralizeListHomeBanner>
-          <ListHomeBanner>
-            <Slider {...settings}>
-              {all.slice(1, 10).map((res, index) => {
-                return (
-                  // eslint-disable-next-line react/jsx-key
-                  // <React.Fragment key={index}>
+          <DivToCentralizeListHomeBanner>
+            <ListHomeBanner>
+              <Slider {...settings}>
+                {all.slice(1, 10).map((res, index) => {
+                  return (
+                    // eslint-disable-next-line react/jsx-key
+                    // <React.Fragment key={index}>
                     <HyperCardGroup
-                    key={index}
+                      key={index}
                       onClick={() => handleClick(res.fields?.pathUrl)}
                     >
                       <HyperCard
@@ -185,12 +185,12 @@ export default function HomeBanner() {
                         number={res.fields?.number}
                       />
                     </HyperCardGroup>
-                  // </React.Fragment>
-                );
-              })}
-            </Slider>
-          </ListHomeBanner>
-        </DivToCentralizeListHomeBanner>
+                    // </React.Fragment>
+                  );
+                })}
+              </Slider>
+            </ListHomeBanner>
+          </DivToCentralizeListHomeBanner>
         </OverlayDiv>
       </Banner>
     </Content>
