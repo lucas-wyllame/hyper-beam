@@ -42,6 +42,7 @@ export default function Comments() {
         widthTablet="557px"
         widthDesktop="682px"
         heightDesktop="126px"
+        href="mailto:hyperbeampodcast@gmail.com"
       >
         <EmailPokeCenter />
         <Divider />
