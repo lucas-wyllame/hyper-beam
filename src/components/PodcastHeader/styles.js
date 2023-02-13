@@ -33,7 +33,6 @@ export const BackBanner = styled.div`
 export const OverlayDiv = styled.div`
   width: 100%;
   height: auto;
-  background-color: green;
   display: flex;
   align-items: flex-end;
   background: linear-gradient(90deg, rgba(2,0,36,0.5) 0%, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 35%);
@@ -75,7 +74,6 @@ export const BannerInfos = styled.div`
   /* margin-top: 60px; */
   @media (min-width: 1024px) {
     width: 40%;
-    height: 250px;
     margin-top: -60px;
   }
   @media (min-width: 1330px) {
