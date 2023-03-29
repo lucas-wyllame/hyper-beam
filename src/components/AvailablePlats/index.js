@@ -41,7 +41,13 @@ export default function AvailablePlats(props) {
               target="_blank"
               rel="noreferrer"
             >
-              <PlatsCards>
+              <PlatsCards
+                width="332px"
+                height="82px"
+                widthTablet="507px"
+                widthDesktop="608px"
+                heightDesktop="125px"
+              >
                 <PlatsIcons
                   image={`url(${res.fields.icon?.fields.file.url})` || ""}
                 />

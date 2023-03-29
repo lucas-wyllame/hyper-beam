@@ -13,6 +13,10 @@ export const Content = styled.div`
     height: 476px;
     flex-direction: row;
     margin: 91px 0 90px 0;
+    padding-right: 10px;
+  }
+  @media (min-width: 1366px) {
+    padding-right: 30px;
   }
 `;
 

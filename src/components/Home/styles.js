@@ -31,6 +31,7 @@ export const Banner = styled.div`
   position: relative;
   justify-content: space-between;
   background-position: center;
+  cursor: pointer;
   @media (min-width: 768px) {
     width: 91%;
     height: 692px;
@@ -83,8 +84,15 @@ export const FeaturedPodcastInfo = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 34px;
+  @media (min-width: 768px) {
+    padding: 0 117px;
+    position: absolute;
+    top: 10px;
+  }
   @media (min-width: 1024px) {
+    padding: 0 34px;
     width: 45%;
+    top: 25%;
   }
 `;
 
@@ -137,17 +145,14 @@ export const BigImg = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   bottom: 0;
-  /* background-image: url("/img/Pkm.png");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: center; */
+  cursor: initial;
   @media (min-width: 768px) {
     width: 494px;
     height: 470px;
     max-width: 540px;
-    right: 80px;
   }
   @media (min-width: 1024px) {
+    right: 80px;
     width: 394px;
     height: 375px;
   }
@@ -201,7 +206,7 @@ export const ListHomeBanner = styled.div`
 export const HyperCardGroup = styled.div`
   height: 220px;
   /* background: green; */
-  cursor: pointer;
+  cursor: initial;
   display: flex !important;
   align-items: center;
   flex-direction: column;

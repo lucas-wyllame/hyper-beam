@@ -40,7 +40,7 @@ export default function PodcastHeader(props) {
               margin="0"
               alignItems="normal"
               widthLaptop="90%"
-              heightLaptop="216px"
+              heightLaptop="auto"
               heightLaptopLarge="100px"
               flexDLaptopLarge="row"
             >

@@ -64,9 +64,9 @@ export default function HomeBanner() {
 
   useEffect(() => {
     if (window.innerWidth > 1100 && activeSlide > 5) {
-      sliderRef.current.slickGoTo(3)
+      sliderRef.current.slickGoTo(3);
     }
-  }, [activeSlide, sliderRef.current])
+  }, [activeSlide, sliderRef.current]);
 
   var slider = ".slider";
 
@@ -129,9 +129,17 @@ export default function HomeBanner() {
     router.push(`/podcasts/${link}`);
   };
 
+  const handleChildElementClick = (e) => {
+    e.stopPropagation();
+    // Do other stuff here
+  };
+
   return (
     <Content>
-      <Banner image={`url(${lastPodcast.fields?.bigImage?.fields.file.url})`}>
+      <Banner
+        onClick={() => handleClick(lastPodcast.fields?.pathUrl)}
+        image={`url(${lastPodcast.fields?.bigImage?.fields.file.url})`}
+      >
         <OverlayDiv>
           <FeaturedPodcastInfo>
             <TitleInsideComponent
@@ -146,7 +154,9 @@ export default function HomeBanner() {
               heightCircleTablet="8px"
               number={lastPodcast.fields?.number}
             />
-            <PodcastTheme>{lastPodcast.fields?.title}</PodcastTheme>
+            <PodcastTheme onClick={(e) => handleChildElementClick(e)}>
+              {lastPodcast.fields?.title}
+            </PodcastTheme>
             <PlayButton
               onClick={() => handleClick(lastPodcast.fields?.pathUrl)}
             >
@@ -154,18 +164,21 @@ export default function HomeBanner() {
             </PlayButton>
           </FeaturedPodcastInfo>
           <BigImg
+            onClick={(e) => handleChildElementClick(e)}
             image={`url(${lastPodcast.fields?.detachedImage?.fields.file.url})`}
           />
 
-        <DivToCentralizeListHomeBanner>
-          <ListHomeBanner>
-            <Slider {...settings}>
-              {all.slice(1, 10).map((res, index) => {
-                return (
-                  // eslint-disable-next-line react/jsx-key
-                  // <React.Fragment key={index}>
+          <DivToCentralizeListHomeBanner
+            onClick={(e) => handleChildElementClick(e)}
+          >
+            <ListHomeBanner onClick={(e) => handleChildElementClick(e)}>
+              <Slider {...settings}>
+                {all.slice(1, 10).map((res, index) => {
+                  return (
+                    // eslint-disable-next-line react/jsx-key
+                    // <React.Fragment key={index}>
                     <HyperCardGroup
-                    key={index}
+                      key={index}
                       onClick={() => handleClick(res.fields?.pathUrl)}
                     >
                       <HyperCard
@@ -185,12 +198,12 @@ export default function HomeBanner() {
                         number={res.fields?.number}
                       />
                     </HyperCardGroup>
-                  // </React.Fragment>
-                );
-              })}
-            </Slider>
-          </ListHomeBanner>
-        </DivToCentralizeListHomeBanner>
+                    // </React.Fragment>
+                  );
+                })}
+              </Slider>
+            </ListHomeBanner>
+          </DivToCentralizeListHomeBanner>
         </OverlayDiv>
       </Banner>
     </Content>

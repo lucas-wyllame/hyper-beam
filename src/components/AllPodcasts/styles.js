@@ -30,7 +30,7 @@ export const PodcastsList = styled.div`
   flex-direction: column;
   padding: 0 37px;
   @media (min-width: 1024px) {
-    gap: 60px;
+    gap: 30px;
     margin-bottom: 0;
     align-items: center;
     padding: 0 70px;
@@ -42,6 +42,7 @@ export const PodcastsList = styled.div`
 
 export const CarouselStyled = styled.div`
   width: 100%;
+  max-width: 1200px;
   height: auto;
   background: #0a0b26;
   display: flex !important;
@@ -57,7 +58,7 @@ export const CarouselStyled = styled.div`
     justify-content: space-around;
   }
   @media (min-width: 1024px) {
-    padding: 26px 20px 32px 40px;
+    padding: 40px 15px 40px 11px;
     margin-bottom: 0;
   }
 `;

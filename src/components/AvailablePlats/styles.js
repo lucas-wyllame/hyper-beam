@@ -39,8 +39,8 @@ export const Plats = styled.div`
 `;
 
 export const PlatsCards = styled.a`
-  width: 332px;
-  height: 82px;
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
   background: #a127ff;
   display: flex;
   align-items: center;
@@ -48,12 +48,12 @@ export const PlatsCards = styled.a`
   gap: 15px;
   border-radius: 15px;
   @media (min-width: 768px) {
-    width: 507px;
+    width: ${(props) => props.widthTablet};
     height: 105px;
   }
   @media (min-width: 1024px) {
-    width: 608px;
-    height: 125px;
+    width: ${(props) => props.widthDesktop};
+    height: ${(props) => props.heightDesktop};
   }
 `;
 
@@ -74,9 +74,15 @@ export const PlatsIcons = styled.div`
 `;
 
 export const Divider = styled.div`
-  width: 1px;
+  width: 1.23px;
   height: 51px;
   background: #711bb4;
+  @media (min-width: 768px) {
+    height: 64px;
+  }
+  @media (min-width: 1024px) {
+    height: 78px;
+  }
 `;
 
 export const PlatsButton = styled.button`

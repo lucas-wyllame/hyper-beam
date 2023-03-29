@@ -33,11 +33,14 @@ export default function Carousel() {
       setCurrentPage(offset);
       setOffset(offset + itemsPerPage);
     }
-    if (offset + 1 >= totalRecords) {
+    console.log("offset", currentPage / itemsPerPage + 1)
+    console.log("totalrecords", Math.ceil(totalRecords / itemsPerPage))
+    if (Math.ceil(totalRecords / itemsPerPage) == currentPage / itemsPerPage + 2) {
       NextBtnStyle.style.backgroundImage = "url('./icon/blueArrowRight.svg')";
       // setCurrentPage(offset);
       // setOffset(offset + itemsPerPage);
     }
+    
     if (offset >= itemsPerPage) {
       PreviousBtnStyle.style.backgroundImage =
         "url('./icon/purpleArrowLeft.svg')";
@@ -84,6 +87,7 @@ export default function Carousel() {
       setCurrentPage(0);
       setOffset(itemsPerPage);
       setTotalRecords(allContent.length);
+      
       if (itemsPerPage < allContent.length) {
         NextBtnStyle.style.backgroundImage =
           "url('./icon/purpleArrowRight.svg')";
