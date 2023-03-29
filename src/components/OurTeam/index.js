@@ -10,6 +10,7 @@ import {
   FuncCasters,
   LeftArrow,
   RightArrow,
+  CardsOurTeamHover,
   AlingCountBaseDiv,
   AlingArrowBaseDiv,
 } from "./styles";
@@ -111,13 +112,17 @@ export default function OurTeam() {
               // eslint-disable-next-line react/jsx-key
               <React.Fragment key={index}>
                 <Peoples>
+                  <CardsOurTeamHover
+                  image={
+                    `url(${res.fields.profilePicture?.fields.file.url})` || ""
+                  }
+                  />
                   <CardsOurTeam
                     image={
                       `url(${res.fields.profilePicture?.fields.file.url})` || ""
                     }
                     imageHover={
-                      `url(${res.fields.profilePictureHover?.fields.file.url})` ||
-                      ""
+                      `url(${res.fields.profilePictureHover?.fields.file.url})`
                     }
                   />
                   <CastersBox>

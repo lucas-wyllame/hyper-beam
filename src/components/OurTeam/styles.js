@@ -74,6 +74,53 @@ export const CardsOurTeam = styled.div`
   max-height: 253px;
   background-image: ${(props) => props.image};
   background-size: cover;
+  position: absolute;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  @media (min-width: 1175px) {
+    width: 100%;
+    height: 254px;
+    max-width: 254px;
+    max-height: 254px;
+    :hover {
+      width: 293px;
+      height: 293px;
+      background-image: ${(props) => props.imageHover};
+      animation: fadeIn 1.5s;
+      -webkit-animation: fadeIn 1.5s;
+      -moz-animation: fadeIn 1.5s;
+      -o-animation: fadeIn 1.5s;
+      -ms-animation: fadeIn 1.5s;
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  @media (min-width: 1645px) {
+    width: 100%;
+    height: 285px;
+    max-width: 285px;
+    max-height: 285px;
+    :hover {
+      width: 293px;
+      height: 293px;
+    }
+  }
+`;
+
+export const CardsOurTeamHover = styled.div`
+  width: 253px;
+  height: 253px;
+  max-width: 253px;
+  max-height: 253px;
+  background-image: ${(props) => props.image};
+  background-size: cover;
   background-repeat: no-repeat;
   border-radius: 20px;
   margin-bottom: 20px;
