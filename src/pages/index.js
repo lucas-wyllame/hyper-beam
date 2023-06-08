@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <div>
         <Head>
-          <title>Hyper Beam Podcast</title>
+          <title>HYPER BEAM - Podcasts sobre vídeo games</title>
           <meta
             name="viewport"
             content="initial-scale=1.0, width=device-width"
@@ -19,7 +19,6 @@ export default function Home() {
           <meta name='description' content='A fagulha de amor aos games em forma de podcast.' />
         </Head>
       </div>
-
       <HomeBanner />
       <About />
       <GlobalStyles />
