@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: 700px;
-  /* background: green; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +40,6 @@ export const IframeSpotify = styled.iframe`
 export const OtherPlats = styled.div`
   width: 85%;
   height: 500px;
-  /* background: pink; */
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -56,7 +54,6 @@ export const OtherPlats = styled.div`
 export const DivForGroupingPlatsButton = styled.div`
   width: 100%;
   height: 300px;
-  /* background: red; */
   display: grid;
   justify-content: space-between;
   grid-template-columns: 1fr;

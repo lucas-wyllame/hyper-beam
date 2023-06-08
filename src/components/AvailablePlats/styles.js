@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: auto;
-  /* background: #11129d; */
   background-image: url("/img/degrade logo.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -21,7 +20,6 @@ export const Content = styled.div`
 export const Plats = styled.div`
   width: 100%;
   height: auto;
-  /* background: red; */
   flex-direction: column;
   display: flex;
   row-gap: 14px;

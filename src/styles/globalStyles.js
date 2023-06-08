@@ -142,7 +142,6 @@ export const TitleInside = styled.div`
   align-items: center;
   justify-content: space-between;
   cursor: ${(props) => props.cursor};
-  /* background: blue; */
   span {
     color: #ffe747;
     font-size: ${(props) => props.fontSize};
@@ -173,8 +172,6 @@ export const TitleInside = styled.div`
 `;
 
 export const Icon = styled.div`
-  /* width: ${(props) => props.widthIcon}; */
-  /* height: ${(props) => props.heightIcon}; */
   width: 100%;
   height: ${(props) => props.height};
   background: #a127ff;

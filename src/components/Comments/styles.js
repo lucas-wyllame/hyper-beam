@@ -5,7 +5,6 @@ export const Divider = styled.div`
   height: 82.5px;
   background: #711bb4;
   @media (min-width: 768px) {
-    /* width: 1.2px; */
     height: 64.5px;
   }
   @media (min-width: 1024px) {

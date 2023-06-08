@@ -37,8 +37,6 @@ export default function Carousel() {
     console.log("totalrecords", Math.ceil(totalRecords / itemsPerPage))
     if (Math.ceil(totalRecords / itemsPerPage) == currentPage / itemsPerPage + 2) {
       NextBtnStyle.style.backgroundImage = "url('./icon/blueArrowRight.svg')";
-      // setCurrentPage(offset);
-      // setOffset(offset + itemsPerPage);
     }
     
     if (offset >= itemsPerPage) {
@@ -124,7 +122,6 @@ export default function Carousel() {
                 heightTablet="171px"
                 widthLaptop="200px"
                 heightLaptop="200px"
-                // margin="0 0 13px 0"
               />
               <GropingTexts>
                 <TitleInsideComponent

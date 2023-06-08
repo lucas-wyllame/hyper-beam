@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: auto;
-  /* background: pink; */
   margin: 40px 0;
   display: flex;
   flex-direction: column;
@@ -30,8 +29,6 @@ export const TextBox = styled.div`
 export const ListPodcasts = styled.div`
   width: 100%;
   height: auto;
-  /* background: blue; */
-  /* margin: 20px 0; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -111,7 +108,6 @@ export const Background = styled.div`
 export const Block = styled.div`
   width: 90%;
   height: auto;
-  /* background: green; */
   border-radius: 44px 44px 0px 0px;
   display: flex;
   flex-direction: column;
@@ -123,13 +119,11 @@ export const Block = styled.div`
 export const CardAndText = styled.div`
   width: 100%;
   height: auto;
-  /* background: orange; */
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 44px 44px 0px 0px;
   @media (min-width: 1024px) {
-    /* height: 350px; */
     flex-direction: row;
   }
 `;
@@ -137,7 +131,6 @@ export const CardAndText = styled.div`
 export const TextsDivEp = styled.div`
   width: 100%;
   height: auto;
-  /* background: red; */
   @media (min-width: 1024px) {
     width: 60%;
     margin-left: 62px;
@@ -148,7 +141,6 @@ export const IconAndButtons = styled.div`
   width: 100%;
   height: auto;
   gap: ${(props) => props.gap};
-  /* background: yellow; */
   margin-left: 0;
   margin-bottom: 0;
   display: flex;
@@ -156,7 +148,6 @@ export const IconAndButtons = styled.div`
   justify-content: space-between;
   padding-left: 0px;
   margin: ${(props) => props.margin};
-  /* justify-content: ${(props) => props.justifyContent}; */
   align-items: ${(props) => props.alignItems};
   @media (min-width: 1024px) {
     align-items: center;
@@ -185,7 +176,6 @@ export const ButtonsEp = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 25px;
-  /* margin: 0 -3px; */
   @media (min-width: 768px) {
     height: 56px;
     font-size: 2rem;
@@ -212,8 +202,6 @@ export const ButtonSeeAll = styled.button`
   transition: transform 0.5s;
   transition: text-shadow 0.5s;
   :hover {
-    /* width: 161px; */
-    /* height: 51px; */
     text-shadow: 0px 3px 6px #ff00c47a;
     transform: scale(1.01);
   }

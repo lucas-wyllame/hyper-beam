@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: auto;
-  /* background: green; */
   background-image: url("/img/degrade logo.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -23,7 +22,6 @@ export const Content = styled.div`
 export const PodcastsList = styled.div`
   width: 100%;
   height: auto;
-  /* background: red; */
   display: flex;
   position: relative;
   margin-bottom: 70px;
@@ -51,7 +49,6 @@ export const CarouselStyled = styled.div`
   gap: 15px;
   padding: 25px 20px 40px;
   border-radius: 15px;
-  /* margin-right: 45px; */
   @media (min-width: 768px) {
     flex-direction: row;
     padding: 25px 20px 40px;
@@ -87,7 +84,6 @@ export const RightArrow = styled.div`
 export const AlignArrowBaseDiv = styled.div`
   width: 225px;
   height: 94px;
-  /* background: gray; */
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -113,7 +109,6 @@ export const AlignArrowBaseDiv = styled.div`
 export const AlignCountBaseDiv = styled.div`
   width: 200px;
   height: 39px;
-  /* background: cyan; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -129,7 +124,6 @@ export const CountLabel = styled.label`
 export const PageButtons = styled.div`
   width: 100%;
   height: 39px;
-  /* background: pink; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -156,9 +150,7 @@ export const GropingTexts = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  /* background: cyan; */
   justify-content: center;
-  /* align-self:center; */
   @media (min-width: 768px) {
     width: 70%;
   }

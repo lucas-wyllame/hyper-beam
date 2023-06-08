@@ -3,7 +3,6 @@ import styled, { css } from "styled-components";
 export const Content = styled.div`
   width: 100%;
   margin: 74px 0 30px 0;
-  /* background: blue; */
   height: auto;
   display: flex;
   flex-direction: column;
@@ -45,7 +44,6 @@ export const LeftImage = styled.div`
 export const TextDiv = styled.div`
   width: 100%;
   height: auto;
-  /* background: green; */
   padding: 0 18px;
   display: flex;
   flex-direction: column;

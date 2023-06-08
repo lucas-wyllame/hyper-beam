@@ -22,28 +22,6 @@ import { ConnectContent } from "../../ConfigContent";
 import { useState } from "react";
 import { TitleInsideComponentGray } from "../Header/styles";
 
-// function SamplePrevArrow(props) {
-//   const { className, onClick } = props;
-//   return (
-//     <LeftArrow
-//       className={className}
-//       src="./icon/blueArrowLeft.svg"
-//       onClick={onClick}
-//     />
-//   );
-// }
-
-// function SampleNextArrow(props) {
-//   const { className, onClick } = props;
-//   return (
-//     <RightArrow
-//       className={className}
-//       src="./icon/purpleArrowRight.svg"
-//       onClick={onClick}
-//     />
-//   );
-// }
-
 export default function HomeBanner() {
   const [all, setAll] = useState([]);
   const sliderRef = useRef();
@@ -58,7 +36,6 @@ export default function HomeBanner() {
       setLastPodcast(allContent[allContent.length - 1]);
       setAll(allContent.reverse());
     }
-    // sliderRef.current.slickGoTo(5)
     FetchMyApi();
   }, []);
 
@@ -78,15 +55,12 @@ export default function HomeBanner() {
     slidesToScroll: 1,
     initialSlide: 0,
     mobileFirst: true,
-    // nextArrow: <SampleNextArrow />,
-    // prevArrow: <SamplePrevArrow />,
     slickGoTo: 5,
     transformEnabled: false,
     responsive: [
       {
         breakpoint: 1365,
         settings: {
-          // initialSlide: 0,
           slidesToShow: 4,
           slidesToScroll: 1,
           infinite: slider.length > 1 ? true : false,
@@ -131,7 +105,6 @@ export default function HomeBanner() {
 
   const handleChildElementClick = (e) => {
     e.stopPropagation();
-    // Do other stuff here
   };
 
   return (
@@ -176,7 +149,6 @@ export default function HomeBanner() {
                 {all.slice(1, 10).map((res, index) => {
                   return (
                     // eslint-disable-next-line react/jsx-key
-                    // <React.Fragment key={index}>
                     <HyperCardGroup
                       key={index}
                       onClick={() => handleClick(res.fields?.pathUrl)}
@@ -198,7 +170,6 @@ export default function HomeBanner() {
                         number={res.fields?.number}
                       />
                     </HyperCardGroup>
-                    // </React.Fragment>
                   );
                 })}
               </Slider>

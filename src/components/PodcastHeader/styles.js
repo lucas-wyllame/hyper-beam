@@ -3,11 +3,9 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: auto;
-  /* background: red; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: space-between; */
   margin-top: 65px;
   @media (min-width: 1024px) {
     height: 700px;
@@ -47,7 +45,6 @@ export const OverlayDiv = styled.div`
 export const ItensBanner = styled.div`
   width: 81%;
   height: auto;
-  /* background: blue; */
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -67,11 +64,9 @@ export const BannerInfos = styled.div`
   width: 100%;
   height: auto;
   display: flex;
-  /* background: cyan; */
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  /* margin-top: 60px; */
   @media (min-width: 1024px) {
     width: 40%;
     margin-top: -60px;

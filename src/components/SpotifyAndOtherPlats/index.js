@@ -16,7 +16,6 @@ export default function SpotifyAndOtherPlats(props) {
       />
       <OtherPlats>
         <Title
-          // margin={"0 38px 0 0"}
           fontSizeTablet="3.5rem"
           margin="0"
           marginTablet="0"

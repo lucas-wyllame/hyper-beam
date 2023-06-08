@@ -23,7 +23,6 @@ export const Top = styled.div`
 export const CenterLogoDiv = styled.div`
   width: 57%;
   height: 66px;
-  /* background: red; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,13 +34,11 @@ export const CenterLogoDiv = styled.div`
 export const LogoTop = styled.div`
   width: 53px;
   height: 53px;
-  /* background-color: #fff; */
   background-image: ${(props) => props.headerLogo};
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 50%;
   cursor: pointer;
-  /* margin: 0 500px; */
 `;
 
 export const SearchLogoBox = styled.div`
@@ -83,7 +80,6 @@ export const SearchBar = styled.input`
 export const AfterSearch = styled.div`
   width: 100%;
   height: 300px;
-  /* background: red; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -108,7 +104,6 @@ export const AfterSearch = styled.div`
 export const InfoSearch = styled.div`
   width: 100%;
   height: 172px;
-  /* background: orange; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -126,7 +121,6 @@ export const InfoSearch = styled.div`
 export const IconAndTagBox = styled.div`
   width: 231px;
   height: 100px;
-  /* background: cyan; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -136,14 +130,12 @@ export const IconAndTagBox = styled.div`
     flex-direction: row;
   }
   @media (min-width: 1024px) {
-    /* width: 586px; */
   }
 `;
 
 export const IconAndTagRow = styled.div`
   width: 212px;
   height: 54px;
-  /* background: blue; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -151,7 +143,6 @@ export const IconAndTagRow = styled.div`
     height: auto;
   }
   @media (min-width: 1024px) {
-    /* width: 272px; */
   }
 `;
 
@@ -175,7 +166,6 @@ export function TitleInsideComponentGray(props) {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* background: blue; */
     cursor: ${(props) => props.cursor};
     @media (min-width: 768px) {
       width: ${(props) => props.widthTablet};

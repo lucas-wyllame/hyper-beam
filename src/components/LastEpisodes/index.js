@@ -136,9 +136,6 @@ export default function LastEpisodes() {
         <Desc margin="0">Acompanhe nosso podcast e seus episódios</Desc>
       </TextBox>
       <ListPodcasts>
-        {/* {isHovering && (
-          <HoveringIcon>Sobre o que falamos nesse episodio?</HoveringIcon>
-        )} */}
         <Slider {...settings}>
           {all.slice(0, 5).map((res, index) => {
             return (
@@ -147,7 +144,6 @@ export default function LastEpisodes() {
                   image={`url(${res.fields?.bigImage?.fields.file.url})`}
                 >
                   <OverlayDiv>
-                    {/* <BackgroundOverlay /> */}
                     <Block>
                       <CardAndText>
                         <a href={`/podcasts/${res.fields?.pathUrl}`}>
@@ -163,7 +159,6 @@ export default function LastEpisodes() {
                             top={"-20px"}
                             widthLaptopLarge={"337px"}
                             heightLaptopLarge={"337px"}
-                            // onClick={window.location.href=`/podcasts`}
                           />
                         </a>
                         <TextsDivEp>
@@ -208,8 +203,7 @@ export default function LastEpisodes() {
                           onMouseOver={handleMouseOver}
                           onMouseOut={handleMouseOut}
                           height="40px"
-                          // widthIcon={"40px"}
-                          // heightIcon={"40px"}
+                         
                           widthIconLaptop="53px"
                           heightIconLaptop="53px"
                         >

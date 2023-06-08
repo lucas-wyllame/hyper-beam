@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: 790px;
-  /* background: blue; */
   display: flex;
   justify-content: center;
   margin-top: 80px;
@@ -78,9 +77,7 @@ export const OverlayDiv = styled.div`
 
 export const FeaturedPodcastInfo = styled.div`
   width: 100%;
-  /* border-radius: 44px; */
   height: 201px;
-  /* background: lightblue; */
   display: flex;
   flex-direction: column;
   padding: 0 34px;
@@ -111,8 +108,6 @@ export const PlayButton = styled.button`
   transition: transform 1s;
   transition: text-shadow 1s;
   :hover {
-    /* width: 135px; */
-    /* height: 54px; */
     text-shadow: 0px 3px 6px #ff00c47a;
     transform: scale(1.03);
   }
@@ -164,7 +159,6 @@ export const BigImg = styled.div`
 export const DivToCentralizeListHomeBanner = styled.div`
   width: 100%;
   height: 160px;
-  /* background: gray; */
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -185,7 +179,6 @@ export const DivToCentralizeListHomeBanner = styled.div`
 export const ListHomeBanner = styled.div`
   width: 242px;
   height: auto;
-  /* background: red; */
   @media (min-width: 569px) {
     width: 440px;
   }
@@ -205,7 +198,6 @@ export const ListHomeBanner = styled.div`
 
 export const HyperCardGroup = styled.div`
   height: 220px;
-  /* background: green; */
   cursor: initial;
   display: flex !important;
   align-items: center;

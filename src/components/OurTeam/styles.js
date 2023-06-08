@@ -23,7 +23,6 @@ export const Content = styled.div`
 export const GroupText = styled.div`
   width: 100%;
   height: auto;
-  /* background: pink; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,7 +32,6 @@ export const GlobalPeoples = styled.div`
   width: 68%;
   max-width: 253px;
   height: 1100px;
-  /* background: red; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -53,7 +51,6 @@ export const GlobalPeoples = styled.div`
   }
   @media (max-width: 768px) {
     width: 281px;
-    /* max-width: 253px; */
     height: auto;
   }
 `;
@@ -61,7 +58,6 @@ export const GlobalPeoples = styled.div`
 export const Peoples = styled.div`
   width: 100%;
   height: 370px;
-  /* background: green; */
   display: flex !important;
   align-items: center;
   flex-direction: column;
@@ -163,7 +159,6 @@ export const CardsOurTeamHover = styled.div`
 export const CastersBox = styled.div`
   width: 253px;
   display: flex;
-  /* background: green; */
   flex-direction: column;
   @media (min-width: 1175px) {
     width: 254px;
@@ -248,7 +243,6 @@ export const RightArrow = styled.div`
 export const AlingArrowBaseDiv = styled.div`
   width: 253px;
   height: 160px;
-  /* background: gray; */
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -277,7 +271,6 @@ export const AlingArrowBaseDiv = styled.div`
 export const AlingCountBaseDiv = styled.div`
   width: 130px;
   height: 39px;
-  /* background: pink; */
   display: flex;
   align-items: center;
   justify-content: center;

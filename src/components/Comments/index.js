@@ -8,7 +8,6 @@ import { BrTag, Divider, GroupTexts } from "./styles";
 const Content = styled.div`
   width: 100%;
   height: 305px;
-  /* background: #27273d; */
   display: flex;
   flex-direction: column;
   align-items: center;

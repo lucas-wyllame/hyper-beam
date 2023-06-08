@@ -46,10 +46,6 @@ export default function PodcastHeader(props) {
             >
               <Icon
                 height="49px"
-                // widthIcon={"40px"}
-                // heightIcon={"40px"}
-                // widthIconLaptop="53px"
-                // heightIconLaptop="53px"
               >
                 <Control className="control"/>
                 <TextInsideIcon>Assuntos desse episódio</TextInsideIcon>
