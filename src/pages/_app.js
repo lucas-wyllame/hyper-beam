@@ -7,6 +7,7 @@ import Header from "src/components/Header/header";
 import Footer from "src/components/Footer/footer";
 import { useEffect, useState } from "react";
 import { ConnectContent } from "src/ConfigContent";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
   const [all, setAll] = useState([]);
@@ -23,6 +24,16 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+    <div>
+        <Head>
+          <title>HYPER BEAM - Podcasts sobre vídeo games</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+          <meta name='description' content='A fagulha de amor aos games em forma de podcast.' />
+        </Head>
+      </div>
       <Header
         headerLogo={`url(${all.map((res) => {
           return res.fields?.headerLogo?.fields.file.url;
