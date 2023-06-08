@@ -18,8 +18,6 @@ export default function Home() {
           />
           <meta name='description' content='A fagulha de amor aos games em forma de podcast.' />
         </Head>
-
-        <p>Hello world!</p>
       </div>
 
       <HomeBanner />
