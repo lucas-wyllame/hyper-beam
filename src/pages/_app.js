@@ -32,9 +32,9 @@ function MyApp({ Component, pageProps }) {
             content="initial-scale=1.0, width=device-width"
           />
           <meta name='description' content='A fagulha de amor aos games em forma de podcast.' />
-          <meta property="og:description" content="A fagulha de amor aos games em forma de podcast.">
-          <meta property="og:url" content="https://hyperbeampodcast.com/">
-          <meta property="og:type" content="website">
+          <meta property="og:description" content="A fagulha de amor aos games em forma de podcast."/>
+          <meta property="og:url" content="https://hyperbeampodcast.com/"/>
+          <meta property="og:type" content="website"/>
           <link rel="icon" href="/hyperbeamLogo.svg" />
         </Head>
       </div>
