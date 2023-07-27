@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <>
       <HomeBanner />
-      <About />
       <GlobalStyles />
       <LastEpisodes />
+      <About />
       <OurTeam />
       <AvailablePlats />
     </>

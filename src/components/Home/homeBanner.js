@@ -141,7 +141,7 @@ export default function HomeBanner() {
             image={`url(${lastPodcast.fields?.detachedImage?.fields.file.url})`}
           />
 
-          <DivToCentralizeListHomeBanner
+          {/* <DivToCentralizeListHomeBanner
             onClick={(e) => handleChildElementClick(e)}
           >
             <ListHomeBanner onClick={(e) => handleChildElementClick(e)}>
@@ -174,7 +174,7 @@ export default function HomeBanner() {
                 })}
               </Slider>
             </ListHomeBanner>
-          </DivToCentralizeListHomeBanner>
+          </DivToCentralizeListHomeBanner> */}
         </OverlayDiv>
       </Banner>
     </Content>

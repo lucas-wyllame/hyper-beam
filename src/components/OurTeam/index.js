@@ -11,13 +11,10 @@ import {
   LeftArrow,
   RightArrow,
   CardsOurTeamHover,
-  AlingCountBaseDiv,
-  AlingArrowBaseDiv,
 } from "./styles";
 import Slider from "react-slick";
 import { ConnectContent } from "../../ConfigContent";
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 function SamplePrevArrow(props) {
   const { className, onClick, style } = props;
@@ -42,21 +39,35 @@ function SampleNextArrow(props) {
 }
 
 export default function OurTeam() {
-  const [all, setAll] = useState([]);
-
-  let name;
-  let nameUrl;
+  let castersList;
+  let othersList;
+  const sliderRef = useRef();
+  const [allCollaborators, setAllCollaborators] = useState([]);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     async function FetchMyApi() {
       let items = await ConnectContent();
-      let allContent = await items.filter(
+      let response = await items.filter(
         (x) => x.sys.contentType.sys.id == "collaborators"
       );
-      setAll(allContent);
+      castersList = response.filter((x) =>
+        x.fields?.caster === true ? x : null
+      );
+      othersList = response.filter((x) =>
+        x.fields?.caster === false ? x : null
+      );
+      setAllCollaborators([...castersList, ...othersList]);
+      setIsMobile(window.screen.width > 1175 ? false : true);
     }
-    FetchMyApi();
-  }, []);
+    FetchMyApi().then(() => {
+      if (isMobile) handleNext();
+    });
+  }, [isMobile]);
+
+  const handleNext = () => {
+    sliderRef?.current?.slickNext();
+  };
 
   var slider = ".slider";
 
@@ -91,6 +102,7 @@ export default function OurTeam() {
         breakpoint: 480,
         settings: {
           rows: 1,
+          initialSlide: 3,
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: slider.length > 3 ? true : false,
@@ -106,24 +118,21 @@ export default function OurTeam() {
         <Desc margin="0">A equipe que trabalha no Hyper Beam</Desc>
       </GroupText>
       <GlobalPeoples>
-        <Slider {...settings}>
-          {all.map((res, index) => {
+        <Slider ref={sliderRef} {...settings}>
+          {allCollaborators?.map((res, index) => {
             return (
-              // eslint-disable-next-line react/jsx-key
               <React.Fragment key={index}>
                 <Peoples>
                   <CardsOurTeamHover
-                  image={
-                    `url(${res.fields.profilePicture?.fields.file.url})` || ""
-                  }
+                    image={
+                      `url(${res.fields.profilePicture?.fields.file.url})` || ""
+                    }
                   />
                   <CardsOurTeam
                     image={
                       `url(${res.fields.profilePicture?.fields.file.url})` || ""
                     }
-                    imageHover={
-                      `url(${res.fields.profilePictureHover?.fields.file.url})`
-                    }
+                    imageHover={`url(${res.fields.profilePictureHover?.fields.file.url})`}
                   />
                   <CastersBox>
                     <NameCasters>

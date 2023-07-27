@@ -4,7 +4,6 @@ import { Icon } from "@styles/globalStyles";
 import {
   Content,
   ListPodcasts,
-  HoveringIcon,
   Background,
   Block,
   CardAndText,
@@ -16,7 +15,6 @@ import {
   RightArrow,
   Dots,
   LittleDots,
-  BackgroundOverlay,
   TextBox,
   OverlayDiv,
 } from "./styles";
@@ -51,16 +49,7 @@ function SampleNextArrow(props) {
 }
 
 export default function LastEpisodes() {
-  const [isHovering, setIsHovering] = useState(false);
   const [all, setAll] = useState([]);
-  const [clicked, setClicked] = useState(false);
-  const [state, setState] = useState();
-
-  function teste() {
-    let liTeste =
-      document.getElementsByClassName("slick-active div").style?.background;
-    liTeste = "red !important";
-  }
 
   useEffect(() => {
     async function FetchMyApi() {
@@ -71,16 +60,7 @@ export default function LastEpisodes() {
       setAll(allContent.reverse());
     }
     FetchMyApi();
-    teste();
   }, []);
-
-  const handleMouseOver = () => {
-    setIsHovering(true);
-  };
-
-  const handleMouseOut = () => {
-    setIsHovering(false);
-  };
 
   const router = useRouter();
 
@@ -200,10 +180,7 @@ export default function LastEpisodes() {
                         margin="25px 0 90px 0"
                       >
                         <Icon
-                          onMouseOver={handleMouseOver}
-                          onMouseOut={handleMouseOut}
                           height="40px"
-                         
                           widthIconLaptop="53px"
                           heightIconLaptop="53px"
                         >

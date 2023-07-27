@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import "../components/LastEpisodes/teste.css"
+import "../components/LastEpisodes/icon.css"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "@fontsource/poppins";
