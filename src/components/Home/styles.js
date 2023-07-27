@@ -7,11 +7,11 @@ export const Content = styled.div`
   justify-content: center;
   margin-top: 80px;
   @media (min-width: 768px) {
-    height: 695px;
+    height: 705px;
     margin-top: 90px;
   }
   @media (min-width: 1024px) {
-    height: 495px;
+    height: 570px;
     margin-top: 100px;
   }
 `;
