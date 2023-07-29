@@ -14,6 +14,9 @@ export const Content = styled.div`
     height: 488px;
     margin-top: 100px;
   }
+  @media (min-width: 1366px) {
+    height: 520px;
+  }
 `;
 
 export const Banner = styled.div`
