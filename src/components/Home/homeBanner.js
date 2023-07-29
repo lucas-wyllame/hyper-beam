@@ -1,4 +1,3 @@
-import HyperCard from "../HyperCard/hyperCard";
 import {
   Content,
   Banner,
@@ -6,21 +5,13 @@ import {
   PlayButton,
   PodcastTheme,
   BigImg,
-  ListHomeBanner,
-  HyperCardGroup,
-  HyperText,
-  LeftArrow,
-  RightArrow,
-  DivToCentralizeListHomeBanner,
   OverlayDiv,
 } from "./styles";
-import Slider from "react-slick";
 import { useRouter } from "next/router";
 import { TitleInsideComponent } from "@styles/globalStyles";
 import React, { useEffect, useRef } from "react";
 import { ConnectContent } from "../../ConfigContent";
 import { useState } from "react";
-import { TitleInsideComponentGray } from "../Header/styles";
 
 export default function HomeBanner() {
   const [all, setAll] = useState([]);
