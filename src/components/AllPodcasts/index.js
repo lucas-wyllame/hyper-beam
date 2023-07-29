@@ -33,12 +33,15 @@ export default function Carousel() {
       setCurrentPage(offset);
       setOffset(offset + itemsPerPage);
     }
-    console.log("offset", currentPage / itemsPerPage + 1)
-    console.log("totalrecords", Math.ceil(totalRecords / itemsPerPage))
-    if (Math.ceil(totalRecords / itemsPerPage) == currentPage / itemsPerPage + 2) {
+    console.log("offset", currentPage / itemsPerPage + 1);
+    console.log("totalrecords", Math.ceil(totalRecords / itemsPerPage));
+    if (
+      Math.ceil(totalRecords / itemsPerPage) ==
+      currentPage / itemsPerPage + 2
+    ) {
       NextBtnStyle.style.backgroundImage = "url('./icon/blueArrowRight.svg')";
     }
-    
+
     if (offset >= itemsPerPage) {
       PreviousBtnStyle.style.backgroundImage =
         "url('./icon/purpleArrowLeft.svg')";
@@ -85,7 +88,7 @@ export default function Carousel() {
       setCurrentPage(0);
       setOffset(itemsPerPage);
       setTotalRecords(allContent.length);
-      
+
       if (itemsPerPage < allContent.length) {
         NextBtnStyle.style.backgroundImage =
           "url('./icon/purpleArrowRight.svg')";
@@ -127,13 +130,15 @@ export default function Carousel() {
                 <TitleInsideComponent
                   width="170px"
                   widthTablet="240px"
-                  number={res.fields?.number}
                   colorSpan="#FFE747"
                   cursor="pointer"
-                  widthCircle="6px"
-                  heightCircle="6px"
+                  widthCircle="8px"
+                  heightCircle="8px"
                   fontSize="2.0rem"
                   fontSizeTablet="2.8rem"
+                  number={res.fields?.number}
+                  title={res.fields?.title}
+                  maxChars={14}
                 />
                 <MoreInfs
                   textOverflow="ellipsis"

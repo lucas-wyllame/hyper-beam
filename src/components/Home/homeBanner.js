@@ -117,6 +117,7 @@ export default function HomeBanner() {
               widthCircleTablet="8px"
               heightCircleTablet="8px"
               number={lastPodcast.fields?.number}
+              title="Hyper Beam"
             />
             <PodcastTheme onClick={(e) => handleChildElementClick(e)}>
               {lastPodcast.fields?.title}

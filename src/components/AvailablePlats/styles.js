@@ -36,7 +36,7 @@ export const Plats = styled.div`
   }
 `;
 
-export const PlatsCards = styled.a`
+export const PlatsCards = styled.div`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
   background: #a127ff;

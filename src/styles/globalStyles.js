@@ -133,42 +133,29 @@ export const MoreInfs = styled.h2`
   }
 `;
 
-export const TitleInside = styled.div`
-  width: ${(props) => props.width};
+export const TitleInside = styled.p`
   font-size: ${(props) => props.fontSize};
   margin: 12px 0;
   color: #fff;
   font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   cursor: ${(props) => props.cursor};
-  span {
-    color: #ffe747;
-    font-size: ${(props) => props.fontSize};
-    font-weight: bold;
-  }
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: ${({ maxChars }) => maxChars && `${maxChars}ch`};
+  color: #fff;
   @media (min-width: 768px) {
-    width: ${(props) => props.widthTablet};
+    width: max-content;
     font-size: ${(props) => props.fontSizeTablet};
-    span {
-      font-size: ${(props) => props.fontSizeTablet};
-    }
   }
   @media (min-width: 1024px) {
-    width: 230px;
+    width: max-content;
     font-size: 2.7rem;
     margin: 0;
-    span {
-      font-size: 2.7rem;
-    }
   }
   @media (min-width: 1366px) {
-    width: 250px;
+    width: max-content;
     font-size: 3rem;
-    span {
-      font-size: 3rem;
-    }
   }
 `;
 
@@ -204,6 +191,32 @@ export const TextInsideIcon = styled.div`
   }
 `;
 
+export const TitleInsideDiv = styled.div`
+  width: max-content;
+  max-width: 100%;
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: ${(props) => props.cursor};
+`;
+
+export const TitleInsideNumber = styled.div`
+  color: #ffe747;
+  font-size: ${(props) => props.fontSize};
+  font-weight: bold;
+  @media (min-width: 768px) {
+    font-size: ${(props) => props.fontSizeTablet};
+  }
+  @media (min-width: 1024px) {
+    font-size: 2.7rem;
+  }
+  @media (min-width: 1366px) {
+    font-size: 3rem;
+  }
+`;
+
 export const theme = createTheme({
   palette: {
     secondary: {
@@ -213,24 +226,28 @@ export const theme = createTheme({
 });
 export function TitleInsideComponent(props) {
   return (
-    <TitleInside
-      width={props.width}
-      widthTablet={props.widthTablet}
-      fontSize={props.fontSize}
-      cursor={props.cursor}
-      fontSizeTablet={props.fontSizeTablet}
-    >
-      Hyper Beam
+    <TitleInsideDiv>
+      <TitleInside
+        fontSize={props.fontSize}
+        cursor={props.cursor}
+        fontSizeTablet={props.fontSizeTablet}
+        maxChars={props.maxChars}
+      >
+        {props.title}
+      </TitleInside>
       <Circle
         widthCircle={props.widthCircle}
         heightCircle={props.heightCircle}
         widthCircleTablet={props.widthCircleTablet}
         heightCircleTablet={props.heightCircleTablet}
       />
-      <span>
+      <TitleInsideNumber
+        fontSize={props.fontSize}
+        fontSizeTablet={props.fontSizeTablet}
+      >
         {props.number < 10 ? 0 : ""}
         {props.number}
-      </span>
-    </TitleInside>
+      </TitleInsideNumber>
+    </TitleInsideDiv>
   );
 }

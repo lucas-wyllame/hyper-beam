@@ -94,8 +94,8 @@ export default function LastEpisodes() {
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
-    autoplay: true,
-    autoplaySpeed: 4000,
+    // autoplay: true,
+    // autoplaySpeed: 4000,
     responsive: [
       {
         breakpoint: 480,
@@ -145,8 +145,9 @@ export default function LastEpisodes() {
                           <a href={`/podcasts/${res.fields?.pathUrl}`}>
                             <TitleInsideComponent
                               number={res.fields?.number}
-                              width="240px"
-                              widthTablet="310px"
+                              title={res.fields?.title}
+                              // width="240px"
+                              // widthTablet="310px"
                               fontSize="2.8rem"
                               fontSizeTablet="3.8rem"
                               cursor="pointer"
@@ -154,6 +155,7 @@ export default function LastEpisodes() {
                               heightCircle="8px"
                               widthCircleTablet="10px"
                               heightCircleTablet="10px"
+                              maxChars={14}
                             />
                           </a>
                           <MoreInfs
