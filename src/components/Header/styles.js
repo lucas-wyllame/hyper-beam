@@ -15,19 +15,25 @@ export const Top = styled.div`
   position: fixed;
   z-index: 999;
   top: -1px;
-  @media (min-width: 1024px) {
+  justify-content: flex-end;
+  padding: 0 13px 0 30px;
+  @media (min-width: 768px) {
+    padding: 0 39px 0 0;
     top: 0;
+  }
+  @media (min-width: 1024px) {
+    padding: 0 145px 0 0;
   }
 `;
 
 export const CenterLogoDiv = styled.div`
-  width: 57%;
+  width: 375px;
   height: 66px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media (min-width: 1024px) {
-    width: 51.5%;
+  @media (min-width: 768px) {
+    width: 50%;
   }
 `;
 
@@ -39,6 +45,34 @@ export const LogoTop = styled.div`
   background-repeat: no-repeat;
   border-radius: 50%;
   cursor: pointer;
+`;
+
+export const ButtonSeeAllTopBar = styled.div`
+  width: 169px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  background: none;
+  border-radius: 44px;
+  border: 1px solid #ffe747;
+  color: #ffe747;
+  cursor: pointer;
+`;
+
+export const LogoButtonSeeAllTopBar = styled.div`
+  width: 18px;
+  height: 18px;
+  background: #ffe747;
+  box-shadow: 0px 2px 2px #0000000f;
+`;
+
+export const TextButtonSeeAllTopBar = styled.div`
+  font-size: 20px;
+  color: #ffe747;
+  text-shadow: 0px 1px 1px #00000029;
+  text-align: center;
 `;
 
 export const SearchLogoBox = styled.div`
@@ -169,7 +203,7 @@ export function TitleInsideComponentGray(props) {
     cursor: ${(props) => props.cursor};
     @media (min-width: 768px) {
       width: ${(props) => props.widthTablet};
-      font-size: ${(props.fontSizeTablet)};
+      font-size: ${props.fontSizeTablet};
     }
     @media (min-width: 1024px) {
       width: 180px;
@@ -179,7 +213,7 @@ export function TitleInsideComponentGray(props) {
       font-size: 2rem;
       color: ${(props) => props.colorSpan};
       @media (min-width: 768px) {
-        font-size: ${(props.fontSizeTablet)};
+        font-size: ${props.fontSizeTablet};
       }
       @media (min-width: 1024px) {
         font-size: 2rem;

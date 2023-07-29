@@ -1,5 +1,12 @@
 import { useRouter } from "next/router";
-import { Top, CenterLogoDiv, LogoTop } from "./styles";
+import {
+  Top,
+  CenterLogoDiv,
+  LogoTop,
+  ButtonSeeAllTopBar,
+  LogoButtonSeeAllTopBar,
+  TextButtonSeeAllTopBar,
+} from "./styles";
 
 export default function Header(props) {
   // const [isClicked, setIsClicked] = useState(false);
@@ -12,18 +19,28 @@ export default function Header(props) {
     router.push("/");
   };
 
+  const handleClickAllPodcasts = (e) => {
+    e.preventDefault();
+    router.push("/podcasts");
+  };
+
   return (
     <>
       <Top>
-        {/* <CenterLogoDiv> */}
+        <CenterLogoDiv>
           <LogoTop headerLogo={props.headerLogo} onClick={handleClick} />
+          <ButtonSeeAllTopBar onClick={handleClickAllPodcasts}>
+            <LogoButtonSeeAllTopBar />
+            <TextButtonSeeAllTopBar>Podcasts</TextButtonSeeAllTopBar>
+          </ButtonSeeAllTopBar>
+
           {/* <SearchLogoBox>
             <SearchIcon
               onClick={(e) => setIsClicked(!isClicked)}
               sx={{ fontSize: 35, color: "#fff" }}
             />
           </SearchLogoBox> */}
-        {/* </CenterLogoDiv> */}
+        </CenterLogoDiv>
       </Top>
       {/* {isClicked ? (
         <SearchBar
