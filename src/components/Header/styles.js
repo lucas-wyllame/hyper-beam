@@ -33,7 +33,12 @@ export const CenterLogoDiv = styled.div`
   align-items: center;
   justify-content: space-between;
   @media (min-width: 768px) {
-    width: 50%;
+    width: calc(50% + 26.5px);
+    padding-left: 19.5px;
+  }
+  @media (min-width: 1024px) {
+    width: calc(50% + 26.5px);
+    padding-left: 72.5px;
   }
 `;
 
@@ -64,7 +69,6 @@ export const ButtonSeeAllTopBar = styled.div`
 export const LogoButtonSeeAllTopBar = styled.div`
   width: 18px;
   height: 18px;
-  background: #ffe747;
   box-shadow: 0px 2px 2px #0000000f;
 `;
 

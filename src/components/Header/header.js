@@ -7,6 +7,7 @@ import {
   LogoButtonSeeAllTopBar,
   TextButtonSeeAllTopBar,
 } from "./styles";
+import { AllPodcastsIconTopBar } from "@icon/AllPodcastsIconTopBar";
 
 export default function Header(props) {
   // const [isClicked, setIsClicked] = useState(false);
@@ -30,7 +31,8 @@ export default function Header(props) {
         <CenterLogoDiv>
           <LogoTop headerLogo={props.headerLogo} onClick={handleClick} />
           <ButtonSeeAllTopBar onClick={handleClickAllPodcasts}>
-            <LogoButtonSeeAllTopBar />
+            {/* <LogoButtonSeeAllTopBar /> */}
+            {/* <AllPodcastsIconTopBar /> */}
             <TextButtonSeeAllTopBar>Podcasts</TextButtonSeeAllTopBar>
           </ButtonSeeAllTopBar>
 
