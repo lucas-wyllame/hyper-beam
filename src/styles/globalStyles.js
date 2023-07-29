@@ -50,7 +50,8 @@ export const GlobalStyles = createGlobalStyle`
     z-index: 9;
   }
   .slick-prev:before, .slick-next:before {
-    content: ""
+    opacity: 0;
+    content: "";
   }
 `;
 

@@ -3,10 +3,13 @@ import styled from "styled-components";
 export const Content = styled.div`
   width: 100%;
   height: auto;
-  margin: 40px 0;
+  margin: 40px 0 60px;
   display: flex;
   flex-direction: column;
   padding: 0 18px;
+  @media (min-width: 768px) {
+    margin: 50px 0 60px;
+  }
   @media (min-width: 1024px) {
     width: 100%;
     height: 683px;

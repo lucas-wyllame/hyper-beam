@@ -140,41 +140,6 @@ export default function HomeBanner() {
             onClick={(e) => handleChildElementClick(e)}
             image={`url(${lastPodcast.fields?.detachedImage?.fields.file.url})`}
           />
-
-          <DivToCentralizeListHomeBanner
-            onClick={(e) => handleChildElementClick(e)}
-          >
-            <ListHomeBanner onClick={(e) => handleChildElementClick(e)}>
-              <Slider {...settings}>
-                {all.slice(1, 10).map((res, index) => {
-                  return (
-                    // eslint-disable-next-line react/jsx-key
-                    <HyperCardGroup
-                      key={index}
-                      onClick={() => handleClick(res.fields?.pathUrl)}
-                    >
-                      <HyperCard
-                        hyperCardImg={`url(${res.fields?.littleImage?.fields?.file.url})`}
-                        width={"196px"}
-                        height={"196px"}
-                        widthTablet="168px"
-                        heightTablet="168px"
-                        widthLaptop={"196px"}
-                        heightLaptop={"196px"}
-                      />
-                      <TitleInsideComponentGray
-                        width="145px"
-                        widthTablet="148px"
-                        widthCircle="6px"
-                        heightCircle="6px"
-                        number={res.fields?.number}
-                      />
-                    </HyperCardGroup>
-                  );
-                })}
-              </Slider>
-            </ListHomeBanner>
-          </DivToCentralizeListHomeBanner>
         </OverlayDiv>
       </Banner>
     </Content>

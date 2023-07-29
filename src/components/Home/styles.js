@@ -2,16 +2,16 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 100%;
-  height: 790px;
+  height: 610px;
   display: flex;
   justify-content: center;
   margin-top: 80px;
   @media (min-width: 768px) {
-    height: 850px;
+    height: 692px;
     margin-top: 90px;
   }
   @media (min-width: 1024px) {
-    height: 650px;
+    height: 570px;
     margin-top: 100px;
   }
 `;
