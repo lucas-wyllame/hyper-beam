@@ -17,8 +17,6 @@ export default function Home() {
             content="initial-scale=1.0, width=device-width"
           />
         </Head>
-
-        <p>Hello world!</p>
       </div>
 
       <HomeBanner />
