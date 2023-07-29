@@ -8,9 +8,9 @@ export const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  @media (min-width: 769px) {
-    height: 647px;
+  @media (min-width: 768px) {
+    padding-top: 20px;
+    height: 685px;
   }
   @media (min-width: 1024px) {
     height: 620px;
@@ -195,9 +195,9 @@ export const LeftArrow = styled.div`
   top: 433px;
   left: 86px;
   z-index: 2;
-  background-image:  url("./icon/purpleArrowLeft.svg");
-  :hover{
-    background-image:  url("./icon/purpleArrowLeft.svg");
+  background-image: url("./icon/purpleArrowLeft.svg");
+  :hover {
+    background-image: url("./icon/purpleArrowLeft.svg");
   }
   @media (min-width: 769px) {
     top: 433px;
@@ -220,11 +220,11 @@ export const RightArrow = styled.div`
   top: 24px;
   left: 157px;
   z-index: 2;
-  background-image:  url("./icon/purpleArrowRight.svg");
-  :hover{
-    background-image:  url("./icon/purpleArrowRight.svg");
+  background-image: url("./icon/purpleArrowRight.svg");
+  :hover {
+    background-image: url("./icon/purpleArrowRight.svg");
   }
-  .disabled{
+  .disabled {
     background-image: none;
   }
   @media (min-width: 769px) {

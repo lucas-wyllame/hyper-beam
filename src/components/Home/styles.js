@@ -11,7 +11,7 @@ export const Content = styled.div`
     margin-top: 90px;
   }
   @media (min-width: 1024px) {
-    height: 570px;
+    height: 488px;
     margin-top: 100px;
   }
 `;
