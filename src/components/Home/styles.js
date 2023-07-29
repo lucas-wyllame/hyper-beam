@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const Content = styled.div`
   width: 100%;
-  height: 625px;
+  height: 610px;
   display: flex;
   justify-content: center;
   margin-top: 80px;
   @media (min-width: 768px) {
-    height: 705px;
+    height: 692px;
     margin-top: 90px;
   }
   @media (min-width: 1024px) {
