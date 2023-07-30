@@ -67,9 +67,13 @@ export const ButtonSeeAllTopBar = styled.div`
 `;
 
 export const LogoButtonSeeAllTopBar = styled.div`
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
   box-shadow: 0px 2px 2px #0000000f;
+  background-image: url("/icon/AllPodcastsIconTopBar.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 `;
 
 export const TextButtonSeeAllTopBar = styled.div`

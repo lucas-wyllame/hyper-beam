@@ -31,8 +31,8 @@ export default function Header(props) {
         <CenterLogoDiv>
           <LogoTop headerLogo={props.headerLogo} onClick={handleClick} />
           <ButtonSeeAllTopBar onClick={handleClickAllPodcasts}>
-            {/* <LogoButtonSeeAllTopBar /> */}
-            <AllPodcastsIconTopBar />
+            <LogoButtonSeeAllTopBar />
+            {/* <AllPodcastsIconTopBar /> */}
             <TextButtonSeeAllTopBar>Podcasts</TextButtonSeeAllTopBar>
           </ButtonSeeAllTopBar>
 
