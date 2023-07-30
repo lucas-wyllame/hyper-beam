@@ -32,7 +32,7 @@ export default function Header(props) {
           <LogoTop headerLogo={props.headerLogo} onClick={handleClick} />
           <ButtonSeeAllTopBar onClick={handleClickAllPodcasts}>
             {/* <LogoButtonSeeAllTopBar /> */}
-            {/* <AllPodcastsIconTopBar /> */}
+            <AllPodcastsIconTopBar />
             <TextButtonSeeAllTopBar>Podcasts</TextButtonSeeAllTopBar>
           </ButtonSeeAllTopBar>
 
