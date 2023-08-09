@@ -8,7 +8,7 @@ export const Content = styled.div`
   align-items: center;
   margin-top: 65px;
   @media (min-width: 1024px) {
-    height: 700px;
+    /* height: 700px; */
   }
 `;
 
@@ -84,8 +84,9 @@ export const Topic = styled.div`
   display: flex;
   padding: 30px 0;
   @media (min-width: 1024px) {
-    height: 250px;
-    align-items: center;
-    margin-top: 38px;
+    /* height: 250px; */
+    /* align-items: center; */
+    /* margin-top: 38px; */
+    margin-top: 69px;
   }
 `;

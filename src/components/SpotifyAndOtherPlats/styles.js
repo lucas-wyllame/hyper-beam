@@ -13,7 +13,7 @@ export const Content = styled.div`
   }
   @media (min-width: 1024px) {
     height: 590px;
-    margin-top: 0px;
+    margin-top: 31px;
   }
 `;
 
