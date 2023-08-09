@@ -1,7 +1,7 @@
 export const buttons = [
     {
       title: "Google Podcast",
-      href: "https://bit.ly/3Qe9421",
+      href: "https://bit.ly/3QiAwf6",
       gridColumn: "1/2",
       gridRow: "1/2",
       gridColumnLaptop: "1/2",
@@ -9,7 +9,7 @@ export const buttons = [
     },
     {
       title: "Pocket Casts",
-      href: "https://bit.ly/3Qe9421",
+      href: "https://pca.st/4ve24tm9",
       gridColumn: "1/2",
       gridRow: "2/3",
       gridColumnLaptop: "2/3",
@@ -25,7 +25,7 @@ export const buttons = [
     },
     {
       title: "Sugerir Plataforma",
-      href: "https://textoeditable.com.br/bloco-de-notas-online/",
+      href: "https://hayatodoc.typeform.com/to/fEfEfzcY",
       gridColumn: "1/2",
       gridRow: "4/5",
       gridColumnLaptop: "2/3",

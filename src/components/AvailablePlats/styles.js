@@ -83,7 +83,7 @@ export const Divider = styled.div`
   }
 `;
 
-export const PlatsButton = styled.button`
+export const PlatsButton = styled.a`
   width: ${(props) => props.width};
   height: ${(props) => props.height};
   font-size: 2rem;

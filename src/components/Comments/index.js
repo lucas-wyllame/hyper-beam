@@ -35,27 +35,32 @@ export default function Comments() {
           fim de cada episódio
         </Desc>
       </GroupTexts>
-      <PlatsCards
-        width="346px"
-        height="111px"
-        widthTablet="557px"
-        widthDesktop="682px"
-        heightDesktop="126px"
-        href="mailto:hyperbeampodcast@gmail.com"
+      <a
+        href="mailto:perguntehyperbeam@gmail.com"
+        target="_blank"
+        rel="noreferrer"
       >
-        <EmailPokeCenter />
-        <Divider />
-        <MoreInfs
-          fontSize="1.4rem"
-          fontSizeTablet="1.9rem"
-          fontSizeLaptop="2.3rem"
-          fontSizeLaptopLarge="2.3rem"
+        <PlatsCards
+          width="346px"
+          height="111px"
+          widthTablet="557px"
+          widthDesktop="682px"
+          heightDesktop="126px"
         >
-          Mande um e-mail pra gente!
-          <br />
-          <span>Apareça na leitura de e-mails</span>
-        </MoreInfs>
-      </PlatsCards>
+          <EmailPokeCenter />
+          <Divider />
+          <MoreInfs
+            fontSize="1.4rem"
+            fontSizeTablet="1.9rem"
+            fontSizeLaptop="2.3rem"
+            fontSizeLaptopLarge="2.3rem"
+          >
+            Mande um e-mail pra gente!
+            <br />
+            <span>Apareça na leitura de e-mails</span>
+          </MoreInfs>
+        </PlatsCards>
+      </a>
     </Content>
   );
 }
