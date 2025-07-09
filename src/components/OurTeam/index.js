@@ -18,24 +18,12 @@ import React, { useEffect, useState, useRef } from "react";
 
 function SamplePrevArrow(props) {
   const { className, onClick, style } = props;
-  return (
-    <LeftArrow
-      className={className}
-      style={{ ...style, backgroundColor: "none", borderStyle: "0" }}
-      onClick={onClick}
-    />
-  );
+  return <LeftArrow className={className} style={{ ...style, backgroundColor: "none", borderStyle: "0" }} onClick={onClick} />;
 }
 
 function SampleNextArrow(props) {
   const { className, onClick, style } = props;
-  return (
-    <RightArrow
-      className={className}
-      style={{ ...style, backgroundColor: "none", borderStyle: "0" }}
-      onClick={onClick}
-    />
-  );
+  return <RightArrow className={className} style={{ ...style, backgroundColor: "none", borderStyle: "0" }} onClick={onClick} />;
 }
 
 export default function OurTeam() {
@@ -48,15 +36,9 @@ export default function OurTeam() {
   useEffect(() => {
     async function FetchMyApi() {
       let items = await ConnectContent();
-      let response = await items.filter(
-        (x) => x.sys.contentType.sys.id == "collaborators"
-      );
-      castersList = response.filter((x) =>
-        x.fields?.caster === true ? x : null
-      );
-      othersList = response.filter((x) =>
-        x.fields?.caster === false ? x : null
-      );
+      let response = await items.filter((x) => x.sys.contentType.sys.id == "collaborators");
+      castersList = response.filter((x) => (x.fields?.caster === true ? x : null));
+      othersList = response.filter((x) => (x.fields?.caster === false ? x : null));
       setAllCollaborators([...castersList, ...othersList]);
       setIsMobile(window.screen.width > 1175 ? false : true);
     }
@@ -123,15 +105,9 @@ export default function OurTeam() {
             return (
               <React.Fragment key={index}>
                 <Peoples>
-                  <CardsOurTeamHover
-                    image={
-                      `url(${res.fields.profilePicture?.fields.file.url})` || ""
-                    }
-                  />
+                  <CardsOurTeamHover image={`url(${res.fields.profilePicture?.fields.file.url})` || ""} />
                   <CardsOurTeam
-                    image={
-                      `url(${res.fields.profilePicture?.fields.file.url})` || ""
-                    }
+                    image={`url(${res.fields.profilePicture?.fields.file.url})` || ""}
                     imageHover={`url(${res.fields.profilePictureHover?.fields.file.url})`}
                   />
                   <CastersBox>
@@ -145,6 +121,17 @@ export default function OurTeam() {
               </React.Fragment>
             );
           })}
+          <Peoples>
+            <CardsOurTeamHover image={`url(/img/imagemhover.png)` || ""} />
+            <CardsOurTeam image={`url(/img/imagemhover.png)` || ""} imageHover={`url(/img/imagem.jpg)`} />
+            <CastersBox>
+              <NameCasters>
+                Lucas
+                <span> SuP </span>
+              </NameCasters>
+              <FuncCasters>Desenvolvedor</FuncCasters>
+            </CastersBox>
+          </Peoples>
         </Slider>
       </GlobalPeoples>
     </Content>
